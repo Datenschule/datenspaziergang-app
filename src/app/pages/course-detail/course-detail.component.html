@@ -1,0 +1,11 @@
+<div class="wrapper" *ngIf="course">
+  <app-action-bar  [name]="course.name"></app-action-bar>
+  <div class="main">
+    <div class="detail">
+      <img src="{{course.preview_image}}" alt="">
+      <p>{{course.description}}</p>
+      <button routerLink="/map/{{course.id}}">Take the tour!</button>
+    </div>
+  </div>
+</div>
+

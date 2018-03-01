@@ -1,0 +1,21 @@
+<div class="container" *ngIf="course">
+  <div class="wrapper">
+
+    <h1>{{course.points[waypointId].title}}</h1>
+
+    <p>
+      <img src="{{course.points[waypointId].img}}" />
+    </p>
+    <p class="content">
+      {{course.points[waypointId].content}}
+    </p>
+    <p>
+      <a href="{{course.points[waypointId].link}}">{{course.points[waypointId].link}}</a>
+    </p>
+    <p>
+      <a routerLink="/waypoint/{{course.id}}/{{waypointId}}">Details</a>
+    </p>
+  </div>
+</div>
+
+

@@ -1,0 +1,30 @@
+<div class="wrapper" *ngIf="course">
+  <app-action-bar  [name]="course.name"></app-action-bar>
+  <!--<div class="main">-->
+    <!--<div class="map">-->
+      <!--<p>Hello World!</p>-->
+      <!--&lt;!&ndash;<div class="mymap" id="mymap" (load)="initmap()"></div>&ndash;&gt;-->
+    <!--</div>-->
+    <!--<mapbox [options]="mapOptions">-->
+      <!--<mapbox-marker-->
+        <!--*ngFor="let point of course.points"-->
+        <!--[coordinates]="[ point.lat, point.lon ]"-->
+        <!--[image]="image"-->
+        <!--[data]="point"-->
+        <!--(click)="click($event)">-->
+      <!--</mapbox-marker>-->
+      <!--<mapbox-line-->
+        <!--[id]="lineId"-->
+        <!--[line]="line"-->
+      <!--&gt;</mapbox-line>-->
+    <!--</mapbox>-->
+  <!--<app-waypoint-info [course]="course" [waypointId]="activeWaypoint"></app-waypoint-info>-->
+
+  <!--</div>-->
+<!--</div>-->
+<!--<div class="wrapper">-->
+  <!--<div class="mymap" id="mymap"></div>-->
+</div>
+<app-page-container></app-page-container>
+
+

@@ -152,7 +152,7 @@ export class InMemoryDataService implements InMemoryDbService {
         pages: [
           {
             id: 0,
-            type: "overview_map",
+            type: "overview-map",
             data: {
               points: [
                 {lat: 13.390789031982422, lon: 52.51833617387861},
@@ -173,7 +173,7 @@ export class InMemoryDataService implements InMemoryDbService {
             id: 1,
             data: {
               name: "First Section",
-              points: [{lat: 13.38883638381958, lon: 52.51905431150669}, {at: 13.386948108673096, lon: 52.51735687637764}]
+              points: [{lat: 13.38883638381958, lon: 52.51905431150669}, {lat: 13.386948108673096, lon: 52.51735687637764}]
             },
             next: 2
           },
@@ -190,7 +190,7 @@ export class InMemoryDataService implements InMemoryDbService {
             next: 3
           },
           {
-            type: "PointToPointMapComponent",
+            type: "pointtopoint",
             id: 3,
             data: {
               name: "First Section",
@@ -199,18 +199,30 @@ export class InMemoryDataService implements InMemoryDbService {
             next: 4,
           },
           {
-            type: "QuizComponent",
+            type: "story",
             id: 4,
+            data: {
+              img: '/assets/images/datawalk.png',
+              content: 'Künstler zu Kunstwerken der Sammlung des Museum Moderner Kunst Stiftung Ludwig Wien zu bereits aufbereiteten ' +
+              'Kunstwerken, die sich auch in der Online-Sammlung des mumok befinden.',
+              title: 'Museumsquartier / Was haben die Künstler der Sammlung des mumok mit der Wirtschaftsuniversität Wien zu tun?',
+              link: 'http://datenschule.de'
+            },
+            next: 5
+          },
+          {
+            type: "quiz",
+            id: 5,
             data: {
               question: "How do you do",
               answers: [ "Good", "Bad", "Fine" ],
               correct: 2
             },
-            next: 5
+            next: 6
           },
           {
             type: "success",
-            id: 5,
+            id: 6,
             data: { message: "You won!!!!"}
           }
         ]

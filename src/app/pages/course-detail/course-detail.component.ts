@@ -12,12 +12,16 @@ export class CourseDetailComponent implements OnInit {
 
   title = "Detail";
   course: Course;
+  entryLink: string;
 
-  constructor(private route:ActivatedRoute, private coursesService:CoursesService) { }
+  constructor(private route: ActivatedRoute, private coursesService: CoursesService) { }
 
   ngOnInit() {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.coursesService.getCourse(id).subscribe(course => this.course = course);
+    this.coursesService.getCourse(id).subscribe((course) => {
+      this.course = course;
+      this.entryLink = `/${course.pages[course.entry].type}/${course.id}/${course.entry}`;
+    });
   }
 
 }

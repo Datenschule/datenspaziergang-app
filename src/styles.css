@@ -41,3 +41,30 @@ body {
   -ms-flex-line-pack: stretch;
   align-content: stretch;
   background: #ececec; }
+
+.btn {
+  background: #039908;
+  background-image: -webkit-linear-gradient(top, #039908, #039908);
+  background-image: -moz-linear-gradient(top, #039908, #039908);
+  background-image: -ms-linear-gradient(top, #039908, #039908);
+  background-image: -o-linear-gradient(top, #039908, #039908);
+  background-image: linear-gradient(to bottom, #039908, #039908);
+  -webkit-border-radius: 16;
+  -moz-border-radius: 16;
+  border-radius: 16px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 41px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #42bd7b;
+  background-image: -webkit-linear-gradient(top, #42bd7b, #42bd7b);
+  background-image: -moz-linear-gradient(top, #42bd7b, #42bd7b);
+  background-image: -ms-linear-gradient(top, #42bd7b, #42bd7b);
+  background-image: -o-linear-gradient(top, #42bd7b, #42bd7b);
+  background-image: linear-gradient(to bottom, #42bd7b, #42bd7b);
+  text-decoration: none;
+}

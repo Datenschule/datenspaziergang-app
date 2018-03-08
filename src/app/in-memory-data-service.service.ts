@@ -184,7 +184,7 @@ export class InMemoryDataService implements InMemoryDbService {
               img: '/assets/images/datawalk.png',
               content: 'Künstler zu Kunstwerken der Sammlung des Museum Moderner Kunst Stiftung Ludwig Wien zu bereits aufbereiteten ' +
               'Kunstwerken, die sich auch in der Online-Sammlung des mumok befinden.',
-              title: 'Museumsquartier / Was haben die Künstler der Sammlung des mumok mit der Wirtschaftsuniversität Wien zu tun?',
+              title: 'Museumsquartier',
               link: 'http://datenschule.de'
             },
             next: 3

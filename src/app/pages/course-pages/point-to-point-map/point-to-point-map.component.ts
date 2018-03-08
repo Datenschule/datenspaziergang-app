@@ -59,7 +59,7 @@ export class PointToPointMapComponent implements OnInit {
       console.log(course);
 
       const pageData = course.pages.find((page) => page.id === page_id);
-      this.points = pageData.data.points;
+      this.points = pageData.data['points'];
 
       const nextType = course.pages.find((page) => page.id === pageData.next).type;
       this.nextLink = `/${nextType}/${course.id}/${pageData.next}`;

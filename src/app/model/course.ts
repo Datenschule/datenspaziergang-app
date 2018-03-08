@@ -11,4 +11,5 @@ export class Course {
   description: string;
   pages: ComponentModel[];
   pageComponents: PageItem[];
+  entry: number;
 }

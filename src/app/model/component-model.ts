@@ -1,4 +1,6 @@
 export class ComponentModel {
-  name: string;
+  type: string;
   data: Object;
+  id: number;
+  next: number;
 }

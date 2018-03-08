@@ -3,8 +3,7 @@
 * Mapbox Marker Directive component
 *
 */
-import {Component, Inject, Output, EventEmitter, Input, OnInit, OnDestroy} from '@angular/core';
-import {MapBoxService} from '../../services/mapbox/mapbox-service.service';
+import {Component, Inject, Output, EventEmitter, Input, OnInit} from '@angular/core';
 import {Subject} from 'rxjs/Subject';
 import * as mapbox from 'mapbox-gl';
 
@@ -15,10 +14,9 @@ import * as mapbox from 'mapbox-gl';
       <ng-content></ng-content>
     </a>
   `,
-  providers: [MapBoxService]
 })
 
-export class MapboxMarkerDirectionComponent implements OnInit, OnDestroy {
+export class MapboxMarkerDirectionComponent implements OnInit {
   @Input() direction: String = 'next';
   @Input() mapLoadedSubject: Subject<mapbox.Map> = new Subject<mapbox.Map>();
   @Input() id = 'line-0';
@@ -36,10 +34,6 @@ export class MapboxMarkerDirectionComponent implements OnInit, OnDestroy {
       this.map = event;
       this.initLine();
     });
-  }
-
-  ngOnDestroy(): void {
-    this.mapLoadedSubject.unsubscribe();
   }
 
   initLine() {

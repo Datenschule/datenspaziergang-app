@@ -3,28 +3,20 @@
 * Mapbox component
 *
 */
-import { Component, OnInit, Inject, Output, Input, EventEmitter } from '@angular/core';
-
-import { MapBoxService } from '../../services/mapbox/mapbox-service.service';
-
-import { MapOptions } from '../../model/map-options';
+import { Component, OnInit, Input } from '@angular/core';
 import * as mapbox from "mapbox-gl";
-import {assign} from 'rxjs/util/assign';
-import {Subject} from 'rxjs/Subject';
+
 
 @Component({
   selector: 'mapbox',
   template: `
-      <div style="position: relative; overflow: hidden;">
-        <div [attr.id]="'map' + index" style="height: 100vh; margin-top:56px;"></div>
-        <ng-content></ng-content>
-      </div>
-    `,
-  providers: [MapBoxService]
+    <div style="position: relative; overflow: hidden;">
+      <div [attr.id]="'map' + index" style="height: 100vh; margin-top:56px;"></div>
+      <ng-content></ng-content>
+    </div>`,
 })
 
 export class MapboxComponent implements OnInit {
-  @Output() state = new EventEmitter();
   @Input() options: Object = this.defaultOptions();
   map: mapbox.Map;
   index = 0;

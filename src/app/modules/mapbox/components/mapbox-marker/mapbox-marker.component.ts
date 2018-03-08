@@ -3,17 +3,14 @@
 * Mapbox Marker component
 *
 */
-import {Directive, Input, OnInit, Inject, Output, EventEmitter, OnDestroy, OnChanges, SimpleChanges} from '@angular/core';
-
-import {MapBoxService} from '../../services/mapbox/mapbox-service.service';
-import {Subject} from 'rxjs/Subject';
+import {Directive, Input, OnInit, Output, EventEmitter, OnChanges, SimpleChanges} from '@angular/core';
 import * as mapbox from 'mapbox-gl';
 
 @Directive({
   selector: 'mapbox-marker',
 })
 
-export class MapboxMarkerDirective implements OnInit, OnDestroy, OnChanges {
+export class MapboxMarkerDirective implements OnInit, OnChanges {
   @Input() image: String;
   @Input() width = 60;
   @Input() height = 60;
@@ -26,18 +23,9 @@ export class MapboxMarkerDirective implements OnInit, OnDestroy, OnChanges {
   @Input() map: mapbox.Map;
 
 
-  constructor(private mapBoxService: MapBoxService) {
-  }
+  constructor() { }
 
   ngOnInit() {
-    // this.mapSubject.subscribe(event => {
-    //   this.map = event;
-    //   this.addPins();
-    // });
-  }
-
-  ngOnDestroy(): void {
-    // this.mapSubject.unsubscribe();
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -61,16 +49,10 @@ export class MapboxMarkerDirective implements OnInit, OnDestroy, OnChanges {
       .setLngLat(this.coordinates)
       .addTo(map);
 
-
-    // this.mapBoxService.Marker(
-    //   el, // element
-    //   {offset: [-this.width / 2, -this.height / 2]}, // options
-    //   this.coordinates // coordinates
-    // );
-
     el.addEventListener('click', () => {
       if (this.flyTo) {
-        this.mapBoxService.flyTo(this.coordinates, this.flyTo);
+        // this.mapBoxService.flyTo(this.coordinates, this.flyTo);
+      //  TODO: Implement Fly to
       }
 
       this.click.emit({

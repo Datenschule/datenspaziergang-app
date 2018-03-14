@@ -1,4 +1,9 @@
-<p>
-  quiz works!
+<div class="wrapper" *ngIf="station">
+  <p>{{station.question}}</p>
+  <ul>
+    <li *ngFor="let answer of station.answers">{{answer}}</li>
+  </ul>
   <button routerLink="{{nextLink}}">Next</button>
-</p>
+</div>
+
+

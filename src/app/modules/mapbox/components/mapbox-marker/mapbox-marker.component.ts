@@ -29,7 +29,6 @@ export class MapboxMarkerDirective implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes);
     if (changes.map.currentValue) {
       this.map.on('style.load', () => this.addPins(changes.map.currentValue));
     }
@@ -37,7 +36,6 @@ export class MapboxMarkerDirective implements OnInit, OnChanges {
 
   addPins(map) {
     const el = document.createElement('div');
-    console.log(this.map);
     el.className = 'marker';
     el.style.backgroundImage = 'url(' + this.image + ')';
     el.style.backgroundSize = 'cover';

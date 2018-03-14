@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {CoursesService} from '../../../services/courses/courses.service';
 import {ActivatedRoute} from '@angular/router';
 import {ComponentModel} from '../../../model/component-model';
+import {Stations} from '../../../model/stations';
+import QuizStation = Stations.QuizStation;
 
 @Component({
   selector: 'app-quiz',
@@ -10,7 +12,7 @@ import {ComponentModel} from '../../../model/component-model';
 })
 export class QuizComponent implements OnInit {
 
-  page: ComponentModel;
+  station: QuizStation;
   nextLink: string;
 
   constructor(private coursesService: CoursesService, private route: ActivatedRoute) {
@@ -20,10 +22,10 @@ export class QuizComponent implements OnInit {
     const course_id = +this.route.snapshot.paramMap.get('course');
     const page_id = +this.route.snapshot.paramMap.get('id');
     this.coursesService.getCourse(course_id).subscribe((course) => {
-      this.page = course.pages.find((page) => page.id === page_id);
+      this.station = course.stations.find((station) => station.id === page_id);
 
-      const nextType = course.pages.find((page) => page.id === this.page.next).type;
-      this.nextLink = `/${nextType}/${course.id}/${this.page.next}`;
+      const nextStation = course.stations.find((station) => station.id === this.station.next);
+      this.nextLink = `/${nextStation.type}/${course.id}/${nextStation.id}`;
     });
   }
 

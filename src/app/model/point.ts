@@ -1,4 +1,4 @@
 export class Point {
   lon: number;
-  lat:number;
+  lat: number;
 }

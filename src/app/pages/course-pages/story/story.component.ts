@@ -5,6 +5,8 @@ import {ComponentModel} from '../../../model/component-model';
 import {Story} from '../../../model/story';
 import {Course} from '../../../model/course';
 import {DomSanitizer, SafeStyle} from '@angular/platform-browser';
+import {Stations} from '../../../model/stations';
+import StoryStation = Stations.StoryStation;
 
 @Component({
   selector: 'app-story',
@@ -13,26 +15,25 @@ import {DomSanitizer, SafeStyle} from '@angular/platform-browser';
 })
 export class StoryComponent implements OnInit {
 
-  page: ComponentModel;
   nextLink: string;
-  story: Story;
+  station: StoryStation;
   course: Course;
-  image:SafeStyle;
+  image: SafeStyle;
 
   constructor(private coursesService: CoursesService, private route: ActivatedRoute, private sanitizer: DomSanitizer) {
   }
 
   ngOnInit() {
     const course_id = +this.route.snapshot.paramMap.get('course');
-    const page_id = +this.route.snapshot.paramMap.get('id');
+    const station_id = +this.route.snapshot.paramMap.get('id');
     this.coursesService.getCourse(course_id).subscribe((course) => {
-      this.page = course.pages.find((page) => page.id === page_id);
-      this.story = this.page.data as Story;
-      console.log(this.story);
+
       this.course = course;
-      const nextType = course.pages.find((page) => page.id === this.page.next).type;
-      this.nextLink = `/${nextType}/${course.id}/${this.page.next}`;
-      this.image = this.image = this.sanitizer.bypassSecurityTrustStyle(`url(${this.story.img})`);
+      this.station = <StoryStation>this.course.stations.find((station) => station.id === station_id);
+      let nextStation = course.stations.find((station) => station.id === this.station.next);
+      console.log(nextStation);
+      this.nextLink = `/${nextStation.type}/${course.id}/${nextStation.id}`;
+      this.image = this.image = this.sanitizer.bypassSecurityTrustStyle(`url(${this.station.img})`);
     });
   }
 }

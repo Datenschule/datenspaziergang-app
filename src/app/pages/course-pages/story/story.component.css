@@ -1,0 +1,15 @@
+.detail {
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45));
+  height: 100%;
+}
+
+.description {
+  color: white;
+  padding: 80px 10% 10% 10%;
+  max-width: 800px;
+}
+
+.btn {
+  margin-left: 10%;
+  margin-top: 40px;
+}

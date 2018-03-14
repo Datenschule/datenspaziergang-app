@@ -1,15 +1,12 @@
-import {Waypoint} from "./waypoint";
-import {ComponentModel} from './component-model';
-import {PageItem} from './page-item';
+import {Stations} from './stations';
+import Station = Stations.Station;
 
 export class Course {
   id: number;
-  name: string;
+  title: string;
   location: string;
-  points: Waypoint[];
+  stations: Station[];
   preview_image: string;
   description: string;
-  pages: ComponentModel[];
-  pageComponents: PageItem[];
   entry: number;
 }

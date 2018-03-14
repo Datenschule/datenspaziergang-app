@@ -4,6 +4,9 @@ import {ComponentModel} from '../../../model/component-model';
 import {ActivatedRoute} from '@angular/router';
 import {Course} from '../../../model/course';
 import {Point} from '../../../model/point';
+import {Stations} from '../../../model/stations';
+import PointToPointStation = Stations.PointToPointStation;
+import Station = Stations.Station;
 
 @Component({
   selector: 'app-point-to-point-map',
@@ -19,6 +22,8 @@ export class PointToPointMapComponent implements OnInit {
   course: Course;
   points: Point[];
   image = '/assets/images/pin.jpeg';
+  station: PointToPointStation;
+  line: number[][];
 
   mapOptions = {
     style: 'mapbox://styles/mapbox/streets-v9',
@@ -52,17 +57,16 @@ export class PointToPointMapComponent implements OnInit {
 
   ngOnInit() {
     const course_id = +this.route.snapshot.paramMap.get('course');
-    const page_id = +this.route.snapshot.paramMap.get('id');
+    const station_id = +this.route.snapshot.paramMap.get('id');
     this.coursesService.getCourse(course_id).subscribe((course) => {
 
       this.course = course;
-      console.log(course);
 
-      const pageData = course.pages.find((page) => page.id === page_id);
-      this.points = pageData.data['points'];
+      this.station = <PointToPointStation>this.course.stations.find((station) => station.id === station_id);
+      this.line = [[this.station.start.lat, this.station.start.lon], [this.station.finish.lat, this.station.finish.lon]];
 
-      const nextType = course.pages.find((page) => page.id === pageData.next).type;
-      this.nextLink = `/${nextType}/${course.id}/${pageData.next}`;
+      let nextStation = this.course.stations.find(station => station.id === this.station.next);
+      this.nextLink = `/${nextStation['type']}/${this.course.id}/${nextStation.id}`;
     });
 
   }

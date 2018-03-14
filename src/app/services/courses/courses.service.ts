@@ -1,41 +1,39 @@
 import {Injectable} from '@angular/core';
-import { HttpClient, HttpHeaders } from "@angular/common/http";
-import {Observable} from "rxjs/Observable";
-import {Course} from "../../model/course";
-import {tap} from "rxjs/operators";
-import {PageItem} from '../../model/page-item';
-import {ComponentModel} from '../../model/component-model';
+import {Observable} from 'rxjs/Observable';
+import {Course} from '../../model/course';
+import {COURSES} from '../../mock_data';
+import {of} from 'rxjs/observable/of';
+import {Stations} from '../../model/stations';
+import Station = Stations.Station;
+import {HttpClient} from '@angular/common/http';
+import {Http} from '@angular/http';
+import OverviewStation = Stations.OverviewStation;
+import {map, first, tap} from 'rxjs/operators';
+
 
 
 @Injectable()
 export class CoursesService {
 
-  constructor(private http: HttpClient) {
-  }
+  constructor(private http: HttpClient) { }
 
-  private coursesUrl = 'api/courses';
+  private courses;
+  private url = '/assets/data/mock.json';
 
   private log(message: string) {
-    console.log('Courses Service: ' + message)
+    console.log('Courses Service: ' + message);
   }
 
-  getCourses(): Observable<Course[]> {
-    return this.http.get<Course[]>(this.coursesUrl);
+  getCourses(): Observable<any> {
+    return this.http.get(this.url);
   }
 
-  getCourse(id: number): Observable<Course> {
-    console.log('fetching course');
-    const url = `${this.coursesUrl}/${id}`;
-    return this.http.get<Course>(url).pipe(
-      tap(_ => this.log(`fetched course id=${id}`)),
+  getCourse(id: number): Observable<any> {
+    console.log(id);
+    return this.http.get(this.url).pipe(
+      map(courses => {
+        return courses.find((course) => course.id === id);
+      })
     );
-  }
-
-  getPageForCourse(course_id: number, page_id: number): Observable<ComponentModel> {
-    return new Observable((observer) => {
-      this.getCourse(course_id).subscribe(course => {
-        observer.next(course.pages.find(page => page.id === page_id));
-      });
-    });
   }
 }

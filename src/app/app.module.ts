@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { environment } from '../environments/environment';
 
 import {HttpClientInMemoryWebApiModule} from "angular-in-memory-web-api";
-import {InMemoryDataService} from './in-memory-data-service.service';
 
 import { PerfectScrollbarModule, PERFECT_SCROLLBAR_CONFIG, PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
@@ -32,6 +31,8 @@ import {PointToPointMapComponent} from './pages/course-pages/point-to-point-map/
 import {StoryComponent} from './pages/course-pages/story/story.component';
 import {QuizComponent} from './pages/course-pages/quiz/quiz.component';
 import {SuccessComponent} from './pages/course-pages/success/success.component';
+import { TreeMapComponent } from './pages/course-pages/tree-map/tree-map.component';
+import {TreeBerlinService} from './services/plugins/tree-berlin.service';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -55,21 +56,19 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     QuizComponent,
     SuccessComponent,
     PageDirective,
+    TreeMapComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, {dataEncapsulation: false}
-    ),
     MapboxModule.forRoot(environment.mapbox_key),
     PerfectScrollbarModule
   ],
   providers: [CoursesService, {
     provide: PERFECT_SCROLLBAR_CONFIG,
     useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG,
-  }, NextPageService],
+  }, NextPageService, TreeBerlinService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

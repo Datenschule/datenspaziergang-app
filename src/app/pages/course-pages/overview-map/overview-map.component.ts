@@ -5,6 +5,8 @@ import {PageComponent} from '../../../model/page-component';
 import {ComponentModel} from '../../../model/component-model';
 import * as mapboxgl from 'mapbox-gl';
 import {Course} from '../../../model/course';
+import {Stations} from '../../../model/stations';
+import OverviewStation = Stations.OverviewStation;
 
 @Component({
   selector: 'app-overview-map',
@@ -20,6 +22,7 @@ export class OverviewMapComponent implements OnInit {
   activeWaypoint = 0;
   nextLink: string;
   course: Course;
+  station: OverviewStation;
 
   mapOptions = {
     style: 'mapbox://styles/mapbox/streets-v9',
@@ -57,25 +60,22 @@ export class OverviewMapComponent implements OnInit {
 
   ngOnInit() {
     const course_id = +this.route.snapshot.paramMap.get('course');
-    const page_id = +this.route.snapshot.paramMap.get('id');
+    const station_id = +this.route.snapshot.paramMap.get('id');
     this.coursesService.getCourse(course_id).subscribe((course) => {
-      let pageData = course.pages.find((page) => page.id === page_id);
-      const nextType = course.pages.find((page) => page.id === pageData.next).type;
-      this.nextLink = `/${nextType}/${course.id}/${pageData.next}`;
-
       this.course = course;
-      this.course.points.map((point) => {
-        point['active'] = false;
-        return point;
-      });
-
+      this.station = <OverviewStation>this.course.stations[station_id];
+      console.log(this.station);
+      this.line = this.station.waypoints.map(point => [point.lat, point.lon]);
+      let nextStation = this.course.stations[this.station.next];
+      console.log(nextStation);
+      this.nextLink = `/${nextStation.type}/${this.course.id}/${nextStation.id}`;
     });
 
   }
 
   click(event) {
     console.log(event.data);
-    this.course.points.forEach((point) => {
+    this.station.waypoints.forEach((point) => {
       if (point.id === event.data.id) {
         point['active'] = true;
       } else {

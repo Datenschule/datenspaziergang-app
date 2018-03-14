@@ -28,7 +28,6 @@ export class MapboxLineDirective implements OnInit, OnChanges {
   }
 
   initLine(map) {
-    console.log('initline');
 
     map.addLayer({
       id: this.id,

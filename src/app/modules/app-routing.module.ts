@@ -9,6 +9,7 @@ import {PointToPointMapComponent} from '../pages/course-pages/point-to-point-map
 import {QuizComponent} from '../pages/course-pages/quiz/quiz.component';
 import {StoryComponent} from '../pages/course-pages/story/story.component';
 import {SuccessComponent} from '../pages/course-pages/success/success.component';
+import {TreeMapComponent} from '../pages/course-pages/tree-map/tree-map.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/overview', pathMatch: 'full'},
@@ -16,10 +17,11 @@ const routes: Routes = [
   { path: 'course/:id', component: CourseDetailComponent },
   { path: 'waypoint/:course/:waypoint', component: WaypointDetailComponent},
   { path: 'overview-map/:course/:id', component: OverviewMapComponent},
-  { path: 'pointtopoint/:course/:id', component: PointToPointMapComponent},
+  { path: 'point-to-point/:course/:id', component: PointToPointMapComponent},
   { path: 'quiz/:course/:id', component: QuizComponent},
   { path: 'story/:course/:id', component: StoryComponent},
-  { path: 'success/:course/:id', component: SuccessComponent}
+  { path: 'success/:course/:id', component: SuccessComponent},
+  { path: 'berlin-tree/:course/:id', component: TreeMapComponent}
 ]
 
 @NgModule({

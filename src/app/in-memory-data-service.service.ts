@@ -175,6 +175,14 @@ export class InMemoryDataService implements InMemoryDbService {
               name: "First Section",
               points: [{lat: 13.38883638381958, lon: 52.51905431150669}, {lat: 13.386948108673096, lon: 52.51735687637764}]
             },
+            next: 10
+          },
+          {
+            type: "berlintree",
+            id: 10,
+            data: {
+              address: "Görlitzer Park"
+            },
             next: 2
           },
           {

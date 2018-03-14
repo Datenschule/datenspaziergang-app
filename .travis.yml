@@ -16,7 +16,3 @@ script:
   - ng build
 after_success:
   - bash ./scripts/deploy.sh
-env:
-  global:
-    - "GH_USER: datenschule"
-    - "GH_REPO: datenspaziergang-app"

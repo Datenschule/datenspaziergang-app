@@ -110,13 +110,15 @@
       {
         "type": "quiz",
         "id": 5,
-        "question": "How do you do ?",
+        "question": "How are you?",
         "answers": [
           "Good",
           "Bad",
           "Fine"
         ],
         "correct": 0,
+        "wrongMessage": "False, try again",
+        "correctMessage": "You made it!!!!",
         "next": 6,
         "prev": 4,
         "title": "Quiz"

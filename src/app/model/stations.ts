@@ -43,6 +43,8 @@ export namespace Stations {
     question: string;
     answers: string[];
     correct: number;
+    wrongMessage: string;
+    correctMessage: string;
   }
 
   export class SuccessStation implements Station {

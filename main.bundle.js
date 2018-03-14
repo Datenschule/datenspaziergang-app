@@ -722,15 +722,23 @@ var MapboxMarkerDirective = /** @class */ (function () {
         this.click = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
     }
     MapboxMarkerDirective.prototype.ngOnInit = function () {
+        console.log('init marker');
     };
     MapboxMarkerDirective.prototype.ngOnChanges = function (changes) {
-        var _this = this;
+        console.log('marker changed');
         if (changes.map.currentValue) {
-            this.map.on('style.load', function () { return _this.addPins(changes.map.currentValue); });
+            console.log('try to add marker');
+            // if (this.map.isStyleLoaded()) {
+            //   this.addPins(changes.map.currentValue);
+            // } else {
+            //   this.map.on('style.load', () => this.addPins(changes.map.currentValue));
+            // }
+            this.addPins(changes.map.currentValue);
         }
     };
     MapboxMarkerDirective.prototype.addPins = function (map) {
         var _this = this;
+        console.log('add marker');
         var el = document.createElement('div');
         el.className = 'marker';
         el.style.backgroundImage = 'url(' + this.image + ')';
@@ -1503,7 +1511,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/course-pages/tree-map/tree-map.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"main\">\n  <mapbox #map [options]=\"mapOptions\">\n    <mapbox-marker\n      *ngFor=\"let point of trees\"\n      [coordinates]=\"[ point.lat, point.lon ]\"\n      [image]=\"image\"\n      [width]=\"30\"\n      [height]=\"50\"\n      [data]=\"point\"\n      [map]=\"map.map\"\n    >\n    </mapbox-marker>\n  </mapbox>\n  <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Los gehts</a>\n  <!--<app-waypoint-info [course]=\"course\" [waypointId]=\"activeWaypoint\"></app-waypoint-info>-->\n</div>\n"
+module.exports = "<div class=\"main\" *ngIf=\"station\">\n  <app-action-bar  [name]=\"station.title\"></app-action-bar>\n  <div class=\"wrapper\">\n    <mapbox [options]=\"mapOptions\" #map>\n      <mapbox-marker\n        *ngFor=\"let point of trees\"\n        [coordinates]=\"[ point.lat, point.lon ]\"\n        [image]=\"image\"\n        [width]=\"30\"\n        [height]=\"50\"\n        [data]=\"point\"\n        [map]=\"map.map\"\n      >\n      </mapbox-marker>\n    </mapbox>\n  </div>\n  <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Los gehts</a>\n  <!--<app-waypoint-info [course]=\"course\" [waypointId]=\"activeWaypoint\"></app-waypoint-info>-->\n</div>\n"
 
 /***/ }),
 

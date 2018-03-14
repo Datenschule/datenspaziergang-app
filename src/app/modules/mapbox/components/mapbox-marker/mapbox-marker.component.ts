@@ -23,18 +23,28 @@ export class MapboxMarkerDirective implements OnInit, OnChanges {
   @Input() map: mapbox.Map;
 
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
+    console.log('init marker');
   }
 
   ngOnChanges(changes: SimpleChanges): void {
+    console.log('marker changed');
     if (changes.map.currentValue) {
-      this.map.on('style.load', () => this.addPins(changes.map.currentValue));
+      console.log('try to add marker');
+      // if (this.map.isStyleLoaded()) {
+      //   this.addPins(changes.map.currentValue);
+      // } else {
+      //   this.map.on('style.load', () => this.addPins(changes.map.currentValue));
+      // }
+      this.addPins(changes.map.currentValue);
     }
   }
 
   addPins(map) {
+    console.log('add marker');
     const el = document.createElement('div');
     el.className = 'marker';
     el.style.backgroundImage = 'url(' + this.image + ')';
@@ -50,7 +60,7 @@ export class MapboxMarkerDirective implements OnInit, OnChanges {
     el.addEventListener('click', () => {
       if (this.flyTo) {
         // this.mapBoxService.flyTo(this.coordinates, this.flyTo);
-      //  TODO: Implement Fly to
+        //  TODO: Implement Fly to
       }
 
       this.click.emit({

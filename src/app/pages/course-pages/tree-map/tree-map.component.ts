@@ -24,7 +24,7 @@ export class TreeMapComponent implements OnInit {
   image = '/assets/images/pin.jpeg';
   mapOptions = {
     style: 'mapbox://styles/mapbox/streets-v9',
-    center: [13.390497, 52.517221],
+    center: [13.437747, 52.496506],
     container: `map0`,
     zoom: 15,
     hash: false,
@@ -78,4 +78,7 @@ export class TreeMapComponent implements OnInit {
     });
   }
 
+  treeClick(event) {
+    console.log("click!");
+  }
 }

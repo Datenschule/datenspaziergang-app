@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = " <router-outlet></router-outlet>\n"
+module.exports = "<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -1042,7 +1042,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/course-pages/overview-map/overview-map.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"wrapper\" *ngIf=\"course\">\n  <app-action-bar [name]=\"course.title\"></app-action-bar>\n  <div class=\"main\">\n    <mapbox [options]=\"mapOptions\" #map>\n      <mapbox-marker\n        *ngFor=\"let point of station.waypoints\"\n        [coordinates]=\"[ point.lat, point.lon ]\"\n        [image]=\"image\"\n        [width]=\"30\"\n        [height]=\"50\"\n        [data]=\"point\"\n        (click)=\"click($event)\"\n        [map]=\"map.map\"\n        >\n      </mapbox-marker>\n      <mapbox-line\n        [id]=\"lineId\"\n        [map]=\"map.map\"\n        [coordinates]=\"line\"\n      ></mapbox-line>\n    </mapbox>\n    <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Los gehts</a>\n    <!--<app-waypoint-info [course]=\"course\" [waypointId]=\"activeWaypoint\"></app-waypoint-info>-->\n  </div>\n</div>\n<div class=\"wrapper\">\n  <!--<div class=\"mymap\" id=\"mymap\"></div>-->\n</div>\n"
+module.exports = "<div class=\"wrapper\" *ngIf=\"course\">\n  <app-action-bar [name]=\"station.title\"></app-action-bar>\n  <div class=\"main\">\n    <mapbox [options]=\"mapOptions\" #map>\n      <mapbox-marker\n        *ngFor=\"let point of station.waypoints\"\n        [coordinates]=\"[ point.lat, point.lon ]\"\n        [image]=\"image\"\n        [width]=\"30\"\n        [height]=\"50\"\n        [data]=\"point\"\n        (click)=\"click($event)\"\n        [map]=\"map.map\"\n        >\n      </mapbox-marker>\n      <mapbox-line\n        [id]=\"lineId\"\n        [map]=\"map.map\"\n        [coordinates]=\"line\"\n      ></mapbox-line>\n    </mapbox>\n    <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Los gehts</a>\n    <!--<app-waypoint-info [course]=\"course\" [waypointId]=\"activeWaypoint\"></app-waypoint-info>-->\n  </div>\n</div>\n<div class=\"wrapper\">\n  <!--<div class=\"mymap\" id=\"mymap\"></div>-->\n</div>\n"
 
 /***/ }),
 
@@ -1154,7 +1154,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/course-pages/point-to-point-map/point-to-point-map.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"wrapper\" *ngIf=\"station\">\n  <app-action-bar [name]=\"course.title\"></app-action-bar>\n  <div class=\"main\">\n    <mapbox [options]=\"mapOptions\" #map>\n      <mapbox-marker\n        *ngFor=\"let point of [station.start, station.finish]\"\n        [coordinates]=\"[ point.lat, point.lon ]\"\n        [image]=\"image\"\n        [width]=\"30\"\n        [height]=\"50\"\n        [data]=\"point\"\n        [map]=\"map.map\"\n      >\n      </mapbox-marker>\n      <mapbox-line\n        [map]=\"map.map\"\n        [coordinates]=\"line\"\n      ></mapbox-line>\n    </mapbox>\n    <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Ok, angekommen, was mach ich hier?</a>\n    <!--<app-waypoint-info [course]=\"course\" [waypointId]=\"activeWaypoint\"></app-waypoint-info>-->\n  </div>\n</div>\n"
+module.exports = "<div class=\"wrapper\" *ngIf=\"station\">\n  <app-action-bar [name]=\"station.title\"></app-action-bar>\n  <div class=\"main\">\n    <mapbox [options]=\"mapOptions\" #map>\n      <mapbox-marker\n        *ngFor=\"let point of [station.start, station.finish]\"\n        [coordinates]=\"[ point.lat, point.lon ]\"\n        [image]=\"image\"\n        [width]=\"30\"\n        [height]=\"50\"\n        [data]=\"point\"\n        [map]=\"map.map\"\n      >\n      </mapbox-marker>\n      <mapbox-line\n        [map]=\"map.map\"\n        [coordinates]=\"line\"\n      ></mapbox-line>\n    </mapbox>\n    <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Ok, angekommen, was mach ich hier?</a>\n    <!--<app-waypoint-info [course]=\"course\" [waypointId]=\"activeWaypoint\"></app-waypoint-info>-->\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -1248,7 +1248,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".button {\n  background-color: #555555;\n  color: white;\n  border: none;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 16px;\n}\n\n.button:hover {\n  color: white;\n  background-color: #008CBA;\n}\n\nli {\n  display: block;\n  width: 100%;\n  margin-top: 10px;\n}\n\nul {\n  margin: auto;\n  text-align: center;\n  width: 80%;\n  padding: 0;\n}\n\nbutton {\n  margin: 10px auto;\n  text-align: center !important;\n  display: block !important;\n}\n", ""]);
 
 // exports
 
@@ -1261,7 +1261,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/course-pages/quiz/quiz.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"wrapper\" *ngIf=\"station\">\n  <p>{{station.question}}</p>\n  <ul>\n    <li *ngFor=\"let answer of station.answers\">{{answer}}</li>\n  </ul>\n  <button routerLink=\"{{nextLink}}\">Next</button>\n</div>\n\n\n"
+module.exports = "<div class=\"wrapper\" *ngIf=\"station\">\n  <app-action-bar [name]=\"station.title\"></app-action-bar>\n  <h1 style=\"text-align: center\">{{station.question}}</h1>\n  <ul>\n    <li class=\"button\" *ngFor=\"let answer of station.answers; let i = index\" (click)=\"sendanswer(i)\">{{answer}}</li>\n  </ul>\n  <p *ngIf=\"firstguess && correct\">{{station.correctMessage}}</p>\n  <p *ngIf=\"firstguess && !correct\">{{station.wrongMessage}}</p>\n  <button class=\"button\" style=\"margin-top: 10px\" routerLink=\"{{nextLink}}\">Next</button>\n\n</div>\n\n\n"
 
 /***/ }),
 
@@ -1289,16 +1289,28 @@ var QuizComponent = /** @class */ (function () {
     function QuizComponent(coursesService, route) {
         this.coursesService = coursesService;
         this.route = route;
+        this.correct = false;
+        this.firstguess = false;
     }
     QuizComponent.prototype.ngOnInit = function () {
         var _this = this;
         var course_id = +this.route.snapshot.paramMap.get('course');
         var page_id = +this.route.snapshot.paramMap.get('id');
         this.coursesService.getCourse(course_id).subscribe(function (course) {
+            _this.course = course;
             _this.station = course.stations.find(function (station) { return station.id === page_id; });
             var nextStation = course.stations.find(function (station) { return station.id === _this.station.next; });
             _this.nextLink = "/" + nextStation.type + "/" + course.id + "/" + nextStation.id;
+            console.log(_this.station.wrongMessage);
         });
+    };
+    QuizComponent.prototype.sendanswer = function (answer) {
+        this.firstguess = true;
+        console.log("clicked " + answer);
+        if (answer === this.station.correct) {
+            this.correct = true;
+        }
+        console.log(this.correct);
     };
     QuizComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -1417,7 +1429,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/course-pages/success/success.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  success works!\n  <button routerLink=\"/overview\">Back to Overview</button>\n</p>\n"
+module.exports = "<div class=\"wrapper\" *ngIf=\"station\" style=\"height: 100vh; background-color: rgb(225,246,253)\">\n  <app-action-bar  [name]=\"station.title\"></app-action-bar>\n  <img style=\"max-width: 100%\" src=\"/assets/images/success.svg\" alt=\"\">\n  <h3 style=\"text-align: center; padding: 10px 5em\">{{station.message}}</h3>\n  <button class=\"btn\" style=\"display: block; margin: auto\" routerLink=\"/overview\">Zurück zu allen Spaziergängen</button>\n</div>\n"
 
 /***/ }),
 
@@ -1427,6 +1439,8 @@ module.exports = "<p>\n  success works!\n  <button routerLink=\"/overview\">Back
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SuccessComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__ = __webpack_require__("../../../../../src/app/services/courses/courses.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1437,10 +1451,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
 var SuccessComponent = /** @class */ (function () {
-    function SuccessComponent() {
+    function SuccessComponent(coursesService, route) {
+        this.coursesService = coursesService;
+        this.route = route;
     }
     SuccessComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        var course_id = +this.route.snapshot.paramMap.get('course');
+        var station_id = +this.route.snapshot.paramMap.get('id');
+        this.coursesService.getCourse(course_id).subscribe(function (course) {
+            _this.course = course;
+            _this.station = _this.course.stations.find(function (station) { return station.id === station_id; });
+        });
     };
     SuccessComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -1448,7 +1473,7 @@ var SuccessComponent = /** @class */ (function () {
             template: __webpack_require__("../../../../../src/app/pages/course-pages/success/success.component.html"),
             styles: [__webpack_require__("../../../../../src/app/pages/course-pages/success/success.component.css")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__["a" /* CoursesService */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */]])
     ], SuccessComponent);
     return SuccessComponent;
 }());

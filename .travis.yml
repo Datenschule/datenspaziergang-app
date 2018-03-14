@@ -19,4 +19,4 @@ after_success:
 env:
   global:
     - "GH_USER: datenschule"
-    -" GH_REPO: datenspaziergang-app"
+    - "GH_REPO: datenspaziergang-app"

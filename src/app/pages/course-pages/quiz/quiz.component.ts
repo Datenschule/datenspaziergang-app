@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {CoursesService} from '../../../services/courses/courses.service';
 import {ActivatedRoute} from '@angular/router';
-import {ComponentModel} from '../../../model/component-model';
 import {Stations} from '../../../model/stations';
 import QuizStation = Stations.QuizStation;
 

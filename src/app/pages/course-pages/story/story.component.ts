@@ -1,8 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {CoursesService} from '../../../services/courses/courses.service';
 import {ActivatedRoute} from '@angular/router';
-import {ComponentModel} from '../../../model/component-model';
-import {Story} from '../../../model/story';
 import {Course} from '../../../model/course';
 import {DomSanitizer, SafeStyle} from '@angular/platform-browser';
 import {Stations} from '../../../model/stations';

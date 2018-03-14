@@ -1,8 +1,6 @@
-import {Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {CoursesService} from '../../../services/courses/courses.service';
 import {ActivatedRoute} from '@angular/router';
-import {PageComponent} from '../../../model/page-component';
-import {ComponentModel} from '../../../model/component-model';
 import * as mapboxgl from 'mapbox-gl';
 import {Course} from '../../../model/course';
 import {Stations} from '../../../model/stations';
@@ -68,21 +66,7 @@ export class OverviewMapComponent implements OnInit {
       this.line = this.station.waypoints.map(point => [point.lat, point.lon]);
       let nextStation = this.course.stations[this.station.next];
       console.log(nextStation);
-      this.nextLink = `/${nextStation.type}/${this.course.id}/${nextStation.id}`;
+      this.nextLink = `/${nextStation['type']}/${this.course.id}/${nextStation.id}`;
     });
-
-  }
-
-  click(event) {
-    console.log(event.data);
-    this.station.waypoints.forEach((point) => {
-      if (point.id === event.data.id) {
-        point['active'] = true;
-      } else {
-        point['active'] = false;
-      }
-      // return point;
-    });
-    this.activeWaypoint = event.data.id;
   }
 }

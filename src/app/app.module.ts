@@ -20,8 +20,6 @@ import { CoursesService } from './services/courses/courses.service';
 import {RouterModule} from "@angular/router";
 import { CourseDetailComponent } from './pages/course-detail/course-detail.component';
 import { MapCellComponent } from './components/map-cell/map-cell.component';
-import { WaypointInfoComponent } from './components/waypoint-info/waypoint-info.component';
-import { WaypointDetailComponent } from './pages/waypoint-detail/waypoint-detail.component';
 import { SafeHtmlPipe } from './pipes/safe-html.pipe';
 import { PageDirective } from './directives/page.directive';
 import { NextPageService } from './services/next-page/next-page.service';
@@ -47,8 +45,6 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     CardComponent,
     CourseDetailComponent,
     MapCellComponent,
-    WaypointInfoComponent,
-    WaypointDetailComponent,
     SafeHtmlPipe,
     OverviewMapComponent,
     PointToPointMapComponent,

@@ -722,12 +722,9 @@ var MapboxMarkerDirective = /** @class */ (function () {
         this.click = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
     }
     MapboxMarkerDirective.prototype.ngOnInit = function () {
-        console.log('init marker');
     };
     MapboxMarkerDirective.prototype.ngOnChanges = function (changes) {
-        console.log('marker changed');
         if (changes.map.currentValue) {
-            console.log('try to add marker');
             // if (this.map.isStyleLoaded()) {
             //   this.addPins(changes.map.currentValue);
             // } else {
@@ -738,7 +735,6 @@ var MapboxMarkerDirective = /** @class */ (function () {
     };
     MapboxMarkerDirective.prototype.addPins = function (map) {
         var _this = this;
-        console.log('add marker');
         var el = document.createElement('div');
         el.className = 'marker';
         el.style.backgroundImage = 'url(' + this.image + ')';
@@ -960,7 +956,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".main {\n  padding-top: 60px;\n  -webkit-box-flex: 1;\n  -ms-flex: 1;\n  flex: 1;\n  overflow-x: hidden;\n  overflow-y: auto;\n  -webkit-overflow-scrolling: touch; }\n\n.detail {\n  padding: 16px;\n  position: relative;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  background: #fff;\n  border-radius: 2px;\n  margin: 16px;\n  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);\n          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); }\n\n.detail img{\n  max-width: 100%\n}\n", ""]);
+exports.push([module.i, ".main {\n  padding-top: 60px;\n  -webkit-box-flex: 1;\n  -ms-flex: 1;\n  flex: 1;\n  overflow-x: hidden;\n  overflow-y: auto;\n  -webkit-overflow-scrolling: touch; }\n\n.detail {\n  padding: 16px;\n  position: relative;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  background: #fff;\n  border-radius: 2px;\n  margin: 16px;\n  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);\n          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); }\n\n.detail img{\n  max-width: 100%\n}\n\n.button {\n  background-color: #555555;\n  color: white;\n  border: none;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 16px;\n}\n", ""]);
 
 // exports
 
@@ -973,7 +969,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/course-detail/course-detail.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"wrapper\" *ngIf=\"course\">\n  <app-action-bar  [name]=\"course.title\"></app-action-bar>\n  <div class=\"main\">\n    <div class=\"detail\">\n      <img src=\"{{course.preview_image}}\" alt=\"\">\n      <p>{{course.description}}</p>\n      <button routerLink=\"{{entryLink}}\">Take the tour!</button>\n    </div>\n  </div>\n</div>\n\n"
+module.exports = "<div class=\"wrapper\" *ngIf=\"course\">\n  <app-action-bar  [name]=\"course.title\"></app-action-bar>\n  <div class=\"main\">\n    <div class=\"detail\">\n      <img src=\"{{course.preview_image}}\" alt=\"\">\n      <p>{{course.description}}</p>\n      <button class=\"button\" routerLink=\"{{entryLink}}\">Take the tour!</button>\n    </div>\n  </div>\n</div>\n\n"
 
 /***/ }),
 
@@ -1119,10 +1115,8 @@ var OverviewMapComponent = /** @class */ (function () {
         this.coursesService.getCourse(course_id).subscribe(function (course) {
             _this.course = course;
             _this.station = _this.course.stations[station_id];
-            console.log(_this.station);
             _this.line = _this.station.waypoints.map(function (point) { return [point.lat, point.lon]; });
             var nextStation = _this.course.stations[_this.station.next];
-            console.log(nextStation);
             _this.nextLink = "/" + nextStation['type'] + "/" + _this.course.id + "/" + nextStation.id;
         });
     };
@@ -1162,7 +1156,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/course-pages/point-to-point-map/point-to-point-map.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"wrapper\" *ngIf=\"station\">\n  <app-action-bar [name]=\"station.title\"></app-action-bar>\n  <div class=\"main\">\n    <mapbox [options]=\"mapOptions\" #map>\n      <mapbox-marker\n        *ngFor=\"let point of [station.start, station.finish]\"\n        [coordinates]=\"[ point.lat, point.lon ]\"\n        [image]=\"image\"\n        [width]=\"30\"\n        [height]=\"50\"\n        [data]=\"point\"\n        [map]=\"map.map\"\n      >\n      </mapbox-marker>\n      <mapbox-line\n        [map]=\"map.map\"\n        [coordinates]=\"line\"\n      ></mapbox-line>\n    </mapbox>\n    <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Ok, angekommen, was mach ich hier?</a>\n    <!--<app-waypoint-info [course]=\"course\" [waypointId]=\"activeWaypoint\"></app-waypoint-info>-->\n  </div>\n</div>\n"
+module.exports = "<div class=\"wrapper\" *ngIf=\"station\">\n  <app-action-bar [name]=\"station.title\"></app-action-bar>\n  <div class=\"main\">\n    <mapbox [options]=\"mapOptions\" #map>\n      <mapbox-marker\n        *ngFor=\"let point of [station.start, station.finish]\"\n        [coordinates]=\"[ point.lat, point.lon ]\"\n        [image]=\"image\"\n        [width]=\"30\"\n        [height]=\"50\"\n        [data]=\"point\"\n        [map]=\"map.map\"\n      >\n      </mapbox-marker>\n      <mapbox-line\n        [map]=\"map.map\"\n        [coordinates]=\"line\"\n      ></mapbox-line>\n    </mapbox>\n    <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Angekommen</a>\n    <!--<app-waypoint-info [course]=\"course\" [waypointId]=\"activeWaypoint\"></app-waypoint-info>-->\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -1309,16 +1303,14 @@ var QuizComponent = /** @class */ (function () {
             _this.station = course.stations.find(function (station) { return station.id === page_id; });
             var nextStation = course.stations.find(function (station) { return station.id === _this.station.next; });
             _this.nextLink = "/" + nextStation.type + "/" + course.id + "/" + nextStation.id;
-            console.log(_this.station.wrongMessage);
         });
     };
     QuizComponent.prototype.sendanswer = function (answer) {
         this.firstguess = true;
-        console.log("clicked " + answer);
+        console.log("clicked option " + answer);
         if (answer === this.station.correct) {
             this.correct = true;
         }
-        console.log(this.correct);
     };
     QuizComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -1396,7 +1388,6 @@ var StoryComponent = /** @class */ (function () {
             _this.course = course;
             _this.station = _this.course.stations.find(function (station) { return station.id === station_id; });
             var nextStation = course.stations.find(function (station) { return station.id === _this.station.next; });
-            console.log(nextStation);
             _this.nextLink = "/" + nextStation.type + "/" + course.id + "/" + nextStation.id;
             _this.image = _this.image = _this.sanitizer.bypassSecurityTrustStyle("url(" + _this.station.img + ")");
         });
@@ -1498,7 +1489,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".marker:hover {\n  cursor: pointer;\n}\n", ""]);
 
 // exports
 
@@ -1511,7 +1502,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/course-pages/tree-map/tree-map.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"main\" *ngIf=\"station\">\n  <app-action-bar  [name]=\"station.title\"></app-action-bar>\n  <div class=\"wrapper\">\n    <mapbox [options]=\"mapOptions\" #map>\n      <mapbox-marker\n        *ngFor=\"let point of trees\"\n        [coordinates]=\"[ point.lat, point.lon ]\"\n        [image]=\"image\"\n        [width]=\"30\"\n        [height]=\"50\"\n        [data]=\"point\"\n        [map]=\"map.map\"\n      >\n      </mapbox-marker>\n    </mapbox>\n  </div>\n  <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Los gehts</a>\n  <!--<app-waypoint-info [course]=\"course\" [waypointId]=\"activeWaypoint\"></app-waypoint-info>-->\n</div>\n"
+module.exports = "<div class=\"main\" *ngIf=\"station\">\n  <app-action-bar  [name]=\"station.title\"></app-action-bar>\n  <div class=\"wrapper\">\n    <mapbox [options]=\"mapOptions\" #map>\n      <mapbox-marker\n        *ngFor=\"let point of trees\"\n        [coordinates]=\"[ point.lat, point.lon ]\"\n        [image]=\"image\"\n        [width]=\"30\"\n        [height]=\"50\"\n        [data]=\"point\"\n        [map]=\"map.map\"\n        (click)=\"treeClick($event)\"\n      >\n      </mapbox-marker>\n    </mapbox>\n  </div>\n  <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Los gehts</a>\n  <!--<app-waypoint-info [course]=\"course\" [waypointId]=\"activeWaypoint\"></app-waypoint-info>-->\n</div>\n"
 
 /***/ }),
 
@@ -1545,7 +1536,7 @@ var TreeMapComponent = /** @class */ (function () {
         this.image = '/assets/images/pin.jpeg';
         this.mapOptions = {
             style: 'mapbox://styles/mapbox/streets-v9',
-            center: [13.390497, 52.517221],
+            center: [13.437747, 52.496506],
             container: "map0",
             zoom: 15,
             hash: false,
@@ -1581,7 +1572,6 @@ var TreeMapComponent = /** @class */ (function () {
         this.coursesService.getCourse(course_id).subscribe(function (course) {
             _this.course = course;
             _this.station = _this.course.stations.find(function (station) { return station.id === station_id; });
-            console.log(_this.station);
             var nextStation = _this.course.stations.find(function (station) { return station.id === _this.station.next; });
             _this.nextLink = "/" + nextStation['type'] + "/" + _this.course.id + "/" + nextStation.id;
             _this.treeService.getTreesByAdress('Görlitzer Park').subscribe(function (trees) {
@@ -1589,9 +1579,11 @@ var TreeMapComponent = /** @class */ (function () {
                     var feature = _a[_i];
                     _this.trees.push({ lat: feature.geometry.coordinates[0], lon: feature.geometry.coordinates[1] });
                 }
-                console.log(_this.trees);
             });
         });
+    };
+    TreeMapComponent.prototype.treeClick = function (event) {
+        console.log("click!");
     };
     TreeMapComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -1753,7 +1745,6 @@ var CoursesService = /** @class */ (function () {
         return this.http.get(this.url);
     };
     CoursesService.prototype.getCourse = function (id) {
-        console.log(id);
         return this.getCourses().pipe(Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__["c" /* map */])(function (courses) {
             return (courses).find(function (course) { return course.id === id; });
         }));
@@ -1834,9 +1825,7 @@ var TreeBerlinService = /** @class */ (function () {
     }
     TreeBerlinService.prototype.getTreesByAdress = function (address) {
         var url = "https://trees.codefor.de/api/trees/?address=" + encodeURIComponent(address);
-        // const url2 = "https://trees.codefor.de/api/trees/?format=json";
-        console.log(url);
-        return this.http.get(url).pipe(Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__["d" /* tap */])(function (res) { return console.log(address); }), Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__["a" /* catchError */])((this.handleError('get trees', []))));
+        return this.http.get(url).pipe(Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__["d" /* tap */])(function (res) { return console.log("Fetching trees for " + address); }), Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__["a" /* catchError */])((this.handleError('get trees', []))));
     };
     TreeBerlinService.prototype.parseTree = function (raw) {
         var tree = raw['properties'];

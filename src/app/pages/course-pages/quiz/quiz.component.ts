@@ -30,15 +30,13 @@ export class QuizComponent implements OnInit {
 
       const nextStation = course.stations.find((station) => station.id === this.station.next);
       this.nextLink = `/${nextStation.type}/${course.id}/${nextStation.id}`;
-      console.log(this.station.wrongMessage);
     });
   }
 
   sendanswer(answer) {
     this.firstguess = true;
-    console.log(`clicked ${answer}`);
+    console.log(`clicked option ${answer}`);
     if (answer === this.station.correct) { this.correct = true; }
-    console.log(this.correct);
   }
 
 }

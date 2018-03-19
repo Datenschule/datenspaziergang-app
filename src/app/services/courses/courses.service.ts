@@ -29,7 +29,6 @@ export class CoursesService {
   }
 
   getCourse(id: number): Observable<any> {
-    console.log(id);
     return this.getCourses().pipe(
       map(courses => {
         return (courses).find((course) => course.id === id);

@@ -64,7 +64,6 @@ export class TreeMapComponent implements OnInit {
 
 
       this.station = <BerlinTreeStation>this.course.stations.find((station) => station.id === station_id);
-      console.log(this.station);
       let nextStation = this.course.stations.find(station => station.id === this.station.next);
       this.nextLink = `/${nextStation['type']}/${this.course.id}/${nextStation.id}`;
 
@@ -72,7 +71,6 @@ export class TreeMapComponent implements OnInit {
         for (let feature of trees.features) {
           this.trees.push({lat: feature.geometry.coordinates[0], lon: feature.geometry.coordinates[1]});
         }
-        console.log(this.trees);
       });
 
     });

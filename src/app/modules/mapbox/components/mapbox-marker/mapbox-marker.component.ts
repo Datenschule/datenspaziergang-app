@@ -27,13 +27,13 @@ export class MapboxMarkerDirective implements OnInit, OnChanges {
   }
 
   ngOnInit() {
-    console.log('init marker');
+
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log('marker changed');
+
     if (changes.map.currentValue) {
-      console.log('try to add marker');
+
       // if (this.map.isStyleLoaded()) {
       //   this.addPins(changes.map.currentValue);
       // } else {
@@ -44,7 +44,6 @@ export class MapboxMarkerDirective implements OnInit, OnChanges {
   }
 
   addPins(map) {
-    console.log('add marker');
     const el = document.createElement('div');
     el.className = 'marker';
     el.style.backgroundImage = 'url(' + this.image + ')';

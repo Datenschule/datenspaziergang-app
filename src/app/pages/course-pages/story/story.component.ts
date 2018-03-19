@@ -29,7 +29,6 @@ export class StoryComponent implements OnInit {
       this.course = course;
       this.station = <StoryStation>this.course.stations.find((station) => station.id === station_id);
       let nextStation = course.stations.find((station) => station.id === this.station.next);
-      console.log(nextStation);
       this.nextLink = `/${nextStation.type}/${course.id}/${nextStation.id}`;
       this.image = this.image = this.sanitizer.bypassSecurityTrustStyle(`url(${this.station.img})`);
     });

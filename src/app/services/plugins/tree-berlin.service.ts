@@ -14,10 +14,8 @@ export class TreeBerlinService {
 
   getTreesByAdress(address: string): Observable<any> {
     const url = `https://trees.codefor.de/api/trees/?address=${encodeURIComponent(address)}`;
-    // const url2 = "https://trees.codefor.de/api/trees/?format=json";
-    console.log(url);
     return this.http.get<Object>(url).pipe(
-      tap(res => console.log(address)),
+      tap(res => console.log(`Fetching trees for ${address}`)),
       catchError((this.handleError('get trees', []))));
   }
 

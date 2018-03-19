@@ -62,10 +62,8 @@ export class OverviewMapComponent implements OnInit {
     this.coursesService.getCourse(course_id).subscribe((course) => {
       this.course = course;
       this.station = <OverviewStation>this.course.stations[station_id];
-      console.log(this.station);
       this.line = this.station.waypoints.map(point => [point.lat, point.lon]);
       let nextStation = this.course.stations[this.station.next];
-      console.log(nextStation);
       this.nextLink = `/${nextStation['type']}/${this.course.id}/${nextStation.id}`;
     });
   }

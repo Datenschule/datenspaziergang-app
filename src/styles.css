@@ -13,8 +13,8 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-html {
-  overflow: hidden; }
+/*html {*/
+  /*overflow: hidden; }*/
 
 body {
   display: -webkit-box;

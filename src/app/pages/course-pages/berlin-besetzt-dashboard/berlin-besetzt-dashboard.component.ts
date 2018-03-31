@@ -24,6 +24,6 @@ export class BerlinBesetztDashboardComponent implements OnInit {
       this.coursesService.getNextPageLink(course_id, station_id, page.next).subscribe((nextPage) => {
         this.nextLink = nextPage;
       });
+    });
   }
-
 }

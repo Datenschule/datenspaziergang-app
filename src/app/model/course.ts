@@ -8,4 +8,5 @@ export class Course {
   stations: Station[];
   preview_image: string;
   description: string;
+  entry: number;
 }

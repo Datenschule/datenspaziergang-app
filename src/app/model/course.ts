@@ -1,12 +1,11 @@
-import {Stations} from './stations';
-import Station = Stations.Station;
+import {Station} from './stations';
+
 
 export class Course {
   id: number;
-  title: string;
+  name: string;
   location: string;
   stations: Station[];
   preview_image: string;
   description: string;
-  entry: number;
 }

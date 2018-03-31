@@ -1,135 +1,262 @@
 [
   {
-    "id": 1,
-    "location": "Berlin-Mitte",
-    "title": "erster Spaziergang",
+    "id": 0,
+    "name": "Spaziergang Kreuzberg",
+    "location": "Berlin-Kreuzberg",
     "preview_image": "/assets/images/datawalk.png",
-    "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magnaaliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit",
+    "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer",
     "entry": 0,
     "stations": [
       {
-        "type": "overview-map",
         "id": 0,
+        "name": "Am Kottbusser Tor",
+        "position": {
+          "lat": 52.4989969,
+          "lon": 13.4183337
+        },
+        "entry": 0,
         "next": 1,
-        "title": "Overview",
-        "waypoints": [
+        "pages": [
           {
-            "lat": 13.390789031982422,
-            "lon": 52.51833617387861
+            "type": "story",
+            "id": 0,
+            "img": "/assets/images/datawalk.png",
+            "content": "Drogen am Kotti Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "title": "Kriminalität und Drogen",
+            "next": 1
           },
           {
-            "lat": 13.394072055816649,
-            "lon": 52.51682151784933
+            "type": "story",
+            "id": 1,
+            "img": "/assets/images/datawalk.png",
+            "content": "Offenes Parlament ist toll Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "title": "Offenes Parlament - Kurztutorial",
+            "prev": 0,
+            "next": 2
           },
           {
-            "lat": 13.394308090209961,
-            "lon": 52.514209919312506
+            "type": "op-debate",
+            "id": 2,
+            "content": "Debatte Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "prev": 1,
+            "next": 3
           },
           {
-            "lat": 13.391432762145996,
-            "lon": 52.51279959156077
+            "id": 3,
+            "type": "quiz",
+            "title": "Wer hats gesagt?",
+            "question": "Sagen Sie auch noch etwas zur Gefährlichkeit von Cannabis?",
+            "answers": [
+              "Kai Gehring, Bündnis '90 die GRÜNEN",
+              "Horst Seehofer, CDU/CSU",
+              "Sigmar Gabriel, SPD"
+            ],
+            "correct": 0,
+            "prev": 2,
+            "next": 4
           },
           {
-            "lat": 13.390467166900635,
-            "lon": 52.51426215280443
+            "type": "story",
+            "id": 4,
+            "img": "/assets/images/datawalk.png",
+            "content": "Berrierefeiheit Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "title": "Barrierefreiheit",
+            "prev": 3,
+            "next": 6
           },
           {
-            "lat": 13.385703563690186,
-            "lon": 52.51452331933267
+            "type": "story",
+            "id": 6,
+            "img": "/assets/images/datawalk.png",
+            "content": "Berrierefeiheit 2 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "title": "Wheelmap Kurztutorial",
+            "prev": 4,
+            "next": 7
           },
           {
-            "lat": 13.387548923492432,
-            "lon": 52.516024996747156
-          },
-          {
-            "lat": 13.386948108673096,
-            "lon": 52.51735687637764
-          },
-          {
-            "lat": 13.38883638381958,
-            "lon": 52.51905431150669
+            "type": "wheelmap-map",
+            "id": 7,
+            "title": "Wheelmap Map",
+            "prev": 6
           }
         ]
       },
       {
-        "type": "point-to-point",
         "id": 1,
-        "title": "First Section",
-        "start": {
-          "lat": 13.38883638381958,
-          "lon": 52.51905431150669
+        "name": "Graefestraße 85",
+        "position": {
+          "lat": 52.4945314,
+          "lon": 13.4190634
         },
-        "finish": {
-          "lat": 13.386948108673096,
-          "lon": 52.51735687637764
-        },
-        "next": 10,
-        "prev": 1
-      },
-      {
-        "type": "berlin-tree",
-        "id": 10,
-        "address": "Görlitzer Park",
+        "prev": 0,
         "next": 2,
-        "prev": 1,
-        "title": "Bäume und so"
+        "entry": 0,
+        "pages": [
+          {
+            "type": "story",
+            "id": 0,
+            "img": "/assets/images/datawalk.png",
+            "content": "Jedeschule.de zeigt Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "title": "Bildung/ außerschulische Bildung",
+            "next": 1
+          },
+          {
+            "type": "story",
+            "id": 0,
+            "img": "/assets/images/datawalk.png",
+            "content": "Jedeschule.de zeigt Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "title": "Jedeschule.de",
+            "next": 1
+          },
+          {
+            "type": "line-chart",
+            "id": 1,
+            "title": "Schulpartnerschaften",
+            "datasource": "https://jedeschule.de/assets/data/partnerships-berlin.json",
+            "description": "1.118 und damit die meisten Projektpartner aller allgemeinbildenden Schulen kommen aus dem gemeinnützigen Bereich (38%), gefolgt von 885 Partnerorganisationen aus dem öffentlichen (30%) und 533 aus dem wirtschaftlichen Bereich (18%). Weitere 246 (8%) Partnerschaften finden mit anderen Schulen statt, 42 (1%) mit religiösen Einrichtungen und 34 (1%) mit Verbänden, Kammern und Genossenschaften. 119 Partnerschaften (4%) konnten nicht eindeutig zugeordnet werden und fallen unter die Kategorie Unbestimmt.",
+            "prev": 0,
+            "next": 2
+          },
+          {
+            "type": "chloropleth-map",
+            "id": 2,
+            "title": "Schulaktivitäten nach Bezirken",
+            "datasource": "https://jedeschule.de/assets/data/activities.json",
+            "prev": 1,
+            "next": 3
+          },
+          {
+            "type": "story",
+            "id": 3,
+            "title": "Schulaktivitäten in Kreuzberg",
+            "content": "In Kreuzberg zeigt Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "prev": 2,
+            "next": 5
+          },
+          {
+            "id": 5,
+            "type": "quiz",
+            "title": "Was müss Kind X könnnen?",
+            "question": "Was sind die erwartet Fähigkeiten von 14-Jährigen",
+            "answers": [
+              "Mathe",
+              "Deutsch",
+              "Englisch"
+            ],
+            "correct": 0,
+            "prev": 3
+          }
+        ]
       },
       {
-        "type": "story",
         "id": 2,
-        "img": "/assets/images/datawalk.png",
-        "content": "Künstler zu Kunstwerken der Sammlung des Museum Moderner Kunst Stiftung Ludwig Wien zu bereits aufbereiteten Kunstwerken, die sich auch in der Online-Sammlung des mumok befinden.",
-        "title": "Museumsquartier",
-        "next": 3,
-        "prev": 10
-      },
-      {
-        "type": "point-to-point",
-        "id": 3,
-        "title": "Nächste Etappe",
-        "prev": 2,
-        "next": 4,
-        "start": {
-          "lat": 13.38883638381958,
-          "lon": 52.51905431150669
+        "name": "Görlitzer Park",
+        "position": {
+          "lat": 52.4965063,
+          "lon": 13.4377465
         },
-        "finish": {
-          "lat": 13.386948108673096,
-          "lon": 52.51735687637764
-        }
+        "prev": 1,
+        "next": 3,
+        "entry": 0,
+        "pages": [
+          {
+            "type": "story",
+            "id": 0,
+            "img": "/assets/images/datawalk.png",
+            "content": "Wie und warum werden Bäume vermessen zeigt Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "title": "Umwelt erleben - Baumpolitik",
+            "next": 1
+          },
+          {
+            "type": "story",
+            "id": 0,
+            "img": "/assets/images/datawalk.png",
+            "content": "Wie und warum werden Bäume vermessen zeigt Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "title": "Baum Katasterdaten - CodeForTress",
+            "next": 1
+          },
+          {
+            "id": 1,
+            "type": "tree-dashboard",
+            "title": "Bäume im Görlitzer Park",
+            "prev": 0,
+            "next": 2
+          },
+
+          {
+            "type": "tree-development",
+            "id": 2,
+            "title": "Entwicklung der Bäume",
+            "prev": 1,
+            "next": 3
+          },
+
+          {
+            "type": "story",
+            "id": 3,
+            "img": "/assets/images/datawalk.png",
+            "content": "Mundraub zeigt Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "title": "Mundraub",
+            "prev": 2,
+            "next": 4
+          },
+          {
+            "type": "mundraub-map",
+            "title": "Bäume im Görlitzer Park",
+            "id": 4,
+            "prev": 3
+          }
+        ]
       },
       {
-        "type": "story",
-        "id": 4,
-        "next": 5,
-        "title": "Story2",
-        "content": "Künstler zu Kunstwerken der Sammlung des Museum Moderner Kunst Stiftung Ludwig Wien zu bereits aufbereiteten Kunstwerken, die sich auch in der Online-Sammlung des mumok befinden.",
-        "prev": 3,
-        "img": "/assets/images/datawalk.png"
-      },
-      {
-        "type": "quiz",
-        "id": 5,
-        "question": "How are you?",
-        "answers": [
-          "Good",
-          "Bad",
-          "Fine"
-        ],
-        "correct": 0,
-        "wrongMessage": "False, try again",
-        "correctMessage": "You made it!!!!",
-        "next": 6,
-        "prev": 4,
-        "title": "Quiz"
-      },
-      {
-        "type": "success",
-        "id": 6,
-        "message": "Herzlichen Glückwunsch, besuche uns auf datenschule.de für unsere anderen Workshops",
-        "title": "Das wars...",
-        "prev": 5
+        "id": 3,
+        "name": "Bethanien-Kloster",
+        "prev": 2,
+        "position": {
+          "lat": 52.49698,
+          "lon": 13.4185893
+        },
+        "entry": 0,
+        "pages": [
+          {
+            "type": "story",
+            "id": 0,
+            "next": 1,
+            "img": "/assets/images/datawalk.png",
+            "content": "Mundraub zeigt Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "title": "Stadtraum erobern"
+          },
+          {
+            "type": "story",
+            "id": 1,
+            "next": 2,
+            "prev": 1,
+            "img": "/assets/images/datawalk.png",
+            "content": "Mundraub zeigt Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+            "title": "Berlin.besetzt"
+          },
+          {
+            "id": 2,
+            "type": "berlin-besetzt-map",
+            "datasource": "",
+            "prev": 1,
+            "next": 3
+          },
+          {
+            "id": 3,
+            "type": "berlin-besetzt-dashboard",
+            "title": "Besetzerszene visualisiert",
+            "prev": 2
+          }
+        ]
       }
     ]
+  },
+  {
+    "id": 1,
+    "name": "Spaziergang ohne Stationen",
+    "location": "Nada",
+    "img": "/assets/images/datawalk.png",
+    "stations": []
   }
 ]

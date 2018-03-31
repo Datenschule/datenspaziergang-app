@@ -1,11 +1,11 @@
-<div class="wrapper" *ngIf="station">
-  <app-action-bar [name]="station.title"></app-action-bar>
-  <h1 style="text-align: center">{{station.question}}</h1>
+<div class="wrapper" *ngIf="title">
+  <app-action-bar [name]="title"></app-action-bar>
+  <h1 style="text-align: center; padding-top: 100px;">{{question}}</h1>
   <ul>
-    <li class="button" *ngFor="let answer of station.answers; let i = index" (click)="sendanswer(i)">{{answer}}</li>
+    <li class="button" *ngFor="let answer of answers; let i = index" (click)="sendanswer(i)">{{answer}}</li>
   </ul>
-  <p *ngIf="firstguess && correct">{{station.correctMessage}}</p>
-  <p *ngIf="firstguess && !correct">{{station.wrongMessage}}</p>
+  <p *ngIf="firstguess && correct">{{correct_message}}</p>
+  <p *ngIf="firstguess && !correct">{{wrong_message}}</p>
   <button class="button" style="margin-top: 10px" routerLink="{{nextLink}}">Next</button>
 
 </div>

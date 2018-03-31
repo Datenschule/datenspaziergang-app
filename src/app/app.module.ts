@@ -31,6 +31,15 @@ import {QuizComponent} from './pages/course-pages/quiz/quiz.component';
 import {SuccessComponent} from './pages/course-pages/success/success.component';
 import { TreeMapComponent } from './pages/course-pages/tree-map/tree-map.component';
 import {TreeBerlinService} from './services/plugins/tree-berlin.service';
+import { OpDebateComponent } from './pages/course-pages/op-debate/op-debate.component';
+import { WheelmapMapComponent } from './pages/course-pages/wheelmap-map/wheelmap-map.component';
+import { LineChartComponent } from './pages/course-pages/line-chart/line-chart.component';
+import { ChloroplethMapComponent } from './pages/course-pages/chloropleth-map/chloropleth-map.component';
+import { TreeDashboardComponent } from './pages/course-pages/tree-dashboard/tree-dashboard.component';
+import { TreeDevelopmentComponent } from './pages/course-pages/tree-development/tree-development.component';
+import { MundraubMapComponent } from './pages/course-pages/mundraub-map/mundraub-map.component';
+import { BerlinBesetztMapComponent } from './pages/course-pages/berlin-besetzt-map/berlin-besetzt-map.component';
+import { BerlinBesetztDashboardComponent } from './pages/course-pages/berlin-besetzt-dashboard/berlin-besetzt-dashboard.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -53,6 +62,15 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     SuccessComponent,
     PageDirective,
     TreeMapComponent,
+    OpDebateComponent,
+    WheelmapMapComponent,
+    LineChartComponent,
+    ChloroplethMapComponent,
+    TreeDashboardComponent,
+    TreeDevelopmentComponent,
+    MundraubMapComponent,
+    BerlinBesetztMapComponent,
+    BerlinBesetztDashboardComponent,
   ],
   imports: [
     BrowserModule,

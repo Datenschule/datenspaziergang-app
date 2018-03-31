@@ -22,8 +22,7 @@ export class CourseDetailComponent implements OnInit {
       console.log('fetched course!!!!');
       console.log(course);
       this.course = course;
-      // this.coursesService.getRouteForStation(this.course.stations[this.course.entry]);
-      this.entryLink = `/${this.course.stations[this.course.entry]['type']}/${this.course.id}/${this.course.entry}`;
+      this.entryLink = `/overview-map/${this.course.id}`;
     });
   }
 

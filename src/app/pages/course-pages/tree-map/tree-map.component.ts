@@ -1,11 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {TreeBerlinService} from '../../../services/plugins/tree-berlin.service';
-import {Stations} from '../../../model/stations';
-import BerlinTreeStation = Stations.BerlinTreeStation;
 import {CoursesService} from '../../../services/courses/courses.service';
 import {Course} from '../../../model/course';
 import {ActivatedRoute} from '@angular/router';
 import {Point} from '../../../model/point';
+import {Station} from '../../../model/stations';
 
 @Component({
   selector: 'app-tree-map',
@@ -19,7 +18,7 @@ export class TreeMapComponent implements OnInit {
 
   nextLink: string;
   course: Course;
-  station: BerlinTreeStation;
+  station: Station;
   trees: Point[];
   image = '/assets/images/pin.jpeg';
   mapOptions = {
@@ -63,9 +62,9 @@ export class TreeMapComponent implements OnInit {
       this.course = course;
 
 
-      this.station = <BerlinTreeStation>this.course.stations.find((station) => station.id === station_id);
-      let nextStation = this.course.stations.find(station => station.id === this.station.next);
-      this.nextLink = `/${nextStation['type']}/${this.course.id}/${nextStation.id}`;
+      this.station = this.course.stations.find((station) => station.id === station_id);
+      // let nextStation = this.course.stations.find(station => station.id === this.station.next);
+      // this.nextLink = `/${nextStation['type']}/${this.course.id}/${nextStation.id}`;
 
       this.treeService.getTreesByAdress('Görlitzer Park').subscribe((trees) => {
         for (let feature of trees.features) {

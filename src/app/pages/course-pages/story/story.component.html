@@ -1,9 +1,9 @@
-<div class="wrapper" *ngIf="station">
-  <app-action-bar  [name]="station.title"></app-action-bar>
+<div class="wrapper" *ngIf="story">
+  <app-action-bar  [name]="story.title"></app-action-bar>
   <div class="main" [style.background-image]="image" style="height: 100vh; background-size: cover">
     <div class="detail">
       <!--<img src="{{course.preview_image}}" alt="">-->
-      <p class="description">{{station.content}}</p>
+      <p class="description">{{story.content}}</p>
       <a class="btn" routerLink="{{nextLink}}">Weiter</a>
     </div>
   </div>

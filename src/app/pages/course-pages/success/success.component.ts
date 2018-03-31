@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {CoursesService} from '../../../services/courses/courses.service';
 import {ActivatedRoute} from '@angular/router';
-import {Stations} from '../../../model/stations';
-import SuccessStation = Stations.SuccessStation;
+
 import {Course} from '../../../model/course';
+import {Station} from '../../../model/stations';
 
 @Component({
   selector: 'app-success',
@@ -13,7 +13,7 @@ import {Course} from '../../../model/course';
 export class SuccessComponent implements OnInit {
 
   course: Course;
-  station: SuccessStation;
+  station: Station;
 
   constructor(private coursesService: CoursesService, private route: ActivatedRoute) { }
 
@@ -23,7 +23,7 @@ export class SuccessComponent implements OnInit {
     this.coursesService.getCourse(course_id).subscribe((course) => {
 
       this.course = course;
-      this.station = <SuccessStation>this.course.stations.find((station) => station.id === station_id);
+      this.station = this.course.stations.find((station) => station.id === station_id);
     });
   }
 

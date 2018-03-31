@@ -1,10 +1,10 @@
 <div class="wrapper" *ngIf="course">
-  <app-action-bar [name]="station.title"></app-action-bar>
+  <app-action-bar [name]="course.name"></app-action-bar>
   <div class="main">
     <mapbox [options]="mapOptions" #map>
       <mapbox-marker
-        *ngFor="let point of station.waypoints"
-        [coordinates]="[ point.lat, point.lon ]"
+        *ngFor="let station of stations"
+        [coordinates]="[ station.position.lon, station.position.lat ]"
         [image]="image"
         [width]="30"
         [height]="50"

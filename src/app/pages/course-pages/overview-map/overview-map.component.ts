@@ -2,9 +2,9 @@ import {Component, OnInit} from '@angular/core';
 import {CoursesService} from '../../../services/courses/courses.service';
 import {ActivatedRoute} from '@angular/router';
 import * as mapboxgl from 'mapbox-gl';
+import * as turf from '@turf/turf';
 import {Course} from '../../../model/course';
-import {Stations} from '../../../model/stations';
-import OverviewStation = Stations.OverviewStation;
+import {Station} from '../../../model/stations';
 
 @Component({
   selector: 'app-overview-map',
@@ -20,13 +20,13 @@ export class OverviewMapComponent implements OnInit {
   activeWaypoint = 0;
   nextLink: string;
   course: Course;
-  station: OverviewStation;
+  stations: Station[];
 
   mapOptions = {
     style: 'mapbox://styles/mapbox/streets-v9',
     center: [13.390497, 52.517221],
     container: `map0`,
-    zoom: 15,
+    zoom: 14,
     hash: false,
     interactive: true,
     index: 0,
@@ -61,10 +61,18 @@ export class OverviewMapComponent implements OnInit {
     const station_id = +this.route.snapshot.paramMap.get('id');
     this.coursesService.getCourse(course_id).subscribe((course) => {
       this.course = course;
-      this.station = <OverviewStation>this.course.stations[station_id];
-      this.line = this.station.waypoints.map(point => [point.lat, point.lon]);
-      let nextStation = this.course.stations[this.station.next];
-      this.nextLink = `/${nextStation['type']}/${this.course.id}/${nextStation.id}`;
+      this.stations = this.course.stations;
+
+      var features = turf.featureCollection(
+        this.stations.map(station => turf.point([station.position.lon, station.position.lat]))
+      );
+
+      var center = turf.center(features);
+      this.line = this.stations.reduce((prev, curr) => { console.log(prev); prev.push([curr.position.lon, curr.position.lat]); return prev;}, []);
+      // console.log();
+
+      this.mapOptions.center = center.geometry.coordinates;
+      this.nextLink = `/point-to-point/${course_id}/${this.course.entry}`;
     });
   }
 }

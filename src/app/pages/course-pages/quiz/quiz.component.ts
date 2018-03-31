@@ -1,9 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {CoursesService} from '../../../services/courses/courses.service';
 import {ActivatedRoute} from '@angular/router';
-import {Stations} from '../../../model/stations';
-import QuizStation = Stations.QuizStation;
 import {Course} from '../../../model/course';
+import {Station} from '../../../model/stations';
 
 @Component({
   selector: 'app-quiz',
@@ -12,31 +11,40 @@ import {Course} from '../../../model/course';
 })
 export class QuizComponent implements OnInit {
 
-  station: QuizStation;
   nextLink: string;
   correct = false;
   firstguess = false;
-  course: Course;
+
+  title: string;
+  question: string;
+  answers: string[];
+  correct_answer: number;
+  correct_message = 'Glückwunsch';
+  wrong_message = 'Falsch';
 
   constructor(private coursesService: CoursesService, private route: ActivatedRoute) {
   }
 
   ngOnInit() {
     const course_id = +this.route.snapshot.paramMap.get('course');
-    const page_id = +this.route.snapshot.paramMap.get('id');
-    this.coursesService.getCourse(course_id).subscribe((course) => {
-      this.course = course;
-      this.station = course.stations.find((station) => station.id === page_id);
+    const station_id = +this.route.snapshot.paramMap.get('station');
+    const page_id = +this.route.snapshot.paramMap.get('page');
+    this.coursesService.getPage(course_id, station_id, page_id).subscribe((page) => {
 
-      const nextStation = course.stations.find((station) => station.id === this.station.next);
-      this.nextLink = `/${nextStation.type}/${course.id}/${nextStation.id}`;
+      this.title = page.title;
+      this.question = page.question;
+      this.answers = page.answers;
+      this.correct_answer = page.correct;
+
+      this.coursesService.getNextPageLink(course_id, station_id, page.next).subscribe((nextPage) => {
+          this.nextLink = nextPage;
+      });
     });
   }
 
   sendanswer(answer) {
     this.firstguess = true;
     console.log(`clicked option ${answer}`);
-    if (answer === this.station.correct) { this.correct = true; }
+    this.correct = answer === this.correct_answer;
   }
-
 }

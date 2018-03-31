@@ -17,7 +17,7 @@ export class CoursesOverviewComponent implements OnInit {
   private getCourses() {
     this.coursesService.getCourses()
       .subscribe(courses => {
-        this.courses = courses
+        this.courses = courses;
         console.log(courses);
       });
   }

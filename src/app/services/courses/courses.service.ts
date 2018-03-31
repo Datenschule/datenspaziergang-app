@@ -1,21 +1,15 @@
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
-import {Course} from '../../model/course';
-import {COURSES} from '../../mock_data';
-import {of} from 'rxjs/observable/of';
-import {Stations} from '../../model/stations';
-import Station = Stations.Station;
 import {HttpClient} from '@angular/common/http';
-import {Http} from '@angular/http';
-import OverviewStation = Stations.OverviewStation;
 import {map, first, tap} from 'rxjs/operators';
-
+import {of} from 'rxjs/observable/of';
 
 
 @Injectable()
 export class CoursesService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+  }
 
   private courses;
   private url = '/assets/data/mock.json';
@@ -31,8 +25,32 @@ export class CoursesService {
   getCourse(id: number): Observable<any> {
     return this.getCourses().pipe(
       map(courses => {
-        return (courses).find((course) => course.id === id);
+        return courses.find((course) => course.id === id);
       })
     );
+  }
+
+  getPage(course_id: number, station_id: number, page_id: number): Observable<any> {
+    return this.getCourse(course_id).pipe(
+      map((course) => {
+        const station = course.stations.find((curr) => curr.id === station_id);
+        return station.pages.find((curr) => curr.id === page_id);
+    }));
+  }
+
+  getNextPageLink(course_id: number, station_id: number, next_page_id: number): Observable<any> {
+    return this.getCourse(course_id).pipe(
+      map((course) => {
+        const station = course.stations.find((curr) => curr.id === station_id);
+        console.log(station);
+        const page = station.pages.find((curr) => curr.id === next_page_id);
+        if (page) {
+          return `/${page.type}/${course_id}/${station_id}/${page.id}`;
+        } else if (station.next) {
+          return `/point-to-point/${course_id}/${station.next}`;
+        } else {
+          return `/success/${course_id}`;
+        }
+      }));
   }
 }

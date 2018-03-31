@@ -102,12 +102,30 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_course_pages_success_success_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/success/success.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_course_pages_tree_map_tree_map_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/tree-map/tree-map.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__services_plugins_tree_berlin_service__ = __webpack_require__("../../../../../src/app/services/plugins/tree-berlin.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_course_pages_op_debate_op_debate_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/op-debate/op-debate.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_course_pages_wheelmap_map_wheelmap_map_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/wheelmap-map/wheelmap-map.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_course_pages_line_chart_line_chart_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/line-chart/line-chart.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_course_pages_chloropleth_map_chloropleth_map_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/chloropleth-map/chloropleth-map.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_course_pages_tree_dashboard_tree_dashboard_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/tree-dashboard/tree-dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_course_pages_tree_development_tree_development_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/tree-development/tree-development.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pages_course_pages_mundraub_map_mundraub_map_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/mundraub-map/mundraub-map.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__pages_course_pages_berlin_besetzt_map_berlin_besetzt_map_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/berlin-besetzt-map/berlin-besetzt-map.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__pages_course_pages_berlin_besetzt_dashboard_berlin_besetzt_dashboard_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/berlin-besetzt-dashboard/berlin-besetzt-dashboard.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
+
+
+
+
+
+
 
 
 
@@ -155,6 +173,15 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_21__pages_course_pages_success_success_component__["a" /* SuccessComponent */],
                 __WEBPACK_IMPORTED_MODULE_15__directives_page_directive__["a" /* PageDirective */],
                 __WEBPACK_IMPORTED_MODULE_22__pages_course_pages_tree_map_tree_map_component__["a" /* TreeMapComponent */],
+                __WEBPACK_IMPORTED_MODULE_24__pages_course_pages_op_debate_op_debate_component__["a" /* OpDebateComponent */],
+                __WEBPACK_IMPORTED_MODULE_25__pages_course_pages_wheelmap_map_wheelmap_map_component__["a" /* WheelmapMapComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__pages_course_pages_line_chart_line_chart_component__["a" /* LineChartComponent */],
+                __WEBPACK_IMPORTED_MODULE_27__pages_course_pages_chloropleth_map_chloropleth_map_component__["a" /* ChloroplethMapComponent */],
+                __WEBPACK_IMPORTED_MODULE_28__pages_course_pages_tree_dashboard_tree_dashboard_component__["a" /* TreeDashboardComponent */],
+                __WEBPACK_IMPORTED_MODULE_29__pages_course_pages_tree_development_tree_development_component__["a" /* TreeDevelopmentComponent */],
+                __WEBPACK_IMPORTED_MODULE_30__pages_course_pages_mundraub_map_mundraub_map_component__["a" /* MundraubMapComponent */],
+                __WEBPACK_IMPORTED_MODULE_31__pages_course_pages_berlin_besetzt_map_berlin_besetzt_map_component__["a" /* BerlinBesetztMapComponent */],
+                __WEBPACK_IMPORTED_MODULE_32__pages_course_pages_berlin_besetzt_dashboard_berlin_besetzt_dashboard_component__["a" /* BerlinBesetztDashboardComponent */],
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -269,7 +296,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/card/card.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<a routerLink=\"/course/{{course.id}}\">\n  <div class=\"card\">\n    {{course.title}} - {{course.location}}\n  </div>\n</a>\n\n"
+module.exports = "<a routerLink=\"/course/{{course.id}}\">\n  <div class=\"card\">\n    {{course.name}} - {{course.location}}\n  </div>\n</a>\n\n"
 
 /***/ }),
 
@@ -439,6 +466,15 @@ var Course = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_course_pages_story_story_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/story/story.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_course_pages_success_success_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/success/success.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_course_pages_tree_map_tree_map_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/tree-map/tree-map.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_course_pages_op_debate_op_debate_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/op-debate/op-debate.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_course_pages_wheelmap_map_wheelmap_map_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/wheelmap-map/wheelmap-map.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_course_pages_line_chart_line_chart_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/line-chart/line-chart.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_course_pages_chloropleth_map_chloropleth_map_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/chloropleth-map/chloropleth-map.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_course_pages_tree_dashboard_tree_dashboard_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/tree-dashboard/tree-dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_course_pages_tree_development_tree_development_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/tree-development/tree-development.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_course_pages_mundraub_map_mundraub_map_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/mundraub-map/mundraub-map.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_course_pages_berlin_besetzt_map_berlin_besetzt_map_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/berlin-besetzt-map/berlin-besetzt-map.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_course_pages_berlin_besetzt_dashboard_berlin_besetzt_dashboard_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/berlin-besetzt-dashboard/berlin-besetzt-dashboard.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -455,16 +491,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
+
+
+
+
+
+
+
 var routes = [
     { path: '', redirectTo: '/overview', pathMatch: 'full' },
     { path: 'overview', component: __WEBPACK_IMPORTED_MODULE_2__pages_courses_overview_courses_overview_component__["a" /* CoursesOverviewComponent */] },
     { path: 'course/:id', component: __WEBPACK_IMPORTED_MODULE_3__pages_course_detail_course_detail_component__["a" /* CourseDetailComponent */] },
-    { path: 'overview-map/:course/:id', component: __WEBPACK_IMPORTED_MODULE_4__pages_course_pages_overview_map_overview_map_component__["a" /* OverviewMapComponent */] },
-    { path: 'point-to-point/:course/:id', component: __WEBPACK_IMPORTED_MODULE_5__pages_course_pages_point_to_point_map_point_to_point_map_component__["a" /* PointToPointMapComponent */] },
-    { path: 'quiz/:course/:id', component: __WEBPACK_IMPORTED_MODULE_6__pages_course_pages_quiz_quiz_component__["a" /* QuizComponent */] },
-    { path: 'story/:course/:id', component: __WEBPACK_IMPORTED_MODULE_7__pages_course_pages_story_story_component__["a" /* StoryComponent */] },
-    { path: 'success/:course/:id', component: __WEBPACK_IMPORTED_MODULE_8__pages_course_pages_success_success_component__["a" /* SuccessComponent */] },
-    { path: 'berlin-tree/:course/:id', component: __WEBPACK_IMPORTED_MODULE_9__pages_course_pages_tree_map_tree_map_component__["a" /* TreeMapComponent */] }
+    { path: 'overview-map/:course', component: __WEBPACK_IMPORTED_MODULE_4__pages_course_pages_overview_map_overview_map_component__["a" /* OverviewMapComponent */] },
+    { path: 'point-to-point/:course/:station', component: __WEBPACK_IMPORTED_MODULE_5__pages_course_pages_point_to_point_map_point_to_point_map_component__["a" /* PointToPointMapComponent */] },
+    { path: 'quiz/:course/:station/:page', component: __WEBPACK_IMPORTED_MODULE_6__pages_course_pages_quiz_quiz_component__["a" /* QuizComponent */] },
+    { path: 'story/:course/:station/:page', component: __WEBPACK_IMPORTED_MODULE_7__pages_course_pages_story_story_component__["a" /* StoryComponent */], pathMatch: 'full' },
+    { path: 'success/:course', component: __WEBPACK_IMPORTED_MODULE_8__pages_course_pages_success_success_component__["a" /* SuccessComponent */] },
+    { path: 'berlin-tree/:course/:station/:page', component: __WEBPACK_IMPORTED_MODULE_9__pages_course_pages_tree_map_tree_map_component__["a" /* TreeMapComponent */] },
+    { path: 'op-debate/:course/:station/:page', component: __WEBPACK_IMPORTED_MODULE_10__pages_course_pages_op_debate_op_debate_component__["a" /* OpDebateComponent */] },
+    { path: 'wheelmap-map/:course/:station/:page', component: __WEBPACK_IMPORTED_MODULE_11__pages_course_pages_wheelmap_map_wheelmap_map_component__["a" /* WheelmapMapComponent */] },
+    { path: 'line-chart/:course/:station/:page', component: __WEBPACK_IMPORTED_MODULE_12__pages_course_pages_line_chart_line_chart_component__["a" /* LineChartComponent */] },
+    { path: 'chloropleth-map/:course/:station/:page', component: __WEBPACK_IMPORTED_MODULE_13__pages_course_pages_chloropleth_map_chloropleth_map_component__["a" /* ChloroplethMapComponent */] },
+    { path: 'tree-dashboard/:course/:station/:page', component: __WEBPACK_IMPORTED_MODULE_14__pages_course_pages_tree_dashboard_tree_dashboard_component__["a" /* TreeDashboardComponent */] },
+    { path: 'tree-development/:course/:station/:page', component: __WEBPACK_IMPORTED_MODULE_15__pages_course_pages_tree_development_tree_development_component__["a" /* TreeDevelopmentComponent */] },
+    { path: 'mundraub-map/:course/:station/:page', component: __WEBPACK_IMPORTED_MODULE_16__pages_course_pages_mundraub_map_mundraub_map_component__["a" /* MundraubMapComponent */] },
+    { path: 'berlin-besetzt-map/:course/:station/:page', component: __WEBPACK_IMPORTED_MODULE_17__pages_course_pages_berlin_besetzt_map_berlin_besetzt_map_component__["a" /* BerlinBesetztMapComponent */] },
+    { path: 'berlin-besetzt-dashboard/:course/:station/:page', component: __WEBPACK_IMPORTED_MODULE_18__pages_course_pages_berlin_besetzt_dashboard_berlin_besetzt_dashboard_component__["a" /* BerlinBesetztDashboardComponent */] }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -969,7 +1023,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/course-detail/course-detail.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"wrapper\" *ngIf=\"course\">\n  <app-action-bar  [name]=\"course.title\"></app-action-bar>\n  <div class=\"main\">\n    <div class=\"detail\">\n      <img src=\"{{course.preview_image}}\" alt=\"\">\n      <p>{{course.description}}</p>\n      <button class=\"button\" routerLink=\"{{entryLink}}\">Take the tour!</button>\n    </div>\n  </div>\n</div>\n\n"
+module.exports = "<div class=\"wrapper\" *ngIf=\"course\">\n  <app-action-bar  [name]=\"course.name\"></app-action-bar>\n  <div class=\"main\">\n    <div class=\"detail\">\n      <img src=\"{{course.preview_image}}\" alt=\"\">\n      <p>{{course.description}}</p>\n      <button class=\"button\" routerLink=\"{{entryLink}}\">Take the tour!</button>\n    </div>\n  </div>\n</div>\n\n"
 
 /***/ }),
 
@@ -1006,8 +1060,7 @@ var CourseDetailComponent = /** @class */ (function () {
             console.log('fetched course!!!!');
             console.log(course);
             _this.course = course;
-            // this.coursesService.getRouteForStation(this.course.stations[this.course.entry]);
-            _this.entryLink = "/" + _this.course.stations[_this.course.entry]['type'] + "/" + _this.course.id + "/" + _this.course.entry;
+            _this.entryLink = "/overview-map/" + _this.course.id;
         });
     };
     CourseDetailComponent = __decorate([
@@ -1019,6 +1072,467 @@ var CourseDetailComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_2__services_courses_courses_service__["a" /* CoursesService */]])
     ], CourseDetailComponent);
     return CourseDetailComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/berlin-besetzt-dashboard/berlin-besetzt-dashboard.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/berlin-besetzt-dashboard/berlin-besetzt-dashboard.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  berlin-besetzt-dashboard works!\n  <button routerLink=\"{{nextLink}}\">Weiter</button>\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/berlin-besetzt-dashboard/berlin-besetzt-dashboard.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BerlinBesetztDashboardComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__ = __webpack_require__("../../../../../src/app/services/courses/courses.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var BerlinBesetztDashboardComponent = /** @class */ (function () {
+    function BerlinBesetztDashboardComponent(coursesService, route) {
+        this.coursesService = coursesService;
+        this.route = route;
+    }
+    BerlinBesetztDashboardComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        var course_id = +this.route.snapshot.paramMap.get('course');
+        var station_id = +this.route.snapshot.paramMap.get('station');
+        var page_id = +this.route.snapshot.paramMap.get('page');
+        this.coursesService.getPage(course_id, station_id, page_id).subscribe(function (page) {
+            console.log(page);
+            _this.coursesService.getNextPageLink(course_id, station_id, page.next).subscribe(function (nextPage) {
+                _this.nextLink = nextPage;
+            });
+        });
+    };
+    BerlinBesetztDashboardComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-berlin-besetzt-dashboard',
+            template: __webpack_require__("../../../../../src/app/pages/course-pages/berlin-besetzt-dashboard/berlin-besetzt-dashboard.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/berlin-besetzt-dashboard/berlin-besetzt-dashboard.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__["a" /* CoursesService */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */]])
+    ], BerlinBesetztDashboardComponent);
+    return BerlinBesetztDashboardComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/berlin-besetzt-map/berlin-besetzt-map.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/berlin-besetzt-map/berlin-besetzt-map.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  berlin-besetzt-map works!\n  <button routerLink=\"{{nextLink}}\">Weiter</button>\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/berlin-besetzt-map/berlin-besetzt-map.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BerlinBesetztMapComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__ = __webpack_require__("../../../../../src/app/services/courses/courses.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var BerlinBesetztMapComponent = /** @class */ (function () {
+    function BerlinBesetztMapComponent(coursesService, route) {
+        this.coursesService = coursesService;
+        this.route = route;
+    }
+    BerlinBesetztMapComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        var course_id = +this.route.snapshot.paramMap.get('course');
+        var station_id = +this.route.snapshot.paramMap.get('station');
+        var page_id = +this.route.snapshot.paramMap.get('page');
+        this.coursesService.getPage(course_id, station_id, page_id).subscribe(function (page) {
+            console.log(page);
+            _this.coursesService.getNextPageLink(course_id, station_id, page.next).subscribe(function (nextPage) {
+                _this.nextLink = nextPage;
+            });
+        });
+    };
+    BerlinBesetztMapComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-berlin-besetzt-map',
+            template: __webpack_require__("../../../../../src/app/pages/course-pages/berlin-besetzt-map/berlin-besetzt-map.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/berlin-besetzt-map/berlin-besetzt-map.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__["a" /* CoursesService */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */]])
+    ], BerlinBesetztMapComponent);
+    return BerlinBesetztMapComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/chloropleth-map/chloropleth-map.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/chloropleth-map/chloropleth-map.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  chloropleth-map works!\n  <button routerLink=\"{{nextLink}}\">Weiter</button>\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/chloropleth-map/chloropleth-map.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChloroplethMapComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__ = __webpack_require__("../../../../../src/app/services/courses/courses.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var ChloroplethMapComponent = /** @class */ (function () {
+    function ChloroplethMapComponent(coursesService, route) {
+        this.coursesService = coursesService;
+        this.route = route;
+    }
+    ChloroplethMapComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        var course_id = +this.route.snapshot.paramMap.get('course');
+        var station_id = +this.route.snapshot.paramMap.get('station');
+        var page_id = +this.route.snapshot.paramMap.get('page');
+        this.coursesService.getPage(course_id, station_id, page_id).subscribe(function (page) {
+            console.log(page);
+            _this.coursesService.getNextPageLink(course_id, station_id, page.next).subscribe(function (nextPage) {
+                _this.nextLink = nextPage;
+            });
+        });
+    };
+    ChloroplethMapComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-chloropleth-map',
+            template: __webpack_require__("../../../../../src/app/pages/course-pages/chloropleth-map/chloropleth-map.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/chloropleth-map/chloropleth-map.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__["a" /* CoursesService */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */]])
+    ], ChloroplethMapComponent);
+    return ChloroplethMapComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/line-chart/line-chart.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/line-chart/line-chart.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  line-chart works!\n  <button routerLink=\"{{nextLink}}\">Weiter</button>\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/line-chart/line-chart.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LineChartComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__ = __webpack_require__("../../../../../src/app/services/courses/courses.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var LineChartComponent = /** @class */ (function () {
+    function LineChartComponent(coursesService, route) {
+        this.coursesService = coursesService;
+        this.route = route;
+    }
+    LineChartComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        var course_id = +this.route.snapshot.paramMap.get('course');
+        var station_id = +this.route.snapshot.paramMap.get('station');
+        var page_id = +this.route.snapshot.paramMap.get('page');
+        this.coursesService.getPage(course_id, station_id, page_id).subscribe(function (page) {
+            console.log(page);
+            _this.coursesService.getNextPageLink(course_id, station_id, page.next).subscribe(function (nextPage) {
+                _this.nextLink = nextPage;
+            });
+        });
+    };
+    LineChartComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-line-chart',
+            template: __webpack_require__("../../../../../src/app/pages/course-pages/line-chart/line-chart.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/line-chart/line-chart.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__["a" /* CoursesService */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */]])
+    ], LineChartComponent);
+    return LineChartComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/mundraub-map/mundraub-map.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/mundraub-map/mundraub-map.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  mundraub-map works!\n  <button routerLink=\"{{nextLink}}\">Weiter</button>\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/mundraub-map/mundraub-map.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MundraubMapComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__ = __webpack_require__("../../../../../src/app/services/courses/courses.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var MundraubMapComponent = /** @class */ (function () {
+    function MundraubMapComponent(coursesService, route) {
+        this.coursesService = coursesService;
+        this.route = route;
+    }
+    MundraubMapComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        var course_id = +this.route.snapshot.paramMap.get('course');
+        var station_id = +this.route.snapshot.paramMap.get('station');
+        var page_id = +this.route.snapshot.paramMap.get('page');
+        this.coursesService.getPage(course_id, station_id, page_id).subscribe(function (page) {
+            console.log(page);
+            _this.coursesService.getNextPageLink(course_id, station_id, page.next).subscribe(function (nextPage) {
+                _this.nextLink = nextPage;
+            });
+        });
+    };
+    MundraubMapComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-mundraub-map',
+            template: __webpack_require__("../../../../../src/app/pages/course-pages/mundraub-map/mundraub-map.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/mundraub-map/mundraub-map.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__["a" /* CoursesService */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */]])
+    ], MundraubMapComponent);
+    return MundraubMapComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/op-debate/op-debate.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/op-debate/op-debate.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  op-debate works!\n  <button routerLink=\"{{nextLink}}\">Weiter</button>\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/op-debate/op-debate.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OpDebateComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__ = __webpack_require__("../../../../../src/app/services/courses/courses.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var OpDebateComponent = /** @class */ (function () {
+    function OpDebateComponent(coursesService, route) {
+        this.coursesService = coursesService;
+        this.route = route;
+    }
+    OpDebateComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        var course_id = +this.route.snapshot.paramMap.get('course');
+        var station_id = +this.route.snapshot.paramMap.get('station');
+        var page_id = +this.route.snapshot.paramMap.get('page');
+        this.coursesService.getPage(course_id, station_id, page_id).subscribe(function (page) {
+            _this.coursesService.getNextPageLink(course_id, station_id, page.next).subscribe(function (nextPage) {
+                _this.nextLink = nextPage;
+            });
+        });
+    };
+    OpDebateComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-op-debate',
+            template: __webpack_require__("../../../../../src/app/pages/course-pages/op-debate/op-debate.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/op-debate/op-debate.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__["a" /* CoursesService */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */]])
+    ], OpDebateComponent);
+    return OpDebateComponent;
 }());
 
 
@@ -1046,7 +1560,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/course-pages/overview-map/overview-map.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"wrapper\" *ngIf=\"course\">\n  <app-action-bar [name]=\"station.title\"></app-action-bar>\n  <div class=\"main\">\n    <mapbox [options]=\"mapOptions\" #map>\n      <mapbox-marker\n        *ngFor=\"let point of station.waypoints\"\n        [coordinates]=\"[ point.lat, point.lon ]\"\n        [image]=\"image\"\n        [width]=\"30\"\n        [height]=\"50\"\n        [data]=\"point\"\n        (click)=\"click($event)\"\n        [map]=\"map.map\"\n        >\n      </mapbox-marker>\n      <mapbox-line\n        [id]=\"lineId\"\n        [map]=\"map.map\"\n        [coordinates]=\"line\"\n      ></mapbox-line>\n    </mapbox>\n    <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Los gehts</a>\n    <!--<app-waypoint-info [course]=\"course\" [waypointId]=\"activeWaypoint\"></app-waypoint-info>-->\n  </div>\n</div>\n<div class=\"wrapper\">\n  <!--<div class=\"mymap\" id=\"mymap\"></div>-->\n</div>\n"
+module.exports = "<div class=\"wrapper\" *ngIf=\"course\">\n  <app-action-bar [name]=\"course.name\"></app-action-bar>\n  <div class=\"main\">\n    <mapbox [options]=\"mapOptions\" #map>\n      <mapbox-marker\n        *ngFor=\"let station of stations\"\n        [coordinates]=\"[ station.position.lon, station.position.lat ]\"\n        [image]=\"image\"\n        [width]=\"30\"\n        [height]=\"50\"\n        [data]=\"point\"\n        (click)=\"click($event)\"\n        [map]=\"map.map\"\n        >\n      </mapbox-marker>\n      <mapbox-line\n        [id]=\"lineId\"\n        [map]=\"map.map\"\n        [coordinates]=\"line\"\n      ></mapbox-line>\n    </mapbox>\n    <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Los gehts</a>\n    <!--<app-waypoint-info [course]=\"course\" [waypointId]=\"activeWaypoint\"></app-waypoint-info>-->\n  </div>\n</div>\n<div class=\"wrapper\">\n  <!--<div class=\"mymap\" id=\"mymap\"></div>-->\n</div>\n"
 
 /***/ }),
 
@@ -1058,6 +1572,8 @@ module.exports = "<div class=\"wrapper\" *ngIf=\"course\">\n  <app-action-bar [n
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__ = __webpack_require__("../../../../../src/app/services/courses/courses.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__turf_turf__ = __webpack_require__("../../../../@turf/turf/turf.min.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__turf_turf___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__turf_turf__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1067,6 +1583,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -1082,7 +1599,7 @@ var OverviewMapComponent = /** @class */ (function () {
             style: 'mapbox://styles/mapbox/streets-v9',
             center: [13.390497, 52.517221],
             container: "map0",
-            zoom: 15,
+            zoom: 14,
             hash: false,
             interactive: true,
             index: 0,
@@ -1114,10 +1631,13 @@ var OverviewMapComponent = /** @class */ (function () {
         var station_id = +this.route.snapshot.paramMap.get('id');
         this.coursesService.getCourse(course_id).subscribe(function (course) {
             _this.course = course;
-            _this.station = _this.course.stations[station_id];
-            _this.line = _this.station.waypoints.map(function (point) { return [point.lat, point.lon]; });
-            var nextStation = _this.course.stations[_this.station.next];
-            _this.nextLink = "/" + nextStation['type'] + "/" + _this.course.id + "/" + nextStation.id;
+            _this.stations = _this.course.stations;
+            var features = __WEBPACK_IMPORTED_MODULE_3__turf_turf__["featureCollection"](_this.stations.map(function (station) { return __WEBPACK_IMPORTED_MODULE_3__turf_turf__["point"]([station.position.lon, station.position.lat]); }));
+            var center = __WEBPACK_IMPORTED_MODULE_3__turf_turf__["center"](features);
+            _this.line = _this.stations.reduce(function (prev, curr) { console.log(prev); prev.push([curr.position.lon, curr.position.lat]); return prev; }, []);
+            // console.log();
+            _this.mapOptions.center = center.geometry.coordinates;
+            _this.nextLink = "/point-to-point/" + course_id + "/" + _this.course.entry;
         });
     };
     OverviewMapComponent = __decorate([
@@ -1156,7 +1676,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/course-pages/point-to-point-map/point-to-point-map.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"wrapper\" *ngIf=\"station\">\n  <app-action-bar [name]=\"station.title\"></app-action-bar>\n  <div class=\"main\">\n    <mapbox [options]=\"mapOptions\" #map>\n      <mapbox-marker\n        *ngFor=\"let point of [station.start, station.finish]\"\n        [coordinates]=\"[ point.lat, point.lon ]\"\n        [image]=\"image\"\n        [width]=\"30\"\n        [height]=\"50\"\n        [data]=\"point\"\n        [map]=\"map.map\"\n      >\n      </mapbox-marker>\n      <mapbox-line\n        [map]=\"map.map\"\n        [coordinates]=\"line\"\n      ></mapbox-line>\n    </mapbox>\n    <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Angekommen</a>\n    <!--<app-waypoint-info [course]=\"course\" [waypointId]=\"activeWaypoint\"></app-waypoint-info>-->\n  </div>\n</div>\n"
+module.exports = "<div class=\"wrapper\" *ngIf=\"station\">\n  <app-action-bar [name]=\"station.name\"></app-action-bar>\n  <div class=\"main\">\n    <mapbox [options]=\"mapOptions\" #map>\n      <mapbox-marker\n        [coordinates]=\"[ station.position.lon, station.position.lat ]\"\n        [image]=\"image\"\n        [width]=\"30\"\n        [height]=\"50\"\n        [data]=\"station\"\n        [map]=\"map.map\"\n        *ngIf=\"station\"\n      >\n      </mapbox-marker>\n      <mapbox-marker\n        [coordinates]=\"[ location.lon, location.lat ]\"\n        [image]=\"image\"\n        [width]=\"30\"\n        [height]=\"50\"\n        [data]=\"location\"\n        [map]=\"map.map\"\n        *ngIf=\"location\"\n      >\n      </mapbox-marker>\n      <mapbox-line\n        [map]=\"map.map\"\n        [coordinates]=\"line\"\n        *ngIf=\"line\"\n      ></mapbox-line>\n    </mapbox>\n    <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Angekommen</a>\n\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -1218,13 +1738,26 @@ var PointToPointMapComponent = /** @class */ (function () {
     PointToPointMapComponent.prototype.ngOnInit = function () {
         var _this = this;
         var course_id = +this.route.snapshot.paramMap.get('course');
-        var station_id = +this.route.snapshot.paramMap.get('id');
+        var station_id = +this.route.snapshot.paramMap.get('station');
         this.coursesService.getCourse(course_id).subscribe(function (course) {
             _this.course = course;
             _this.station = _this.course.stations.find(function (station) { return station.id === station_id; });
-            _this.line = [[_this.station.start.lat, _this.station.start.lon], [_this.station.finish.lat, _this.station.finish.lon]];
-            var nextStation = _this.course.stations.find(function (station) { return station.id === _this.station.next; });
-            _this.nextLink = "/" + nextStation['type'] + "/" + _this.course.id + "/" + nextStation.id;
+            _this.mapOptions.center = [_this.station.position.lon, _this.station.position.lat];
+            console.log(_this.station);
+            _this.title = "N\u00E4chste Station: " + _this.station.title;
+            if (navigator.geolocation) {
+                console.log('start requesting geolocation');
+                navigator.geolocation.getCurrentPosition(function (current_location) {
+                    console.log(current_location);
+                    _this.location = { lon: current_location.coords.longitude, lat: current_location.coords.latitude };
+                    _this.line = [[_this.station.position.lon, _this.station.position.lat], [_this.location.lon, _this.location.lat]];
+                });
+            }
+            else {
+                console.log('no navigator object found');
+            }
+            var firstpage = _this.station.pages.find(function (page) { return page.id === _this.station.entry; });
+            _this.nextLink = "/" + firstpage['type'] + "/" + _this.course.id + "/" + _this.station.id + "/" + firstpage.id;
         });
     };
     PointToPointMapComponent = __decorate([
@@ -1263,7 +1796,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/course-pages/quiz/quiz.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"wrapper\" *ngIf=\"station\">\n  <app-action-bar [name]=\"station.title\"></app-action-bar>\n  <h1 style=\"text-align: center\">{{station.question}}</h1>\n  <ul>\n    <li class=\"button\" *ngFor=\"let answer of station.answers; let i = index\" (click)=\"sendanswer(i)\">{{answer}}</li>\n  </ul>\n  <p *ngIf=\"firstguess && correct\">{{station.correctMessage}}</p>\n  <p *ngIf=\"firstguess && !correct\">{{station.wrongMessage}}</p>\n  <button class=\"button\" style=\"margin-top: 10px\" routerLink=\"{{nextLink}}\">Next</button>\n\n</div>\n\n\n"
+module.exports = "<div class=\"wrapper\" *ngIf=\"title\">\n  <app-action-bar [name]=\"title\"></app-action-bar>\n  <h1 style=\"text-align: center; padding-top: 100px;\">{{question}}</h1>\n  <ul>\n    <li class=\"button\" *ngFor=\"let answer of answers; let i = index\" (click)=\"sendanswer(i)\">{{answer}}</li>\n  </ul>\n  <p *ngIf=\"firstguess && correct\">{{correct_message}}</p>\n  <p *ngIf=\"firstguess && !correct\">{{wrong_message}}</p>\n  <button class=\"button\" style=\"margin-top: 10px\" routerLink=\"{{nextLink}}\">Next</button>\n\n</div>\n\n\n"
 
 /***/ }),
 
@@ -1293,24 +1826,28 @@ var QuizComponent = /** @class */ (function () {
         this.route = route;
         this.correct = false;
         this.firstguess = false;
+        this.correct_message = 'Glückwunsch';
+        this.wrong_message = 'Falsch';
     }
     QuizComponent.prototype.ngOnInit = function () {
         var _this = this;
         var course_id = +this.route.snapshot.paramMap.get('course');
-        var page_id = +this.route.snapshot.paramMap.get('id');
-        this.coursesService.getCourse(course_id).subscribe(function (course) {
-            _this.course = course;
-            _this.station = course.stations.find(function (station) { return station.id === page_id; });
-            var nextStation = course.stations.find(function (station) { return station.id === _this.station.next; });
-            _this.nextLink = "/" + nextStation.type + "/" + course.id + "/" + nextStation.id;
+        var station_id = +this.route.snapshot.paramMap.get('station');
+        var page_id = +this.route.snapshot.paramMap.get('page');
+        this.coursesService.getPage(course_id, station_id, page_id).subscribe(function (page) {
+            _this.title = page.title;
+            _this.question = page.question;
+            _this.answers = page.answers;
+            _this.correct_answer = page.correct;
+            _this.coursesService.getNextPageLink(course_id, station_id, page.next).subscribe(function (nextPage) {
+                _this.nextLink = nextPage;
+            });
         });
     };
     QuizComponent.prototype.sendanswer = function (answer) {
         this.firstguess = true;
         console.log("clicked option " + answer);
-        if (answer === this.station.correct) {
-            this.correct = true;
-        }
+        this.correct = answer === this.correct_answer;
     };
     QuizComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -1348,7 +1885,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/course-pages/story/story.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"wrapper\" *ngIf=\"station\">\n  <app-action-bar  [name]=\"station.title\"></app-action-bar>\n  <div class=\"main\" [style.background-image]=\"image\" style=\"height: 100vh; background-size: cover\">\n    <div class=\"detail\">\n      <!--<img src=\"{{course.preview_image}}\" alt=\"\">-->\n      <p class=\"description\">{{station.content}}</p>\n      <a class=\"btn\" routerLink=\"{{nextLink}}\">Weiter</a>\n    </div>\n  </div>\n</div>\n\n\n"
+module.exports = "<div class=\"wrapper\" *ngIf=\"story\">\n  <app-action-bar  [name]=\"story.title\"></app-action-bar>\n  <div class=\"main\" [style.background-image]=\"image\" style=\"height: 100vh; background-size: cover\">\n    <div class=\"detail\">\n      <!--<img src=\"{{course.preview_image}}\" alt=\"\">-->\n      <p class=\"description\">{{story.content}}</p>\n      <a class=\"btn\" routerLink=\"{{nextLink}}\">Weiter</a>\n    </div>\n  </div>\n</div>\n\n\n"
 
 /***/ }),
 
@@ -1382,14 +1919,18 @@ var StoryComponent = /** @class */ (function () {
     }
     StoryComponent.prototype.ngOnInit = function () {
         var _this = this;
-        var course_id = +this.route.snapshot.paramMap.get('course');
-        var station_id = +this.route.snapshot.paramMap.get('id');
-        this.coursesService.getCourse(course_id).subscribe(function (course) {
-            _this.course = course;
-            _this.station = _this.course.stations.find(function (station) { return station.id === station_id; });
-            var nextStation = course.stations.find(function (station) { return station.id === _this.station.next; });
-            _this.nextLink = "/" + nextStation.type + "/" + course.id + "/" + nextStation.id;
-            _this.image = _this.image = _this.sanitizer.bypassSecurityTrustStyle("url(" + _this.station.img + ")");
+        this.route.params.subscribe(function (params) {
+            var course_id = +params['course'];
+            var station_id = +params['station'];
+            var page_id = +params['page'];
+            console.log('new page');
+            _this.coursesService.getPage(course_id, station_id, page_id).subscribe(function (page) {
+                _this.story = page;
+                _this.image = _this.sanitizer.bypassSecurityTrustStyle("url(" + _this.story.img + ")");
+                _this.coursesService.getNextPageLink(course_id, station_id, page.next).subscribe(function (nextPage) {
+                    _this.nextLink = nextPage;
+                });
+            });
         });
     };
     StoryComponent = __decorate([
@@ -1475,6 +2016,160 @@ var SuccessComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__["a" /* CoursesService */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */]])
     ], SuccessComponent);
     return SuccessComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/tree-dashboard/tree-dashboard.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/tree-dashboard/tree-dashboard.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  tree-dashboard works!\n  <button routerLink=\"{{nextLink}}\">Weiter</button>\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/tree-dashboard/tree-dashboard.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TreeDashboardComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__ = __webpack_require__("../../../../../src/app/services/courses/courses.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var TreeDashboardComponent = /** @class */ (function () {
+    function TreeDashboardComponent(coursesService, route) {
+        this.coursesService = coursesService;
+        this.route = route;
+    }
+    TreeDashboardComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        var course_id = +this.route.snapshot.paramMap.get('course');
+        var station_id = +this.route.snapshot.paramMap.get('station');
+        var page_id = +this.route.snapshot.paramMap.get('page');
+        this.coursesService.getPage(course_id, station_id, page_id).subscribe(function (page) {
+            console.log(page);
+            _this.coursesService.getNextPageLink(course_id, station_id, page.next).subscribe(function (nextPage) {
+                _this.nextLink = nextPage;
+            });
+        });
+    };
+    TreeDashboardComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-tree-dashboard',
+            template: __webpack_require__("../../../../../src/app/pages/course-pages/tree-dashboard/tree-dashboard.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/tree-dashboard/tree-dashboard.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__["a" /* CoursesService */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */]])
+    ], TreeDashboardComponent);
+    return TreeDashboardComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/tree-development/tree-development.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/tree-development/tree-development.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  tree-development works!\n  <button routerLink=\"{{nextLink}}\">Weiter</button>\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/tree-development/tree-development.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TreeDevelopmentComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__ = __webpack_require__("../../../../../src/app/services/courses/courses.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var TreeDevelopmentComponent = /** @class */ (function () {
+    function TreeDevelopmentComponent(coursesService, route) {
+        this.coursesService = coursesService;
+        this.route = route;
+    }
+    TreeDevelopmentComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        var course_id = +this.route.snapshot.paramMap.get('course');
+        var station_id = +this.route.snapshot.paramMap.get('station');
+        var page_id = +this.route.snapshot.paramMap.get('page');
+        this.coursesService.getPage(course_id, station_id, page_id).subscribe(function (page) {
+            console.log(page);
+            _this.coursesService.getNextPageLink(course_id, station_id, page.next).subscribe(function (nextPage) {
+                _this.nextLink = nextPage;
+            });
+        });
+    };
+    TreeDevelopmentComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-tree-development',
+            template: __webpack_require__("../../../../../src/app/pages/course-pages/tree-development/tree-development.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/tree-development/tree-development.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__["a" /* CoursesService */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */]])
+    ], TreeDevelopmentComponent);
+    return TreeDevelopmentComponent;
 }());
 
 
@@ -1572,8 +2267,8 @@ var TreeMapComponent = /** @class */ (function () {
         this.coursesService.getCourse(course_id).subscribe(function (course) {
             _this.course = course;
             _this.station = _this.course.stations.find(function (station) { return station.id === station_id; });
-            var nextStation = _this.course.stations.find(function (station) { return station.id === _this.station.next; });
-            _this.nextLink = "/" + nextStation['type'] + "/" + _this.course.id + "/" + nextStation.id;
+            // let nextStation = this.course.stations.find(station => station.id === this.station.next);
+            // this.nextLink = `/${nextStation['type']}/${this.course.id}/${nextStation.id}`;
             _this.treeService.getTreesByAdress('Görlitzer Park').subscribe(function (trees) {
                 for (var _i = 0, _a = trees.features; _i < _a.length; _i++) {
                     var feature = _a[_i];
@@ -1600,6 +2295,83 @@ var TreeMapComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/pages/course-pages/wheelmap-map/wheelmap-map.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/wheelmap-map/wheelmap-map.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  wheelmap-map works!\n  <button routerLink=\"{{nextLink}}\">Weiter</button>\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/wheelmap-map/wheelmap-map.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WheelmapMapComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__ = __webpack_require__("../../../../../src/app/services/courses/courses.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var WheelmapMapComponent = /** @class */ (function () {
+    function WheelmapMapComponent(coursesService, route) {
+        this.coursesService = coursesService;
+        this.route = route;
+    }
+    WheelmapMapComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        var course_id = +this.route.snapshot.paramMap.get('course');
+        var station_id = +this.route.snapshot.paramMap.get('station');
+        var page_id = +this.route.snapshot.paramMap.get('page');
+        this.coursesService.getPage(course_id, station_id, page_id).subscribe(function (page) {
+            console.log(page);
+            _this.coursesService.getNextPageLink(course_id, station_id, page.next).subscribe(function (nextPage) {
+                _this.nextLink = nextPage;
+            });
+        });
+    };
+    WheelmapMapComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-wheelmap-map',
+            template: __webpack_require__("../../../../../src/app/pages/course-pages/wheelmap-map/wheelmap-map.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/wheelmap-map/wheelmap-map.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__["a" /* CoursesService */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */]])
+    ], WheelmapMapComponent);
+    return WheelmapMapComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "../../../../../src/app/pages/courses-overview/courses-overview.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1608,7 +2380,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".main {\n  padding-top: 60px;\n  -webkit-box-flex: 1;\n  -ms-flex: 1;\n  flex: 1;\n  overflow-x: hidden;\n  overflow-y: auto;\n  -webkit-overflow-scrolling: touch; }\n", ""]);
+exports.push([module.i, ".main {\n  padding-top: 60px;\n  -webkit-box-flex: 1;\n  -ms-flex: 1;\n  flex: 1;\n  overflow-x: hidden;\n  overflow-y: auto;\n  -webkit-overflow-scrolling: touch;\n}\n", ""]);
 
 // exports
 
@@ -1746,7 +2518,29 @@ var CoursesService = /** @class */ (function () {
     };
     CoursesService.prototype.getCourse = function (id) {
         return this.getCourses().pipe(Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__["c" /* map */])(function (courses) {
-            return (courses).find(function (course) { return course.id === id; });
+            return courses.find(function (course) { return course.id === id; });
+        }));
+    };
+    CoursesService.prototype.getPage = function (course_id, station_id, page_id) {
+        return this.getCourse(course_id).pipe(Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__["c" /* map */])(function (course) {
+            var station = course.stations.find(function (curr) { return curr.id === station_id; });
+            return station.pages.find(function (curr) { return curr.id === page_id; });
+        }));
+    };
+    CoursesService.prototype.getNextPageLink = function (course_id, station_id, next_page_id) {
+        return this.getCourse(course_id).pipe(Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__["c" /* map */])(function (course) {
+            var station = course.stations.find(function (curr) { return curr.id === station_id; });
+            console.log(station);
+            var page = station.pages.find(function (curr) { return curr.id === next_page_id; });
+            if (page) {
+                return "/" + page.type + "/" + course_id + "/" + station_id + "/" + page.id;
+            }
+            else if (station.next) {
+                return "/point-to-point/" + course_id + "/" + station.next;
+            }
+            else {
+                return "/success/" + course_id;
+            }
         }));
     };
     CoursesService = __decorate([

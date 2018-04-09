@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {CoursesService} from '../../../services/courses/courses.service';
 import {ActivatedRoute} from '@angular/router';
+import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-wheelmap-map',
@@ -10,6 +11,15 @@ import {ActivatedRoute} from '@angular/router';
 export class WheelmapMapComponent implements OnInit {
 
   nextLink: string;
+  mapOptions: Object = {
+    style: environment.mapboxTiles.light,
+    zoom: [14],
+    center: [13.40497, 52.517221]
+  };
+
+  log(param: string) {
+    console.log(param);
+  }
 
   constructor(private coursesService: CoursesService, private route: ActivatedRoute) {
   }

@@ -82,7 +82,7 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ngx_perfect_scrollbar__ = __webpack_require__("../../../../ngx-perfect-scrollbar/dist/ngx-perfect-scrollbar.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__modules_mapbox_mapbox_module__ = __webpack_require__("../../../../../src/app/modules/mapbox/mapbox.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_mapbox_gl__ = __webpack_require__("../../../../ngx-mapbox-gl/esm5/ngx-mapbox-gl.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_courses_overview_courses_overview_component__ = __webpack_require__("../../../../../src/app/pages/courses-overview/courses-overview.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__modules_app_routing_module__ = __webpack_require__("../../../../../src/app/modules/app-routing.module.ts");
@@ -157,7 +157,7 @@ var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["J" /* NgModule */])({
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */],
                 __WEBPACK_IMPORTED_MODULE_6__pages_courses_overview_courses_overview_component__["a" /* CoursesOverviewComponent */],
@@ -187,8 +187,10 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_7__modules_app_routing_module__["a" /* AppRoutingModule */],
                 __WEBPACK_IMPORTED_MODULE_10__angular_common_http__["b" /* HttpClientModule */],
-                __WEBPACK_IMPORTED_MODULE_4__modules_mapbox_mapbox_module__["a" /* MapboxModule */].forRoot(__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].mapbox_key),
-                __WEBPACK_IMPORTED_MODULE_3_ngx_perfect_scrollbar__["b" /* PerfectScrollbarModule */]
+                __WEBPACK_IMPORTED_MODULE_3_ngx_perfect_scrollbar__["b" /* PerfectScrollbarModule */],
+                __WEBPACK_IMPORTED_MODULE_4_ngx_mapbox_gl__["a" /* NgxMapboxGLModule */].forRoot({
+                    accessToken: __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].mapbox_key,
+                })
             ],
             providers: [__WEBPACK_IMPORTED_MODULE_11__services_courses_courses_service__["a" /* CoursesService */], {
                     provide: __WEBPACK_IMPORTED_MODULE_3_ngx_perfect_scrollbar__["a" /* PERFECT_SCROLLBAR_CONFIG */],
@@ -257,7 +259,7 @@ var ActionBarComponent = /** @class */ (function () {
         this.locaction.back();
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", String)
     ], ActionBarComponent.prototype, "name", void 0);
     ActionBarComponent = __decorate([
@@ -324,7 +326,7 @@ var CardComponent = /** @class */ (function () {
     CardComponent.prototype.ngOnInit = function () {
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__model_course__["a" /* Course */])
     ], CardComponent.prototype, "course", void 0);
     CardComponent = __decorate([
@@ -424,10 +426,10 @@ var PageDirective = /** @class */ (function () {
         this.viewContainerRef = viewContainerRef;
     }
     PageDirective = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["s" /* Directive */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* Directive */])({
             selector: '[appPage]'
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewContainerRef */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewContainerRef */]])
     ], PageDirective);
     return PageDirective;
 }());
@@ -524,478 +526,12 @@ var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
     }
     AppRoutingModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
             imports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */].forRoot(routes)],
             exports: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* RouterModule */]]
         })
     ], AppRoutingModule);
     return AppRoutingModule;
-}());
-
-
-
-/***/ }),
-
-/***/ "../../../../../src/app/modules/mapbox/components/mapbox-line/mapbox-line.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MapboxLineDirective; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mapbox_gl__ = __webpack_require__("../../../../mapbox-gl/dist/mapbox-gl.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mapbox_gl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mapbox_gl__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__ = __webpack_require__("../../../../rxjs/_esm5/Subject.js");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var MapboxLineDirective = /** @class */ (function () {
-    function MapboxLineDirective() {
-        this.id = 'line-0';
-        this.layout = { 'line-join': 'round', 'line-cap': 'round' };
-        this.paint = { 'line-width': 8, 'line-color': '#000' };
-        this.mapLoadedSubject = new __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__["a" /* Subject */]();
-    }
-    MapboxLineDirective.prototype.ngOnInit = function () {
-    };
-    MapboxLineDirective.prototype.ngOnChanges = function (changes) {
-        var _this = this;
-        if (changes.map.currentValue) {
-            this.map.on('style.load', function () { return _this.initLine(changes.map.currentValue); });
-        }
-    };
-    MapboxLineDirective.prototype.initLine = function (map) {
-        map.addLayer({
-            id: this.id,
-            type: 'line',
-            source: {
-                type: 'geojson',
-                data: {
-                    type: 'Feature',
-                    properties: {},
-                    geometry: {
-                        type: 'LineString',
-                        coordinates: this.coordinates
-                    }
-                }
-            },
-            layout: this.layout,
-            paint: this.paint
-        });
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", Object)
-    ], MapboxLineDirective.prototype, "id", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", typeof (_a = (typeof __WEBPACK_IMPORTED_MODULE_1_mapbox_gl__ !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_mapbox_gl__).LineLayout) === "function" && _a || Object)
-    ], MapboxLineDirective.prototype, "layout", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", typeof (_b = (typeof __WEBPACK_IMPORTED_MODULE_1_mapbox_gl__ !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_mapbox_gl__).LinePaint) === "function" && _b || Object)
-    ], MapboxLineDirective.prototype, "paint", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__["a" /* Subject */])
-    ], MapboxLineDirective.prototype, "mapLoadedSubject", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", Array)
-    ], MapboxLineDirective.prototype, "coordinates", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", typeof (_c = (typeof __WEBPACK_IMPORTED_MODULE_1_mapbox_gl__ !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_mapbox_gl__).Map) === "function" && _c || Object)
-    ], MapboxLineDirective.prototype, "map", void 0);
-    MapboxLineDirective = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["s" /* Directive */])({
-            selector: 'mapbox-line',
-        }),
-        __metadata("design:paramtypes", [])
-    ], MapboxLineDirective);
-    return MapboxLineDirective;
-    var _a, _b, _c;
-}());
-
-
-
-/***/ }),
-
-/***/ "../../../../../src/app/modules/mapbox/components/mapbox-marker-direction/mapbox-marker-direction.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MapboxMarkerDirectionComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Subject__ = __webpack_require__("../../../../rxjs/_esm5/Subject.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_mapbox_gl__ = __webpack_require__("../../../../mapbox-gl/dist/mapbox-gl.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_mapbox_gl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_mapbox_gl__);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-/*
-*
-* Mapbox Marker Directive component
-*
-*/
-
-
-
-var MapboxMarkerDirectionComponent = /** @class */ (function () {
-    function MapboxMarkerDirectionComponent() {
-        this.direction = 'next';
-        this.mapLoadedSubject = new __WEBPACK_IMPORTED_MODULE_1_rxjs_Subject__["a" /* Subject */]();
-        this.id = 'line-0';
-        this.layout = {};
-        this.paint = {};
-    }
-    MapboxMarkerDirectionComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.mapLoadedSubject.subscribe(function (event) {
-            _this.map = event;
-            _this.initLine();
-        });
-    };
-    MapboxMarkerDirectionComponent.prototype.initLine = function () {
-        console.log('initline');
-        console.log(this.map);
-        this.map.addLayer({
-            id: this.id,
-            type: 'line',
-            source: ' { type: "geojson", ' +
-                'data: { ' +
-                'type: "Feature", ' +
-                'properties: {}, ' +
-                'geometry: { ' +
-                'type: "LineString", coordinates: [' +
-                '[ 13.390789031982422, lon: 52.51833617387861],' +
-                '[ 13.394072055816649, lon: 52.51682151784933},' +
-                '[ 13.394308090209961, 52.514209919312506],' +
-                '[ 13.391432762145996, 52.51279959156077],' +
-                '[ 13.390467166900635, 52.51426215280443],' +
-                '[ 13.385703563690186, 52.51452331933267],' +
-                '[ 13.387548923492432, 52.516024996747156],' +
-                '[ 13.386948108673096, 52.51735687637764],' +
-                '[ 13.38883638381958, 52.51905431150669]' +
-                ']' +
-                '}' +
-                '}',
-            layout: this.layout,
-            paint: this.paint
-        });
-    };
-    MapboxMarkerDirectionComponent.prototype.action = function () {
-        if (this.direction === 'next') {
-            // this._mapBoxService.nextMarker();
-        }
-        else {
-            // this._mapBoxService.prevMarker();
-        }
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", String)
-    ], MapboxMarkerDirectionComponent.prototype, "direction", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_rxjs_Subject__["a" /* Subject */])
-    ], MapboxMarkerDirectionComponent.prototype, "mapLoadedSubject", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", Object)
-    ], MapboxMarkerDirectionComponent.prototype, "id", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", Array)
-    ], MapboxMarkerDirectionComponent.prototype, "coordinates", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", typeof (_a = (typeof __WEBPACK_IMPORTED_MODULE_2_mapbox_gl__ !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_mapbox_gl__).LineLayout) === "function" && _a || Object)
-    ], MapboxMarkerDirectionComponent.prototype, "layout", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", typeof (_b = (typeof __WEBPACK_IMPORTED_MODULE_2_mapbox_gl__ !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_mapbox_gl__).LinePaint) === "function" && _b || Object)
-    ], MapboxMarkerDirectionComponent.prototype, "paint", void 0);
-    MapboxMarkerDirectionComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'mapbox-marker-direction',
-            template: "\n    <a (click)=\"action()\">\n      <ng-content></ng-content>\n    </a>\n  ",
-        }),
-        __metadata("design:paramtypes", [])
-    ], MapboxMarkerDirectionComponent);
-    return MapboxMarkerDirectionComponent;
-    var _a, _b;
-}());
-
-
-
-/***/ }),
-
-/***/ "../../../../../src/app/modules/mapbox/components/mapbox-marker/mapbox-marker.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MapboxMarkerDirective; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mapbox_gl__ = __webpack_require__("../../../../mapbox-gl/dist/mapbox-gl.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mapbox_gl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mapbox_gl__);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-/*
-*
-* Mapbox Marker component
-*
-*/
-
-
-var MapboxMarkerDirective = /** @class */ (function () {
-    function MapboxMarkerDirective() {
-        this.width = 60;
-        this.height = 60;
-        this.click = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
-    }
-    MapboxMarkerDirective.prototype.ngOnInit = function () {
-    };
-    MapboxMarkerDirective.prototype.ngOnChanges = function (changes) {
-        if (changes.map.currentValue) {
-            // if (this.map.isStyleLoaded()) {
-            //   this.addPins(changes.map.currentValue);
-            // } else {
-            //   this.map.on('style.load', () => this.addPins(changes.map.currentValue));
-            // }
-            this.addPins(changes.map.currentValue);
-        }
-    };
-    MapboxMarkerDirective.prototype.addPins = function (map) {
-        var _this = this;
-        var el = document.createElement('div');
-        el.className = 'marker';
-        el.style.backgroundImage = 'url(' + this.image + ')';
-        el.style.backgroundSize = 'cover';
-        el.style.backgroundRepeat = 'no-repeat';
-        el.style.width = this.width + 'px';
-        el.style.height = this.height + 'px';
-        new __WEBPACK_IMPORTED_MODULE_1_mapbox_gl__["Marker"](el, { offset: [-this.width / 2, -this.height / 2] })
-            .setLngLat(this.coordinates)
-            .addTo(map);
-        el.addEventListener('click', function () {
-            if (_this.flyTo) {
-                // this.mapBoxService.flyTo(this.coordinates, this.flyTo);
-                //  TODO: Implement Fly to
-            }
-            _this.click.emit({
-                data: _this.data,
-                coordinates: _this.coordinates
-            });
-        });
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", String)
-    ], MapboxMarkerDirective.prototype, "image", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", Object)
-    ], MapboxMarkerDirective.prototype, "width", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", Object)
-    ], MapboxMarkerDirective.prototype, "height", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", Array)
-    ], MapboxMarkerDirective.prototype, "coordinates", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", String)
-    ], MapboxMarkerDirective.prototype, "popup", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", Object)
-    ], MapboxMarkerDirective.prototype, "data", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", Number)
-    ], MapboxMarkerDirective.prototype, "flyTo", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */])(),
-        __metadata("design:type", Object)
-    ], MapboxMarkerDirective.prototype, "click", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", typeof (_a = (typeof __WEBPACK_IMPORTED_MODULE_1_mapbox_gl__ !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_mapbox_gl__).Map) === "function" && _a || Object)
-    ], MapboxMarkerDirective.prototype, "map", void 0);
-    MapboxMarkerDirective = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["s" /* Directive */])({
-            selector: 'mapbox-marker',
-        }),
-        __metadata("design:paramtypes", [])
-    ], MapboxMarkerDirective);
-    return MapboxMarkerDirective;
-    var _a;
-}());
-
-
-
-/***/ }),
-
-/***/ "../../../../../src/app/modules/mapbox/components/mapbox/mapbox.component.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MapboxComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mapbox_gl__ = __webpack_require__("../../../../mapbox-gl/dist/mapbox-gl.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_mapbox_gl___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_mapbox_gl__);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-/*
-*
-* Mapbox component
-*
-*/
-
-
-var MapboxComponent = /** @class */ (function () {
-    function MapboxComponent() {
-        this.options = this.defaultOptions();
-        this.index = 0;
-    }
-    MapboxComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        // setTimeout(() => {
-        //   this._mapBoxService.Map(this.mapOptions);
-        //
-        //   this.state.emit("Loaded");
-        // }, 100);
-        // this.assign(mapbox, 'accessToken', this.accessToken);
-        __WEBPACK_IMPORTED_MODULE_1_mapbox_gl__["accessToken"] = 'pk.eyJ1Ijoib2tmZGUiLCJhIjoiY2lpOHhvMnNhMDAyNnZla280ZWhmMm96NyJ9.IvGz74dvvukg19B4Npsm1g';
-        setTimeout(function () {
-            _this.map = new __WEBPACK_IMPORTED_MODULE_1_mapbox_gl__["Map"](_this.options);
-            _this.map.addControl(new __WEBPACK_IMPORTED_MODULE_1_mapbox_gl__["NavigationControl"]());
-            _this.map.addControl(new __WEBPACK_IMPORTED_MODULE_1_mapbox_gl__["GeolocateControl"]());
-        });
-    };
-    MapboxComponent.prototype.defaultOptions = function () {
-        return {
-            style: 'mapbox://styles/mapbox/streets-v9',
-            center: [122.390789031982422, 52.51833617387861],
-            container: "map" + this.index,
-            zoom: 15,
-            hash: false,
-            interactive: true,
-            index: this.index,
-            bearingSnap: 7,
-            pitchWithRotate: true,
-            logoPosition: 'bottom-left',
-            classes: [],
-            attributionControl: true,
-            failIfMajorPerformanceCaveat: false,
-            preserveDrawingBuffer: false,
-            refreshExpiredTiles: true,
-            maxBounds: undefined,
-            scrollZoom: true,
-            boxZoom: true,
-            dragRotate: true,
-            dragPan: true,
-            keyboard: true,
-            doubleClickZoom: true,
-            touchZoomRotate: true,
-            trackResize: true,
-            bearing: 0,
-            pitch: 0,
-            renderWorldCopies: true
-        };
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", Object)
-    ], MapboxComponent.prototype, "options", void 0);
-    MapboxComponent = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'mapbox',
-            template: "\n    <div style=\"position: relative; overflow: hidden;\">\n      <div [attr.id]=\"'map' + index\" style=\"height: 100vh; margin-top:56px;\"></div>\n      <ng-content></ng-content>\n    </div>",
-        }),
-        __metadata("design:paramtypes", [])
-    ], MapboxComponent);
-    return MapboxComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "../../../../../src/app/modules/mapbox/mapbox.module.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MapboxModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_mapbox_mapbox_component__ = __webpack_require__("../../../../../src/app/modules/mapbox/components/mapbox/mapbox.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_mapbox_marker_mapbox_marker_component__ = __webpack_require__("../../../../../src/app/modules/mapbox/components/mapbox-marker/mapbox-marker.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_mapbox_marker_direction_mapbox_marker_direction_component__ = __webpack_require__("../../../../../src/app/modules/mapbox/components/mapbox-marker-direction/mapbox-marker-direction.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_mapbox_line_mapbox_line_component__ = __webpack_require__("../../../../../src/app/modules/mapbox/components/mapbox-line/mapbox-line.component.ts");
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-
-
-var MapboxModule = /** @class */ (function () {
-    function MapboxModule() {
-    }
-    MapboxModule_1 = MapboxModule;
-    MapboxModule.forRoot = function (config) {
-        return {
-            ngModule: MapboxModule_1,
-            providers: [
-                { provide: 'MAPBOX_KEY', useValue: config }
-            ]
-        };
-    };
-    MapboxModule = MapboxModule_1 = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
-            exports: [
-                __WEBPACK_IMPORTED_MODULE_1__components_mapbox_mapbox_component__["a" /* MapboxComponent */], __WEBPACK_IMPORTED_MODULE_2__components_mapbox_marker_mapbox_marker_component__["a" /* MapboxMarkerDirective */], __WEBPACK_IMPORTED_MODULE_3__components_mapbox_marker_direction_mapbox_marker_direction_component__["a" /* MapboxMarkerDirectionComponent */], __WEBPACK_IMPORTED_MODULE_4__components_mapbox_line_mapbox_line_component__["a" /* MapboxLineDirective */]
-            ],
-            declarations: [__WEBPACK_IMPORTED_MODULE_1__components_mapbox_mapbox_component__["a" /* MapboxComponent */], __WEBPACK_IMPORTED_MODULE_2__components_mapbox_marker_mapbox_marker_component__["a" /* MapboxMarkerDirective */], __WEBPACK_IMPORTED_MODULE_3__components_mapbox_marker_direction_mapbox_marker_direction_component__["a" /* MapboxMarkerDirectionComponent */], __WEBPACK_IMPORTED_MODULE_4__components_mapbox_line_mapbox_line_component__["a" /* MapboxLineDirective */]]
-        })
-    ], MapboxModule);
-    return MapboxModule;
-    var MapboxModule_1;
 }());
 
 
@@ -1240,7 +776,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, ".map-info {\n  position: absolute;\n  top: 5em;\n  right: 5em;\n  z-index: 1;\n  background: #f1f1f1;\n  padding: 2em;\n}\n", ""]);
 
 // exports
 
@@ -1253,7 +789,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/course-pages/chloropleth-map/chloropleth-map.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  chloropleth-map works!\n  <button routerLink=\"{{nextLink}}\">Weiter</button>\n</p>\n"
+module.exports = "<p>\n  chloropleth-map works!\n  <button routerLink=\"{{nextLink}}\">Weiter</button>\n</p>\n\n<div class=\"map-info\">\n  {{mapDataName}}\n</div>\n\n<mgl-map\n  [center]=\"mapOption.center\"\n  [zoom]=\"mapOption.zoom\"\n  [style]=\"mapOption.style\">\n  <mgl-geojson-source\n    id=\"berlin\"\n    [data]=\"source\">\n  </mgl-geojson-source>\n  <mgl-layer\n    id=\"base\"\n    type=\"fill\"\n    source=\"berlin\"\n    [paint]='{\n    \"fill-opacity\": 0.0}'\n    (mouseMove)=\"activateHoverOn($event)\"\n    (mouseLeave)=\"disableHover()\">\n  </mgl-layer>\n\n  <mgl-layer\n    id=\"outline\"\n    type=\"line\"\n    source=\"berlin\"\n    [paint]='{\n    \"line-color\": \"#333\",\n    \"line-width\": 2\n    }'>\n  </mgl-layer>\n\n  <mgl-layer\n    id=\"hover\"\n    type=\"line\"\n    source=\"berlin\"\n    [paint]='{\n    \"line-color\": \"#333\",\n    \"line-width\": 6\n    }'\n    [filter]=\"hoverFilter\">\n  </mgl-layer>\n</mgl-map>\n"
 
 /***/ }),
 
@@ -1265,6 +801,7 @@ module.exports = "<p>\n  chloropleth-map works!\n  <button routerLink=\"{{nextLi
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__ = __webpack_require__("../../../../../src/app/services/courses/courses.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1277,10 +814,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var ChloroplethMapComponent = /** @class */ (function () {
     function ChloroplethMapComponent(coursesService, route) {
         this.coursesService = coursesService;
         this.route = route;
+        this.defaultText = "Hover über einen Bezirk";
+        this.mapDataName = this.defaultText;
+        this.source = __WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].geoJsonSources.berlin;
+        this.mapOption = {
+            center: [13.4190634, 52.4945314],
+            zoom: [10],
+            style: __WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].mapboxTiles.chloropleth,
+        };
+        this.hoverFilter = ['==', 'name', ''];
     }
     ChloroplethMapComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -1293,6 +840,15 @@ var ChloroplethMapComponent = /** @class */ (function () {
                 _this.nextLink = nextPage;
             });
         });
+    };
+    ChloroplethMapComponent.prototype.activateHoverOn = function (evt) {
+        //console.log(evt);
+        this.mapDataName = evt.features[0].properties.name;
+        this.hoverFilter = ['==', 'name', evt.features[0].properties.name];
+    };
+    ChloroplethMapComponent.prototype.disableHover = function () {
+        this.mapDataName = this.defaultText;
+        this.hoverFilter = ['==', 'name', ''];
     };
     ChloroplethMapComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -1560,7 +1116,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/course-pages/overview-map/overview-map.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"wrapper\" *ngIf=\"course\">\n  <app-action-bar [name]=\"course.name\"></app-action-bar>\n  <div class=\"main\">\n    <mapbox [options]=\"mapOptions\" #map>\n      <mapbox-marker\n        *ngFor=\"let station of stations\"\n        [coordinates]=\"[ station.position.lon, station.position.lat ]\"\n        [image]=\"image\"\n        [width]=\"30\"\n        [height]=\"50\"\n        [data]=\"point\"\n        (click)=\"click($event)\"\n        [map]=\"map.map\"\n        >\n      </mapbox-marker>\n      <mapbox-line\n        [id]=\"lineId\"\n        [map]=\"map.map\"\n        [coordinates]=\"line\"\n      ></mapbox-line>\n    </mapbox>\n    <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Los gehts</a>\n    <!--<app-waypoint-info [course]=\"course\" [waypointId]=\"activeWaypoint\"></app-waypoint-info>-->\n  </div>\n</div>\n<div class=\"wrapper\">\n  <!--<div class=\"mymap\" id=\"mymap\"></div>-->\n</div>\n"
+module.exports = "<div class=\"wrapper\" *ngIf=\"course\">\n  <app-action-bar [name]=\"course.name\"></app-action-bar>\n  <div class=\"main\">\n    <mgl-map\n      [center]=\"mapOptions.center\"\n      [zoom]=\"mapOptions.zoom\"\n      [style]=\"mapOptions.style\">\n      <mgl-layer\n        id=\"linelayer\"\n        type=\"line\"\n        [source]=\"{\n        'type': 'geojson',\n        'data': {\n          'type': 'Feature',\n          'properties': {},\n          'geometry': {\n            'type': 'LineString',\n            'coordinates': line\n          }\n        }\n        }\"\n        [layout]=\"{\n        'line-join': 'round',\n        'line-cap': 'round'\n        }\"\n        [paint]=\"{\n        'line-color': '#888',\n        'line-width': 8\n        }\">\n      </mgl-layer>\n      <mgl-marker\n        *ngFor=\"let station of stations\"\n        [lngLat]=\"[station.position.lon, station.position.lat]\"\n        (click)=\"click($event)\"\n      >{{station.id}} {{station.name}}\n      </mgl-marker>\n    </mgl-map>\n\n    <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Los gehts</a>\n    <!--<app-waypoint-info [course]=\"course\" [waypointId]=\"activeWaypoint\"></app-waypoint-info>-->\n  </div>\n</div>\n<div class=\"wrapper\">\n  <!--<div class=\"mymap\" id=\"mymap\"></div>-->\n</div>\n"
 
 /***/ }),
 
@@ -1599,7 +1155,7 @@ var OverviewMapComponent = /** @class */ (function () {
             style: 'mapbox://styles/mapbox/streets-v9',
             center: [13.390497, 52.517221],
             container: "map0",
-            zoom: 14,
+            zoom: [14],
             hash: false,
             interactive: true,
             index: 0,
@@ -1676,7 +1232,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/course-pages/point-to-point-map/point-to-point-map.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"wrapper\" *ngIf=\"station\">\n  <app-action-bar [name]=\"station.name\"></app-action-bar>\n  <div class=\"main\">\n    <mapbox [options]=\"mapOptions\" #map>\n      <mapbox-marker\n        [coordinates]=\"[ station.position.lon, station.position.lat ]\"\n        [image]=\"image\"\n        [width]=\"30\"\n        [height]=\"50\"\n        [data]=\"station\"\n        [map]=\"map.map\"\n        *ngIf=\"station\"\n      >\n      </mapbox-marker>\n      <mapbox-marker\n        [coordinates]=\"[ location.lon, location.lat ]\"\n        [image]=\"image\"\n        [width]=\"30\"\n        [height]=\"50\"\n        [data]=\"location\"\n        [map]=\"map.map\"\n        *ngIf=\"location\"\n      >\n      </mapbox-marker>\n      <mapbox-line\n        [map]=\"map.map\"\n        [coordinates]=\"line\"\n        *ngIf=\"line\"\n      ></mapbox-line>\n    </mapbox>\n    <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Angekommen</a>\n\n  </div>\n</div>\n"
+module.exports = "2<div class=\"wrapper\" *ngIf=\"station\">\n  <app-action-bar [name]=\"station.name\"></app-action-bar>\n  <div class=\"main\">\n    <mgl-map\n      [center]=\"mapOptions.center\"\n      [zoom]=\"mapOptions.zoom\"\n      [style]=\"mapOptions.style\">\n      <mgl-layer\n        *ngIf=\"locationMarker.length > 0\"\n        id=\"linelayer\"\n        type=\"line\"\n        [source]=\"{\n        'type': 'geojson',\n        'data': {\n          'type': 'Feature',\n          'properties': {},\n          'geometry': {\n            'type': 'LineString',\n            'coordinates': [mapOptions.center, locationMarker]\n           }\n        }\n        }\"\n        [layout]=\"{\n        'line-join': 'round',\n        'line-cap': 'round'\n        }\"\n        [paint]=\"{\n        'line-color': '#888',\n        'line-width': 8\n        }\"\n      ></mgl-layer>\n      <mgl-marker\n        [lngLat]=\"mapOptions.center\">\n        <div class=\"marker\">HIER</div>\n      </mgl-marker>\n      <mgl-marker *ngIf=\"locationMarker.length > 0\"\n        [lngLat]=\"locationMarker\">\n        <div class=\"marker\">DU</div>\n      </mgl-marker>\n    </mgl-map>\n\n    <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Angekommen</a>\n\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -1688,6 +1244,7 @@ module.exports = "<div class=\"wrapper\" *ngIf=\"station\">\n  <app-action-bar [
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__ = __webpack_require__("../../../../../src/app/services/courses/courses.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1700,16 +1257,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var PointToPointMapComponent = /** @class */ (function () {
     function PointToPointMapComponent(coursesService, route) {
         this.coursesService = coursesService;
         this.route = route;
         this.image = '/assets/images/pin.jpeg';
+        this.locationMarker = [];
+        this.lineData = [
+            [13.419347, 52.497136],
+            [13.419111, 52.498912],
+            [13.423489, 52.499173]
+        ];
         this.mapOptions = {
-            style: 'mapbox://styles/mapbox/streets-v9',
+            style: __WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].mapboxTiles.street,
             center: [13.390497, 52.517221],
             container: "map0",
-            zoom: 15,
+            zoom: [15],
             hash: false,
             interactive: true,
             index: 0,
@@ -1747,10 +1311,14 @@ var PointToPointMapComponent = /** @class */ (function () {
             _this.title = "N\u00E4chste Station: " + _this.station.title;
             if (navigator.geolocation) {
                 console.log('start requesting geolocation');
-                navigator.geolocation.getCurrentPosition(function (current_location) {
+                navigator.geolocation.watchPosition(function (current_location) {
                     console.log(current_location);
-                    _this.location = { lon: current_location.coords.longitude, lat: current_location.coords.latitude };
-                    _this.line = [[_this.station.position.lon, _this.station.position.lat], [_this.location.lon, _this.location.lat]];
+                    //this.location = {lon: current_location.coords.longitude, lat: current_location.coords.latitude};
+                    _this.locationMarker = [current_location.coords.longitude, current_location.coords.latitude];
+                    console.log(_this.locationMarker);
+                    //this.line = [[this.station.position.lon, this.station.position.lat], [this.location.lon, this.location.lat]];
+                }, function (error) {
+                    console.log(error, " did not get user permission");
                 });
             }
             else {
@@ -2197,7 +1765,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/course-pages/tree-map/tree-map.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"main\" *ngIf=\"station\">\n  <app-action-bar  [name]=\"station.title\"></app-action-bar>\n  <div class=\"wrapper\">\n    <mapbox [options]=\"mapOptions\" #map>\n      <mapbox-marker\n        *ngFor=\"let point of trees\"\n        [coordinates]=\"[ point.lat, point.lon ]\"\n        [image]=\"image\"\n        [width]=\"30\"\n        [height]=\"50\"\n        [data]=\"point\"\n        [map]=\"map.map\"\n        (click)=\"treeClick($event)\"\n      >\n      </mapbox-marker>\n    </mapbox>\n  </div>\n  <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Los gehts</a>\n  <!--<app-waypoint-info [course]=\"course\" [waypointId]=\"activeWaypoint\"></app-waypoint-info>-->\n</div>\n"
+module.exports = "<div class=\"main\" *ngIf=\"station\">\n  <app-action-bar  [name]=\"station.title\"></app-action-bar>\n  <div class=\"wrapper\">\n    <mgl-map\n      [zoom]=\"[mapOptions.zoom]\"\n      [center]=\"mapOptions.center\"\n      [style]=\"mapOptions.style\">\n      <mgl-marker\n        *ngFor=\"let point of trees\"\n        [lngLat]=\"[ point.lat, point.lon ]\"\n        (click)=\"treeClick($event)\"></mgl-marker>\n    </mgl-map>\n  </div>\n  <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Los gehts</a>\n  <!--<app-waypoint-info [course]=\"course\" [waypointId]=\"activeWaypoint\"></app-waypoint-info>-->\n</div>\n"
 
 /***/ }),
 
@@ -2316,7 +1884,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/course-pages/wheelmap-map/wheelmap-map.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  wheelmap-map works!\n  <button routerLink=\"{{nextLink}}\">Weiter</button>\n</p>\n"
+module.exports = "<div class=\"wrapper\" *ngIf=\"course\">\n  <app-action-bar [name]=\"course.name\"></app-action-bar>\n  <div class=\"main\">\n    <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Weiter</a>\n\n  </div>\n</div>\n<mgl-map\n  [style]=\"mapOptions.style\"\n  [zoom]=\"mapOptions.zoom\"\n  [center]=\"mapOptions.center\"\n  [doubleClickZoom]=\"false\">\n  <mgl-marker\n    [lngLat]=\"mapOptions.center\">\n    <div\n      (click)=\"log('Foo')\"\n      class=\"marker\">\n\t    Hello\n    </div>\n  </mgl-marker>\n</mgl-map>\n\n<a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Weiter</a>\n"
 
 /***/ }),
 
@@ -2328,6 +1896,7 @@ module.exports = "<p>\n  wheelmap-map works!\n  <button routerLink=\"{{nextLink}
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__ = __webpack_require__("../../../../../src/app/services/courses/courses.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2340,11 +1909,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var WheelmapMapComponent = /** @class */ (function () {
     function WheelmapMapComponent(coursesService, route) {
         this.coursesService = coursesService;
         this.route = route;
+        this.mapOptions = {
+            style: __WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].mapboxTiles.light,
+            zoom: [14],
+            center: [13.40497, 52.517221]
+        };
     }
+    WheelmapMapComponent.prototype.log = function (param) {
+        console.log(param);
+    };
     WheelmapMapComponent.prototype.ngOnInit = function () {
         var _this = this;
         var course_id = +this.route.snapshot.paramMap.get('course');
@@ -2473,7 +2051,7 @@ var SafeHtmlPipe = /** @class */ (function () {
         return this.sanitizer.bypassSecurityTrustHtml(value);
     };
     SafeHtmlPipe = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["T" /* Pipe */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* Pipe */])({
             name: 'safeHtml'
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["b" /* DomSanitizer */]])
@@ -2544,7 +2122,7 @@ var CoursesService = /** @class */ (function () {
         }));
     };
     CoursesService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
     ], CoursesService);
     return CoursesService;
@@ -2581,7 +2159,7 @@ var NextPageService = /** @class */ (function () {
         this.nextPageAnnouncedSource.next(message);
     };
     NextPageService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
         __metadata("design:paramtypes", [])
     ], NextPageService);
     return NextPageService;
@@ -2636,7 +2214,7 @@ var TreeBerlinService = /** @class */ (function () {
         };
     };
     TreeBerlinService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
     ], TreeBerlinService);
     return TreeBerlinService;
@@ -2657,7 +2235,15 @@ var TreeBerlinService = /** @class */ (function () {
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 var environment = {
     production: false,
-    mapbox_key: 'pk.eyJ1Ijoib2tmZGUiLCJhIjoiY2lpOHhvMnNhMDAyNnZla280ZWhmMm96NyJ9.IvGz74dvvukg19B4Npsm1g'
+    mapbox_key: 'pk.eyJ1Ijoib2tmZGUiLCJhIjoiY2lpOHhvMnNhMDAyNnZla280ZWhmMm96NyJ9.IvGz74dvvukg19B4Npsm1g',
+    mapboxTiles: {
+        chloropleth: 'mapbox://styles/okfde/cjfs9xmub1ni72tntjq1q949v',
+        light: 'mapbox://styles/mapbox/light-v9',
+        street: 'mapbox://styles/mapbox/streets-v9'
+    },
+    geoJsonSources: {
+        berlin: "https://raw.githubusercontent.com/berlinermorgenpost/Berlin-Geodaten/master/berlin_bezirke.geojson"
+    }
 };
 
 
@@ -2677,7 +2263,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* enableProdMode */])();
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* enableProdMode */])();
 }
 Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */])
     .catch(function (err) { return console.log(err); });

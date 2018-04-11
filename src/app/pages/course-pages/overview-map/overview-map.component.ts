@@ -26,7 +26,7 @@ export class OverviewMapComponent implements OnInit {
     style: 'mapbox://styles/mapbox/streets-v9',
     center: [13.390497, 52.517221],
     container: `map0`,
-    zoom: 14,
+    zoom: [14],
     hash: false,
     interactive: true,
     index: 0,

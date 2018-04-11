@@ -4,6 +4,7 @@ import {ActivatedRoute} from '@angular/router';
 import {Course} from '../../../model/course';
 import {Point} from '../../../model/point';
 import {Station} from '../../../model/stations';
+import { environment } from '../../../../environments/environment';
 
 
 @Component({
@@ -23,13 +24,20 @@ export class PointToPointMapComponent implements OnInit {
   station: Station;
   line: number[][];
   location: Point;
+  locationMarker: Array<number> = [];
   title: string;
 
+  lineData =  [
+    [13.419347, 52.497136],
+    [13.419111, 52.498912],
+    [13.423489, 52.499173]
+  ];
+
   mapOptions = {
-    style: 'mapbox://styles/mapbox/streets-v9',
+    style: environment.mapboxTiles.street,
     center: [13.390497, 52.517221],
     container: `map0`,
-    zoom: 15,
+    zoom: [15],
     hash: false,
     interactive: true,
     index: 0,
@@ -70,10 +78,15 @@ export class PointToPointMapComponent implements OnInit {
 
       if (navigator.geolocation) {
         console.log('start requesting geolocation');
-        navigator.geolocation.getCurrentPosition((current_location) => {
+        navigator.geolocation.watchPosition((current_location) => {
           console.log(current_location);
-          this.location = {lon: current_location.coords.longitude, lat: current_location.coords.latitude};
-          this.line = [[this.station.position.lon, this.station.position.lat], [this.location.lon, this.location.lat]];
+
+          //this.location = {lon: current_location.coords.longitude, lat: current_location.coords.latitude};
+          this.locationMarker = [current_location.coords.longitude, current_location.coords.latitude];
+          console.log(this.locationMarker);
+          //this.line = [[this.station.position.lon, this.station.position.lat], [this.location.lon, this.location.lat]];
+        }, (error) => {
+          console.log(error, " did not get user permission");
         });
       } else {
         console.log('no navigator object found');

@@ -57,6 +57,8 @@
   background: url(/assets/images/ic_add_white_24px.svg) center center no-repeat; }
 .header #goBack {
   background: url(/assets/images/ic_keyboard_backspace_white_24px.svg) center center no-repeat; }
+.header #butLogo {
+  background: url(/assets/images/logo.png) center center no-repeat; }
 
 .header__title {
   font-weight: 400;

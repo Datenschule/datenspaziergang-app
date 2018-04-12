@@ -1,6 +1,5 @@
 import {Station} from './stations';
 
-
 export class Course {
   id: number;
   name: string;

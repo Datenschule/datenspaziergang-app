@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { environment } from '../environments/environment';
 
@@ -40,6 +41,7 @@ import { TreeDevelopmentComponent } from './pages/course-pages/tree-development/
 import { MundraubMapComponent } from './pages/course-pages/mundraub-map/mundraub-map.component';
 import { BerlinBesetztMapComponent } from './pages/course-pages/berlin-besetzt-map/berlin-besetzt-map.component';
 import { BerlinBesetztDashboardComponent } from './pages/course-pages/berlin-besetzt-dashboard/berlin-besetzt-dashboard.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -71,9 +73,11 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     MundraubMapComponent,
     BerlinBesetztMapComponent,
     BerlinBesetztDashboardComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
     MapboxModule.forRoot(environment.mapbox_key),

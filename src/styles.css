@@ -79,6 +79,10 @@ mgl-map {
   z-index: -1;
 }
 
+.main {
+  margin-top: 60px;
+}
+
 .marker,
 .mapboxgl-marker {
   width: 40px;

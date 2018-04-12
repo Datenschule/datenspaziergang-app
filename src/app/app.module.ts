@@ -8,8 +8,7 @@ import {HttpClientInMemoryWebApiModule} from "angular-in-memory-web-api";
 
 import { PerfectScrollbarModule, PERFECT_SCROLLBAR_CONFIG, PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
-import {MapboxModule} from './modules/mapbox/mapbox.module';
-
+import { NgxMapboxGLModule } from 'ngx-mapbox-gl';
 
 import { AppComponent } from './app.component';
 import { CoursesOverviewComponent } from './pages/courses-overview/courses-overview.component';
@@ -48,7 +47,6 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -82,8 +80,11 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
-    MapboxModule.forRoot(environment.mapbox_key),
-    PerfectScrollbarModule
+    PerfectScrollbarModule,
+    NgxMapboxGLModule.forRoot({
+      accessToken: environment.mapbox_key, // Can also be set per map (accessToken input of mgl-map)
+      //geocoderAccessToken: 'TOKEN' // Optionnal, specify if different from the map access token, can also be set per mgl-geocoder (accessToken input of mgl-geocoder)
+    })
   ],
   providers: [CoursesService, {
     provide: PERFECT_SCROLLBAR_CONFIG,

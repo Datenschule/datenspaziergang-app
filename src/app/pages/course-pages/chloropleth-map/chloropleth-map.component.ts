@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {CoursesService} from '../../../services/courses/courses.service';
 import {ActivatedRoute} from '@angular/router';
+import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-chloropleth-map',
@@ -10,6 +11,15 @@ import {ActivatedRoute} from '@angular/router';
 export class ChloroplethMapComponent implements OnInit {
 
   nextLink: string;
+  defaultText: string = "Hover über einen Bezirk";
+  mapDataName: string = this.defaultText;
+  source: string = environment.geoJsonSources.berlin;
+
+  mapOption: Object = {
+    center: [13.4190634, 52.4945314],
+    zoom: [10],
+    style: environment.mapboxTiles.chloropleth,
+  };
 
   constructor(private coursesService: CoursesService, private route: ActivatedRoute) {
   }
@@ -25,6 +35,19 @@ export class ChloroplethMapComponent implements OnInit {
         this.nextLink = nextPage;
       });
     });
+  }
+
+  hoverFilter = ['==', 'name', ''];
+
+  activateHoverOn(evt: any) {
+    //console.log(evt);
+    this.mapDataName = evt.features[0].properties.name;
+    this.hoverFilter = ['==', 'name', evt.features[0].properties.name];
+  }
+
+  disableHover() {
+    this.mapDataName = this.defaultText;
+    this.hoverFilter = ['==', 'name', ''];
   }
 
 }

@@ -1,33 +1,44 @@
-<div class="wrapper" *ngIf="station">
+2<div class="wrapper" *ngIf="station">
   <app-action-bar [name]="station.name"></app-action-bar>
   <div class="main">
-    <mapbox [options]="mapOptions" #map>
-      <mapbox-marker
-        [coordinates]="[ station.position.lon, station.position.lat ]"
-        [image]="image"
-        [width]="30"
-        [height]="50"
-        [data]="station"
-        [map]="map.map"
-        *ngIf="station"
-      >
-      </mapbox-marker>
-      <mapbox-marker
-        [coordinates]="[ location.lon, location.lat ]"
-        [image]="image"
-        [width]="30"
-        [height]="50"
-        [data]="location"
-        [map]="map.map"
-        *ngIf="location"
-      >
-      </mapbox-marker>
-      <mapbox-line
-        [map]="map.map"
-        [coordinates]="line"
-        *ngIf="line"
-      ></mapbox-line>
-    </mapbox>
+    <mgl-map
+      [center]="mapOptions.center"
+      [zoom]="mapOptions.zoom"
+      [style]="mapOptions.style">
+      <mgl-layer
+        *ngIf="locationMarker.length > 0"
+        id="linelayer"
+        type="line"
+        [source]="{
+        'type': 'geojson',
+        'data': {
+          'type': 'Feature',
+          'properties': {},
+          'geometry': {
+            'type': 'LineString',
+            'coordinates': [mapOptions.center, locationMarker]
+           }
+        }
+        }"
+        [layout]="{
+        'line-join': 'round',
+        'line-cap': 'round'
+        }"
+        [paint]="{
+        'line-color': '#888',
+        'line-width': 8
+        }"
+      ></mgl-layer>
+      <mgl-marker
+        [lngLat]="mapOptions.center">
+        <div class="marker">HIER</div>
+      </mgl-marker>
+      <mgl-marker *ngIf="locationMarker.length > 0"
+        [lngLat]="locationMarker">
+        <div class="marker">DU</div>
+      </mgl-marker>
+    </mgl-map>
+
     <a class="btn" style="position: absolute; top: 100px; left: 50px" routerLink="{{nextLink}}">Angekommen</a>
 
   </div>

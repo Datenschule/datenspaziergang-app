@@ -1,0 +1,8 @@
+.map-info {
+  position: absolute;
+  top: 5em;
+  right: 5em;
+  z-index: 1;
+  background: #f1f1f1;
+  padding: 2em;
+}

@@ -12,7 +12,7 @@ export class WheelmapMapComponent implements OnInit {
 
   nextLink: string;
   title: string;
-  mapOptions: Object = {
+  mapOptions = {
     style: environment.mapboxTiles.light,
     zoom: [14],
     center: [13.40497, 52.517221]

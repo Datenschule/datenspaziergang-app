@@ -80,43 +80,49 @@ var AppComponent = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("../../../platform-browser/esm5/platform-browser.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ngx_perfect_scrollbar__ = __webpack_require__("../../../../ngx-perfect-scrollbar/dist/ngx-perfect-scrollbar.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_mapbox_gl__ = __webpack_require__("../../../../ngx-mapbox-gl/esm5/ngx-mapbox-gl.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_courses_overview_courses_overview_component__ = __webpack_require__("../../../../../src/app/pages/courses-overview/courses-overview.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__modules_app_routing_module__ = __webpack_require__("../../../../../src/app/modules/app-routing.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_action_bar_action_bar_component__ = __webpack_require__("../../../../../src/app/components/action-bar/action-bar.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_card_card_component__ = __webpack_require__("../../../../../src/app/components/card/card.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_courses_courses_service__ = __webpack_require__("../../../../../src/app/services/courses/courses.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_course_detail_course_detail_component__ = __webpack_require__("../../../../../src/app/pages/course-detail/course-detail.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_map_cell_map_cell_component__ = __webpack_require__("../../../../../src/app/components/map-cell/map-cell.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pipes_safe_html_pipe__ = __webpack_require__("../../../../../src/app/pipes/safe-html.pipe.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__directives_page_directive__ = __webpack_require__("../../../../../src/app/directives/page.directive.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__services_next_page_next_page_service__ = __webpack_require__("../../../../../src/app/services/next-page/next-page.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_course_pages_overview_map_overview_map_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/overview-map/overview-map.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_course_pages_point_to_point_map_point_to_point_map_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/point-to-point-map/point-to-point-map.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_course_pages_story_story_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/story/story.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_course_pages_quiz_quiz_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/quiz/quiz.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_course_pages_success_success_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/success/success.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_course_pages_tree_map_tree_map_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/tree-map/tree-map.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__services_plugins_tree_berlin_service__ = __webpack_require__("../../../../../src/app/services/plugins/tree-berlin.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_course_pages_op_debate_op_debate_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/op-debate/op-debate.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_course_pages_wheelmap_map_wheelmap_map_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/wheelmap-map/wheelmap-map.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_course_pages_line_chart_line_chart_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/line-chart/line-chart.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_course_pages_chloropleth_map_chloropleth_map_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/chloropleth-map/chloropleth-map.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_course_pages_tree_dashboard_tree_dashboard_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/tree-dashboard/tree-dashboard.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_course_pages_tree_development_tree_development_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/tree-development/tree-development.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pages_course_pages_mundraub_map_mundraub_map_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/mundraub-map/mundraub-map.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__pages_course_pages_berlin_besetzt_map_berlin_besetzt_map_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/berlin-besetzt-map/berlin-besetzt-map.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__pages_course_pages_berlin_besetzt_dashboard_berlin_besetzt_dashboard_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/berlin-besetzt-dashboard/berlin-besetzt-dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/esm5/animations.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_perfect_scrollbar__ = __webpack_require__("../../../../ngx-perfect-scrollbar/dist/ngx-perfect-scrollbar.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ngx_mapbox_gl__ = __webpack_require__("../../../../ngx-mapbox-gl/esm5/ngx-mapbox-gl.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_courses_overview_courses_overview_component__ = __webpack_require__("../../../../../src/app/pages/courses-overview/courses-overview.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__modules_app_routing_module__ = __webpack_require__("../../../../../src/app/modules/app-routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_action_bar_action_bar_component__ = __webpack_require__("../../../../../src/app/components/action-bar/action-bar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_card_card_component__ = __webpack_require__("../../../../../src/app/components/card/card.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__services_courses_courses_service__ = __webpack_require__("../../../../../src/app/services/courses/courses.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_course_detail_course_detail_component__ = __webpack_require__("../../../../../src/app/pages/course-detail/course-detail.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_map_cell_map_cell_component__ = __webpack_require__("../../../../../src/app/components/map-cell/map-cell.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pipes_safe_html_pipe__ = __webpack_require__("../../../../../src/app/pipes/safe-html.pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__directives_page_directive__ = __webpack_require__("../../../../../src/app/directives/page.directive.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_next_page_next_page_service__ = __webpack_require__("../../../../../src/app/services/next-page/next-page.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_course_pages_overview_map_overview_map_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/overview-map/overview-map.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_course_pages_point_to_point_map_point_to_point_map_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/point-to-point-map/point-to-point-map.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_course_pages_story_story_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/story/story.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_course_pages_quiz_quiz_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/quiz/quiz.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_course_pages_success_success_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/success/success.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_course_pages_tree_map_tree_map_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/tree-map/tree-map.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__services_plugins_tree_berlin_service__ = __webpack_require__("../../../../../src/app/services/plugins/tree-berlin.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_course_pages_op_debate_op_debate_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/op-debate/op-debate.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_course_pages_wheelmap_map_wheelmap_map_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/wheelmap-map/wheelmap-map.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_course_pages_line_chart_line_chart_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/line-chart/line-chart.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_course_pages_chloropleth_map_chloropleth_map_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/chloropleth-map/chloropleth-map.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_course_pages_tree_dashboard_tree_dashboard_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/tree-dashboard/tree-dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pages_course_pages_tree_development_tree_development_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/tree-development/tree-development.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__pages_course_pages_mundraub_map_mundraub_map_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/mundraub-map/mundraub-map.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__pages_course_pages_berlin_besetzt_map_berlin_besetzt_map_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/berlin-besetzt-map/berlin-besetzt-map.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__pages_course_pages_berlin_besetzt_dashboard_berlin_besetzt_dashboard_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/berlin-besetzt-dashboard/berlin-besetzt-dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__pages_intro_intro_component__ = __webpack_require__("../../../../../src/app/pages/intro/intro.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__components_menu_menu_component__ = __webpack_require__("../../../../../src/app/components/menu/menu.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
 
 
 
@@ -159,44 +165,47 @@ var AppModule = /** @class */ (function () {
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["J" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_6__pages_courses_overview_courses_overview_component__["a" /* CoursesOverviewComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__components_action_bar_action_bar_component__["a" /* ActionBarComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__components_card_card_component__["a" /* CardComponent */],
-                __WEBPACK_IMPORTED_MODULE_12__pages_course_detail_course_detail_component__["a" /* CourseDetailComponent */],
-                __WEBPACK_IMPORTED_MODULE_13__components_map_cell_map_cell_component__["a" /* MapCellComponent */],
-                __WEBPACK_IMPORTED_MODULE_14__pipes_safe_html_pipe__["a" /* SafeHtmlPipe */],
-                __WEBPACK_IMPORTED_MODULE_17__pages_course_pages_overview_map_overview_map_component__["a" /* OverviewMapComponent */],
-                __WEBPACK_IMPORTED_MODULE_18__pages_course_pages_point_to_point_map_point_to_point_map_component__["a" /* PointToPointMapComponent */],
-                __WEBPACK_IMPORTED_MODULE_19__pages_course_pages_story_story_component__["a" /* StoryComponent */],
-                __WEBPACK_IMPORTED_MODULE_20__pages_course_pages_quiz_quiz_component__["a" /* QuizComponent */],
-                __WEBPACK_IMPORTED_MODULE_21__pages_course_pages_success_success_component__["a" /* SuccessComponent */],
-                __WEBPACK_IMPORTED_MODULE_15__directives_page_directive__["a" /* PageDirective */],
-                __WEBPACK_IMPORTED_MODULE_22__pages_course_pages_tree_map_tree_map_component__["a" /* TreeMapComponent */],
-                __WEBPACK_IMPORTED_MODULE_24__pages_course_pages_op_debate_op_debate_component__["a" /* OpDebateComponent */],
-                __WEBPACK_IMPORTED_MODULE_25__pages_course_pages_wheelmap_map_wheelmap_map_component__["a" /* WheelmapMapComponent */],
-                __WEBPACK_IMPORTED_MODULE_26__pages_course_pages_line_chart_line_chart_component__["a" /* LineChartComponent */],
-                __WEBPACK_IMPORTED_MODULE_27__pages_course_pages_chloropleth_map_chloropleth_map_component__["a" /* ChloroplethMapComponent */],
-                __WEBPACK_IMPORTED_MODULE_28__pages_course_pages_tree_dashboard_tree_dashboard_component__["a" /* TreeDashboardComponent */],
-                __WEBPACK_IMPORTED_MODULE_29__pages_course_pages_tree_development_tree_development_component__["a" /* TreeDevelopmentComponent */],
-                __WEBPACK_IMPORTED_MODULE_30__pages_course_pages_mundraub_map_mundraub_map_component__["a" /* MundraubMapComponent */],
-                __WEBPACK_IMPORTED_MODULE_31__pages_course_pages_berlin_besetzt_map_berlin_besetzt_map_component__["a" /* BerlinBesetztMapComponent */],
-                __WEBPACK_IMPORTED_MODULE_32__pages_course_pages_berlin_besetzt_dashboard_berlin_besetzt_dashboard_component__["a" /* BerlinBesetztDashboardComponent */],
+                __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_7__pages_courses_overview_courses_overview_component__["a" /* CoursesOverviewComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__components_action_bar_action_bar_component__["a" /* ActionBarComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__components_card_card_component__["a" /* CardComponent */],
+                __WEBPACK_IMPORTED_MODULE_13__pages_course_detail_course_detail_component__["a" /* CourseDetailComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__components_map_cell_map_cell_component__["a" /* MapCellComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__pipes_safe_html_pipe__["a" /* SafeHtmlPipe */],
+                __WEBPACK_IMPORTED_MODULE_18__pages_course_pages_overview_map_overview_map_component__["a" /* OverviewMapComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__pages_course_pages_point_to_point_map_point_to_point_map_component__["a" /* PointToPointMapComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__pages_course_pages_story_story_component__["a" /* StoryComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__pages_course_pages_quiz_quiz_component__["a" /* QuizComponent */],
+                __WEBPACK_IMPORTED_MODULE_22__pages_course_pages_success_success_component__["a" /* SuccessComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__directives_page_directive__["a" /* PageDirective */],
+                __WEBPACK_IMPORTED_MODULE_23__pages_course_pages_tree_map_tree_map_component__["a" /* TreeMapComponent */],
+                __WEBPACK_IMPORTED_MODULE_25__pages_course_pages_op_debate_op_debate_component__["a" /* OpDebateComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__pages_course_pages_wheelmap_map_wheelmap_map_component__["a" /* WheelmapMapComponent */],
+                __WEBPACK_IMPORTED_MODULE_27__pages_course_pages_line_chart_line_chart_component__["a" /* LineChartComponent */],
+                __WEBPACK_IMPORTED_MODULE_28__pages_course_pages_chloropleth_map_chloropleth_map_component__["a" /* ChloroplethMapComponent */],
+                __WEBPACK_IMPORTED_MODULE_29__pages_course_pages_tree_dashboard_tree_dashboard_component__["a" /* TreeDashboardComponent */],
+                __WEBPACK_IMPORTED_MODULE_30__pages_course_pages_tree_development_tree_development_component__["a" /* TreeDevelopmentComponent */],
+                __WEBPACK_IMPORTED_MODULE_31__pages_course_pages_mundraub_map_mundraub_map_component__["a" /* MundraubMapComponent */],
+                __WEBPACK_IMPORTED_MODULE_32__pages_course_pages_berlin_besetzt_map_berlin_besetzt_map_component__["a" /* BerlinBesetztMapComponent */],
+                __WEBPACK_IMPORTED_MODULE_33__pages_course_pages_berlin_besetzt_dashboard_berlin_besetzt_dashboard_component__["a" /* BerlinBesetztDashboardComponent */],
+                __WEBPACK_IMPORTED_MODULE_34__pages_intro_intro_component__["a" /* IntroComponent */],
+                __WEBPACK_IMPORTED_MODULE_35__components_menu_menu_component__["a" /* MenuComponent */],
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_7__modules_app_routing_module__["a" /* AppRoutingModule */],
-                __WEBPACK_IMPORTED_MODULE_10__angular_common_http__["b" /* HttpClientModule */],
-                __WEBPACK_IMPORTED_MODULE_3_ngx_perfect_scrollbar__["b" /* PerfectScrollbarModule */],
-                __WEBPACK_IMPORTED_MODULE_4_ngx_mapbox_gl__["a" /* NgxMapboxGLModule */].forRoot({
-                    accessToken: __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].mapbox_key,
+                __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
+                __WEBPACK_IMPORTED_MODULE_8__modules_app_routing_module__["a" /* AppRoutingModule */],
+                __WEBPACK_IMPORTED_MODULE_11__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_4_ngx_perfect_scrollbar__["b" /* PerfectScrollbarModule */],
+                __WEBPACK_IMPORTED_MODULE_5_ngx_mapbox_gl__["a" /* NgxMapboxGLModule */].forRoot({
+                    accessToken: __WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].mapbox_key,
                 })
             ],
-            providers: [__WEBPACK_IMPORTED_MODULE_11__services_courses_courses_service__["a" /* CoursesService */], {
-                    provide: __WEBPACK_IMPORTED_MODULE_3_ngx_perfect_scrollbar__["a" /* PERFECT_SCROLLBAR_CONFIG */],
+            providers: [__WEBPACK_IMPORTED_MODULE_12__services_courses_courses_service__["a" /* CoursesService */], {
+                    provide: __WEBPACK_IMPORTED_MODULE_4_ngx_perfect_scrollbar__["a" /* PERFECT_SCROLLBAR_CONFIG */],
                     useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG,
-                }, __WEBPACK_IMPORTED_MODULE_16__services_next_page_next_page_service__["a" /* NextPageService */], __WEBPACK_IMPORTED_MODULE_23__services_plugins_tree_berlin_service__["a" /* TreeBerlinService */]],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
+                }, __WEBPACK_IMPORTED_MODULE_17__services_next_page_next_page_service__["a" /* NextPageService */], __WEBPACK_IMPORTED_MODULE_24__services_plugins_tree_berlin_service__["a" /* TreeBerlinService */]],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
     return AppModule;
@@ -214,7 +223,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".header {\n  width: 100%;\n  height: 56px;\n  color: #FFF;\n  background: #3F51B5;\n  position: fixed;\n  font-size: 20px;\n  -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 2px 9px 1px rgba(0, 0, 0, 0.12), 0 4px 2px -2px rgba(0, 0, 0, 0.2);\n          box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 2px 9px 1px rgba(0, 0, 0, 0.12), 0 4px 2px -2px rgba(0, 0, 0, 0.2);\n  padding: 16px 16px 0 16px;\n  will-change: transform;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -ms-flex-direction: row;\n  flex-direction: row;\n  -ms-flex-wrap: nowrap;\n  flex-wrap: nowrap;\n  -webkit-box-pack: start;\n  -ms-flex-pack: start;\n  justify-content: flex-start;\n  -webkit-box-align: stretch;\n  -ms-flex-align: stretch;\n  align-items: stretch;\n  -ms-flex-line-pack: center;\n  align-content: center;\n  -webkit-transition: -webkit-transform 0.233s cubic-bezier(0, 0, 0.21, 1) 0.1s;\n  transition: -webkit-transform 0.233s cubic-bezier(0, 0, 0.21, 1) 0.1s;\n  transition: transform 0.233s cubic-bezier(0, 0, 0.21, 1) 0.1s;\n  transition: transform 0.233s cubic-bezier(0, 0, 0.21, 1) 0.1s, -webkit-transform 0.233s cubic-bezier(0, 0, 0.21, 1) 0.1s;\n  z-index: 1000; }\n.header .headerButton {\n  width: 24px;\n  height: 24px;\n  margin-right: 16px;\n  text-indent: -30000px;\n  overflow: hidden;\n  opacity: 0.54;\n  -webkit-transition: opacity 0.333s cubic-bezier(0, 0, 0.21, 1);\n  transition: opacity 0.333s cubic-bezier(0, 0, 0.21, 1);\n  border: none;\n  outline: none;\n  cursor: pointer; }\n.header .headerButton:hover {\n  opacity: 1;\n}\n.header #butRefresh {\n  background: url(/assets/images/ic_refresh_white_24px.svg) center center no-repeat; }\n.header #butAdd {\n  background: url(/assets/images/ic_add_white_24px.svg) center center no-repeat; }\n.header #goBack {\n  background: url(/assets/images/ic_keyboard_backspace_white_24px.svg) center center no-repeat; }\n.header__title {\n  font-weight: 400;\n  font-size: 20px;\n  margin: 0;\n  -webkit-box-flex: 1;\n  -ms-flex: 1;\n  flex: 1; }\n", ""]);
+exports.push([module.i, ".header {\n  width: 100%;\n  height: 56px;\n  color: #FFF;\n  background: #3F51B5;\n  position: fixed;\n  font-size: 20px;\n  -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 2px 9px 1px rgba(0, 0, 0, 0.12), 0 4px 2px -2px rgba(0, 0, 0, 0.2);\n          box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 2px 9px 1px rgba(0, 0, 0, 0.12), 0 4px 2px -2px rgba(0, 0, 0, 0.2);\n  padding: 16px 16px 0 16px;\n  will-change: transform;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -ms-flex-direction: row;\n  flex-direction: row;\n  -ms-flex-wrap: nowrap;\n  flex-wrap: nowrap;\n  -webkit-box-pack: start;\n  -ms-flex-pack: start;\n  justify-content: flex-start;\n  -webkit-box-align: stretch;\n  -ms-flex-align: stretch;\n  align-items: stretch;\n  -ms-flex-line-pack: center;\n  align-content: center;\n  -webkit-transition: -webkit-transform 0.233s cubic-bezier(0, 0, 0.21, 1) 0.1s;\n  transition: -webkit-transform 0.233s cubic-bezier(0, 0, 0.21, 1) 0.1s;\n  transition: transform 0.233s cubic-bezier(0, 0, 0.21, 1) 0.1s;\n  transition: transform 0.233s cubic-bezier(0, 0, 0.21, 1) 0.1s, -webkit-transform 0.233s cubic-bezier(0, 0, 0.21, 1) 0.1s;\n  z-index: 1000; }\n.header .headerButton {\n  width: 24px;\n  height: 24px;\n  margin-right: 16px;\n  text-indent: -30000px;\n  overflow: hidden;\n  opacity: 0.54;\n  -webkit-transition: opacity 0.333s cubic-bezier(0, 0, 0.21, 1);\n  transition: opacity 0.333s cubic-bezier(0, 0, 0.21, 1);\n  border: none;\n  outline: none;\n  cursor: pointer; }\n.header .headerButton:hover {\n  opacity: 1;\n}\n.header #butRefresh {\n  background: url(/assets/images/ic_refresh_white_24px.svg) center center no-repeat; }\n.header #butAdd {\n  background: url(/assets/images/ic_add_white_24px.svg) center center no-repeat; }\n.header #goBack {\n  background: url(/assets/images/ic_keyboard_backspace_white_24px.svg) center center no-repeat; }\n.header #butLogo {\n  background: url(/assets/images/logo.png) center center no-repeat; }\n.header__title {\n  font-weight: 400;\n  font-size: 20px;\n  margin: 0;\n  -webkit-box-flex: 1;\n  -ms-flex: 1;\n  flex: 1; }\n", ""]);
 
 // exports
 
@@ -227,7 +236,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/action-bar/action-bar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"header\">\n  <button id=\"goBack\" class=\"headerButton\" aria-label=\"goBack\" (click)=\"goBack()\"></button>\n  <h1 class=\"header__title\">{{name}}</h1>\n  <button id=\"butRefresh\" class=\"headerButton\" aria-label=\"Refresh\"></button>\n  <button id=\"butAdd\" class=\"headerButton\" aria-label=\"Add\"></button>\n</div>\n"
+module.exports = "<div class=\"header\">\n  <button id=\"butLogo\" class=\"headerButton\" aria-label=\"goBack\" (click)=\"toggleMenu()\" [hidden]=\"!showMenu\"></button>\n  <button id=\"goBack\" class=\"headerButton\" aria-label=\"goBack\" (click)=\"goBack()\" [hidden]=\"!showBack\"></button>\n  <h1 class=\"header__title\">{{name}}</h1>\n</div>\n<app-menu [@slideInOut]=\"menuState\"></app-menu>\n"
 
 /***/ }),
 
@@ -238,6 +247,7 @@ module.exports = "<div class=\"header\">\n  <button id=\"goBack\" class=\"header
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ActionBarComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/esm5/common.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_animations__ = __webpack_require__("../../../animations/esm5/animations.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -249,24 +259,49 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var ActionBarComponent = /** @class */ (function () {
     function ActionBarComponent(locaction) {
         this.locaction = locaction;
+        this.menuState = 'out';
     }
     ActionBarComponent.prototype.ngOnInit = function () {
     };
     ActionBarComponent.prototype.goBack = function () {
         this.locaction.back();
     };
+    ActionBarComponent.prototype.toggleMenu = function () {
+        this.menuState = this.menuState === 'out' ? 'in' : 'out';
+    };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", String)
     ], ActionBarComponent.prototype, "name", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Boolean)
+    ], ActionBarComponent.prototype, "showMenu", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Boolean)
+    ], ActionBarComponent.prototype, "showBack", void 0);
     ActionBarComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-action-bar',
             template: __webpack_require__("../../../../../src/app/components/action-bar/action-bar.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/components/action-bar/action-bar.component.css")]
+            styles: [__webpack_require__("../../../../../src/app/components/action-bar/action-bar.component.css")],
+            animations: [
+                Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["j" /* trigger */])('slideInOut', [
+                    Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["g" /* state */])('in', Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])({
+                        transform: 'translate3d(100%, 0, 0)'
+                    })),
+                    Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["g" /* state */])('out', Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])({
+                        transform: 'translate3d(0,0,0)'
+                    })),
+                    Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* transition */])('in => out', Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["e" /* animate */])('400ms ease-in-out')),
+                    Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["i" /* transition */])('out => in', Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["e" /* animate */])('400ms ease-in-out'))
+                ])
+            ]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common__["f" /* Location */]])
     ], ActionBarComponent);
@@ -298,7 +333,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/card/card.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<a routerLink=\"/course/{{course.id}}\">\n  <div class=\"card\">\n    {{course.name}} - {{course.location}}\n  </div>\n</a>\n\n"
+module.exports = "<a routerLink=\"/overview-map/{{course.id}}\">\n  <div class=\"card\">\n    {{course.name}} - {{course.location}}\n  </div>\n</a>\n\n"
 
 /***/ }),
 
@@ -405,6 +440,67 @@ var MapCellComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/components/menu/menu.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ":host {\n  background: #1a2580;\n  color: #fff;\n  position: fixed;\n  right: auto;\n  top: 55px;\n  left: -20%;\n  bottom: 0;\n  width: 20%;\n  min-width: 250px;\n  z-index: 9999;\n  font-family: Arial, \"Helvetica Neue\", Helvetica, sans-serif;\n}\n\nul {\n  font-size: 18px;\n  line-height: 3;\n  font-weight: 400;\n  padding-top: 50px;\n  list-style: none;\n}\n\nul.inner-menu {\n  padding-top: 0;\n}\n\na, a:hover, a:visited, a:active, a:focus {\n  color: #fff;\n  text-decoration: none;\n}\n\na:hover {\n  text-decoration: underline;\n}\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/menu/menu.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<ul>\n  <li><a routerLink=\"/intro\">Datenspaziergang</a></li>\n  <li>Touren\n    <ul class=\"inner-menu\">\n      <li>1. Tour</li>\n      <li>2. Tour</li>\n    </ul>\n  </li>\n  <li><a routerLink=\"/feedback\">Feedback</a></li>\n  <li><a routerLink=\"/impressum\">Impressum</a></li>\n</ul>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/menu/menu.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MenuComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var MenuComponent = /** @class */ (function () {
+    function MenuComponent() {
+    }
+    MenuComponent.prototype.ngOnInit = function () {
+    };
+    MenuComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-menu',
+            template: __webpack_require__("../../../../../src/app/components/menu/menu.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/components/menu/menu.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], MenuComponent);
+    return MenuComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "../../../../../src/app/directives/page.directive.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -477,6 +573,7 @@ var Course = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_course_pages_mundraub_map_mundraub_map_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/mundraub-map/mundraub-map.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_course_pages_berlin_besetzt_map_berlin_besetzt_map_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/berlin-besetzt-map/berlin-besetzt-map.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_course_pages_berlin_besetzt_dashboard_berlin_besetzt_dashboard_component__ = __webpack_require__("../../../../../src/app/pages/course-pages/berlin-besetzt-dashboard/berlin-besetzt-dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_intro_intro_component__ = __webpack_require__("../../../../../src/app/pages/intro/intro.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -502,8 +599,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var routes = [
-    { path: '', redirectTo: '/overview', pathMatch: 'full' },
+    { path: '', redirectTo: '/intro', pathMatch: 'full' },
+    { path: 'intro', component: __WEBPACK_IMPORTED_MODULE_19__pages_intro_intro_component__["a" /* IntroComponent */] },
     { path: 'overview', component: __WEBPACK_IMPORTED_MODULE_2__pages_courses_overview_courses_overview_component__["a" /* CoursesOverviewComponent */] },
     { path: 'course/:id', component: __WEBPACK_IMPORTED_MODULE_3__pages_course_detail_course_detail_component__["a" /* CourseDetailComponent */] },
     { path: 'overview-map/:course', component: __WEBPACK_IMPORTED_MODULE_4__pages_course_pages_overview_map_overview_map_component__["a" /* OverviewMapComponent */] },
@@ -789,7 +888,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/course-pages/chloropleth-map/chloropleth-map.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  chloropleth-map works!\n  <button routerLink=\"{{nextLink}}\">Weiter</button>\n</p>\n\n<div class=\"map-info\">\n  {{mapDataName}}\n</div>\n\n<mgl-map\n  [center]=\"mapOption.center\"\n  [zoom]=\"mapOption.zoom\"\n  [style]=\"mapOption.style\">\n  <mgl-geojson-source\n    id=\"berlin\"\n    [data]=\"source\">\n  </mgl-geojson-source>\n  <mgl-layer\n    id=\"base\"\n    type=\"fill\"\n    source=\"berlin\"\n    [paint]='{\n    \"fill-opacity\": 0.0}'\n    (mouseMove)=\"activateHoverOn($event)\"\n    (mouseLeave)=\"disableHover()\">\n  </mgl-layer>\n\n  <mgl-layer\n    id=\"outline\"\n    type=\"line\"\n    source=\"berlin\"\n    [paint]='{\n    \"line-color\": \"#333\",\n    \"line-width\": 2\n    }'>\n  </mgl-layer>\n\n  <mgl-layer\n    id=\"hover\"\n    type=\"line\"\n    source=\"berlin\"\n    [paint]='{\n    \"line-color\": \"#333\",\n    \"line-width\": 6\n    }'\n    [filter]=\"hoverFilter\">\n  </mgl-layer>\n</mgl-map>\n"
+module.exports = "<div class=\"wrapper\" *ngIf=\"title\">\n  <app-action-bar [name]=\"title\" [showBack]=\"true\"></app-action-bar>\n  <div class=\"main\">\n    <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px; z-index: 100;\" routerLink=\"{{nextLink}}\">Weiter</a>\n\n  </div>\n</div>\n\n<div class=\"map-info\">\n  {{mapDataName}}\n</div>\n\n<mgl-map\n  [center]=\"mapOption.center\"\n  [zoom]=\"mapOption.zoom\"\n  [style]=\"mapOption.style\">\n  <mgl-geojson-source\n    id=\"berlin\"\n    [data]=\"source\">\n  </mgl-geojson-source>\n  <mgl-layer\n    id=\"base\"\n    type=\"fill\"\n    source=\"berlin\"\n    [paint]='{\n    \"fill-opacity\": 0.0}'\n    (mouseMove)=\"activateHoverOn($event)\"\n    (mouseLeave)=\"disableHover()\">\n  </mgl-layer>\n\n  <mgl-layer\n    id=\"outline\"\n    type=\"line\"\n    source=\"berlin\"\n    [paint]='{\n    \"line-color\": \"#333\",\n    \"line-width\": 2\n    }'>\n  </mgl-layer>\n\n  <mgl-layer\n    id=\"hover\"\n    type=\"line\"\n    source=\"berlin\"\n    [paint]='{\n    \"line-color\": \"#333\",\n    \"line-width\": 6\n    }'\n    [filter]=\"hoverFilter\">\n  </mgl-layer>\n</mgl-map>\n"
 
 /***/ }),
 
@@ -836,6 +935,7 @@ var ChloroplethMapComponent = /** @class */ (function () {
         var page_id = +this.route.snapshot.paramMap.get('page');
         this.coursesService.getPage(course_id, station_id, page_id).subscribe(function (page) {
             console.log(page);
+            _this.title = page.title;
             _this.coursesService.getNextPageLink(course_id, station_id, page.next).subscribe(function (nextPage) {
                 _this.nextLink = nextPage;
             });
@@ -1116,7 +1216,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/course-pages/overview-map/overview-map.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"wrapper\" *ngIf=\"course\">\n  <app-action-bar [name]=\"course.name\"></app-action-bar>\n  <div class=\"main\">\n    <mgl-map\n      [center]=\"mapOptions.center\"\n      [zoom]=\"mapOptions.zoom\"\n      [style]=\"mapOptions.style\">\n      <mgl-layer\n        id=\"linelayer\"\n        type=\"line\"\n        [source]=\"{\n        'type': 'geojson',\n        'data': {\n          'type': 'Feature',\n          'properties': {},\n          'geometry': {\n            'type': 'LineString',\n            'coordinates': line\n          }\n        }\n        }\"\n        [layout]=\"{\n        'line-join': 'round',\n        'line-cap': 'round'\n        }\"\n        [paint]=\"{\n        'line-color': '#888',\n        'line-width': 8\n        }\">\n      </mgl-layer>\n      <mgl-marker\n        *ngFor=\"let station of stations\"\n        [lngLat]=\"[station.position.lon, station.position.lat]\"\n        (click)=\"click($event)\"\n      >{{station.id}} {{station.name}}\n      </mgl-marker>\n    </mgl-map>\n\n    <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Los gehts</a>\n    <!--<app-waypoint-info [course]=\"course\" [waypointId]=\"activeWaypoint\"></app-waypoint-info>-->\n  </div>\n</div>\n<div class=\"wrapper\">\n  <!--<div class=\"mymap\" id=\"mymap\"></div>-->\n</div>\n"
+module.exports = "<div class=\"wrapper\" *ngIf=\"course\">\n  <app-action-bar [name]=\"course.name\" [showMenu]=\"true\"></app-action-bar>\n  <div class=\"main\">\n    <mgl-map\n      [center]=\"mapOptions.center\"\n      [zoom]=\"mapOptions.zoom\"\n      [style]=\"mapOptions.style\">\n      <mgl-layer\n        id=\"linelayer\"\n        type=\"line\"\n        [source]=\"{\n        'type': 'geojson',\n        'data': {\n          'type': 'Feature',\n          'properties': {},\n          'geometry': {\n            'type': 'LineString',\n            'coordinates': line\n          }\n        }\n        }\"\n        [layout]=\"{\n        'line-join': 'round',\n        'line-cap': 'round'\n        }\"\n        [paint]=\"{\n        'line-color': '#888',\n        'line-width': 8\n        }\">\n      </mgl-layer>\n      <mgl-marker\n        *ngFor=\"let station of stations\"\n        [lngLat]=\"[station.position.lon, station.position.lat]\"\n        (click)=\"click($event)\"\n      >{{station.id}} {{station.name}}\n      </mgl-marker>\n    </mgl-map>\n\n    <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Los gehts</a>\n    <!--<app-waypoint-info [course]=\"course\" [waypointId]=\"activeWaypoint\"></app-waypoint-info>-->\n  </div>\n</div>\n<div class=\"wrapper\">\n  <!--<div class=\"mymap\" id=\"mymap\"></div>-->\n</div>\n"
 
 /***/ }),
 
@@ -1232,7 +1332,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/course-pages/point-to-point-map/point-to-point-map.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "2<div class=\"wrapper\" *ngIf=\"station\">\n  <app-action-bar [name]=\"station.name\"></app-action-bar>\n  <div class=\"main\">\n    <mgl-map\n      [center]=\"mapOptions.center\"\n      [zoom]=\"mapOptions.zoom\"\n      [style]=\"mapOptions.style\">\n      <mgl-layer\n        *ngIf=\"locationMarker.length > 0\"\n        id=\"linelayer\"\n        type=\"line\"\n        [source]=\"{\n        'type': 'geojson',\n        'data': {\n          'type': 'Feature',\n          'properties': {},\n          'geometry': {\n            'type': 'LineString',\n            'coordinates': [mapOptions.center, locationMarker]\n           }\n        }\n        }\"\n        [layout]=\"{\n        'line-join': 'round',\n        'line-cap': 'round'\n        }\"\n        [paint]=\"{\n        'line-color': '#888',\n        'line-width': 8\n        }\"\n      ></mgl-layer>\n      <mgl-marker\n        [lngLat]=\"mapOptions.center\">\n        <div class=\"marker\">HIER</div>\n      </mgl-marker>\n      <mgl-marker *ngIf=\"locationMarker.length > 0\"\n        [lngLat]=\"locationMarker\">\n        <div class=\"marker\">DU</div>\n      </mgl-marker>\n    </mgl-map>\n\n    <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Angekommen</a>\n\n  </div>\n</div>\n"
+module.exports = "<div class=\"wrapper\" *ngIf=\"station\">\n  <app-action-bar [name]=\"station.name\" [showBack]=\"true\"></app-action-bar>\n  <div class=\"main\">\n    <mgl-map\n      [center]=\"mapOptions.center\"\n      [zoom]=\"mapOptions.zoom\"\n      [style]=\"mapOptions.style\">\n      <mgl-layer\n        *ngIf=\"locationMarker.length > 0\"\n        id=\"linelayer\"\n        type=\"line\"\n        [source]=\"{\n        'type': 'geojson',\n        'data': {\n          'type': 'Feature',\n          'properties': {},\n          'geometry': {\n            'type': 'LineString',\n            'coordinates': [mapOptions.center, locationMarker]\n           }\n        }\n        }\"\n        [layout]=\"{\n        'line-join': 'round',\n        'line-cap': 'round'\n        }\"\n        [paint]=\"{\n        'line-color': '#888',\n        'line-width': 8\n        }\"\n      ></mgl-layer>\n      <mgl-marker\n        [lngLat]=\"mapOptions.center\">\n        <div class=\"marker\">HIER</div>\n      </mgl-marker>\n      <mgl-marker *ngIf=\"locationMarker.length > 0\"\n        [lngLat]=\"locationMarker\">\n        <div class=\"marker\">DU</div>\n      </mgl-marker>\n    </mgl-map>\n\n    <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Angekommen</a>\n\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -1364,7 +1464,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/course-pages/quiz/quiz.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"wrapper\" *ngIf=\"title\">\n  <app-action-bar [name]=\"title\"></app-action-bar>\n  <h1 style=\"text-align: center; padding-top: 100px;\">{{question}}</h1>\n  <ul>\n    <li class=\"button\" *ngFor=\"let answer of answers; let i = index\" (click)=\"sendanswer(i)\">{{answer}}</li>\n  </ul>\n  <p *ngIf=\"firstguess && correct\">{{correct_message}}</p>\n  <p *ngIf=\"firstguess && !correct\">{{wrong_message}}</p>\n  <button class=\"button\" style=\"margin-top: 10px\" routerLink=\"{{nextLink}}\">Next</button>\n\n</div>\n\n\n"
+module.exports = "<div class=\"wrapper\" *ngIf=\"title\">\n  <app-action-bar [name]=\"title\" [showBack]=\"true\"></app-action-bar>\n  <h1 style=\"text-align: center; padding-top: 100px;\">{{question}}</h1>\n  <ul>\n    <li class=\"button\" *ngFor=\"let answer of answers; let i = index\" (click)=\"sendanswer(i)\">{{answer}}</li>\n  </ul>\n  <p *ngIf=\"firstguess && correct\">{{correct_message}}</p>\n  <p *ngIf=\"firstguess && !correct\">{{wrong_message}}</p>\n  <button class=\"button\" style=\"margin-top: 10px\" routerLink=\"{{nextLink}}\">Next</button>\n\n</div>\n\n\n"
 
 /***/ }),
 
@@ -1453,7 +1553,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/course-pages/story/story.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"wrapper\" *ngIf=\"story\">\n  <app-action-bar  [name]=\"story.title\"></app-action-bar>\n  <div class=\"main\" [style.background-image]=\"image\" style=\"height: 100vh; background-size: cover\">\n    <div class=\"detail\">\n      <!--<img src=\"{{course.preview_image}}\" alt=\"\">-->\n      <p class=\"description\">{{story.content}}</p>\n      <a class=\"btn\" routerLink=\"{{nextLink}}\">Weiter</a>\n    </div>\n  </div>\n</div>\n\n\n"
+module.exports = "<div class=\"wrapper\" *ngIf=\"story\">\n  <app-action-bar  [name]=\"story.title\" [showBack]=\"true\"></app-action-bar>\n  <div class=\"main\" [style.background-image]=\"image\" style=\"height: 100vh; background-size: cover\">\n    <div class=\"detail\">\n      <!--<img src=\"{{course.preview_image}}\" alt=\"\">-->\n      <p class=\"description\">{{story.content}}</p>\n      <a class=\"btn\" routerLink=\"{{nextLink}}\">Weiter</a>\n    </div>\n  </div>\n</div>\n\n\n"
 
 /***/ }),
 
@@ -1491,7 +1591,6 @@ var StoryComponent = /** @class */ (function () {
             var course_id = +params['course'];
             var station_id = +params['station'];
             var page_id = +params['page'];
-            console.log('new page');
             _this.coursesService.getPage(course_id, station_id, page_id).subscribe(function (page) {
                 _this.story = page;
                 _this.image = _this.sanitizer.bypassSecurityTrustStyle("url(" + _this.story.img + ")");
@@ -1507,7 +1606,7 @@ var StoryComponent = /** @class */ (function () {
             template: __webpack_require__("../../../../../src/app/pages/course-pages/story/story.component.html"),
             styles: [__webpack_require__("../../../../../src/app/pages/course-pages/story/story.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__["a" /* CoursesService */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["b" /* DomSanitizer */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__["a" /* CoursesService */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["c" /* DomSanitizer */]])
     ], StoryComponent);
     return StoryComponent;
 }());
@@ -1537,7 +1636,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/course-pages/success/success.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"wrapper\" *ngIf=\"station\" style=\"height: 100vh; background-color: rgb(225,246,253)\">\n  <app-action-bar  [name]=\"station.title\"></app-action-bar>\n  <img style=\"max-width: 100%\" src=\"/assets/images/success.svg\" alt=\"\">\n  <h3 style=\"text-align: center; padding: 10px 5em\">{{station.message}}</h3>\n  <button class=\"btn\" style=\"display: block; margin: auto\" routerLink=\"/overview\">Zurück zu allen Spaziergängen</button>\n</div>\n"
+module.exports = "<app-action-bar  [name]=\"title\" [showBack]=\"true\"></app-action-bar>\n<img style=\"max-width: 100%\" src=\"/assets/images/success.svg\" alt=\"\">\n<h3 style=\"text-align: center; padding: 10px 5em\">{{message}}</h3>\n<button class=\"btn\" style=\"display: block; margin: auto\" routerLink=\"/overview\">Zurück zu allen Spaziergängen</button>\n\n"
 
 /***/ }),
 
@@ -1565,15 +1664,10 @@ var SuccessComponent = /** @class */ (function () {
     function SuccessComponent(coursesService, route) {
         this.coursesService = coursesService;
         this.route = route;
+        this.message = "Herzlichen Glückwunsch, besuchen uns auf datenschule.de für unsere Workshops";
+        this.title = "Abschluss";
     }
     SuccessComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        var course_id = +this.route.snapshot.paramMap.get('course');
-        var station_id = +this.route.snapshot.paramMap.get('id');
-        this.coursesService.getCourse(course_id).subscribe(function (course) {
-            _this.course = course;
-            _this.station = _this.course.stations.find(function (station) { return station.id === station_id; });
-        });
     };
     SuccessComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -1765,7 +1859,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/course-pages/tree-map/tree-map.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"main\" *ngIf=\"station\">\n  <app-action-bar  [name]=\"station.title\"></app-action-bar>\n  <div class=\"wrapper\">\n    <mgl-map\n      [zoom]=\"[mapOptions.zoom]\"\n      [center]=\"mapOptions.center\"\n      [style]=\"mapOptions.style\">\n      <mgl-marker\n        *ngFor=\"let point of trees\"\n        [lngLat]=\"[ point.lat, point.lon ]\"\n        (click)=\"treeClick($event)\"></mgl-marker>\n    </mgl-map>\n  </div>\n  <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Los gehts</a>\n  <!--<app-waypoint-info [course]=\"course\" [waypointId]=\"activeWaypoint\"></app-waypoint-info>-->\n</div>\n"
+module.exports = "<div class=\"main\" *ngIf=\"station\">\n  <app-action-bar  [name]=\"station.title\" [showBack]=\"true\"></app-action-bar>\n  <div class=\"wrapper\">\n    <mgl-map\n      [zoom]=\"[mapOptions.zoom]\"\n      [center]=\"mapOptions.center\"\n      [style]=\"mapOptions.style\">\n      <mgl-marker\n        *ngFor=\"let point of trees\"\n        [lngLat]=\"[ point.lat, point.lon ]\"\n        (click)=\"treeClick($event)\"></mgl-marker>\n    </mgl-map>\n  </div>\n  <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Los gehts</a>\n  <!--<app-waypoint-info [course]=\"course\" [waypointId]=\"activeWaypoint\"></app-waypoint-info>-->\n</div>\n"
 
 /***/ }),
 
@@ -1884,7 +1978,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/course-pages/wheelmap-map/wheelmap-map.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"wrapper\" *ngIf=\"course\">\n  <app-action-bar [name]=\"course.name\"></app-action-bar>\n  <div class=\"main\">\n    <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Weiter</a>\n\n  </div>\n</div>\n<mgl-map\n  [style]=\"mapOptions.style\"\n  [zoom]=\"mapOptions.zoom\"\n  [center]=\"mapOptions.center\"\n  [doubleClickZoom]=\"false\">\n  <mgl-marker\n    [lngLat]=\"mapOptions.center\">\n    <div\n      (click)=\"log('Foo')\"\n      class=\"marker\">\n\t    Hello\n    </div>\n  </mgl-marker>\n</mgl-map>\n\n<a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Weiter</a>\n"
+module.exports = "<div class=\"wrapper\" *ngIf=\"title\">\n  <app-action-bar [name]=\"title\" [showBack]=\"true\"></app-action-bar>\n  <div class=\"main\">\n    <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Weiter</a>\n\n  </div>\n</div>\n<mgl-map\n  [style]=\"mapOptions.style\"\n  [zoom]=\"mapOptions.zoom\"\n  [center]=\"mapOptions.center\"\n  [doubleClickZoom]=\"false\">\n  <mgl-marker\n    [lngLat]=\"mapOptions.center\">\n    <div\n      (click)=\"log('Foo')\"\n      class=\"marker\">\n\t    Hello\n    </div>\n  </mgl-marker>\n</mgl-map>\n\n<a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Weiter</a>\n"
 
 /***/ }),
 
@@ -1930,6 +2024,7 @@ var WheelmapMapComponent = /** @class */ (function () {
         var page_id = +this.route.snapshot.paramMap.get('page');
         this.coursesService.getPage(course_id, station_id, page_id).subscribe(function (page) {
             console.log(page);
+            _this.title = page.title;
             _this.coursesService.getNextPageLink(course_id, station_id, page.next).subscribe(function (nextPage) {
                 _this.nextLink = nextPage;
             });
@@ -1958,7 +2053,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".main {\n  padding-top: 60px;\n  -webkit-box-flex: 1;\n  -ms-flex: 1;\n  flex: 1;\n  overflow-x: hidden;\n  overflow-y: auto;\n  -webkit-overflow-scrolling: touch;\n}\n", ""]);
+exports.push([module.i, ".main {\n  padding-top: 60px;\n  -webkit-box-flex: 1;\n  -ms-flex: 1;\n  flex: 1;\n  overflow-x: hidden;\n  overflow-y: auto;\n  -webkit-overflow-scrolling: touch;\n}\n\n.box {\n  position: absolute;\n  top: 80px;\n  left: 60px;\n  min-height: 30vh;\n  width: 50vh;\n  background-color: white;\n  border: 1px solid black;\n  padding: 30px;\n}\n", ""]);
 
 // exports
 
@@ -1971,7 +2066,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/pages/courses-overview/courses-overview.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-action-bar [name]=\"title\"></app-action-bar>\n<div class=\"main\">\n  <app-card *ngFor=\"let course of courses\" [course]=\"course\"></app-card>\n</div>\n"
+module.exports = "<app-action-bar [name]=\"title\" [showMenu]=\"true\"></app-action-bar>\n<!--<div class=\"main\">-->\n  <!--<app-card *ngFor=\"let course of courses\" [course]=\"course\"></app-card>-->\n<!--</div>-->\n<div class=\"wrapper\" *ngIf=\"activeCourse\">\n  <mgl-map\n    [style]=\"mapOptions.style\"\n    [zoom]=\"mapOptions.zoom\"\n    [center]=\"mapOptions.center\"\n    [doubleClickZoom]=\"false\">\n    <mgl-layer\n      id=\"linelayer\"\n      type=\"line\"\n      [source]=\"{\n        'type': 'geojson',\n        'data': {\n          'type': 'Feature',\n          'properties': {},\n          'geometry': {\n            'type': 'LineString',\n            'coordinates': activeLine\n          }\n        }\n        }\"\n      [layout]=\"{\n        'line-join': 'round',\n        'line-cap': 'round'\n        }\"\n      [paint]=\"{\n        'line-color': '#888',\n        'line-width': 8\n        }\">\n    </mgl-layer>\n    <mgl-marker\n      *ngFor=\"let station of activeCourse.stations\"\n      [lngLat]=\"[station.position.lon, station.position.lat]\"\n    >{{station.id}} {{station.name}}\n    </mgl-marker>\n  </mgl-map>\n\n  <div class=\"box\">\n    <h1>{{activeCourse.name}}</h1>\n    <p>{{activeCourse.description}}</p>\n    <div class=\"navigation\">\n      <a class=\"btn\" routerLink=\"\">&lt;</a>\n      <a class=\"btn\" routerLink=\"/overview-map/{{activeCourse.id}}\">Starten</a>\n      <a class=\"btn\" routerLink=\"\">&gt;</a>\n    </div>\n  </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -1982,6 +2077,9 @@ module.exports = "<app-action-bar [name]=\"title\"></app-action-bar>\n<div class
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CoursesOverviewComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__ = __webpack_require__("../../../../../src/app/services/courses/courses.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__turf_turf__ = __webpack_require__("../../../../@turf/turf/turf.min.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__turf_turf___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__turf_turf__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1993,10 +2091,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
+
 var CoursesOverviewComponent = /** @class */ (function () {
     function CoursesOverviewComponent(coursesService) {
         this.coursesService = coursesService;
-        this.title = "Datenspaziergang";
+        this.title = 'Touren';
+        this.activeLine = [[13.390497, 52.518321, 49], [13.390521, 52.51815, 48], [13.390688, 52.517271, 43.1], [13.39068, 52.51723, 42.7], [13.390703, 52.517122, 42.3], [13.392561, 52.517235, 39.4], [13.392584, 52.517118, 39.3], [13.393054, 52.517149, 39.1], [13.393172, 52.517192, 39.2], [13.393289, 52.517222, 39.3], [13.393364, 52.517227, 39.3], [13.393385, 52.517089, 39.3], [13.394184, 52.517141, 39], [13.394233, 52.516831, 38.6], [13.394358, 52.516045, 36.3], [13.394367, 52.515986, 36.2], [13.394171, 52.515955, 36.2], [13.393571, 52.515912, 36.2], [13.393495, 52.515906, 36.1], [13.393164, 52.515884, 36.4], [13.393034, 52.515888, 36.5], [13.392887, 52.51588, 36.6], [13.392927, 52.515624, 37], [13.393033, 52.514997, 38.9], [13.393129, 52.514432, 41], [13.393179, 52.514104, 41.9], [13.394314, 52.514145, 43.4], [13.393179, 52.514104, 44.3], [13.393092, 52.514098, 44.2], [13.392478, 52.514057, 43.8], [13.391333, 52.513979, 43.6], [13.391248, 52.513974, 43.5], [13.391388, 52.513118, 43.2], [13.391442, 52.512801, 43.4], [13.391388, 52.513118, 43.5], [13.391248, 52.513974, 43.5], [13.390523, 52.513928, 43.6], [13.389337, 52.513854, 43.3], [13.388208, 52.513782, 42.9], [13.386962, 52.513702, 42.7], [13.386368, 52.51367, 42.4], [13.386293, 52.514122, 41.9], [13.386209, 52.51457, 41.4], [13.385703, 52.51453, 40.8], [13.386209, 52.51457, 39], [13.386158, 52.514868, 39], [13.38612, 52.515087, 38.8], [13.386106, 52.515165, 38.8], [13.386057, 52.515451, 38.6], [13.387619, 52.515556, 38.8], [13.387547, 52.516025, 39.2], [13.387619, 52.515556, 40.5], [13.386057, 52.515451, 39.5], [13.385972, 52.515896, 39.2], [13.385894, 52.516325, 38.7], [13.385854, 52.516522, 38.5], [13.385846, 52.51656, 38.4], [13.385821, 52.516671, 38.2], [13.386007, 52.516685, 38.3], [13.385973, 52.516886, 38.5], [13.385958, 52.516976, 38.6], [13.386016, 52.51698, 38.7], [13.387006, 52.517049, 39.9], [13.388066, 52.517123, 44], [13.388057, 52.517173, 44.1], [13.388046, 52.517231, 44.2], [13.38802, 52.517373, 44.3], [13.38799, 52.517529, 44.3], [13.387968, 52.517647, 44.2], [13.38794, 52.517799, 44.2], [13.387919, 52.517912, 44.2], [13.387908, 52.517983, 44.2], [13.388643, 52.518027, 44.5], [13.388544, 52.518716, 43], [13.388611, 52.518785, 42.5], [13.388625, 52.518882, 41.9], [13.388592, 52.519069, 40.8], [13.388622, 52.51907, 40.3], [13.388627, 52.519075, 39.8], [13.388627, 52.519075, 39.3], [13.388627, 52.519075, 34], [13.388622, 52.51907, 34], [13.388592, 52.519069, 34], [13.388625, 52.518882, 34], [13.388611, 52.518785, 34], [13.388544, 52.518716, 34], [13.388855, 52.518711, 34], [13.390091, 52.518793, 38.3], [13.390236, 52.518824, 38.9], [13.390371, 52.518879, 39.5], [13.390416, 52.518908, 40.4], [13.390419, 52.518887, 41.2], [13.390497, 52.518321, 46]];
+        this.mapOptions = {
+            style: __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].mapboxTiles.light,
+            zoom: [14],
+            center: [13.40497, 52.517221]
+        };
     }
     CoursesOverviewComponent.prototype.getCourses = function () {
         var _this = this;
@@ -2004,7 +2110,22 @@ var CoursesOverviewComponent = /** @class */ (function () {
             .subscribe(function (courses) {
             _this.courses = courses;
             console.log(courses);
+            _this.updateCourse(courses[0]);
+            // console.log();
         });
+    };
+    CoursesOverviewComponent.prototype.updateCourse = function (course) {
+        this.activeCourse = course;
+        var features = __WEBPACK_IMPORTED_MODULE_3__turf_turf__["featureCollection"](this.activeCourse.stations.map(function (station) { return __WEBPACK_IMPORTED_MODULE_3__turf_turf__["point"]([station.position.lon, station.position.lat]); }));
+        var center = __WEBPACK_IMPORTED_MODULE_3__turf_turf__["center"](features);
+        center = __WEBPACK_IMPORTED_MODULE_3__turf_turf__["transformTranslate"](center, -1, 90);
+        console.log(center);
+        this.mapOptions.center = center.geometry.coordinates;
+        this.activeLine = this.activeCourse.stations.reduce(function (prev, curr) {
+            console.log(prev);
+            prev.push([curr.position.lon, curr.position.lat]);
+            return prev;
+        }, []);
     };
     CoursesOverviewComponent.prototype.ngOnInit = function () {
         this.getCourses();
@@ -2018,6 +2139,68 @@ var CoursesOverviewComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__["a" /* CoursesService */]])
     ], CoursesOverviewComponent);
     return CoursesOverviewComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/intro/intro.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".main {\n  max-width: 50%;\n  float:left;\n  margin: 60px 10%;\n}\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/intro/intro.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<app-action-bar [name]=\"title\" [showMenu]=\"true\"></app-action-bar>\n<div class=\"main\">\n  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto atque delectus fugiat ipsa natus nesciunt\n    nihil nostrum obcaecati, officia quia recusandae repellendus suscipit vitae? Cum dolorum iure laborum quibusdam\n    rerum. Aliquam aspernatur error soluta veritatis voluptatum. Beatae, dolores esse exercitationem nisi provident\n    quisquam! Aliquid dignissimos fugiat itaque maxime neque recusandae tempore vel, veniam! Aperiam consequuntur\n    deserunt dolorem dolorum, eius eligendi, enim eum exercitationem explicabo hic iste laboriosam maxime mollitia nam\n    nesciunt nihil provident sapiente! Asperiores aspernatur assumenda cumque debitis deserunt eligendi eos esse eum\n    harum iure, minus, quas quidem repellendus reprehenderit ullam. Corporis fuga hic ipsam odit porro possimus quis\n    quos ratione. Aliquid amet aperiam commodi deleniti dicta facilis fuga itaque magni mollitia nisi nobis non quas,\n    temporibus? Corporis eum ex in laudantium nam nihil non numquam praesentium ut, vero vitae voluptatum. Deserunt quas\n    quidem similique voluptatum. Blanditiis consectetur consequuntur cum dolores eligendi eveniet explicabo fugit iste\n    magni maiores nesciunt odio pariatur quae quas quasi quia quis quo, repellat reprehenderit sed vitae, voluptatem\n    voluptatum. Aspernatur assumenda delectus distinctio dolore, expedita id necessitatibus obcaecati perspiciatis\n    possimus, quasi recusandae repellendus rerum saepe vel voluptatem? Accusantium amet laborum voluptatem? Accusantium\n    aliquid asperiores at atque aut commodi cum delectus dicta distinctio dolores ea eius error fuga incidunt inventore\n    itaque libero magni nemo nostrum nulla omnis perspiciatis provident quaerat quos, reprehenderit repudiandae rerum\n    similique sint soluta suscipit totam ut vero voluptates! Accusantium aperiam aut fuga laboriosam veniam voluptas! A\n    ab animi, asperiores at dolor dolorum ducimus expedita id incidunt iste minima nobis quam quia sed sint soluta,\n    temporibus voluptas voluptatem. Ab commodi cumque dolorem dolores dolorum eius enim fugiat illum iste magni modi\n    nihil optio pariatur quas quis quos ratione repellat repudiandae sed sequi sint temporibus ut, voluptatum? Amet\n    asperiores cupiditate enim hic ipsum laborum nesciunt odio omnis quidem sapiente, sed soluta veniam veritatis\n    voluptas.</p>\n  <a class=\"btn\" routerLink=\"/overview\">zu den Touren</a>\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/intro/intro.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IntroComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var IntroComponent = /** @class */ (function () {
+    function IntroComponent() {
+        this.title = 'Datenspaziergang';
+    }
+    IntroComponent.prototype.ngOnInit = function () {
+    };
+    IntroComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-intro',
+            template: __webpack_require__("../../../../../src/app/pages/intro/intro.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/pages/intro/intro.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], IntroComponent);
+    return IntroComponent;
 }());
 
 
@@ -2054,7 +2237,7 @@ var SafeHtmlPipe = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* Pipe */])({
             name: 'safeHtml'
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["b" /* DomSanitizer */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["c" /* DomSanitizer */]])
     ], SafeHtmlPipe);
     return SafeHtmlPipe;
 }());

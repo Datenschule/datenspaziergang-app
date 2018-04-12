@@ -41,6 +41,7 @@ import { TreeDevelopmentComponent } from './pages/course-pages/tree-development/
 import { MundraubMapComponent } from './pages/course-pages/mundraub-map/mundraub-map.component';
 import { BerlinBesetztMapComponent } from './pages/course-pages/berlin-besetzt-map/berlin-besetzt-map.component';
 import { BerlinBesetztDashboardComponent } from './pages/course-pages/berlin-besetzt-dashboard/berlin-besetzt-dashboard.component';
+import { IntroComponent } from './pages/intro/intro.component';
 import { MenuComponent } from './components/menu/menu.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -73,6 +74,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     MundraubMapComponent,
     BerlinBesetztMapComponent,
     BerlinBesetztDashboardComponent,
+    IntroComponent,
     MenuComponent,
   ],
   imports: [

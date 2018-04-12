@@ -18,9 +18,11 @@ import {TreeDevelopmentComponent} from '../pages/course-pages/tree-development/t
 import {MundraubMapComponent} from '../pages/course-pages/mundraub-map/mundraub-map.component';
 import {BerlinBesetztMapComponent} from '../pages/course-pages/berlin-besetzt-map/berlin-besetzt-map.component';
 import {BerlinBesetztDashboardComponent} from '../pages/course-pages/berlin-besetzt-dashboard/berlin-besetzt-dashboard.component';
+import {IntroComponent} from '../pages/intro/intro.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/overview', pathMatch: 'full'},
+  { path: '', redirectTo: '/intro', pathMatch: 'full'},
+  { path: 'intro', component: IntroComponent },
   { path: 'overview', component: CoursesOverviewComponent },
   { path: 'course/:id', component: CourseDetailComponent },
   { path: 'overview-map/:course', component: OverviewMapComponent},

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-intro',
@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IntroComponent implements OnInit {
 
-  constructor() { }
+  title = 'Datenspaziergang';
+
+  constructor() {
+  }
 
   ngOnInit() {
   }

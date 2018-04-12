@@ -14,7 +14,7 @@ export class ChloroplethMapComponent implements OnInit {
   defaultText: string = "Hover über einen Bezirk";
   mapDataName: string = this.defaultText;
   source: string = environment.geoJsonSources.berlin;
-
+  title: string;
   mapOption: Object = {
     center: [13.4190634, 52.4945314],
     zoom: [10],
@@ -30,7 +30,7 @@ export class ChloroplethMapComponent implements OnInit {
     const page_id = +this.route.snapshot.paramMap.get('page');
     this.coursesService.getPage(course_id, station_id, page_id).subscribe((page) => {
       console.log(page);
-
+      this.title = page.title;
       this.coursesService.getNextPageLink(course_id, station_id, page.next).subscribe((nextPage) => {
         this.nextLink = nextPage;
       });

@@ -1,5 +1,5 @@
 <div class="wrapper" *ngIf="course">
-  <app-action-bar [name]="course.name"></app-action-bar>
+  <app-action-bar [name]="course.name" [showMenu]="true"></app-action-bar>
   <div class="main">
     <mgl-map
       [center]="mapOptions.center"

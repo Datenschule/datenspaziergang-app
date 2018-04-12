@@ -1,6 +1,6 @@
 <div class="header">
-  <button id="butLogo" class="headerButton" aria-label="goBack" (click)="toggleMenu()"></button>
-  <button id="goBack" class="headerButton" aria-label="goBack" (click)="goBack()"></button>
+  <button id="butLogo" class="headerButton" aria-label="goBack" (click)="toggleMenu()" [hidden]="!showMenu"></button>
+  <button id="goBack" class="headerButton" aria-label="goBack" (click)="goBack()" [hidden]="!showBack"></button>
   <h1 class="header__title">{{name}}</h1>
 </div>
 <app-menu [@slideInOut]="menuState"></app-menu>

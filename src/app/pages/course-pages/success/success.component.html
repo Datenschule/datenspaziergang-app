@@ -1,6 +1,5 @@
-<div class="wrapper" *ngIf="station" style="height: 100vh; background-color: rgb(225,246,253)">
-  <app-action-bar  [name]="station.title"></app-action-bar>
-  <img style="max-width: 100%" src="/assets/images/success.svg" alt="">
-  <h3 style="text-align: center; padding: 10px 5em">{{station.message}}</h3>
-  <button class="btn" style="display: block; margin: auto" routerLink="/overview">Zurück zu allen Spaziergängen</button>
-</div>
+<app-action-bar  [name]="title" [showBack]="true"></app-action-bar>
+<img style="max-width: 100%" src="/assets/images/success.svg" alt="">
+<h3 style="text-align: center; padding: 10px 5em">{{message}}</h3>
+<button class="btn" style="display: block; margin: auto" routerLink="/overview">Zurück zu allen Spaziergängen</button>
+

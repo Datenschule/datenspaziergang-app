@@ -1,5 +1,5 @@
-2<div class="wrapper" *ngIf="station">
-  <app-action-bar [name]="station.name"></app-action-bar>
+<div class="wrapper" *ngIf="station">
+  <app-action-bar [name]="station.name" [showBack]="true"></app-action-bar>
   <div class="main">
     <mgl-map
       [center]="mapOptions.center"

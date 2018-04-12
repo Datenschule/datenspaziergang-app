@@ -1,5 +1,5 @@
 <div class="wrapper" *ngIf="title">
-  <app-action-bar [name]="title"></app-action-bar>
+  <app-action-bar [name]="title" [showBack]="true"></app-action-bar>
   <h1 style="text-align: center; padding-top: 100px;">{{question}}</h1>
   <ul>
     <li class="button" *ngFor="let answer of answers; let i = index" (click)="sendanswer(i)">{{answer}}</li>

@@ -1,5 +1,5 @@
 <div class="main" *ngIf="station">
-  <app-action-bar  [name]="station.title"></app-action-bar>
+  <app-action-bar  [name]="station.title" [showBack]="true"></app-action-bar>
   <div class="wrapper">
     <mgl-map
       [zoom]="[mapOptions.zoom]"

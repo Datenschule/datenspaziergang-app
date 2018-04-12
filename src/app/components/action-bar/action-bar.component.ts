@@ -22,6 +22,8 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 export class ActionBarComponent implements OnInit {
 
   @Input() name: string;
+  @Input() showMenu: boolean;
+  @Input() showBack: boolean;
 
   menuState = 'out';
 

@@ -4,7 +4,7 @@
     "name": "Spaziergang Kreuzberg",
     "location": "Berlin-Kreuzberg",
     "preview_image": "/assets/images/datawalk.png",
-    "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer",
+    "description": "Berlin-Kreuzberg ist bunt und politisch: Der öffentliche Raum ist geprägt von zahlreichen Stories - von Hausbesetzungen, über XX bis hin zu XX. Aber welche Daten erzählen die Geschichte des Bezirks? Und wie gestalten Menschen den öffentlichen Raum durch digitale Mittel? An insgesamt 4 Stationen zu den Themen Kriminalität, Barrierefreiheit, Bildung und Umwelt lernst du neue Perspektiven auf das Berliner Szeneviertel kennen. Wir zeigen dir bei dieser Tour die spannendsten Orte in Kreuzberg und was du in offenen Daten alles über sie herausfinden kannst.<br /><br />Auf geht’s!",
     "entry": 0,
     "stations": [
       {
@@ -16,68 +16,123 @@
         },
         "entry": 0,
         "next": 1,
-        "pages": [
+        "subjects": [
           {
-            "type": "story",
             "id": 0,
-            "img": "/assets/images/datawalk.png",
-            "content": "Drogen am Kotti Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-            "title": "Kriminalität und Drogen",
-            "next": 1
+            "name": "Kriminalität",
+            "description": "Das Kottbusser Tor - oder auch liebevoll “Kotti” genannt, ist nicht nur Berliner*innen ein Begriff, sondern auch außerhalb der Hauptstadt sehr bekannt, leider nicht immer im besten Sinne. Wir zeigen dir hier, was du in offenen Daten alles über den Kotti herausfinden kannst, zum Beispiel zum Thema Kriminalität in der U-Bahn",
+            "entry": 0,
+            "next": 1,
+            "pages": [
+              {
+                "type": "story",
+                "id": 0,
+                "img": "/assets/images/datawalk.png",
+                "content": "Der U-Bahnhof Kottbusser Tor gehört zu den Stationen mit den höchsten Fahrgastzahlen, rund XX Menschen steigen hier pro Tag ein oder aus. Der Kotti gehört aber auch zu den Bahnhöfen mit der höchsten Kriminalität: Etwa 165 Gewalttaten wurden hier im Jahr 2016 begangen. Im gesamten Berliner Nahverkehr kam es im selben Jahr nach Angaben der Berliner Verkehrsbetriebe (BVG) zu 24.477 Straftaten, am häufigsten davon Taschendiebstähle (insgesamt 13.869 Fälle).<br /><br/>Und wie reagiert die Politik auf die Kriminalität an den U-Bahnhöfen? Das kann man bei OffenesParlament.de nachverfolgen.",
+                "name": "Kriminalität",
+                "next": 1
+              },
+              {
+                "type": "story",
+                "id": 1,
+                "img": "/assets/images/datawalk.png",
+                "content": "OffenesParlament.de macht Bundestagsdebatten transparent und nachvollziehbar. Über die Plattform kannst du  alle 245 Plenarprotokolle des Bundestags der letzten Wahlperiode durchsuchen - z.B. nach Ehe für Alle, Videoüberwachung oder Kriminalität. Dadurch hast du die Möglichkeit, die Arbeit von Abgeordneten und ihre Positionen zu überprüfen.<br /><br />Der Bundestag veröffentlicht regelmäßig Sitzungsprotokolle zu aktuellen Debatten. Seit Oktober 2017 werden die Dokumente als offene Daten zur freien Nutzung bereitgestellt. Sie können von Interessierten analysiert werden und finden Verwendung in gemeinnützigen Projekten, wie OffenesParlament.de.",
+                "name": "Was ist OffenesParlament.de?",
+                "prev": 0,
+                "next": 2
+              },
+              {
+                "type": "iframe",
+                "id": 2,
+                "content": "Die Kriminalität an Berliner U-Bahn-Stationen wurde z.B. am 27. Januar 2017 im Bundestag thematisiert (Sitzung 216, Tagesordnungspunkt 28b). Zur Debatte stand, ob der vermehrte Einsatz von Videoüberwachung an Bahnhöfen zu einer erhöhten Sicherheit beiträgt. Das Thema führte zu kontroversen Diskussionen zwischen den Abgeordneten und Fraktionen:",
+                "link": "https://offenesparlament.de/protokoll/#!/216#3",
+                "prev": 1
+              },
+              {
+                "id": 3,
+                "type": "quiz",
+                "title": "Wer hats gesagt?",
+                "question": "Kameras leisten einen entscheidenden Beitrag zu mehr Sicherheit. Sie helfen, Straftäter zu identifizieren, festzunehmen und zu bestrafen. Sie verhindern auch Straftaten.",
+                "answers": [
+                  "Thomas de Maiziere, CDU",
+                  "Horst Seehofer, CDU/CSU",
+                  "Sigmar Gabriel, SPD"
+                ],
+                "correct": 0,
+                "prev": 2,
+                "next": 4
+              },
+              {
+                "id": 4,
+                "type": "quiz",
+                "title": "Wer hats gesagt?",
+                "question": "Das Einzige, was hier passiert, ist, dass Sie gewaltige Datenberge schaffen, von Flensburg bis Rosenheim, um im Fall eines Attentates ein paar mehr Bilder vom Tatort zu bekommen. Und am Ende dauert die Auswertung - wie im Fall Amri - womöglich wochenlang. Ja wen wollen Sie mit diesem Placebo eigentlich beruhigen, meine Damen und Herren?",
+                "answers": [
+                  "Irene Mihalic, Grüne",
+                  "Horst Seehofer, CDU/CSU",
+                  "Sigmar Gabriel, SPD"
+                ],
+                "correct": 0,
+                "prev": 2,
+                "next": 4
+              },
+              {
+                "id": 5,
+                "type": "quiz",
+                "title": "Wer hats gesagt?",
+                "question": "Das Gesetz wird also nichts besser machen. Doch was macht das Gesetz schlimmer? Videoüberwachung ist ein intensiver Eingriff. Sie beeinträchtigt alle, die den betroffenen Raum betreten",
+                "answers": [
+                  "Martina Renner, Linke",
+                  "Horst Seehofer, CDU/CSU",
+                  "Sigmar Gabriel, SPD"
+                ],
+                "correct": 0,
+                "prev": 2,
+                "next": 4
+              }
+            ]
           },
           {
-            "type": "story",
             "id": 1,
-            "img": "/assets/images/datawalk.png",
-            "content": "Offenes Parlament ist toll Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-            "title": "Offenes Parlament - Kurztutorial",
-            "prev": 0,
-            "next": 2
-          },
-          {
-            "type": "op-debate",
-            "id": 2,
-            "content": "Debatte Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-            "prev": 1,
-            "next": 3
-          },
-          {
-            "id": 3,
-            "type": "quiz",
-            "title": "Wer hats gesagt?",
-            "question": "Sagen Sie auch noch etwas zur Gefährlichkeit von Cannabis?",
-            "answers": [
-              "Kai Gehring, Bündnis '90 die GRÜNEN",
-              "Horst Seehofer, CDU/CSU",
-              "Sigmar Gabriel, SPD"
-            ],
-            "correct": 0,
-            "prev": 2,
-            "next": 4
-          },
-          {
-            "type": "story",
-            "id": 4,
-            "img": "/assets/images/datawalk.png",
-            "content": "Berrierefeiheit Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-            "title": "Barrierefreiheit",
-            "prev": 3,
-            "next": 6
-          },
-          {
-            "type": "story",
-            "id": 6,
-            "img": "/assets/images/datawalk.png",
-            "content": "Berrierefeiheit 2 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-            "title": "Wheelmap Kurztutorial",
-            "prev": 4,
-            "next": 7
-          },
-          {
-            "type": "wheelmap-map",
-            "id": 7,
-            "title": "Wheelmap Map",
-            "prev": 6
+            "name": "Barrierefreiheit",
+            "description": "am U-Bahnhof Kottbusser Tor treffen sich Ost und West, Nord und Süd: Die Linien U1 und U8 verbinden große Teile der Stadt miteinander. Aber gilt das auch für Rollstuhlfahrer*innen und andere Menschen, die auf einen barrierefreien Zugang zu öffentlichen Verkehrsmitteln und Orte angewiesen sind?",
+            "entry": 6,
+            "pages": [
+              {
+                "type": "story",
+                "id": 6,
+                "img": "/assets/images/datawalk.png",
+                "content": "Etwa 10 Prozent der Menschen in Deutschland sind auf Barrierefreiheit zwingend angewiesen. Dazu gehört auch der freie Zugang zu Bussen und Bahnen. Von den 173 Berliner U-Bahnhöfen sind aktuell XX durch den Einbau von Aufzügen oder Rampen stufenlos erreichbar. Auf mehr als 100 Bahnhöfen gibt es nach Angaben der BVG außerdem Blindenleitsysteme. Für Menschen, die in ihrer Barrierefreiheit eingeschränkt sind, ist es aber wichtig zu wissen, wo sie in öffentliche Verkehrsmittel ein-, um- und aussteigen können - und wo nicht.<br /><br />Aber welche Bahnhöfe genau sind barrierefrei? Dazu gibt die Wheelmap Auskunft.",
+                "name": "Barrierefreiheit",
+                "next": 7
+              },
+              {
+                "type": "story",
+                "id": 7,
+                "img": "/assets/images/datawalk.png",
+                "content": "Die Wheelmap ist eine Online-Community-Karte zum Suchen und Finden rollstuhlgerechter Orte. Dabei kann jede*r Nutzer*in selbst öffentlich zugängliche Orte wie U-Bahn-Stationen, Cafés oder Behörden entsprechend ihrer Rollstuhlgerechtigkeit markieren – weltweit. Dafür nutzt Wheelmap.org ein einfaches Ampelsystem: Grün steht für voll rollstuhlgerechte Orte, d.h. stufenlos frei zugänglich. Gelb kennzeichnet nur teilweise zugängliche Räume und rot zeigt nicht rollstuhlgerechte Orte an. Bei allen grauen Felder ist der Status noch unbekannt. Die Wheelmap verschafft damit Menschen, die auf Barrierefreiheit angewiesen sind, einen guten Überblick zu rollstuhlgerechten Orten in der Stadt und mehr Planungssicherheit auf ihren Wegen. Politisch gibt es hier aber noch eine Menge zu tun!<br /><br />Wie rollstuhlgerecht ist der Kotti? Finde es heraus!",
+                "name": "Was ist die Wheelmap?",
+                "next": 8,
+                "prev": 6
+              },
+              {
+                "type": "iframe",
+                "id": 8,
+                "content": "",
+                "link": "https://offenesparlament.de/protokoll/#!/216#3",
+                "prev": 7,
+                "next": 9
+              },
+              {
+                "type": "story",
+                "id": 9,
+                "img": "/assets/images/datawalk.png",
+                "content": "Von den sechs U-Bahn-Eingängen am Kottbusser Tor ist nur ein Zugang grün markiert und damit voll rollstuhlgerecht, über alle anderen Eingänge ist der Bahnsteig nicht stufenlos zugänglich. Rollstuhlfahrer*innen oder auch Personen, die eine Gehhilfe o.ä. benutzen, erreichen den Bahnsteig nur über einen Aufzug - der aber nicht immer funktioniert. Aktuelle Informationen zu Aufzugsstörungen stellt die BVG bereit. Ein weiteres Problem: Es gibt keine behindertengerechte Toilette an dieser U-Bahn-Station. Das nächstgelegene WC, das für Rollstuhlfahrer*innen zugänglich ist, ist eine City-Toilette, die sich ein paar Meter außerhalb der Station befindet. Das zeigt: Es gibt noch viel zu tun für mehr Barrierefreiheit!<br /><br />Weiter geht’s! Zur nächsten Station unseres Datenspaziergangs sind es XX Meter/ XX Minuten.",
+                "name": "Was ist die Wheelmap?",
+                "next": 10,
+                "prev": 8
+              }
+            ]
           }
         ]
       },
@@ -182,7 +237,6 @@
             "prev": 0,
             "next": 2
           },
-
           {
             "type": "tree-development",
             "id": 2,
@@ -190,7 +244,6 @@
             "prev": 1,
             "next": 3
           },
-
           {
             "type": "story",
             "id": 3,

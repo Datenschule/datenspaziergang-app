@@ -1,0 +1,6 @@
+<app-action-bar [name]="title" [showBack]="true"></app-action-bar>
+<div class="container" [innerHTML]="text | safeHtml"></div>
+<div class="wrapper-window">
+  <iframe [src]="link" frameborder="0" scrolling="yes"></iframe>
+</div>
+<a class="btn" routerLink="{{nextLink}}">Weiter</a>

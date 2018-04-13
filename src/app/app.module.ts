@@ -44,6 +44,7 @@ import { IntroComponent } from './pages/intro/intro.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { PageIndicatorComponent } from './components/page-indicator/page-indicator.component';
 import { SubjectsComponent } from './pages/course-pages/subjects/subjects.component';
+import { IframeComponent } from './pages/course-pages/iframe/iframe.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -78,6 +79,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     MenuComponent,
     PageIndicatorComponent,
     SubjectsComponent,
+    IframeComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,16 @@
+.wrapper-window {
+  margin: 10vh auto 0 auto;
+  border: 5px solid green;
+  height: 60vh;
+  width: 80vh;
+}
+
+iframe {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+
+.container {
+  margin: 100px 10vh 0 10vh;
+}

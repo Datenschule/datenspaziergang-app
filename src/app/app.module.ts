@@ -42,6 +42,7 @@ import { BerlinBesetztMapComponent } from './pages/course-pages/berlin-besetzt-m
 import { BerlinBesetztDashboardComponent } from './pages/course-pages/berlin-besetzt-dashboard/berlin-besetzt-dashboard.component';
 import { IntroComponent } from './pages/intro/intro.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { PageIndicatorComponent } from './components/page-indicator/page-indicator.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true

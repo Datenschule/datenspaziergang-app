@@ -83,7 +83,10 @@ export class SubjectsComponent implements OnInit {
 
       //
       // this.nextLink = `/${firstpage['type']}/${this.course.id}/${this.station.id}/${firstpage.id}`;
-      this.nextLink = `/subjects/${this.course.id}/${this.station.id}`;
+      this.coursesService.getNextStationLink(course_id, station_id).subscribe((nextStation) => {
+        this.nextLink = nextStation;
+      });
+      // this.nextLink = `/subjects/${this.course.id}/${this.station.id}`;
     });
 
 }

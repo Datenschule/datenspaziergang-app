@@ -99,7 +99,7 @@ export class PointToPointMapComponent implements OnInit {
       }
 
 
-      const firstpage = this.station.pages.find(page => page.id === this.station.entry);
+      // const firstpage = this.station.pages.find(page => page.id === this.station.entry);
       // this.nextLink = `/${firstpage['type']}/${this.course.id}/${this.station.id}/${firstpage.id}`;
       this.nextLink = `/subjects/${this.course.id}/${this.station.id}`;
     });

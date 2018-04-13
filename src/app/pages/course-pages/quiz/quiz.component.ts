@@ -23,23 +23,27 @@ export class QuizComponent implements OnInit {
   wrong_message = 'Falsch';
 
   constructor(private coursesService: CoursesService, private route: ActivatedRoute) {
+    route.params.subscribe(val => {
+      const course_id = +this.route.snapshot.paramMap.get('course');
+      const station_id = +this.route.snapshot.paramMap.get('station');
+      const subject_id = +this.route.snapshot.paramMap.get('subject');
+      const page_id = +this.route.snapshot.paramMap.get('page');
+      this.coursesService.getPage(course_id, station_id, subject_id, page_id).subscribe((page) => {
+
+        this.title = page.name;
+        this.question = page.question;
+        this.answers = page.answers;
+        this.correct_answer = page.correct;
+
+        this.coursesService.getNextPageLink(course_id, station_id, subject_id, page.next).subscribe((nextPage) => {
+          this.nextLink = nextPage;
+        });
+      });
+    });
   }
 
   ngOnInit() {
-    const course_id = +this.route.snapshot.paramMap.get('course');
-    const station_id = +this.route.snapshot.paramMap.get('station');
-    const page_id = +this.route.snapshot.paramMap.get('page');
-    this.coursesService.getPage(course_id, station_id, page_id).subscribe((page) => {
 
-      this.title = page.title;
-      this.question = page.question;
-      this.answers = page.answers;
-      this.correct_answer = page.correct;
-
-      this.coursesService.getNextPageLink(course_id, station_id, page.next).subscribe((nextPage) => {
-          this.nextLink = nextPage;
-      });
-    });
   }
 
   sendanswer(answer) {

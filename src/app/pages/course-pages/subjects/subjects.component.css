@@ -1,0 +1,42 @@
+.box {
+  width: 50vh;
+  background-color: white;
+  border: 1px solid black;
+  padding: 30px;
+  margin: 10px 0;
+}
+
+/*::-webkit-scrollbar {*/
+  /*-webkit-appearance: none;*/
+  /*width: 5px;*/
+/*}*/
+
+/*::-webkit-scrollbar-thumb {*/
+  /*!*border-radius: 5px;*!*/
+  /*background-color: rgba(0, 0, 0, .5);*/
+  /*-webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);*/
+/*}*/
+
+.box:hover {
+  cursor: pointer;
+}
+
+.box-container {
+  position: absolute;
+  top: 80px;
+  left: 60px;
+  height: 90vh;
+  width: 50vh;
+  background: transparent;
+  overflow-y: scroll;
+}
+
+.btn {
+  margin: 10px 0;
+  display: block;
+  text-align: center;
+}
+
+.active {
+  background-color: lightblue;
+}

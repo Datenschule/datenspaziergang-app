@@ -36,7 +36,7 @@ export class CoursesService {
         const station = course.stations.find((curr) => curr.id === station_id);
         const subject = station.subjects.find((curr) => curr.id === subject_id);
         return subject.pages.find((curr) => curr.id === page_id);
-    }));
+      }));
   }
 
   getNextPageLink(course_id: number, station_id: number, subject_id: number, next_page_id: number): Observable<any> {
@@ -48,11 +48,26 @@ export class CoursesService {
         const page = subject.pages.find((curr) => curr.id === next_page_id);
         if (page) {
           return `/${page.type}/${course_id}/${station_id}/${subject_id}/${page.id}`;
-        } else if (station.next) {
-          return `/point-to-point/${course_id}/${station.next}`;
+        } else if (subject.next) { //TODO: Set active subject
+          return `/subjects/${course_id}/${station.id}`;
         } else {
-          return `/success/${course_id}`;
+          return `/subjects/${course_id}/${station.id}`;
         }
       }));
+  }
+
+  getNextStationLink(course_id: number, station_id: number): Observable<any> {
+    return this.getCourse(course_id).pipe(
+      map((course) => {
+          const station = course.stations.find((curr) => curr.id === station_id);
+          if (station.next) {
+            return `/point-to-point/${course_id}/${station.next}`;
+          } else {
+            return `/success/${course_id}`;
+          }
+
+        }
+      ));
+
   }
 }

@@ -19,6 +19,7 @@ import {MundraubMapComponent} from '../pages/course-pages/mundraub-map/mundraub-
 import {BerlinBesetztMapComponent} from '../pages/course-pages/berlin-besetzt-map/berlin-besetzt-map.component';
 import {BerlinBesetztDashboardComponent} from '../pages/course-pages/berlin-besetzt-dashboard/berlin-besetzt-dashboard.component';
 import {IntroComponent} from '../pages/intro/intro.component';
+import {SubjectsComponent} from '../pages/course-pages/subjects/subjects.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/intro', pathMatch: 'full'},
@@ -27,19 +28,20 @@ const routes: Routes = [
   { path: 'course/:id', component: CourseDetailComponent },
   { path: 'overview-map/:course', component: OverviewMapComponent},
   { path: 'point-to-point/:course/:station', component: PointToPointMapComponent},
-  { path: 'quiz/:course/:station/:page', component: QuizComponent},
-  { path: 'story/:course/:station/:page', component: StoryComponent, pathMatch: 'full'},
+  { path: 'subjects/:course/:station', component: SubjectsComponent},
+  { path: 'quiz/:course/:station/:subject/:page', component: QuizComponent},
+  { path: 'story/:course/:station/:subject/:page', component: StoryComponent, pathMatch: 'full'},
   { path: 'success/:course', component: SuccessComponent},
-  { path: 'berlin-tree/:course/:station/:page', component: TreeMapComponent},
-  { path: 'op-debate/:course/:station/:page', component: OpDebateComponent },
-  { path: 'wheelmap-map/:course/:station/:page', component: WheelmapMapComponent },
-  { path: 'line-chart/:course/:station/:page', component: LineChartComponent },
-  { path: 'chloropleth-map/:course/:station/:page', component: ChloroplethMapComponent },
-  { path: 'tree-dashboard/:course/:station/:page', component: TreeDashboardComponent },
-  { path: 'tree-development/:course/:station/:page', component: TreeDevelopmentComponent },
-  { path: 'mundraub-map/:course/:station/:page', component: MundraubMapComponent },
-  { path: 'berlin-besetzt-map/:course/:station/:page', component: BerlinBesetztMapComponent },
-  { path: 'berlin-besetzt-dashboard/:course/:station/:page', component: BerlinBesetztDashboardComponent }
+  { path: 'berlin-tree/:course/:station/:subject/:page', component: TreeMapComponent},
+  { path: 'op-debate/:course/:station/:subject/:page', component: OpDebateComponent },
+  { path: 'wheelmap-map/:course/:station/:subject/:page', component: WheelmapMapComponent },
+  { path: 'line-chart/:course/:station/:subject/:page', component: LineChartComponent },
+  { path: 'chloropleth-map/:course/:station/:subject/:page', component: ChloroplethMapComponent },
+  { path: 'tree-dashboard/:course/:station/:subject/:page', component: TreeDashboardComponent },
+  { path: 'tree-development/:course/:station/:subject/:page', component: TreeDevelopmentComponent },
+  { path: 'mundraub-map/:course/:station/:subject/:page', component: MundraubMapComponent },
+  { path: 'berlin-besetzt-map/:course/:station/:subject/:page', component: BerlinBesetztMapComponent },
+  { path: 'berlin-besetzt-dashboard/:course/:station/:subject/:page', component: BerlinBesetztDashboardComponent }
 ]
 
 @NgModule({

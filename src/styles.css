@@ -2,7 +2,8 @@
 @import "~@mapbox/mapbox-gl-geocoder/lib/mapbox-gl-geocoder.css";
 
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 html, body {
   padding: 0;
@@ -14,36 +15,15 @@ html, body {
   font-display: optional;
   color: #444;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+}
 
 /*html {*/
-  /*overflow: hidden; }*/
+/*overflow: hidden; }*/
 
 body {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-align-content: stretch;
-  -ms-flex-line-pack: stretch;
-  align-content: stretch;
-  background: #ececec; }
+  background: #ececec;
+}
 
 .btn {
   background: #039908;
@@ -71,7 +51,6 @@ body {
   background-image: linear-gradient(to bottom, #42bd7b, #42bd7b);
   text-decoration: none;
 }
-
 
 mgl-map {
   height: 100vh;

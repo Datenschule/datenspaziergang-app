@@ -20,6 +20,7 @@ import {BerlinBesetztMapComponent} from '../pages/course-pages/berlin-besetzt-ma
 import {BerlinBesetztDashboardComponent} from '../pages/course-pages/berlin-besetzt-dashboard/berlin-besetzt-dashboard.component';
 import {IntroComponent} from '../pages/intro/intro.component';
 import {SubjectsComponent} from '../pages/course-pages/subjects/subjects.component';
+import {IframeComponent} from '../pages/course-pages/iframe/iframe.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/intro', pathMatch: 'full'},
@@ -32,6 +33,7 @@ const routes: Routes = [
   { path: 'quiz/:course/:station/:subject/:page', component: QuizComponent},
   { path: 'story/:course/:station/:subject/:page', component: StoryComponent, pathMatch: 'full'},
   { path: 'success/:course', component: SuccessComponent},
+  { path: 'iframe/:course/:station/:subject/:page', component: IframeComponent},
   { path: 'berlin-tree/:course/:station/:subject/:page', component: TreeMapComponent},
   { path: 'op-debate/:course/:station/:subject/:page', component: OpDebateComponent },
   { path: 'wheelmap-map/:course/:station/:subject/:page', component: WheelmapMapComponent },

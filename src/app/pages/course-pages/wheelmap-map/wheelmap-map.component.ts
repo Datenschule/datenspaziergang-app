@@ -29,10 +29,11 @@ export class WheelmapMapComponent implements OnInit {
     const course_id = +this.route.snapshot.paramMap.get('course');
     const station_id = +this.route.snapshot.paramMap.get('station');
     const page_id = +this.route.snapshot.paramMap.get('page');
-    this.coursesService.getPage(course_id, station_id, page_id).subscribe((page) => {
+    const subject_id = +this.route.snapshot.paramMap.get('subject');
+    this.coursesService.getPage(course_id, station_id, subject_id, page_id).subscribe((page) => {
       console.log(page);
       this.title = page.title;
-      this.coursesService.getNextPageLink(course_id, station_id, page.next).subscribe((nextPage) => {
+      this.coursesService.getNextPageLink(course_id, station_id, subject_id, page.next).subscribe((nextPage) => {
         this.nextLink = nextPage;
       });
     });

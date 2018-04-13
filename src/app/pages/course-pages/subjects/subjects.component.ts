@@ -88,5 +88,5 @@ export class SubjectsComponent implements OnInit {
       });
       // this.nextLink = `/subjects/${this.course.id}/${this.station.id}`;
     });
-
+  }
 }

@@ -68,6 +68,7 @@ export class OverviewMapComponent implements OnInit {
       );
 
       var center = turf.center(features);
+      center = turf.transformTranslate(center, -0.5, 90);
       this.line = this.stations.reduce((prev, curr) => { console.log(prev); prev.push([curr.position.lon, curr.position.lat]); return prev;}, []);
       // console.log();
 

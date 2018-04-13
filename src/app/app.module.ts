@@ -42,6 +42,7 @@ import { BerlinBesetztMapComponent } from './pages/course-pages/berlin-besetzt-m
 import { BerlinBesetztDashboardComponent } from './pages/course-pages/berlin-besetzt-dashboard/berlin-besetzt-dashboard.component';
 import { IntroComponent } from './pages/intro/intro.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { MapboxService } from './services/mapbox/mapbox.service';
 import { PageIndicatorComponent } from './components/page-indicator/page-indicator.component';
 import { SubjectsComponent } from './pages/course-pages/subjects/subjects.component';
 import { IframeComponent } from './pages/course-pages/iframe/iframe.component';
@@ -95,7 +96,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   providers: [CoursesService, {
     provide: PERFECT_SCROLLBAR_CONFIG,
     useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG,
-  }, NextPageService, TreeBerlinService],
+  }, NextPageService, TreeBerlinService, MapboxService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

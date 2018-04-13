@@ -44,14 +44,16 @@
               {
                 "type": "iframe",
                 "id": 2,
+                "name": "Offenes Parlament",
                 "content": "Die Kriminalität an Berliner U-Bahn-Stationen wurde z.B. am 27. Januar 2017 im Bundestag thematisiert (Sitzung 216, Tagesordnungspunkt 28b). Zur Debatte stand, ob der vermehrte Einsatz von Videoüberwachung an Bahnhöfen zu einer erhöhten Sicherheit beiträgt. Das Thema führte zu kontroversen Diskussionen zwischen den Abgeordneten und Fraktionen:",
                 "link": "https://offenesparlament.de/protokoll/#!/216#3",
-                "prev": 1
+                "prev": 1,
+                "next": 3
               },
               {
                 "id": 3,
                 "type": "quiz",
-                "title": "Wer hats gesagt?",
+                "name": "Wer hats gesagt?",
                 "question": "Kameras leisten einen entscheidenden Beitrag zu mehr Sicherheit. Sie helfen, Straftäter zu identifizieren, festzunehmen und zu bestrafen. Sie verhindern auch Straftaten.",
                 "answers": [
                   "Thomas de Maiziere, CDU",
@@ -65,7 +67,7 @@
               {
                 "id": 4,
                 "type": "quiz",
-                "title": "Wer hats gesagt?",
+                "name": "Wer hats gesagt?",
                 "question": "Das Einzige, was hier passiert, ist, dass Sie gewaltige Datenberge schaffen, von Flensburg bis Rosenheim, um im Fall eines Attentates ein paar mehr Bilder vom Tatort zu bekommen. Und am Ende dauert die Auswertung - wie im Fall Amri - womöglich wochenlang. Ja wen wollen Sie mit diesem Placebo eigentlich beruhigen, meine Damen und Herren?",
                 "answers": [
                   "Irene Mihalic, Grüne",
@@ -73,13 +75,13 @@
                   "Sigmar Gabriel, SPD"
                 ],
                 "correct": 0,
-                "prev": 2,
-                "next": 4
+                "prev": 3,
+                "next": 5
               },
               {
                 "id": 5,
                 "type": "quiz",
-                "title": "Wer hats gesagt?",
+                "name": "Wer hats gesagt?",
                 "question": "Das Gesetz wird also nichts besser machen. Doch was macht das Gesetz schlimmer? Videoüberwachung ist ein intensiver Eingriff. Sie beeinträchtigt alle, die den betroffenen Raum betreten",
                 "answers": [
                   "Martina Renner, Linke",
@@ -87,8 +89,7 @@
                   "Sigmar Gabriel, SPD"
                 ],
                 "correct": 0,
-                "prev": 2,
-                "next": 4
+                "prev": 4
               }
             ]
           },
@@ -118,8 +119,9 @@
               {
                 "type": "iframe",
                 "id": 8,
-                "content": "",
-                "link": "https://offenesparlament.de/protokoll/#!/216#3",
+                "content": "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem",
+                "name": "Wheelmap",
+                "link": "https://wheelmap.org/beta/nodes/268915491#?lat=52.499&lon=13.4184&zoom=19",
                 "prev": 7,
                 "next": 9
               },
@@ -138,7 +140,7 @@
       },
       {
         "id": 1,
-        "name": "Graefestraße 85",
+        "name": "Schule in der Graefestraße 85",
         "position": {
           "lat": 52.4945314,
           "lon": 13.4190634
@@ -146,60 +148,71 @@
         "prev": 0,
         "next": 2,
         "entry": 0,
-        "pages": [
+        "subjects": [
           {
-            "type": "story",
             "id": 0,
-            "img": "/assets/images/datawalk.png",
-            "content": "Jedeschule.de zeigt Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-            "title": "Bildung/ außerschulische Bildung",
-            "next": 1
-          },
-          {
-            "type": "story",
-            "id": 0,
-            "img": "/assets/images/datawalk.png",
-            "content": "Jedeschule.de zeigt Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-            "title": "Jedeschule.de",
-            "next": 1
-          },
-          {
-            "type": "line-chart",
-            "id": 1,
-            "title": "Schulpartnerschaften",
-            "datasource": "https://jedeschule.de/assets/data/partnerships-berlin.json",
-            "description": "1.118 und damit die meisten Projektpartner aller allgemeinbildenden Schulen kommen aus dem gemeinnützigen Bereich (38%), gefolgt von 885 Partnerorganisationen aus dem öffentlichen (30%) und 533 aus dem wirtschaftlichen Bereich (18%). Weitere 246 (8%) Partnerschaften finden mit anderen Schulen statt, 42 (1%) mit religiösen Einrichtungen und 34 (1%) mit Verbänden, Kammern und Genossenschaften. 119 Partnerschaften (4%) konnten nicht eindeutig zugeordnet werden und fallen unter die Kategorie Unbestimmt.",
-            "prev": 0,
-            "next": 2
-          },
-          {
-            "type": "chloropleth-map",
-            "id": 2,
-            "title": "Schulaktivitäten nach Bezirken",
-            "datasource": "https://jedeschule.de/assets/data/activities.json",
-            "prev": 1,
-            "next": 3
-          },
-          {
-            "type": "story",
-            "id": 3,
-            "title": "Schulaktivitäten in Kreuzberg",
-            "content": "In Kreuzberg zeigt Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-            "prev": 2,
-            "next": 5
-          },
-          {
-            "id": 5,
-            "type": "quiz",
-            "title": "Was müss Kind X könnnen?",
-            "question": "Was sind die erwartet Fähigkeiten von 14-Jährigen",
-            "answers": [
-              "Mathe",
-              "Deutsch",
-              "Englisch"
-            ],
-            "correct": 0,
-            "prev": 3
+            "name": "Bildung / außerschulische Bildung",
+            "description": "Station 2 bei unserem Datenspaziergang ist die Sekundarschule Graefestraße, denn das Thema Schule und Bildung betrifft uns alle. Aber: Schulbildung ist in Deutschland Ländersache, daher wird es im Hinblick auf offene Daten recht schnell kompliziert. Warum? Das zeigen wir dir hier.",
+            "entry": 0,
+            "next": 1,
+            "pages": [
+              {
+                "type": "story",
+                "id": 0,
+                "img": "/assets/images/datawalk.png",
+                "content": "Jedes Bundesland unterscheidet sich nicht nur beim Schulsystem, den Unterrichtsfächern, und Schulaktivitäten, sondern teilweise sogar bei den Schularten. So gibt es z.B. in Hamburg sogenannte Stadtteilschulen, die sonst in keinem anderen Bundesland vorkommen. Das Problem daran: Die Informationen über Schulen in Deutschland sind nur schwer miteinander zu vergleichen und die Daten überall unterschiedlich vorhanden, z.B. über Partnerschaften, Fremdsprachen oder Ganztagsangebote. Für Eltern, Lehrende und Schüler*innen sind diese Informationen aber wichtig, um gute Entscheidungen für die Wahl der Schule zu treffen.<br /><br />Offene Daten über Schulen findet du auf JedeSchule.de",
+                "name": "Bildung/ außerschulische Bildung",
+                "next": 1
+              },
+              {
+                "type": "story",
+                "id": 1,
+                "img": "/assets/images/datawalk.png",
+                "content": "JedeSchule.de macht die Informationen von über 30.000 allgemeinbildende Schulen in Deutschland zugänglich. Für knapp 3.000 Schulen in Berlin und Sachsen werden anhand von Daten außerschulische  Aktivitäten, Förderangebote und Partner der Schulen analysiert. Über eine Suchmaske kann auf JedeSchule.de gezielt nach bestimmten Schulen, Schularten, Aktivitäten oder Ganztagsangeboten von Schulen in der eigenen Umgebung oder deutschlandweit gesucht und gefiltert werden.<br /><br />Und was findest du über die Sekundärschule Graefestraße auf JedeSchule.de heraus?",
+                "name": "Was ist JedeSchule.de?",
+                "next": 2,
+                "prev": 0
+              },
+              {
+                "type": "iframe",
+                "id": 2,
+                "name": "Jedeschule.de",
+                "content": "",
+                "link": "https://jedeschule.de/schulen/#!?lat=52.49349906504009&lng=13.416003427264517&zoom=16",
+                "prev": 1,
+                "next": 3
+              },
+              {
+                "type": "chloropleth-map",
+                "id": 3,
+                "name": "Schulaktivitäten nach Bezirken",
+                "datasource": "https://jedeschule.de/assets/data/activities.json",
+                "prev": 2,
+                "next": 4
+              },
+              {
+                "type": "story",
+                "id": 4,
+                "img": "/assets/images/datawalk.png",
+                "name": "Schulaktivitäten in Kreuzberg",
+                "content": "In Kreuzberg zeigt Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+                "prev": 3,
+                "next": 5
+              },
+              {
+                "id": 5,
+                "type": "quiz",
+                "name": "Was muss Kind X könnnen?",
+                "question": "Was sind die erwarteten Fähigkeiten von 14-Jährigen",
+                "answers": [
+                  "Mathe",
+                  "Deutsch",
+                  "Englisch"
+                ],
+                "correct": 0,
+                "prev": 4
+              }
+            ]
           }
         ]
       },
@@ -213,51 +226,75 @@
         "prev": 1,
         "next": 3,
         "entry": 0,
-        "pages": [
+        "subjects": [
           {
-            "type": "story",
             "id": 0,
-            "img": "/assets/images/datawalk.png",
-            "content": "Wie und warum werden Bäume vermessen zeigt Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-            "title": "Umwelt erleben - Baumpolitik",
-            "next": 1
-          },
-          {
-            "type": "story",
-            "id": 0,
-            "img": "/assets/images/datawalk.png",
-            "content": "Wie und warum werden Bäume vermessen zeigt Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-            "title": "Baum Katasterdaten - CodeForTress",
-            "next": 1
-          },
-          {
-            "id": 1,
-            "type": "tree-dashboard",
-            "title": "Bäume im Görlitzer Park",
-            "prev": 0,
-            "next": 2
-          },
-          {
-            "type": "tree-development",
-            "id": 2,
-            "title": "Entwicklung der Bäume",
-            "prev": 1,
-            "next": 3
-          },
-          {
-            "type": "story",
-            "id": 3,
-            "img": "/assets/images/datawalk.png",
-            "content": "Mundraub zeigt Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-            "title": "Mundraub",
-            "prev": 2,
-            "next": 4
-          },
-          {
-            "type": "mundraub-map",
-            "title": "Bäume im Görlitzer Park",
-            "id": 4,
-            "prev": 3
+            "name": "Umwelt/Bäume",
+            "description": "Wir sind nun an Station 3 unserer Kreuzberg-Tour angekommen - dem Görlitzer Park, auch “Görli” genannt. Der “Görli” ist einer von ca. 2.500 öffentlichen Grünanlagen in Berlin. Damit gehört die deutsche Hauptstadt zu den grünsten Städten in Europa! Was man über Bäume in offenen Daten erfahren kann, zeigen wir dir hier.",
+            "entry": 0,
+            "pages": [
+              {
+                "type": "story",
+                "id": 0,
+                "img": "/assets/images/datawalk.png",
+                "content": "Zunächst denkt man vielleicht nicht, dass Bäume viel mit Politik zu tun haben. Das ändert sich aber schlagartig, wenn z.B. alte Bäume in der eigenen Umgebung gefällt werden sollen - oft ist der Protest der Anwohner*innen groß. Es gibt aber auch eine Menge von Vorschriften, Maßnahmen und Erhebungen, die sich ausschließlich mit den rund 438.000 Straßenbäumen in Berlin beschäftigen. Wusstest du z.B. dass etwa 62% der Ahorn-Bäume geschädigt sind? Oder dass der Abstand von der Mitte eines Baumstamms bis zur Fahrbahn mindestens 80 cm betragen muss?<br /><br />In Baumdaten gibt es viele weitere spannende Fakten zu entdecken.",
+                "name": "Umwelt erleben - Baumpolitik",
+                "next": 1
+              },
+              {
+                "type": "story",
+                "id": 1,
+                "img": "/assets/images/datawalk.png",
+                "content": "Die Street Trees Map ist ein ehrenamtliches Communityprojekt von Code for Germany, das vom OK Lab Berlin entwickelt wurde. Auf einer interaktiven Stadtkarte werden alle registrierten Bäume in Berlin angezeigt. Zu jedem einzelnen Baum gibt es umfangreiche Informationen wie Gattung, Alter, Höhe und Pflanzjahr. Weiterhin kann man nach Straßen- und Anlagebäumen, Kastanien und Birken filtern. Damit bietet die Street Trees Map einen guten Überblick über den Bestand an Bäumen im gesamten Stadtgebiet und ist ein tolles Format die Hauptstadt einmal aus einer anderen Perspektive kennenzulernen.<br /><br />Welcher ist der älteste Baum im Görlitzer Park? Suche ihn auf der Karte!",
+                "name": "Was ist die Street Trees Map?",
+                "next": 2,
+                "prev": 1
+              },
+              {
+                "id": 2,
+                "type": "iframe",
+                "content": "",
+                "name": "StreetTrees Map",
+                "link": "https://trees.codefor.de/",
+                "prev": 1,
+                "next": 3
+              },
+              {
+                "type": "story",
+                "id": 3,
+                "img": "/assets/images/datawalk.png",
+                "content": "Kaum zu glauben, aber im Görlitzer Park gibt es fast 900 Bäume und über 50 verschiedene Arten! Neben Esche, Linde und Kirsche sind auch viele Exoten dabei, z.B. die Oxelbeere, der Japanische Schnurbaum oder der dreidorniger Lederhülsenbaum. Die ältesten Bäume im Görli sind mit jeweils 249 Jahren zwei Berg-Ahorn-Bäume, die gleichzeitig auch den größten Stammumfang besitzen (beide 628 cm). Und hier gibt es noch viel mehr zu entdecken!",
+                "name": "Tree Map - Story vom Görli",
+                "prev": 2,
+                "next": 4
+              },
+              {
+                "type": "story",
+                "id": 4,
+                "img": "/assets/images/datawalk.png",
+                "content": "Auf der Street Trees Map findest du Informationen über die Obstbäume in der Stadt, aber wie essbar ist Berlin eigentlich? Wenn du wissen möchtest, wo du Obst, Nüsse oder auch Kräuter in deiner Nähe pflücken kannst, schau doch einmal bei Mundraub.org nach.",
+                "name": "...und was ist mit Obst?",
+                "prev": 3,
+                "next": 5
+              },
+              {
+                "type": "story",
+                "id": 4,
+                "img": "/assets/images/datawalk.png",
+                "content": "Mundraub.org ist eine Online-Community, die zur Entdeckung und Nutzung essbarer Landschaften weltweit aufruft. Auf einer Karte können Fundorte von Obstbäumen, und -sträuchern, Nussbäumen und Kräutern in der eigenen Umgebung gesucht, gefiltert und hinzugefügt werden. Außerdem gibt es Informationen zu Mostereien, Stadtaktionen und Geburtsbäumen, z.B. im Anton-Saefkow-Park in Treptow. Auf diese Weise möchte Mundraub.org ein Bewusstsein für essbare Landschaften, Regionalität und Saisonalität schaffen und stärken.<br /><br />Wie essbar ist der Görli? Schau nach!",
+                "name": "Was ist Mundraub?",
+                "prev": 3,
+                "next": 5
+              },
+              {
+                "id": 5,
+                "type": "iframe",
+                "name": "Mundraub",
+                "content": "Insgesamt gibt es auf Mundraub.org Informationen über 34 Nussbäume, Obstbäume und -sträucher im Görlitzer Park. Die meisten davon sind Kirschbäume (insgesamt 13), aber auch Äpfel, Birnen, Mirabellen, Brombeeren, Schlehen und Haselnüsse kann man hier zur richtigen Jahreszeit pflücken! Vormerken!",
+                "link": "https://www.mundraub.org/map#z=16&lat=52.49779843831727&lng=13.43750858548447",
+                "prev": 4
+              }
+            ]
           }
         ]
       },
@@ -270,36 +307,39 @@
           "lon": 13.4185893
         },
         "entry": 0,
-        "pages": [
+        "subjects": [
           {
-            "type": "story",
             "id": 0,
-            "next": 1,
-            "img": "/assets/images/datawalk.png",
-            "content": "Mundraub zeigt Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-            "title": "Stadtraum erobern"
-          },
-          {
-            "type": "story",
-            "id": 1,
-            "next": 2,
-            "prev": 1,
-            "img": "/assets/images/datawalk.png",
-            "content": "Mundraub zeigt Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-            "title": "Berlin.besetzt"
-          },
-          {
-            "id": 2,
-            "type": "berlin-besetzt-map",
-            "datasource": "",
-            "prev": 1,
-            "next": 3
-          },
-          {
-            "id": 3,
-            "type": "berlin-besetzt-dashboard",
-            "title": "Besetzerszene visualisiert",
-            "prev": 2
+            "name": "Bethanien - Stadtraum erobern",
+            "description": "Wir stehen jetzt am Bethanien, einem ganz besonderen Oort in Kreuzberg und seine Aaktivist/innenszene. Hier habensind in die srriebziger Jahren die Jugendlichen aus West-Berlin angefangen, ihr Stadt zurück zu erobern.",
+            "entry": 0,
+            "pages": [
+              {
+                "type": "story",
+                "id": 0,
+                "next": 1,
+                "img": "/assets/images/datawalk.png",
+                "content": "Mundraub zeigt Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+                "name": "Stadtraum erobern"
+              },
+              {
+                "type": "story",
+                "id": 1,
+                "next": 2,
+                "prev": 0,
+                "img": "/assets/images/datawalk.png",
+                "content": "Mundraub zeigt Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+                "name": "Berlin.besetzt"
+              },
+              {
+                "id": 2,
+                "type": "iframe",
+                "content": "",
+                "name": "berlin.besetzt",
+                "link": "http://berlin-besetzt.de/",
+                "prev": 1
+              }
+            ]
           }
         ]
       }

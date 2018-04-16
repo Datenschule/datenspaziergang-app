@@ -7,7 +7,7 @@ import {Course} from '../../../model/course';
 @Component({
   selector: 'app-op-debate',
   templateUrl: './op-debate.component.html',
-  styleUrls: ['./op-debate.component.css']
+  styleUrls: ['./op-debate.component.scss']
 })
 export class OpDebateComponent implements OnInit {
 

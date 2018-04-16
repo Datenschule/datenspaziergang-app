@@ -5,7 +5,7 @@ import {ActivatedRoute} from '@angular/router';
 @Component({
   selector: 'app-line-chart',
   templateUrl: './line-chart.component.html',
-  styleUrls: ['./line-chart.component.css']
+  styleUrls: ['./line-chart.component.scss']
 })
 export class LineChartComponent implements OnInit {
 

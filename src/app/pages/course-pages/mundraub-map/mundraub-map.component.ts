@@ -5,7 +5,7 @@ import {ActivatedRoute} from '@angular/router';
 @Component({
   selector: 'app-mundraub-map',
   templateUrl: './mundraub-map.component.html',
-  styleUrls: ['./mundraub-map.component.css']
+  styleUrls: ['./mundraub-map.component.scss']
 })
 export class MundraubMapComponent implements OnInit {
 

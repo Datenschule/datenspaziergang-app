@@ -11,7 +11,7 @@ import {MapboxService} from '../../../services/mapbox/mapbox.service';
 @Component({
   selector: 'app-point-to-point-map',
   templateUrl: './point-to-point-map.component.html',
-  styleUrls: ['./point-to-point-map.component.css']
+  styleUrls: ['./point-to-point-map.component.scss']
 })
 export class PointToPointMapComponent implements OnInit {
 

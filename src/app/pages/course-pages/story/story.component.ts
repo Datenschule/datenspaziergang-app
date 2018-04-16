@@ -7,7 +7,7 @@ import {StoryPage} from '../../../model/stations';
 @Component({
   selector: 'app-story',
   templateUrl: './story.component.html',
-  styleUrls: ['./story.component.css']
+  styleUrls: ['./story.component.scss']
 })
 export class StoryComponent implements OnInit {
 

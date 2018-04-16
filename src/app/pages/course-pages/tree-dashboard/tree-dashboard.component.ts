@@ -5,7 +5,7 @@ import {ActivatedRoute} from '@angular/router';
 @Component({
   selector: 'app-tree-dashboard',
   templateUrl: './tree-dashboard.component.html',
-  styleUrls: ['./tree-dashboard.component.css']
+  styleUrls: ['./tree-dashboard.component.scss']
 })
 export class TreeDashboardComponent implements OnInit {
 

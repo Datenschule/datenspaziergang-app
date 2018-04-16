@@ -5,7 +5,7 @@ import {ActivatedRoute} from '@angular/router';
 @Component({
   selector: 'app-tree-development',
   templateUrl: './tree-development.component.html',
-  styleUrls: ['./tree-development.component.css']
+  styleUrls: ['./tree-development.component.scss']
 })
 export class TreeDevelopmentComponent implements OnInit {
 

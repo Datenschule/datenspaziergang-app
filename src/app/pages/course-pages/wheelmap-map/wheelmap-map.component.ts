@@ -6,7 +6,7 @@ import { environment } from '../../../../environments/environment';
 @Component({
   selector: 'app-wheelmap-map',
   templateUrl: './wheelmap-map.component.html',
-  styleUrls: ['./wheelmap-map.component.css']
+  styleUrls: ['./wheelmap-map.component.scss']
 })
 export class WheelmapMapComponent implements OnInit {
 

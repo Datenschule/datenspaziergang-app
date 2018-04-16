@@ -9,7 +9,7 @@ import {Station} from '../../../model/stations';
 @Component({
   selector: 'app-overview-map',
   templateUrl: './overview-map.component.html',
-  styleUrls: ['./overview-map.component.css']
+  styleUrls: ['./overview-map.component.scss']
 })
 export class OverviewMapComponent implements OnInit {
 

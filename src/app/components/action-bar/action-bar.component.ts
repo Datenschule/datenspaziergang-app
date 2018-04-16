@@ -5,7 +5,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 @Component({
   selector: 'app-action-bar',
   templateUrl: './action-bar.component.html',
-  styleUrls: ['./action-bar.component.css'],
+  styleUrls: ['./action-bar.component.scss'],
   animations: [
     trigger('slideInOut', [
       state('in', style({

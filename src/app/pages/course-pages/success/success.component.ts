@@ -8,7 +8,7 @@ import {Station} from '../../../model/stations';
 @Component({
   selector: 'app-success',
   templateUrl: './success.component.html',
-  styleUrls: ['./success.component.css']
+  styleUrls: ['./success.component.scss']
 })
 export class SuccessComponent implements OnInit {
 

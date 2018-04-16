@@ -9,7 +9,7 @@ import {Station} from '../../../model/stations';
 @Component({
   selector: 'app-tree-map',
   templateUrl: './tree-map.component.html',
-  styleUrls: ['./tree-map.component.css']
+  styleUrls: ['./tree-map.component.scss']
 })
 export class TreeMapComponent implements OnInit {
 

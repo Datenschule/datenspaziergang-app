@@ -7,7 +7,7 @@ import * as turf from '@turf/turf';
 @Component({
   selector: 'app-courses-overview',
   templateUrl: './courses-overview.component.html',
-  styleUrls: ['./courses-overview.component.css']
+  styleUrls: ['./courses-overview.component.scss']
 })
 export class CoursesOverviewComponent implements OnInit {
 

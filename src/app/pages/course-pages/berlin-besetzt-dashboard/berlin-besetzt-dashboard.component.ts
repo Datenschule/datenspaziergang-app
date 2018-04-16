@@ -5,7 +5,7 @@ import {ActivatedRoute} from '@angular/router';
 @Component({
   selector: 'app-berlin-besetzt-dashboard',
   templateUrl: './berlin-besetzt-dashboard.component.html',
-  styleUrls: ['./berlin-besetzt-dashboard.component.css']
+  styleUrls: ['./berlin-besetzt-dashboard.component.scss']
 })
 export class BerlinBesetztDashboardComponent implements OnInit {
 

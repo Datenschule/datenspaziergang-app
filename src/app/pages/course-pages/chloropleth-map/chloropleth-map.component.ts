@@ -6,7 +6,7 @@ import { environment } from '../../../../environments/environment';
 @Component({
   selector: 'app-chloropleth-map',
   templateUrl: './chloropleth-map.component.html',
-  styleUrls: ['./chloropleth-map.component.css']
+  styleUrls: ['./chloropleth-map.component.scss']
 })
 export class ChloroplethMapComponent implements OnInit {
 

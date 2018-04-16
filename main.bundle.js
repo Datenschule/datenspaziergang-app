@@ -17,7 +17,14 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_lazy_route_resource lazy re
 
 /***/ }),
 
-/***/ "../../../../../src/app/app.component.css":
+/***/ "../../../../../src/app/app.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<router-outlet></router-outlet>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/app.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -25,20 +32,13 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "\n", ""]);
+exports.push([module.i, "", ""]);
 
 // exports
 
 
 /*** EXPORTS FROM exports-loader ***/
 module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/app.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -63,7 +63,7 @@ var AppComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-root',
             template: __webpack_require__("../../../../../src/app/app.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/app.component.css")]
+            styles: [__webpack_require__("../../../../../src/app/app.component.scss")]
         })
     ], AppComponent);
     return AppComponent;
@@ -226,7 +226,14 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/action-bar/action-bar.component.css":
+/***/ "../../../../../src/app/components/action-bar/action-bar.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"bar\">\n  <button id=\"butLogo\" class=\"barButton\" aria-label=\"goBack\" (click)=\"toggleMenu()\" [hidden]=\"!showMenu\"></button>\n  <button id=\"goBack\" class=\"barButton\" aria-label=\"goBack\" (click)=\"goBack()\" [hidden]=\"!showBack\"></button>\n  <h1 class=\"bar__title\">{{name}}</h1>\n</div>\n<app-menu [@slideInOut]=\"menuState\"></app-menu>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/action-bar/action-bar.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -234,20 +241,13 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".bar {\n  width: 100%;\n  height: 56px;\n  color: #FFF;\n  background: #3F51B5;\n  font-size: 20px;\n  -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 2px 9px 1px rgba(0, 0, 0, 0.12), 0 4px 2px -2px rgba(0, 0, 0, 0.2);\n          box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 2px 9px 1px rgba(0, 0, 0, 0.12), 0 4px 2px -2px rgba(0, 0, 0, 0.2);\n  padding: 16px 16px 0 16px;\n  will-change: transform;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -ms-flex-direction: row;\n  flex-direction: row;\n  -ms-flex-wrap: nowrap;\n  flex-wrap: nowrap;\n  -webkit-box-pack: start;\n  -ms-flex-pack: start;\n  justify-content: flex-start;\n  -webkit-box-align: stretch;\n  -ms-flex-align: stretch;\n  align-items: stretch;\n  -ms-flex-line-pack: center;\n  align-content: center;\n  -webkit-transition: -webkit-transform 0.233s cubic-bezier(0, 0, 0.21, 1) 0.1s;\n  transition: transform 0.233s cubic-bezier(0, 0, 0.21, 1) 0.1s, -webkit-transform 0.233s cubic-bezier(0, 0, 0.21, 1) 0.1s;\n  z-index: 1000;\n}\n\n.bar .barButton {\n  width: 24px;\n  height: 24px;\n  margin-right: 16px;\n  text-indent: -30000px;\n  overflow: hidden;\n  opacity: 0.54;\n  -webkit-transition: opacity 0.333s cubic-bezier(0, 0, 0.21, 1);\n  transition: opacity 0.333s cubic-bezier(0, 0, 0.21, 1);\n  border: none;\n  outline: none;\n  cursor: pointer;\n}\n\n.bar .barButton:hover {\n  opacity: 1;\n}\n\n.bar #butRefresh {\n  background: url(/assets/images/ic_refresh_white_24px.svg) center center no-repeat;\n}\n\n.bar #butAdd {\n  background: url(/assets/images/ic_add_white_24px.svg) center center no-repeat;\n}\n\n.bar #goBack {\n  background: url(/assets/images/ic_keyboard_backspace_white_24px.svg) center center no-repeat;\n}\n\n.bar #butLogo {\n  background: url(/assets/images/logo.png) center center no-repeat;\n}\n\n.bar__title {\n  font-weight: 400;\n  font-size: 20px;\n  margin: 0;\n  -webkit-box-flex: 1;\n  -ms-flex: 1;\n  flex: 1;\n}\n", ""]);
+exports.push([module.i, ".bar {\n  width: 100%;\n  height: 56px;\n  color: #FFF;\n  background: #3F51B5;\n  font-size: 20px;\n  -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 2px 9px 1px rgba(0, 0, 0, 0.12), 0 4px 2px -2px rgba(0, 0, 0, 0.2);\n          box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 2px 9px 1px rgba(0, 0, 0, 0.12), 0 4px 2px -2px rgba(0, 0, 0, 0.2);\n  padding: 16px 16px 0 16px;\n  will-change: transform;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -ms-flex-direction: row;\n  flex-direction: row;\n  -ms-flex-wrap: nowrap;\n  flex-wrap: nowrap;\n  -webkit-box-pack: start;\n  -ms-flex-pack: start;\n  justify-content: flex-start;\n  -webkit-box-align: stretch;\n  -ms-flex-align: stretch;\n  align-items: stretch;\n  -ms-flex-line-pack: center;\n  align-content: center;\n  -webkit-transition: -webkit-transform 0.233s cubic-bezier(0, 0, 0.21, 1) 0.1s;\n  transition: transform 0.233s cubic-bezier(0, 0, 0.21, 1) 0.1s, -webkit-transform 0.233s cubic-bezier(0, 0, 0.21, 1) 0.1s;\n  z-index: 1000; }\n\n.bar .barButton {\n  width: 24px;\n  height: 24px;\n  margin-right: 16px;\n  text-indent: -30000px;\n  overflow: hidden;\n  opacity: 0.54;\n  -webkit-transition: opacity 0.333s cubic-bezier(0, 0, 0.21, 1);\n  transition: opacity 0.333s cubic-bezier(0, 0, 0.21, 1);\n  border: none;\n  outline: none;\n  cursor: pointer; }\n\n.bar .barButton:hover {\n  opacity: 1; }\n\n.bar #butRefresh {\n  background: url(/assets/images/ic_refresh_white_24px.svg) center center no-repeat; }\n\n.bar #butAdd {\n  background: url(/assets/images/ic_add_white_24px.svg) center center no-repeat; }\n\n.bar #goBack {\n  background: url(/assets/images/ic_keyboard_backspace_white_24px.svg) center center no-repeat; }\n\n.bar #butLogo {\n  background: url(/assets/images/logo.png) center center no-repeat; }\n\n.bar__title {\n  font-weight: 400;\n  font-size: 20px;\n  margin: 0;\n  -webkit-box-flex: 1;\n  -ms-flex: 1;\n  flex: 1; }\n", ""]);
 
 // exports
 
 
 /*** EXPORTS FROM exports-loader ***/
 module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/action-bar/action-bar.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"bar\">\n  <button id=\"butLogo\" class=\"barButton\" aria-label=\"goBack\" (click)=\"toggleMenu()\" [hidden]=\"!showMenu\"></button>\n  <button id=\"goBack\" class=\"barButton\" aria-label=\"goBack\" (click)=\"goBack()\" [hidden]=\"!showBack\"></button>\n  <h1 class=\"bar__title\">{{name}}</h1>\n</div>\n<app-menu [@slideInOut]=\"menuState\"></app-menu>\n"
 
 /***/ }),
 
@@ -300,7 +300,7 @@ var ActionBarComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-action-bar',
             template: __webpack_require__("../../../../../src/app/components/action-bar/action-bar.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/components/action-bar/action-bar.component.css")],
+            styles: [__webpack_require__("../../../../../src/app/components/action-bar/action-bar.component.scss")],
             animations: [
                 Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["j" /* trigger */])('slideInOut', [
                     Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["g" /* state */])('in', Object(__WEBPACK_IMPORTED_MODULE_2__angular_animations__["h" /* style */])({
@@ -323,7 +323,14 @@ var ActionBarComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/card/card.component.css":
+/***/ "../../../../../src/app/components/card/card.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<a routerLink=\"/overview-map/{{course.id}}\">\n  <div class=\"card\">\n    {{course.name}} - {{course.location}}\n  </div>\n</a>\n\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/card/card.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -338,13 +345,6 @@ exports.push([module.i, ".card {\n  padding: 16px;\n  position: relative;\n  -we
 
 /*** EXPORTS FROM exports-loader ***/
 module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/card/card.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<a routerLink=\"/overview-map/{{course.id}}\">\n  <div class=\"card\">\n    {{course.name}} - {{course.location}}\n  </div>\n</a>\n\n"
 
 /***/ }),
 
@@ -379,7 +379,7 @@ var CardComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-card',
             template: __webpack_require__("../../../../../src/app/components/card/card.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/components/card/card.component.css")]
+            styles: [__webpack_require__("../../../../../src/app/components/card/card.component.scss")]
         }),
         __metadata("design:paramtypes", [])
     ], CardComponent);
@@ -390,7 +390,14 @@ var CardComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/map-cell/map-cell.component.css":
+/***/ "../../../../../src/app/components/map-cell/map-cell.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"map\"></div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/map-cell/map-cell.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -398,20 +405,13 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".map {\n  height: 100%;\n  width: 100%;\n}\n", ""]);
+exports.push([module.i, ".map {\n  height: 100%;\n  width: 100%; }\n", ""]);
 
 // exports
 
 
 /*** EXPORTS FROM exports-loader ***/
 module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/map-cell/map-cell.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"map\"></div>\n"
 
 /***/ }),
 
@@ -440,7 +440,7 @@ var MapCellComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-map-cell',
             template: __webpack_require__("../../../../../src/app/components/map-cell/map-cell.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/components/map-cell/map-cell.component.css")]
+            styles: [__webpack_require__("../../../../../src/app/components/map-cell/map-cell.component.scss")]
         }),
         __metadata("design:paramtypes", [])
     ], MapCellComponent);
@@ -451,7 +451,14 @@ var MapCellComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/menu/menu.component.css":
+/***/ "../../../../../src/app/components/menu/menu.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<ul>\n  <li><a routerLink=\"/intro\">Datenspaziergang</a></li>\n  <li>Touren\n    <ul class=\"inner-menu\">\n      <li>1. Tour</li>\n      <li>2. Tour</li>\n    </ul>\n  </li>\n  <li><a routerLink=\"/feedback\">Feedback</a></li>\n  <li><a routerLink=\"/impressum\">Impressum</a></li>\n</ul>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/menu/menu.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -459,20 +466,13 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ":host {\n  background: #1a2580;\n  color: #fff;\n  position: fixed;\n  right: auto;\n  top: 55px;\n  left: -20%;\n  bottom: 0;\n  width: 20%;\n  min-width: 250px;\n  z-index: 9999;\n  font-family: Arial, \"Helvetica Neue\", Helvetica, sans-serif;\n}\n\nul {\n  font-size: 18px;\n  line-height: 3;\n  font-weight: 400;\n  padding-top: 50px;\n  list-style: none;\n}\n\nul.inner-menu {\n  padding-top: 0;\n}\n\na, a:hover, a:visited, a:active, a:focus {\n  color: #fff;\n  text-decoration: none;\n}\n\na:hover {\n  text-decoration: underline;\n}\n", ""]);
+exports.push([module.i, ":host {\n  background: #1a2580;\n  color: #fff;\n  position: fixed;\n  right: auto;\n  top: 55px;\n  left: -20%;\n  bottom: 0;\n  width: 20%;\n  min-width: 250px;\n  z-index: 9999;\n  font-family: Arial, \"Helvetica Neue\", Helvetica, sans-serif; }\n\nul {\n  font-size: 18px;\n  line-height: 3;\n  font-weight: 400;\n  padding-top: 50px;\n  list-style: none; }\n\nul.inner-menu {\n  padding-top: 0; }\n\na, a:hover, a:visited, a:active, a:focus {\n  color: #fff;\n  text-decoration: none; }\n\na:hover {\n  text-decoration: underline; }\n", ""]);
 
 // exports
 
 
 /*** EXPORTS FROM exports-loader ***/
 module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/menu/menu.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<ul>\n  <li><a routerLink=\"/intro\">Datenspaziergang</a></li>\n  <li>Touren\n    <ul class=\"inner-menu\">\n      <li>1. Tour</li>\n      <li>2. Tour</li>\n    </ul>\n  </li>\n  <li><a routerLink=\"/feedback\">Feedback</a></li>\n  <li><a routerLink=\"/impressum\">Impressum</a></li>\n</ul>\n"
 
 /***/ }),
 
@@ -501,7 +501,7 @@ var MenuComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-menu',
             template: __webpack_require__("../../../../../src/app/components/menu/menu.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/components/menu/menu.component.css")]
+            styles: [__webpack_require__("../../../../../src/app/components/menu/menu.component.scss")]
         }),
         __metadata("design:paramtypes", [])
     ], MenuComponent);
@@ -512,7 +512,14 @@ var MenuComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/page-indicator/page-indicator.component.css":
+/***/ "../../../../../src/app/components/page-indicator/page-indicator.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div style=\"text-align:center\">\n  <span class=\"indicator\"></span>\n  <span class=\"indicator\"></span>\n  <span class=\"indicator active\"></span>\n  <span class=\"indicator\"></span>\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/page-indicator/page-indicator.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -520,20 +527,13 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".indicator {\n  height: 10px;\n  width: 25px;\n  background-color: black;\n  border-radius: 50%;\n  display: inline-block;\n}\n\n.indicator:hover {\n  cursor: pointer;\n}\n\n:host {\n  position: absolute;\n  bottom: 50px;\n  right: 50px;\n}\n\n.active {\n  background-color: red;\n}\n", ""]);
+exports.push([module.i, ".indicator {\n  height: 10px;\n  width: 25px;\n  background-color: black;\n  border-radius: 50%;\n  display: inline-block; }\n\n.indicator:hover {\n  cursor: pointer; }\n\n:host {\n  position: absolute;\n  bottom: 50px;\n  right: 50px; }\n\n.active {\n  background-color: red; }\n", ""]);
 
 // exports
 
 
 /*** EXPORTS FROM exports-loader ***/
 module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/components/page-indicator/page-indicator.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div style=\"text-align:center\">\n  <span class=\"indicator\"></span>\n  <span class=\"indicator\"></span>\n  <span class=\"indicator active\"></span>\n  <span class=\"indicator\"></span>\n</div>\n"
 
 /***/ }),
 
@@ -570,7 +570,7 @@ var PageIndicatorComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-page-indicator',
             template: __webpack_require__("../../../../../src/app/components/page-indicator/page-indicator.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/components/page-indicator/page-indicator.component.css")]
+            styles: [__webpack_require__("../../../../../src/app/components/page-indicator/page-indicator.component.scss")]
         }),
         __metadata("design:paramtypes", [])
     ], PageIndicatorComponent);
@@ -723,7 +723,14 @@ var AppRoutingModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/course-detail/course-detail.component.css":
+/***/ "../../../../../src/app/pages/course-detail/course-detail.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"wrapper\" *ngIf=\"course\">\n  <app-action-bar  [name]=\"course.name\"></app-action-bar>\n  <div class=\"main\">\n    <div class=\"detail\">\n      <img src=\"{{course.preview_image}}\" alt=\"\">\n      <p>{{course.description}}</p>\n      <button class=\"button\" routerLink=\"{{entryLink}}\">Take the tour!</button>\n    </div>\n  </div>\n</div>\n\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-detail/course-detail.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -731,20 +738,13 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".main {\n  padding-top: 60px;\n  -webkit-box-flex: 1;\n  -ms-flex: 1;\n  flex: 1;\n  overflow-x: hidden;\n  overflow-y: auto;\n  -webkit-overflow-scrolling: touch; }\n\n.detail {\n  padding: 16px;\n  position: relative;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  background: #fff;\n  border-radius: 2px;\n  margin: 16px;\n  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);\n          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); }\n\n.detail img{\n  max-width: 100%\n}\n\n.button {\n  background-color: #555555;\n  color: white;\n  border: none;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 16px;\n}\n", ""]);
+exports.push([module.i, ".main {\n  padding-top: 60px;\n  -webkit-box-flex: 1;\n  -ms-flex: 1;\n  flex: 1;\n  overflow-x: hidden;\n  overflow-y: auto;\n  -webkit-overflow-scrolling: touch; }\n\n.detail {\n  padding: 16px;\n  position: relative;\n  -webkit-box-sizing: border-box;\n          box-sizing: border-box;\n  background: #fff;\n  border-radius: 2px;\n  margin: 16px;\n  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);\n          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); }\n\n.detail img {\n  max-width: 100%; }\n\n.button {\n  background-color: #555555;\n  color: white;\n  border: none;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 16px; }\n", ""]);
 
 // exports
 
 
 /*** EXPORTS FROM exports-loader ***/
 module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/course-detail/course-detail.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"wrapper\" *ngIf=\"course\">\n  <app-action-bar  [name]=\"course.name\"></app-action-bar>\n  <div class=\"main\">\n    <div class=\"detail\">\n      <img src=\"{{course.preview_image}}\" alt=\"\">\n      <p>{{course.description}}</p>\n      <button class=\"button\" routerLink=\"{{entryLink}}\">Take the tour!</button>\n    </div>\n  </div>\n</div>\n\n"
 
 /***/ }),
 
@@ -788,7 +788,7 @@ var CourseDetailComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-course-detail',
             template: __webpack_require__("../../../../../src/app/pages/course-detail/course-detail.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/course-detail/course-detail.component.css")]
+            styles: [__webpack_require__("../../../../../src/app/pages/course-detail/course-detail.component.scss")]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_2__services_courses_courses_service__["a" /* CoursesService */]])
     ], CourseDetailComponent);
@@ -799,7 +799,14 @@ var CourseDetailComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/course-pages/berlin-besetzt-dashboard/berlin-besetzt-dashboard.component.css":
+/***/ "../../../../../src/app/pages/course-pages/berlin-besetzt-dashboard/berlin-besetzt-dashboard.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  berlin-besetzt-dashboard works!\n  <button routerLink=\"{{nextLink}}\">Weiter</button>\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/berlin-besetzt-dashboard/berlin-besetzt-dashboard.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -814,13 +821,6 @@ exports.push([module.i, "", ""]);
 
 /*** EXPORTS FROM exports-loader ***/
 module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/course-pages/berlin-besetzt-dashboard/berlin-besetzt-dashboard.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<p>\n  berlin-besetzt-dashboard works!\n  <button routerLink=\"{{nextLink}}\">Weiter</button>\n</p>\n"
 
 /***/ }),
 
@@ -866,7 +866,7 @@ var BerlinBesetztDashboardComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-berlin-besetzt-dashboard',
             template: __webpack_require__("../../../../../src/app/pages/course-pages/berlin-besetzt-dashboard/berlin-besetzt-dashboard.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/berlin-besetzt-dashboard/berlin-besetzt-dashboard.component.css")]
+            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/berlin-besetzt-dashboard/berlin-besetzt-dashboard.component.scss")]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__["a" /* CoursesService */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */]])
     ], BerlinBesetztDashboardComponent);
@@ -877,7 +877,14 @@ var BerlinBesetztDashboardComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/course-pages/berlin-besetzt-map/berlin-besetzt-map.component.css":
+/***/ "../../../../../src/app/pages/course-pages/berlin-besetzt-map/berlin-besetzt-map.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  berlin-besetzt-map works!\n  <button routerLink=\"{{nextLink}}\">Weiter</button>\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/berlin-besetzt-map/berlin-besetzt-map.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -892,13 +899,6 @@ exports.push([module.i, "", ""]);
 
 /*** EXPORTS FROM exports-loader ***/
 module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/course-pages/berlin-besetzt-map/berlin-besetzt-map.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<p>\n  berlin-besetzt-map works!\n  <button routerLink=\"{{nextLink}}\">Weiter</button>\n</p>\n"
 
 /***/ }),
 
@@ -944,7 +944,7 @@ var BerlinBesetztMapComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-berlin-besetzt-map',
             template: __webpack_require__("../../../../../src/app/pages/course-pages/berlin-besetzt-map/berlin-besetzt-map.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/berlin-besetzt-map/berlin-besetzt-map.component.css")]
+            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/berlin-besetzt-map/berlin-besetzt-map.component.scss")]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__["a" /* CoursesService */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */]])
     ], BerlinBesetztMapComponent);
@@ -955,7 +955,14 @@ var BerlinBesetztMapComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/course-pages/chloropleth-map/chloropleth-map.component.css":
+/***/ "../../../../../src/app/pages/course-pages/chloropleth-map/chloropleth-map.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"wrapper\" *ngIf=\"title\">\n  <app-action-bar [name]=\"title\" [showBack]=\"true\"></app-action-bar>\n  <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px; z-index: 1000;\" routerLink=\"{{nextLink}}\">Weiter</a>\n</div>\n\n<div class=\"map-info\">\n  {{mapDataName}}\n</div>\n\n<mgl-map\n  [center]=\"mapOption.center\"\n  [zoom]=\"mapOption.zoom\"\n  [style]=\"mapOption.style\">\n  <mgl-geojson-source\n    id=\"berlin\"\n    [data]=\"source\">\n  </mgl-geojson-source>\n  <mgl-layer\n    id=\"base\"\n    type=\"fill\"\n    source=\"berlin\"\n    [paint]='{\n    \"fill-opacity\": 0.0}'\n    (mouseMove)=\"activateHoverOn($event)\"\n    (mouseLeave)=\"disableHover()\">\n  </mgl-layer>\n\n  <mgl-layer\n    id=\"outline\"\n    type=\"line\"\n    source=\"berlin\"\n    [paint]='{\n    \"line-color\": \"#333\",\n    \"line-width\": 2\n    }'>\n  </mgl-layer>\n\n  <mgl-layer\n    id=\"hover\"\n    type=\"line\"\n    source=\"berlin\"\n    [paint]='{\n    \"line-color\": \"#333\",\n    \"line-width\": 6\n    }'\n    [filter]=\"hoverFilter\">\n  </mgl-layer>\n</mgl-map>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/chloropleth-map/chloropleth-map.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -963,20 +970,13 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".map-info {\n  position: absolute;\n  top: 5em;\n  right: 5em;\n  z-index: 1;\n  background: #f1f1f1;\n  padding: 2em;\n}\n", ""]);
+exports.push([module.i, ".map-info {\n  position: absolute;\n  top: 5em;\n  right: 5em;\n  z-index: 1;\n  background: #f1f1f1;\n  padding: 2em; }\n", ""]);
 
 // exports
 
 
 /*** EXPORTS FROM exports-loader ***/
 module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/course-pages/chloropleth-map/chloropleth-map.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"wrapper\" *ngIf=\"title\">\n  <app-action-bar [name]=\"title\" [showBack]=\"true\"></app-action-bar>\n  <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px; z-index: 1000;\" routerLink=\"{{nextLink}}\">Weiter</a>\n</div>\n\n<div class=\"map-info\">\n  {{mapDataName}}\n</div>\n\n<mgl-map\n  [center]=\"mapOption.center\"\n  [zoom]=\"mapOption.zoom\"\n  [style]=\"mapOption.style\">\n  <mgl-geojson-source\n    id=\"berlin\"\n    [data]=\"source\">\n  </mgl-geojson-source>\n  <mgl-layer\n    id=\"base\"\n    type=\"fill\"\n    source=\"berlin\"\n    [paint]='{\n    \"fill-opacity\": 0.0}'\n    (mouseMove)=\"activateHoverOn($event)\"\n    (mouseLeave)=\"disableHover()\">\n  </mgl-layer>\n\n  <mgl-layer\n    id=\"outline\"\n    type=\"line\"\n    source=\"berlin\"\n    [paint]='{\n    \"line-color\": \"#333\",\n    \"line-width\": 2\n    }'>\n  </mgl-layer>\n\n  <mgl-layer\n    id=\"hover\"\n    type=\"line\"\n    source=\"berlin\"\n    [paint]='{\n    \"line-color\": \"#333\",\n    \"line-width\": 6\n    }'\n    [filter]=\"hoverFilter\">\n  </mgl-layer>\n</mgl-map>\n"
 
 /***/ }),
 
@@ -1043,7 +1043,7 @@ var ChloroplethMapComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-chloropleth-map',
             template: __webpack_require__("../../../../../src/app/pages/course-pages/chloropleth-map/chloropleth-map.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/chloropleth-map/chloropleth-map.component.css")]
+            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/chloropleth-map/chloropleth-map.component.scss")]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__["a" /* CoursesService */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */]])
     ], ChloroplethMapComponent);
@@ -1054,7 +1054,14 @@ var ChloroplethMapComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/course-pages/iframe/iframe.component.css":
+/***/ "../../../../../src/app/pages/course-pages/iframe/iframe.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<app-action-bar [name]=\"title\" [showBack]=\"true\"></app-action-bar>\n<div class=\"container\" [innerHTML]=\"text | safeHtml\"></div>\n<div class=\"wrapper-window\">\n  <iframe [src]=\"link\" frameborder=\"0\" scrolling=\"yes\"></iframe>\n</div>\n<a class=\"btn\" routerLink=\"{{nextLink}}\">Weiter</a>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/iframe/iframe.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -1062,20 +1069,13 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".wrapper-window {\n  margin: 10vh auto 0 auto;\n  border: 5px solid green;\n  height: 60vh;\n  width: 80vh;\n}\n\niframe {\n  height: 100%;\n  width: 100%;\n  background-color: white;\n}\n\n.container {\n  margin: 100px 10vh 0 10vh;\n}\n", ""]);
+exports.push([module.i, ".wrapper-window {\n  margin: 10vh auto 0 auto;\n  border: 5px solid green;\n  height: 60vh;\n  width: 80vh; }\n\niframe {\n  height: 100%;\n  width: 100%;\n  background-color: white; }\n\n.container {\n  margin: 100px 10vh 0 10vh; }\n", ""]);
 
 // exports
 
 
 /*** EXPORTS FROM exports-loader ***/
 module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/course-pages/iframe/iframe.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<app-action-bar [name]=\"title\" [showBack]=\"true\"></app-action-bar>\n<div class=\"container\" [innerHTML]=\"text | safeHtml\"></div>\n<div class=\"wrapper-window\">\n  <iframe [src]=\"link\" frameborder=\"0\" scrolling=\"yes\"></iframe>\n</div>\n<a class=\"btn\" routerLink=\"{{nextLink}}\">Weiter</a>\n"
 
 /***/ }),
 
@@ -1128,7 +1128,7 @@ var IframeComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-iframe',
             template: __webpack_require__("../../../../../src/app/pages/course-pages/iframe/iframe.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/iframe/iframe.component.css")]
+            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/iframe/iframe.component.scss")]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_courses_courses_service__["a" /* CoursesService */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["c" /* DomSanitizer */]])
     ], IframeComponent);
@@ -1139,7 +1139,14 @@ var IframeComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/course-pages/line-chart/line-chart.component.css":
+/***/ "../../../../../src/app/pages/course-pages/line-chart/line-chart.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  line-chart works!\n  <button routerLink=\"{{nextLink}}\">Weiter</button>\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/line-chart/line-chart.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -1154,13 +1161,6 @@ exports.push([module.i, "", ""]);
 
 /*** EXPORTS FROM exports-loader ***/
 module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/course-pages/line-chart/line-chart.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<p>\n  line-chart works!\n  <button routerLink=\"{{nextLink}}\">Weiter</button>\n</p>\n"
 
 /***/ }),
 
@@ -1206,7 +1206,7 @@ var LineChartComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-line-chart',
             template: __webpack_require__("../../../../../src/app/pages/course-pages/line-chart/line-chart.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/line-chart/line-chart.component.css")]
+            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/line-chart/line-chart.component.scss")]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__["a" /* CoursesService */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */]])
     ], LineChartComponent);
@@ -1217,7 +1217,14 @@ var LineChartComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/course-pages/mundraub-map/mundraub-map.component.css":
+/***/ "../../../../../src/app/pages/course-pages/mundraub-map/mundraub-map.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  mundraub-map works!\n  <button routerLink=\"{{nextLink}}\">Weiter</button>\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/mundraub-map/mundraub-map.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -1232,13 +1239,6 @@ exports.push([module.i, "", ""]);
 
 /*** EXPORTS FROM exports-loader ***/
 module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/course-pages/mundraub-map/mundraub-map.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<p>\n  mundraub-map works!\n  <button routerLink=\"{{nextLink}}\">Weiter</button>\n</p>\n"
 
 /***/ }),
 
@@ -1284,7 +1284,7 @@ var MundraubMapComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-mundraub-map',
             template: __webpack_require__("../../../../../src/app/pages/course-pages/mundraub-map/mundraub-map.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/mundraub-map/mundraub-map.component.css")]
+            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/mundraub-map/mundraub-map.component.scss")]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__["a" /* CoursesService */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */]])
     ], MundraubMapComponent);
@@ -1295,7 +1295,14 @@ var MundraubMapComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/course-pages/op-debate/op-debate.component.css":
+/***/ "../../../../../src/app/pages/course-pages/op-debate/op-debate.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  op-debate works!\n  <button routerLink=\"{{nextLink}}\">Weiter</button>\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/op-debate/op-debate.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -1310,13 +1317,6 @@ exports.push([module.i, "", ""]);
 
 /*** EXPORTS FROM exports-loader ***/
 module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/course-pages/op-debate/op-debate.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<p>\n  op-debate works!\n  <button routerLink=\"{{nextLink}}\">Weiter</button>\n</p>\n"
 
 /***/ }),
 
@@ -1361,7 +1361,7 @@ var OpDebateComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-op-debate',
             template: __webpack_require__("../../../../../src/app/pages/course-pages/op-debate/op-debate.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/op-debate/op-debate.component.css")]
+            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/op-debate/op-debate.component.scss")]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__["a" /* CoursesService */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */]])
     ], OpDebateComponent);
@@ -1372,7 +1372,14 @@ var OpDebateComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/course-pages/overview-map/overview-map.component.css":
+/***/ "../../../../../src/app/pages/course-pages/overview-map/overview-map.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"wrapper\" *ngIf=\"course\">\n  <app-action-bar [name]=\"course.name\" [showMenu]=\"true\"></app-action-bar>\n  <div class=\"wrapper\" *ngIf=\"stations\">\n    <mgl-map\n      [center]=\"mapOptions.center\"\n      [zoom]=\"mapOptions.zoom\"\n      [style]=\"mapOptions.style\"\n      [interactive]=\"false\"\n      [pitch]=\"0\">\n      <mgl-layer\n        id=\"linelayer\"\n        type=\"line\"\n        [source]=\"{\n        'type': 'geojson',\n        'data': {\n          'type': 'Feature',\n          'properties': {},\n          'geometry': {\n            'type': 'LineString',\n            'coordinates': line\n          }\n        }\n        }\"\n        [layout]=\"{\n        'line-join': 'round',\n        'line-cap': 'round'\n        }\"\n        [paint]=\"{\n        'line-color': '#888',\n        'line-width': 8\n        }\">\n      </mgl-layer>\n      <mgl-marker\n        *ngFor=\"let station of stations\"\n        [lngLat]=\"[station.position.lon, station.position.lat]\"\n      >{{station.id}} {{station.name}}\n      </mgl-marker>\n    </mgl-map>\n\n    <a class=\"btn\" style=\"position: absolute; bottom: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Los gehts</a>\n    <!--<app-waypoint-info [course]=\"course\" [waypointId]=\"activeWaypoint\"></app-waypoint-info>-->\n    <div class=\"box\">\n\n      <p>{{course.description}}</p>\n    </div>\n  </div>\n</div>\n<div class=\"wrapper\">\n  <!--<div class=\"mymap\" id=\"mymap\"></div>-->\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/overview-map/overview-map.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -1380,20 +1387,13 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".box {\n  position: absolute;\n  top: 80px;\n  left: 60px;\n  min-height: 30vh;\n  width: 50vh;\n  background-color: white;\n  border: 1px solid black;\n  padding: 30px;\n  max-height: 30vh;\n  overflow-y: scroll;\n}\n\n::-webkit-scrollbar {\n  -webkit-appearance: none;\n  width: 5px;\n}\n\n::-webkit-scrollbar-thumb {\n  /*border-radius: 5px;*/\n  background-color: rgba(0,0,0,.5);\n  -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);\n}\n", ""]);
+exports.push([module.i, ".box {\n  position: absolute;\n  top: 80px;\n  left: 60px;\n  min-height: 30vh;\n  width: 50vh;\n  background-color: white;\n  border: 1px solid black;\n  padding: 30px;\n  max-height: 30vh;\n  overflow-y: scroll; }\n\n::-webkit-scrollbar {\n  -webkit-appearance: none;\n  width: 5px; }\n\n::-webkit-scrollbar-thumb {\n  /*border-radius: 5px;*/\n  background-color: rgba(0, 0, 0, 0.5);\n  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5); }\n", ""]);
 
 // exports
 
 
 /*** EXPORTS FROM exports-loader ***/
 module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/course-pages/overview-map/overview-map.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"wrapper\" *ngIf=\"course\">\n  <app-action-bar [name]=\"course.name\" [showMenu]=\"true\"></app-action-bar>\n  <div class=\"wrapper\" *ngIf=\"stations\">\n    <mgl-map\n      [center]=\"mapOptions.center\"\n      [zoom]=\"mapOptions.zoom\"\n      [style]=\"mapOptions.style\"\n      [interactive]=\"false\"\n      [pitch]=\"0\">\n      <mgl-layer\n        id=\"linelayer\"\n        type=\"line\"\n        [source]=\"{\n        'type': 'geojson',\n        'data': {\n          'type': 'Feature',\n          'properties': {},\n          'geometry': {\n            'type': 'LineString',\n            'coordinates': line\n          }\n        }\n        }\"\n        [layout]=\"{\n        'line-join': 'round',\n        'line-cap': 'round'\n        }\"\n        [paint]=\"{\n        'line-color': '#888',\n        'line-width': 8\n        }\">\n      </mgl-layer>\n      <mgl-marker\n        *ngFor=\"let station of stations\"\n        [lngLat]=\"[station.position.lon, station.position.lat]\"\n      >{{station.id}} {{station.name}}\n      </mgl-marker>\n    </mgl-map>\n\n    <a class=\"btn\" style=\"position: absolute; bottom: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Los gehts</a>\n    <!--<app-waypoint-info [course]=\"course\" [waypointId]=\"activeWaypoint\"></app-waypoint-info>-->\n    <div class=\"box\">\n\n      <p>{{course.description}}</p>\n    </div>\n  </div>\n</div>\n<div class=\"wrapper\">\n  <!--<div class=\"mymap\" id=\"mymap\"></div>-->\n</div>\n"
 
 /***/ }),
 
@@ -1478,7 +1478,7 @@ var OverviewMapComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-overview-map',
             template: __webpack_require__("../../../../../src/app/pages/course-pages/overview-map/overview-map.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/overview-map/overview-map.component.css")]
+            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/overview-map/overview-map.component.scss")]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__["a" /* CoursesService */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */]])
     ], OverviewMapComponent);
@@ -1489,7 +1489,14 @@ var OverviewMapComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/course-pages/point-to-point-map/point-to-point-map.component.css":
+/***/ "../../../../../src/app/pages/course-pages/point-to-point-map/point-to-point-map.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"wrapper\" *ngIf=\"station\">\n  <app-action-bar [name]=\"title\" [showBack]=\"true\"></app-action-bar>\n\n  <mgl-map\n    [center]=\"mapOptions.center\"\n    [zoom]=\"mapOptions.zoom\"\n    [style]=\"mapOptions.style\">\n    <mgl-layer\n      *ngIf=\"locationMarker.length > 0\"\n      id=\"linelayer\"\n      type=\"line\"\n      [source]=\"{\n        'type': 'geojson',\n        'data': {\n          'type': 'Feature',\n          'properties': {},\n          'geometry': {\n            'type': 'LineString',\n            'coordinates': [mapOptions.center, locationMarker]\n           }\n        }\n        }\"\n      [layout]=\"{\n        'line-join': 'round',\n        'line-cap': 'round'\n        }\"\n      [paint]=\"{\n        'line-color': '#888',\n        'line-width': 8\n        }\"\n    ></mgl-layer>\n    <mgl-marker\n      [lngLat]=\"mapOptions.center\">\n      <div class=\"marker\">{{station.name}}</div>\n    </mgl-marker>\n    <mgl-marker *ngIf=\"locationMarker.length > 0\"\n                [lngLat]=\"locationMarker\">\n      <div class=\"marker\">DU</div>\n    </mgl-marker>\n  </mgl-map>\n\n  <a class=\"btn\" style=\"position: absolute; bottom: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Angekommen</a>\n  <div class=\"box\">\n    <p [innerHTML]=\"course.description | safeHtml\"></p>\n  </div>\n  <app-page-indicator></app-page-indicator>\n\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/point-to-point-map/point-to-point-map.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -1497,20 +1504,13 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".box {\n  position: absolute;\n  top: 80px;\n  left: 60px;\n  min-height: 30vh;\n  width: 50vh;\n  background-color: white;\n  border: 1px solid black;\n  padding: 30px;\n  max-height: 40vh;\n  overflow-y: scroll;\n}\n\n::-webkit-scrollbar {\n  -webkit-appearance: none;\n  width: 5px;\n}\n\n::-webkit-scrollbar-thumb {\n  /*border-radius: 5px;*/\n  background-color: rgba(0,0,0,.5);\n  -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);\n}\n", ""]);
+exports.push([module.i, ".box {\n  position: absolute;\n  top: 80px;\n  left: 60px;\n  min-height: 30vh;\n  width: 50vh;\n  background-color: white;\n  border: 1px solid black;\n  padding: 30px;\n  max-height: 40vh;\n  overflow-y: scroll; }\n\n::-webkit-scrollbar {\n  -webkit-appearance: none;\n  width: 5px; }\n\n::-webkit-scrollbar-thumb {\n  /*border-radius: 5px;*/\n  background-color: rgba(0, 0, 0, 0.5);\n  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5); }\n", ""]);
 
 // exports
 
 
 /*** EXPORTS FROM exports-loader ***/
 module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/course-pages/point-to-point-map/point-to-point-map.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"wrapper\" *ngIf=\"station\">\n  <app-action-bar [name]=\"title\" [showBack]=\"true\"></app-action-bar>\n\n  <mgl-map\n    [center]=\"mapOptions.center\"\n    [zoom]=\"mapOptions.zoom\"\n    [style]=\"mapOptions.style\">\n    <mgl-layer\n      *ngIf=\"locationMarker.length > 0\"\n      id=\"linelayer\"\n      type=\"line\"\n      [source]=\"{\n        'type': 'geojson',\n        'data': {\n          'type': 'Feature',\n          'properties': {},\n          'geometry': {\n            'type': 'LineString',\n            'coordinates': [mapOptions.center, locationMarker]\n           }\n        }\n        }\"\n      [layout]=\"{\n        'line-join': 'round',\n        'line-cap': 'round'\n        }\"\n      [paint]=\"{\n        'line-color': '#888',\n        'line-width': 8\n        }\"\n    ></mgl-layer>\n    <mgl-marker\n      [lngLat]=\"mapOptions.center\">\n      <div class=\"marker\">{{station.name}}</div>\n    </mgl-marker>\n    <mgl-marker *ngIf=\"locationMarker.length > 0\"\n                [lngLat]=\"locationMarker\">\n      <div class=\"marker\">DU</div>\n    </mgl-marker>\n  </mgl-map>\n\n  <a class=\"btn\" style=\"position: absolute; bottom: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Angekommen</a>\n  <div class=\"box\">\n    <p [innerHTML]=\"course.description | safeHtml\"></p>\n  </div>\n  <app-page-indicator></app-page-indicator>\n\n</div>\n"
 
 /***/ }),
 
@@ -1617,7 +1617,7 @@ var PointToPointMapComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-point-to-point-map',
             template: __webpack_require__("../../../../../src/app/pages/course-pages/point-to-point-map/point-to-point-map.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/point-to-point-map/point-to-point-map.component.css")]
+            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/point-to-point-map/point-to-point-map.component.scss")]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__["a" /* CoursesService */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_4__services_mapbox_mapbox_service__["a" /* MapboxService */]])
     ], PointToPointMapComponent);
@@ -1628,7 +1628,14 @@ var PointToPointMapComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/course-pages/quiz/quiz.component.css":
+/***/ "../../../../../src/app/pages/course-pages/quiz/quiz.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"wrapper\" *ngIf=\"title\">\n  <app-action-bar [name]=\"title\" [showBack]=\"true\"></app-action-bar>\n  <h1 style=\"text-align: center; padding-top: 100px;\">{{question}}</h1>\n  <ul>\n    <li class=\"button\" *ngFor=\"let answer of answers; let i = index\" (click)=\"sendanswer(i)\">{{answer}}</li>\n  </ul>\n  <p *ngIf=\"firstguess && correct\">{{correct_message}}</p>\n  <p *ngIf=\"firstguess && !correct\">{{wrong_message}}</p>\n  <button class=\"button\" style=\"margin-top: 10px\" routerLink=\"{{nextLink}}\">Next</button>\n\n</div>\n\n\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/quiz/quiz.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -1636,20 +1643,13 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".button {\n  background-color: #555555;\n  color: white;\n  border: none;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 16px;\n}\n\n.button:hover {\n  color: white;\n  background-color: #008CBA;\n}\n\nli {\n  display: block;\n  width: 100%;\n  margin-top: 10px;\n}\n\nul {\n  margin: auto;\n  text-align: center;\n  width: 80%;\n  padding: 0;\n}\n\nbutton {\n  margin: 10px auto;\n  text-align: center !important;\n  display: block !important;\n}\n", ""]);
+exports.push([module.i, ".button {\n  background-color: #555555;\n  color: white;\n  border: none;\n  padding: 15px 32px;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 16px; }\n\n.button:hover {\n  color: white;\n  background-color: #008CBA; }\n\nli {\n  display: block;\n  width: 100%;\n  margin-top: 10px; }\n\nul {\n  margin: auto;\n  text-align: center;\n  width: 80%;\n  padding: 0; }\n\nbutton {\n  margin: 10px auto;\n  text-align: center !important;\n  display: block !important; }\n", ""]);
 
 // exports
 
 
 /*** EXPORTS FROM exports-loader ***/
 module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/course-pages/quiz/quiz.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"wrapper\" *ngIf=\"title\">\n  <app-action-bar [name]=\"title\" [showBack]=\"true\"></app-action-bar>\n  <h1 style=\"text-align: center; padding-top: 100px;\">{{question}}</h1>\n  <ul>\n    <li class=\"button\" *ngFor=\"let answer of answers; let i = index\" (click)=\"sendanswer(i)\">{{answer}}</li>\n  </ul>\n  <p *ngIf=\"firstguess && correct\">{{correct_message}}</p>\n  <p *ngIf=\"firstguess && !correct\">{{wrong_message}}</p>\n  <button class=\"button\" style=\"margin-top: 10px\" routerLink=\"{{nextLink}}\">Next</button>\n\n</div>\n\n\n"
 
 /***/ }),
 
@@ -1709,7 +1709,7 @@ var QuizComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-quiz',
             template: __webpack_require__("../../../../../src/app/pages/course-pages/quiz/quiz.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/quiz/quiz.component.css")]
+            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/quiz/quiz.component.scss")]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__["a" /* CoursesService */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */]])
     ], QuizComponent);
@@ -1720,7 +1720,14 @@ var QuizComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/course-pages/story/story.component.css":
+/***/ "../../../../../src/app/pages/course-pages/story/story.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<app-action-bar  [name]=\"title\" [showBack]=\"true\"></app-action-bar>\n<div class=\"wrapper\" *ngIf=\"story\">\n  <div class=\"wrapper\" [style.background-image]=\"image\" style=\"height: 100vh; background-size: cover\">\n    <div class=\"detail\">\n      <div class=\"description\" [innerHTML]=\"story.content | safeHtml\"></div>\n      <a class=\"btn\" routerLink=\"{{nextLink}}\">Weiter</a>\n    </div>\n  </div>\n</div>\n\n\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/story/story.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -1728,20 +1735,13 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".detail {\n  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.45)), to(rgba(0,0,0,0.45)));\n  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45));\n  height: 100%;\n}\n\n.description {\n  color: white;\n  padding: 80px 10% 10% 10%;\n  max-width: 50vw;\n}\n\n.btn {\n  margin-left: 10%;\n  margin-top: 40px;\n}\n", ""]);
+exports.push([module.i, ".detail {\n  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.45)), to(rgba(0, 0, 0, 0.45)));\n  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45));\n  height: 100%; }\n\n.description {\n  color: white;\n  padding: 80px 10% 10% 10%;\n  max-width: 50vw; }\n\n.btn {\n  margin-left: 10%;\n  margin-top: 40px; }\n", ""]);
 
 // exports
 
 
 /*** EXPORTS FROM exports-loader ***/
 module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/course-pages/story/story.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<app-action-bar  [name]=\"title\" [showBack]=\"true\"></app-action-bar>\n<div class=\"wrapper\" *ngIf=\"story\">\n  <div class=\"wrapper\" [style.background-image]=\"image\" style=\"height: 100vh; background-size: cover\">\n    <div class=\"detail\">\n      <div class=\"description\" [innerHTML]=\"story.content | safeHtml\"></div>\n      <a class=\"btn\" routerLink=\"{{nextLink}}\">Weiter</a>\n    </div>\n  </div>\n</div>\n\n\n"
 
 /***/ }),
 
@@ -1794,7 +1794,7 @@ var StoryComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-story',
             template: __webpack_require__("../../../../../src/app/pages/course-pages/story/story.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/story/story.component.css")]
+            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/story/story.component.scss")]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__["a" /* CoursesService */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["c" /* DomSanitizer */]])
     ], StoryComponent);
@@ -1805,7 +1805,14 @@ var StoryComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/course-pages/subjects/subjects.component.css":
+/***/ "../../../../../src/app/pages/course-pages/subjects/subjects.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"wrapper\" *ngIf=\"station\">\n  <app-action-bar [name]=\"title\" [showBack]=\"true\"></app-action-bar>\n\n  <mgl-map\n    [center]=\"mapOptions.center\"\n    [zoom]=\"mapOptions.zoom\"\n    [style]=\"mapOptions.style\">\n\n    <mgl-marker\n      [lngLat]=\"mapOptions.center\">\n      <div class=\"marker\">{{station.name}}</div>\n    </mgl-marker>\n  </mgl-map>\n\n  <div class=\"box-container\">\n    <div class=\"box\" *ngFor=\"let subject of station.subjects\" routerLink=\"{{subject['link']}}\">\n      <h1>{{subject.name}}</h1>\n      <p>{{subject.description}}</p>\n    </div>\n    <a class=\"btn\" routerLink=\"{{nextLink}}\">zur nächsten Station</a>\n  </div>\n  <app-page-indicator></app-page-indicator>\n\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/subjects/subjects.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -1813,20 +1820,13 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".box {\n  width: 50vh;\n  background-color: white;\n  border: 1px solid black;\n  padding: 30px;\n  margin: 10px 0;\n}\n\n/*::-webkit-scrollbar {*/\n\n/*-webkit-appearance: none;*/\n\n/*width: 5px;*/\n\n/*}*/\n\n/*::-webkit-scrollbar-thumb {*/\n\n/*!*border-radius: 5px;*!*/\n\n/*background-color: rgba(0, 0, 0, .5);*/\n\n/*-webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);*/\n\n/*}*/\n\n.box:hover {\n  cursor: pointer;\n}\n\n.box-container {\n  position: absolute;\n  top: 80px;\n  left: 60px;\n  height: 90vh;\n  width: 50vh;\n  background: transparent;\n  overflow-y: scroll;\n}\n\n.btn {\n  margin: 10px 0;\n  display: block;\n  text-align: center;\n}\n\n.active {\n  background-color: lightblue;\n}\n", ""]);
+exports.push([module.i, ".box {\n  width: 50vh;\n  background-color: white;\n  border: 1px solid black;\n  padding: 30px;\n  margin: 10px 0; }\n\n/*::-webkit-scrollbar {*/\n\n/*-webkit-appearance: none;*/\n\n/*width: 5px;*/\n\n/*}*/\n\n/*::-webkit-scrollbar-thumb {*/\n\n/*!*border-radius: 5px;*!*/\n\n/*background-color: rgba(0, 0, 0, .5);*/\n\n/*-webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);*/\n\n/*}*/\n\n.box:hover {\n  cursor: pointer; }\n\n.box-container {\n  position: absolute;\n  top: 80px;\n  left: 60px;\n  height: 90vh;\n  width: 50vh;\n  background: transparent;\n  overflow-y: scroll; }\n\n.btn {\n  margin: 10px 0;\n  display: block;\n  text-align: center; }\n\n.active {\n  background-color: lightblue; }\n", ""]);
 
 // exports
 
 
 /*** EXPORTS FROM exports-loader ***/
 module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/course-pages/subjects/subjects.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"wrapper\" *ngIf=\"station\">\n  <app-action-bar [name]=\"title\" [showBack]=\"true\"></app-action-bar>\n\n  <mgl-map\n    [center]=\"mapOptions.center\"\n    [zoom]=\"mapOptions.zoom\"\n    [style]=\"mapOptions.style\">\n\n    <mgl-marker\n      [lngLat]=\"mapOptions.center\">\n      <div class=\"marker\">{{station.name}}</div>\n    </mgl-marker>\n  </mgl-map>\n\n  <div class=\"box-container\">\n    <div class=\"box\" *ngFor=\"let subject of station.subjects\" routerLink=\"{{subject['link']}}\">\n      <h1>{{subject.name}}</h1>\n      <p>{{subject.description}}</p>\n    </div>\n    <a class=\"btn\" routerLink=\"{{nextLink}}\">zur nächsten Station</a>\n  </div>\n  <app-page-indicator></app-page-indicator>\n\n</div>\n"
 
 /***/ }),
 
@@ -1924,7 +1924,7 @@ var SubjectsComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-subjects',
             template: __webpack_require__("../../../../../src/app/pages/course-pages/subjects/subjects.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/subjects/subjects.component.css")]
+            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/subjects/subjects.component.scss")]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_courses_courses_service__["a" /* CoursesService */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */], __WEBPACK_IMPORTED_MODULE_4__services_mapbox_mapbox_service__["a" /* MapboxService */]])
     ], SubjectsComponent);
@@ -1935,7 +1935,14 @@ var SubjectsComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/course-pages/success/success.component.css":
+/***/ "../../../../../src/app/pages/course-pages/success/success.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<app-action-bar  [name]=\"title\" [showBack]=\"true\"></app-action-bar>\n<img style=\"max-width: 100%\" src=\"/assets/images/success.svg\" alt=\"\">\n<h3 style=\"text-align: center; padding: 10px 5em\">{{message}}</h3>\n<button class=\"btn\" style=\"display: block; margin: auto\" routerLink=\"/overview\">Zurück zu allen Spaziergängen</button>\n\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/success/success.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -1950,13 +1957,6 @@ exports.push([module.i, "", ""]);
 
 /*** EXPORTS FROM exports-loader ***/
 module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/course-pages/success/success.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<app-action-bar  [name]=\"title\" [showBack]=\"true\"></app-action-bar>\n<img style=\"max-width: 100%\" src=\"/assets/images/success.svg\" alt=\"\">\n<h3 style=\"text-align: center; padding: 10px 5em\">{{message}}</h3>\n<button class=\"btn\" style=\"display: block; margin: auto\" routerLink=\"/overview\">Zurück zu allen Spaziergängen</button>\n\n"
 
 /***/ }),
 
@@ -1993,7 +1993,7 @@ var SuccessComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-success',
             template: __webpack_require__("../../../../../src/app/pages/course-pages/success/success.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/success/success.component.css")]
+            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/success/success.component.scss")]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__["a" /* CoursesService */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */]])
     ], SuccessComponent);
@@ -2004,7 +2004,14 @@ var SuccessComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/course-pages/tree-dashboard/tree-dashboard.component.css":
+/***/ "../../../../../src/app/pages/course-pages/tree-dashboard/tree-dashboard.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  tree-dashboard works!\n  <button routerLink=\"{{nextLink}}\">Weiter</button>\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/tree-dashboard/tree-dashboard.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -2019,13 +2026,6 @@ exports.push([module.i, "", ""]);
 
 /*** EXPORTS FROM exports-loader ***/
 module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/course-pages/tree-dashboard/tree-dashboard.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<p>\n  tree-dashboard works!\n  <button routerLink=\"{{nextLink}}\">Weiter</button>\n</p>\n"
 
 /***/ }),
 
@@ -2071,7 +2071,7 @@ var TreeDashboardComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-tree-dashboard',
             template: __webpack_require__("../../../../../src/app/pages/course-pages/tree-dashboard/tree-dashboard.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/tree-dashboard/tree-dashboard.component.css")]
+            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/tree-dashboard/tree-dashboard.component.scss")]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__["a" /* CoursesService */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */]])
     ], TreeDashboardComponent);
@@ -2082,7 +2082,14 @@ var TreeDashboardComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/course-pages/tree-development/tree-development.component.css":
+/***/ "../../../../../src/app/pages/course-pages/tree-development/tree-development.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  tree-development works!\n  <button routerLink=\"{{nextLink}}\">Weiter</button>\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/tree-development/tree-development.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -2097,13 +2104,6 @@ exports.push([module.i, "", ""]);
 
 /*** EXPORTS FROM exports-loader ***/
 module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/course-pages/tree-development/tree-development.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<p>\n  tree-development works!\n  <button routerLink=\"{{nextLink}}\">Weiter</button>\n</p>\n"
 
 /***/ }),
 
@@ -2149,7 +2149,7 @@ var TreeDevelopmentComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-tree-development',
             template: __webpack_require__("../../../../../src/app/pages/course-pages/tree-development/tree-development.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/tree-development/tree-development.component.css")]
+            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/tree-development/tree-development.component.scss")]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__["a" /* CoursesService */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */]])
     ], TreeDevelopmentComponent);
@@ -2160,7 +2160,14 @@ var TreeDevelopmentComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/course-pages/tree-map/tree-map.component.css":
+/***/ "../../../../../src/app/pages/course-pages/tree-map/tree-map.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"main\" *ngIf=\"station\">\n  <app-action-bar  [name]=\"station.title\" [showBack]=\"true\"></app-action-bar>\n  <div class=\"wrapper\">\n    <mgl-map\n      [zoom]=\"[mapOptions.zoom]\"\n      [center]=\"mapOptions.center\"\n      [style]=\"mapOptions.style\">\n      <mgl-marker\n        *ngFor=\"let point of trees\"\n        [lngLat]=\"[ point.lat, point.lon ]\"\n        (click)=\"treeClick($event)\"></mgl-marker>\n    </mgl-map>\n  </div>\n  <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Los gehts</a>\n  <!--<app-waypoint-info [course]=\"course\" [waypointId]=\"activeWaypoint\"></app-waypoint-info>-->\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/tree-map/tree-map.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -2168,20 +2175,13 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".marker:hover {\n  cursor: pointer;\n}\n", ""]);
+exports.push([module.i, ".marker:hover {\n  cursor: pointer; }\n", ""]);
 
 // exports
 
 
 /*** EXPORTS FROM exports-loader ***/
 module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/course-pages/tree-map/tree-map.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"main\" *ngIf=\"station\">\n  <app-action-bar  [name]=\"station.title\" [showBack]=\"true\"></app-action-bar>\n  <div class=\"wrapper\">\n    <mgl-map\n      [zoom]=\"[mapOptions.zoom]\"\n      [center]=\"mapOptions.center\"\n      [style]=\"mapOptions.style\">\n      <mgl-marker\n        *ngFor=\"let point of trees\"\n        [lngLat]=\"[ point.lat, point.lon ]\"\n        (click)=\"treeClick($event)\"></mgl-marker>\n    </mgl-map>\n  </div>\n  <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Los gehts</a>\n  <!--<app-waypoint-info [course]=\"course\" [waypointId]=\"activeWaypoint\"></app-waypoint-info>-->\n</div>\n"
 
 /***/ }),
 
@@ -2268,7 +2268,7 @@ var TreeMapComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-tree-map',
             template: __webpack_require__("../../../../../src/app/pages/course-pages/tree-map/tree-map.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/tree-map/tree-map.component.css")]
+            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/tree-map/tree-map.component.scss")]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_plugins_tree_berlin_service__["a" /* TreeBerlinService */], __WEBPACK_IMPORTED_MODULE_2__services_courses_courses_service__["a" /* CoursesService */], __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* ActivatedRoute */]])
     ], TreeMapComponent);
@@ -2279,7 +2279,14 @@ var TreeMapComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/course-pages/wheelmap-map/wheelmap-map.component.css":
+/***/ "../../../../../src/app/pages/course-pages/wheelmap-map/wheelmap-map.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"wrapper\" *ngIf=\"title\">\n  <app-action-bar [name]=\"title\" [showBack]=\"true\"></app-action-bar>\n  <div class=\"main\">\n    <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Weiter</a>\n\n  </div>\n</div>\n<mgl-map\n  [style]=\"mapOptions.style\"\n  [zoom]=\"mapOptions.zoom\"\n  [center]=\"mapOptions.center\"\n  [doubleClickZoom]=\"false\">\n  <mgl-marker\n    [lngLat]=\"mapOptions.center\">\n    <div\n      (click)=\"log('Foo')\"\n      class=\"marker\">\n\t    Hello\n    </div>\n  </mgl-marker>\n</mgl-map>\n\n<a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Weiter</a>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/course-pages/wheelmap-map/wheelmap-map.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -2294,13 +2301,6 @@ exports.push([module.i, "", ""]);
 
 /*** EXPORTS FROM exports-loader ***/
 module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/course-pages/wheelmap-map/wheelmap-map.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<div class=\"wrapper\" *ngIf=\"title\">\n  <app-action-bar [name]=\"title\" [showBack]=\"true\"></app-action-bar>\n  <div class=\"main\">\n    <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Weiter</a>\n\n  </div>\n</div>\n<mgl-map\n  [style]=\"mapOptions.style\"\n  [zoom]=\"mapOptions.zoom\"\n  [center]=\"mapOptions.center\"\n  [doubleClickZoom]=\"false\">\n  <mgl-marker\n    [lngLat]=\"mapOptions.center\">\n    <div\n      (click)=\"log('Foo')\"\n      class=\"marker\">\n\t    Hello\n    </div>\n  </mgl-marker>\n</mgl-map>\n\n<a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px\" routerLink=\"{{nextLink}}\">Weiter</a>\n"
 
 /***/ }),
 
@@ -2357,7 +2357,7 @@ var WheelmapMapComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-wheelmap-map',
             template: __webpack_require__("../../../../../src/app/pages/course-pages/wheelmap-map/wheelmap-map.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/wheelmap-map/wheelmap-map.component.css")]
+            styles: [__webpack_require__("../../../../../src/app/pages/course-pages/wheelmap-map/wheelmap-map.component.scss")]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__["a" /* CoursesService */], __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */]])
     ], WheelmapMapComponent);
@@ -2368,7 +2368,14 @@ var WheelmapMapComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/courses-overview/courses-overview.component.css":
+/***/ "../../../../../src/app/pages/courses-overview/courses-overview.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<app-action-bar [name]=\"title\" [showMenu]=\"true\"></app-action-bar>\n<!--<div class=\"main\">-->\n  <!--<app-card *ngFor=\"let course of courses\" [course]=\"course\"></app-card>-->\n<!--</div>-->\n<div class=\"wrapper\" *ngIf=\"activeCourse\">\n  <mgl-map\n    [style]=\"mapOptions.style\"\n    [zoom]=\"mapOptions.zoom\"\n    [center]=\"mapOptions.center\"\n    [doubleClickZoom]=\"false\">\n    <mgl-layer\n      id=\"linelayer\"\n      type=\"line\"\n      [source]=\"{\n        'type': 'geojson',\n        'data': {\n          'type': 'Feature',\n          'properties': {},\n          'geometry': {\n            'type': 'LineString',\n            'coordinates': activeLine\n          }\n        }\n        }\"\n      [layout]=\"{\n        'line-join': 'round',\n        'line-cap': 'round'\n        }\"\n      [paint]=\"{\n        'line-color': '#888',\n        'line-width': 8\n        }\">\n    </mgl-layer>\n    <mgl-marker\n      *ngFor=\"let station of activeCourse.stations\"\n      [lngLat]=\"[station.position.lon, station.position.lat]\"\n    >{{station.id}} {{station.name}}\n    </mgl-marker>\n  </mgl-map>\n\n  <div class=\"box\">\n    <h1>{{activeCourse.name}}</h1>\n    <p [innerHTML]=\"activeCourse.description | safeHtml\"></p>\n    <div class=\"navigation\">\n      <a class=\"btn\" routerLink=\"\">&lt;</a>\n      <a class=\"btn\" routerLink=\"/point-to-point/{{activeCourse.id}}/{{activeCourse.entry}}\">Starten</a>\n      <a class=\"btn\" routerLink=\"\">&gt;</a>\n    </div>\n  </div>\n\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/courses-overview/courses-overview.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -2376,20 +2383,13 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".main {\n  padding-top: 60px;\n  -webkit-box-flex: 1;\n  -ms-flex: 1;\n  flex: 1;\n  overflow-x: hidden;\n  overflow-y: auto;\n  -webkit-overflow-scrolling: touch;\n}\n\n.box {\n  position: absolute;\n  top: 80px;\n  left: 60px;\n  min-height: 30vh;\n  width: 50vh;\n  background-color: white;\n  border: 1px solid black;\n  padding: 30px;\n}\n", ""]);
+exports.push([module.i, ".main {\n  padding-top: 60px;\n  -webkit-box-flex: 1;\n  -ms-flex: 1;\n  flex: 1;\n  overflow-x: hidden;\n  overflow-y: auto;\n  -webkit-overflow-scrolling: touch; }\n\n.box {\n  position: absolute;\n  top: 80px;\n  left: 60px;\n  min-height: 30vh;\n  width: 50vh;\n  background-color: white;\n  border: 1px solid black;\n  padding: 30px; }\n", ""]);
 
 // exports
 
 
 /*** EXPORTS FROM exports-loader ***/
 module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/courses-overview/courses-overview.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<app-action-bar [name]=\"title\" [showMenu]=\"true\"></app-action-bar>\n<!--<div class=\"main\">-->\n  <!--<app-card *ngFor=\"let course of courses\" [course]=\"course\"></app-card>-->\n<!--</div>-->\n<div class=\"wrapper\" *ngIf=\"activeCourse\">\n  <mgl-map\n    [style]=\"mapOptions.style\"\n    [zoom]=\"mapOptions.zoom\"\n    [center]=\"mapOptions.center\"\n    [doubleClickZoom]=\"false\">\n    <mgl-layer\n      id=\"linelayer\"\n      type=\"line\"\n      [source]=\"{\n        'type': 'geojson',\n        'data': {\n          'type': 'Feature',\n          'properties': {},\n          'geometry': {\n            'type': 'LineString',\n            'coordinates': activeLine\n          }\n        }\n        }\"\n      [layout]=\"{\n        'line-join': 'round',\n        'line-cap': 'round'\n        }\"\n      [paint]=\"{\n        'line-color': '#888',\n        'line-width': 8\n        }\">\n    </mgl-layer>\n    <mgl-marker\n      *ngFor=\"let station of activeCourse.stations\"\n      [lngLat]=\"[station.position.lon, station.position.lat]\"\n    >{{station.id}} {{station.name}}\n    </mgl-marker>\n  </mgl-map>\n\n  <div class=\"box\">\n    <h1>{{activeCourse.name}}</h1>\n    <p [innerHTML]=\"activeCourse.description | safeHtml\"></p>\n    <div class=\"navigation\">\n      <a class=\"btn\" routerLink=\"\">&lt;</a>\n      <a class=\"btn\" routerLink=\"/point-to-point/{{activeCourse.id}}/{{activeCourse.entry}}\">Starten</a>\n      <a class=\"btn\" routerLink=\"\">&gt;</a>\n    </div>\n  </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -2457,7 +2457,7 @@ var CoursesOverviewComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-courses-overview',
             template: __webpack_require__("../../../../../src/app/pages/courses-overview/courses-overview.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/courses-overview/courses-overview.component.css")]
+            styles: [__webpack_require__("../../../../../src/app/pages/courses-overview/courses-overview.component.scss")]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_courses_courses_service__["a" /* CoursesService */]])
     ], CoursesOverviewComponent);
@@ -2468,7 +2468,14 @@ var CoursesOverviewComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/pages/intro/intro.component.css":
+/***/ "../../../../../src/app/pages/intro/intro.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<app-action-bar [name]=\"title\" [showMenu]=\"true\"></app-action-bar>\n<div class=\"main\">\n  <h1>Willkommen beim Datenspaziergang!</h1>\n  <p>Bei unserem analogen Lauf durch Berlin-Kreuzberg entdeckst du, wie die digitale Welt mit unserem Alltag verwoben\n    ist und was Daten, Zahlen und Statistiken über die Politik, das Bildungssystem und die Umwelt verraten und wie du\n    das in deiner Arbeit mit Jugendlichen nutzen kannst.\n  </p>\n  <a class=\"btn\" routerLink=\"/overview\">zu den Touren</a>\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/pages/intro/intro.component.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
@@ -2476,20 +2483,13 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".main {\n  max-width: 50%;\n  float:left;\n  margin: 60px 10%;\n}\n", ""]);
+exports.push([module.i, ".main {\n  max-width: 50%;\n  float: left;\n  margin: 60px 10%; }\n", ""]);
 
 // exports
 
 
 /*** EXPORTS FROM exports-loader ***/
 module.exports = module.exports.toString();
-
-/***/ }),
-
-/***/ "../../../../../src/app/pages/intro/intro.component.html":
-/***/ (function(module, exports) {
-
-module.exports = "<app-action-bar [name]=\"title\" [showMenu]=\"true\"></app-action-bar>\n<div class=\"main\">\n  <h1>Willkommen beim Datenspaziergang!</h1>\n  <p>Bei unserem analogen Lauf durch Berlin-Kreuzberg entdeckst du, wie die digitale Welt mit unserem Alltag verwoben\n    ist und was Daten, Zahlen und Statistiken über die Politik, das Bildungssystem und die Umwelt verraten und wie du\n    das in deiner Arbeit mit Jugendlichen nutzen kannst.\n  </p>\n  <a class=\"btn\" routerLink=\"/overview\">zu den Touren</a>\n</div>\n"
 
 /***/ }),
 
@@ -2519,7 +2519,7 @@ var IntroComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-intro',
             template: __webpack_require__("../../../../../src/app/pages/intro/intro.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/intro/intro.component.css")]
+            styles: [__webpack_require__("../../../../../src/app/pages/intro/intro.component.scss")]
         }),
         __metadata("design:paramtypes", [])
     ], IntroComponent);

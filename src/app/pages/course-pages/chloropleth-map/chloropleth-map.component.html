@@ -8,7 +8,7 @@
   <button
     *ngFor="let k of Object.keys(mapKeysToLayer)"
     [value]="k"
-    (click)="toggleLayer($event)">{{mapKeysToLayer[k]}}</button>
+    (click)="moveLayerToTop($event)">{{mapKeysToLayer[k]}}</button>
 </div>
 
 <div class="map-info">
@@ -27,11 +27,11 @@
   (load)="onLoad($event)">
   <mgl-geojson-source
     id="berlin"
-    [data]="borderSource">
+    [data]="mapOption.sources.berlinBorders">
   </mgl-geojson-source>
   <mgl-geojson-source
     id="schools"
-    [data]="schoolSource">
+    [data]="mapOption.sources.schoolActivities">
   </mgl-geojson-source>
 
   <mgl-layer

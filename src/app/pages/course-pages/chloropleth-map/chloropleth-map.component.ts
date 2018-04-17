@@ -12,10 +12,7 @@ export class ChloroplethMapComponent implements OnInit {
 
   nextLink: string;
   title: string;
-  Object = Object; // weird workaround
-
-  borderSource: string = environment.geoJsonSources.berlin;
-  schoolSource: string = environment.geoJsonSources.schoolActivities;
+  Object = Object; // workaround to access `Object` in template
 
   defaultText: string = "Wähle eine Kategorie und hover über einen Bezirk";
   mapData: Object = { name: this.defaultText };
@@ -50,6 +47,10 @@ export class ChloroplethMapComponent implements OnInit {
     center: [13.4190634, 52.4945314],
     zoom: [10],
     style: environment.mapboxTiles.base,
+    sources: {
+      berlinBorders: environment.geoJsonSources.berlin,
+      schoolActivities: environment.geoJsonSources.schoolActivities
+    }
   };
 
   constructor(private coursesService: CoursesService, private route: ActivatedRoute) {
@@ -81,10 +82,10 @@ export class ChloroplethMapComponent implements OnInit {
     this.hoverFilter = ['==', 'name', ''];
   }
 
-  toggleLayer(evt: any) {
-    let layerId = evt.target.value.toUpperCase();
-    this.activeMap = evt.target.value;
-    console.log(this.activeMap);
+  moveLayerToTop(evt: any) {
+    let mapId = evt.target.value;
+    this.activeMap = mapId;
+    let layerId = mapId.toUpperCase();
     this.theMapStyles = this.theMapStyles.moveLayer(layerId, 'outline');
   }
 

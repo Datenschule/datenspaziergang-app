@@ -9,14 +9,10 @@ export const environment = {
   mapboxTiles: {
     light: 'mapbox://styles/mapbox/light-v9',
     street: 'mapbox://styles/mapbox/streets-v9',
-    base: "mapbox://styles/okfde/cjg2f1o3b0jo52sldswi5pqz2",
-    craft: "mapbox://styles/okfde/cjg2egflr1jkl2snzre9i2g97",
-    society: "mapbox://styles/okfde/cjg2281ls0lem2rqmjtvmncrn"
+    chloropleth: "mapbox://styles/okfde/cjg2f1o3b0jo52sldswi5pqz2"
   },
   geoJsonSources: {
     berlin: "https://raw.githubusercontent.com/berlinermorgenpost/Berlin-Geodaten/master/berlin_bezirke.geojson",
-    schoolActivities: "/assets/data/schools.json",
-    schoolMapbox: "okfde.7hghelae"
+    schoolActivities: "/assets/data/schools.json"
   }
-
 };

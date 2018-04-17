@@ -46,7 +46,7 @@ export class ChloroplethMapComponent implements OnInit {
   mapOption: Object = {
     center: [13.4190634, 52.4945314],
     zoom: [10],
-    style: environment.mapboxTiles.base,
+    style: environment.mapboxTiles.chloropleth,
     sources: {
       berlinBorders: environment.geoJsonSources.berlin,
       schoolActivities: environment.geoJsonSources.schoolActivities

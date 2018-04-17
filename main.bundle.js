@@ -958,7 +958,7 @@ var BerlinBesetztMapComponent = /** @class */ (function () {
 /***/ "../../../../../src/app/pages/course-pages/chloropleth-map/chloropleth-map.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"wrapper\" *ngIf=\"title\">\n  <app-action-bar [name]=\"title\" [showBack]=\"true\"></app-action-bar>\n  <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px; z-index: 1000;\" routerLink=\"{{nextLink}}\">Weiter</a>\n</div>\n\n<div class=\"map-info\">\n  {{mapDataName}}\n</div>\n\n<mgl-map\n  [center]=\"mapOption.center\"\n  [zoom]=\"mapOption.zoom\"\n  [style]=\"mapOption.style\">\n  <mgl-geojson-source\n    id=\"berlin\"\n    [data]=\"source\">\n  </mgl-geojson-source>\n  <mgl-layer\n    id=\"base\"\n    type=\"fill\"\n    source=\"berlin\"\n    [paint]='{\n    \"fill-opacity\": 0.0}'\n    (mouseMove)=\"activateHoverOn($event)\"\n    (mouseLeave)=\"disableHover()\">\n  </mgl-layer>\n\n  <mgl-layer\n    id=\"outline\"\n    type=\"line\"\n    source=\"berlin\"\n    [paint]='{\n    \"line-color\": \"#333\",\n    \"line-width\": 2\n    }'>\n  </mgl-layer>\n\n  <mgl-layer\n    id=\"hover\"\n    type=\"line\"\n    source=\"berlin\"\n    [paint]='{\n    \"line-color\": \"#333\",\n    \"line-width\": 6\n    }'\n    [filter]=\"hoverFilter\">\n  </mgl-layer>\n</mgl-map>\n"
+module.exports = "<div class=\"wrapper\" *ngIf=\"title\">\n  <app-action-bar [name]=\"title\" [showBack]=\"true\"></app-action-bar>\n  <a class=\"btn\" style=\"position: absolute; top: 100px; left: 50px; z-index: 1000;\" routerLink=\"{{nextLink}}\">Weiter</a>\n</div>\n\n<div class=\"map-topics\">\n  <h3>Kategorien</h3>\n  <button\n    *ngFor=\"let k of Object.keys(mapKeysToLayer)\"\n    [value]=\"k\"\n    (click)=\"moveLayerToTop($event)\">{{mapKeysToLayer[k]}}</button>\n</div>\n\n<div class=\"map-info\">\n  <h3>{{mapData['name']}}</h3>\n  <div *ngIf=\"activeMap\">{{mapKeysToLayer[activeMap]}} {{mapData[mapKeysToLayer[activeMap]]}}</div>\n</div>\n\n<div class=\"map-legend\">\n  <div *ngFor=\"let l of legend\"><span class=\"legend-color\" [style.background]=\"l[1]\"></span>{{l[0]}}</div>\n</div>\n\n<mgl-map\n  [center]=\"mapOption.center\"\n  [zoom]=\"mapOption.zoom\"\n  [style]=\"mapOption.style\"\n  (load)=\"onLoad($event)\">\n  <mgl-geojson-source\n    id=\"berlin\"\n    [data]=\"mapOption.sources.berlinBorders\">\n  </mgl-geojson-source>\n  <mgl-geojson-source\n    id=\"schools\"\n    [data]=\"mapOption.sources.schoolActivities\">\n  </mgl-geojson-source>\n\n  <mgl-layer\n    id=\"base\"\n    type=\"fill\"\n    source=\"schools\"\n    [paint]='{\n    \"fill-opacity\": 0.0}'\n    (mouseMove)=\"activateHoverOn($event)\"\n    (mouseLeave)=\"disableHover()\">\n  </mgl-layer>\n\n  <mgl-layer\n    id=\"outline\"\n    type=\"line\"\n    source=\"berlin\"\n    [paint]='{\n    \"line-color\": \"#333\",\n    \"line-width\": 2\n    }'>\n  </mgl-layer>\n  <mgl-layer\n    id=\"hover\"\n    type=\"line\"\n    source=\"berlin\"\n    [paint]='{\n    \"line-color\": \"#333\",\n    \"line-width\": 6\n    }'\n    [filter]=\"hoverFilter\">\n  </mgl-layer>\n</mgl-map>\n"
 
 /***/ }),
 
@@ -970,7 +970,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".map-info {\n  position: absolute;\n  top: 5em;\n  right: 5em;\n  z-index: 1;\n  background: #f1f1f1;\n  padding: 2em; }\n", ""]);
+exports.push([module.i, ".map-topics {\n  position: absolute;\n  bottom: 5em;\n  left: 5em;\n  z-index: 1;\n  background: #f1f1f1;\n  padding: 2em;\n  width: 15em; }\n\n.map-info {\n  position: absolute;\n  top: 5em;\n  right: 5em;\n  z-index: 1;\n  background: #f1f1f1;\n  padding: 2em; }\n\n.map-legend {\n  position: absolute;\n  bottom: 5em;\n  right: 5em;\n  z-index: 1;\n  background: #f1f1f1;\n  padding: 2em; }\n\n.legend-color {\n  display: inline-block;\n  width: 1em;\n  height: 1em;\n  margin-right: 0.5em; }\n", ""]);
 
 // exports
 
@@ -1006,13 +1006,39 @@ var ChloroplethMapComponent = /** @class */ (function () {
     function ChloroplethMapComponent(coursesService, route) {
         this.coursesService = coursesService;
         this.route = route;
-        this.defaultText = "Hover über einen Bezirk";
-        this.mapDataName = this.defaultText;
-        this.source = __WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].geoJsonSources.berlin;
+        this.Object = Object; // workaround to access `Object` in template
+        this.defaultText = "Wähle eine Kategorie und hover über einen Bezirk";
+        this.mapData = { name: this.defaultText };
+        this.legend = [
+            ['0-5', '#FFEDA0'],
+            ['5-15', '#FED976'],
+            ['15-25', '#FEB24C'],
+            ['25-40', '#FD8D3C'],
+            ['40-55', '#FC4E2A'],
+            ['55-75', '#E31A1C'],
+            ['75-90', '#BD0026'],
+            ['90-110', '#800026'],
+            ['110+', '#420014']
+        ];
+        this.mapKeysToLayer = {
+            society: 'Gesellschaft / Partizipation',
+            craft: 'Handwerk',
+            culture: 'Kunst / Kultur',
+            literature: 'Literatur / Medien',
+            music: 'Musik / Tanz',
+            stem: 'Naturwissenschaft / Technik',
+            sports: 'Sport',
+            language: 'Sprachen',
+            environment: 'Umwelt'
+        };
         this.mapOption = {
             center: [13.4190634, 52.4945314],
             zoom: [10],
             style: __WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].mapboxTiles.chloropleth,
+            sources: {
+                berlinBorders: __WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].geoJsonSources.berlin,
+                schoolActivities: __WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].geoJsonSources.schoolActivities
+            }
         };
         this.hoverFilter = ['==', 'name', ''];
     }
@@ -1023,7 +1049,6 @@ var ChloroplethMapComponent = /** @class */ (function () {
         var subject_id = +this.route.snapshot.paramMap.get('subject');
         var page_id = +this.route.snapshot.paramMap.get('page');
         this.coursesService.getPage(course_id, station_id, subject_id, page_id).subscribe(function (page) {
-            console.log(page);
             _this.title = page.name;
             _this.coursesService.getNextPageLink(course_id, station_id, subject_id, page.next).subscribe(function (nextPage) {
                 _this.nextLink = nextPage;
@@ -1031,13 +1056,22 @@ var ChloroplethMapComponent = /** @class */ (function () {
         });
     };
     ChloroplethMapComponent.prototype.activateHoverOn = function (evt) {
-        //console.log(evt);
-        this.mapDataName = evt.features[0].properties.name;
+        this.mapData = evt.features[0].properties;
         this.hoverFilter = ['==', 'name', evt.features[0].properties.name];
     };
     ChloroplethMapComponent.prototype.disableHover = function () {
-        this.mapDataName = this.defaultText;
+        this.mapData = {};
+        this.mapData['name'] = this.defaultText;
         this.hoverFilter = ['==', 'name', ''];
+    };
+    ChloroplethMapComponent.prototype.moveLayerToTop = function (evt) {
+        var mapId = evt.target.value;
+        this.activeMap = mapId;
+        var layerId = mapId.toUpperCase();
+        this.theMapStyles = this.theMapStyles.moveLayer(layerId, 'outline');
+    };
+    ChloroplethMapComponent.prototype.onLoad = function (evt) {
+        this.theMapStyles = evt;
     };
     ChloroplethMapComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -2797,12 +2831,13 @@ var environment = {
     production: false,
     mapbox_key: 'pk.eyJ1Ijoib2tmZGUiLCJhIjoiY2lpOHhvMnNhMDAyNnZla280ZWhmMm96NyJ9.IvGz74dvvukg19B4Npsm1g',
     mapboxTiles: {
-        chloropleth: 'mapbox://styles/okfde/cjfs9xmub1ni72tntjq1q949v',
         light: 'mapbox://styles/mapbox/light-v9',
-        street: 'mapbox://styles/mapbox/streets-v9'
+        street: 'mapbox://styles/mapbox/streets-v9',
+        chloropleth: "mapbox://styles/okfde/cjg2f1o3b0jo52sldswi5pqz2"
     },
     geoJsonSources: {
-        berlin: "https://raw.githubusercontent.com/berlinermorgenpost/Berlin-Geodaten/master/berlin_bezirke.geojson"
+        berlin: "https://raw.githubusercontent.com/berlinermorgenpost/Berlin-Geodaten/master/berlin_bezirke.geojson",
+        schoolActivities: "/assets/data/schools.json"
     }
 };
 

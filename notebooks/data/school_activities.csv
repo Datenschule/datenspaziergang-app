@@ -1,0 +1,153 @@
+,bezirk,category,counts
+0,Charlottenburg-Wilmersdorf,Berufsorientierung,1
+1,Charlottenburg-Wilmersdorf,Gesellschaft / Partizipation,21
+2,Charlottenburg-Wilmersdorf,Handwerk,40
+3,Charlottenburg-Wilmersdorf,Kultur / Kunst,11
+4,Charlottenburg-Wilmersdorf,Kunst / Kultur,52
+5,Charlottenburg-Wilmersdorf,Literatur / Medien,45
+6,Charlottenburg-Wilmersdorf,Musik / Tanz,100
+7,Charlottenburg-Wilmersdorf,Naturwissenschaft / Technik,23
+8,Charlottenburg-Wilmersdorf,Sport,145
+9,Charlottenburg-Wilmersdorf,Sprachen,25
+10,Charlottenburg-Wilmersdorf,Umwelt,6
+11,Charlottenburg-Wilmersdorf,nc,4
+12,Charlottenburg-Wilmersdorf,no category,68
+13,Friedrichshain-Kreuzberg,Berufsorientierung,1
+14,Friedrichshain-Kreuzberg,Gesellschaft / Partizipation,9
+15,Friedrichshain-Kreuzberg,Handwerk,13
+16,Friedrichshain-Kreuzberg,Kultur / Kunst,5
+17,Friedrichshain-Kreuzberg,Kunst / Kultur,29
+18,Friedrichshain-Kreuzberg,Literatur / Medien,21
+19,Friedrichshain-Kreuzberg,Musik / Tanz,46
+20,Friedrichshain-Kreuzberg,Naturwissenschaft / Technik,35
+21,Friedrichshain-Kreuzberg,Sport,83
+22,Friedrichshain-Kreuzberg,Sprachen,12
+23,Friedrichshain-Kreuzberg,Umwelt,9
+24,Friedrichshain-Kreuzberg,nc,9
+25,Friedrichshain-Kreuzberg,no category,55
+26,Lichtenberg,Berufsorientierung,1
+27,Lichtenberg,Gesellschaft / Partizipation,5
+28,Lichtenberg,Handwerk,12
+29,Lichtenberg,Kultur / Kunst,3
+30,Lichtenberg,Kunst / Kultur,12
+31,Lichtenberg,Literatur / Medien,9
+32,Lichtenberg,Musik / Tanz,43
+33,Lichtenberg,Naturwissenschaft / Technik,14
+34,Lichtenberg,Sport,57
+35,Lichtenberg,Sprachen,6
+36,Lichtenberg,Umwelt,4
+37,Lichtenberg,nc,2
+38,Lichtenberg,no category,63
+39,Marzahn-Hellersdorf,Gesellschaft / Partizipation,4
+40,Marzahn-Hellersdorf,Handwerk,23
+41,Marzahn-Hellersdorf,Kultur / Kunst,2
+42,Marzahn-Hellersdorf,Kunst / Kultur,10
+43,Marzahn-Hellersdorf,Literatur / Medien,17
+44,Marzahn-Hellersdorf,Musik / Tanz,31
+45,Marzahn-Hellersdorf,Naturwissenschaft / Technik,10
+46,Marzahn-Hellersdorf,Sport,82
+47,Marzahn-Hellersdorf,Sprachen,8
+48,Marzahn-Hellersdorf,Umwelt,3
+49,Marzahn-Hellersdorf,no category,88
+50,Mitte,Gesellschaft / Partizipation,10
+51,Mitte,Handwerk,36
+52,Mitte,Kultur / Kunst,4
+53,Mitte,Kunst / Kultur,43
+54,Mitte,Literatur / Medien,25
+55,Mitte,Musik / Tanz,75
+56,Mitte,Naturwissenschaft / Technik,41
+57,Mitte,Sport,144
+58,Mitte,Sprachen,25
+59,Mitte,Umwelt,6
+60,Mitte,nc,17
+61,Mitte,no category,46
+62,Neukölln,Berufsorientierung,2
+63,Neukölln,Gesellschaft / Partizipation,11
+64,Neukölln,Handwerk,12
+65,Neukölln,Kultur / Kunst,1
+66,Neukölln,Kunst / Kultur,19
+67,Neukölln,Literatur / Medien,18
+68,Neukölln,Musik / Tanz,78
+69,Neukölln,Naturwissenschaft / Technik,15
+70,Neukölln,Sport,103
+71,Neukölln,Sprachen,6
+72,Neukölln,Umwelt,10
+73,Neukölln,nc,2
+74,Neukölln,no category,82
+75,Pankow,Berufsorientierung,1
+76,Pankow,Gesellschaft / Partizipation,12
+77,Pankow,Handwerk,39
+78,Pankow,Kultur / Kunst,1
+79,Pankow,Kunst / Kultur,24
+80,Pankow,Literatur / Medien,22
+81,Pankow,Musik / Tanz,68
+82,Pankow,Naturwissenschaft / Technik,26
+83,Pankow,Sport,94
+84,Pankow,Sprachen,11
+85,Pankow,Umwelt,3
+86,Pankow,nc,3
+87,Pankow,no category,110
+88,Reinickendorf,Gesellschaft / Partizipation,14
+89,Reinickendorf,Handwerk,35
+90,Reinickendorf,Kultur / Kunst,2
+91,Reinickendorf,Kunst / Kultur,17
+92,Reinickendorf,Literatur / Medien,17
+93,Reinickendorf,Musik / Tanz,64
+94,Reinickendorf,Naturwissenschaft / Technik,29
+95,Reinickendorf,Sport,98
+96,Reinickendorf,Sprachen,9
+97,Reinickendorf,Umwelt,13
+98,Reinickendorf,nc,3
+99,Reinickendorf,no category,170
+100,Spandau,Berufsorientierung,1
+101,Spandau,Gesellschaft / Partizipation,9
+102,Spandau,Handwerk,10
+103,Spandau,Kultur / Kunst,2
+104,Spandau,Kunst / Kultur,12
+105,Spandau,Literatur / Medien,8
+106,Spandau,Musik / Tanz,34
+107,Spandau,Naturwissenschaft / Technik,6
+108,Spandau,Sport,146
+109,Spandau,Sprachen,12
+110,Spandau,Umwelt,4
+111,Spandau,nc,1
+112,Spandau,no category,64
+113,Steglitz-Zehlendorf,Berufsorientierung,3
+114,Steglitz-Zehlendorf,Gesellschaft / Partizipation,34
+115,Steglitz-Zehlendorf,Handwerk,64
+116,Steglitz-Zehlendorf,Hockey),1
+117,Steglitz-Zehlendorf,Kultur / Kunst,2
+118,Steglitz-Zehlendorf,Kunst / Kultur,31
+119,Steglitz-Zehlendorf,Literatur / Medien,20
+120,Steglitz-Zehlendorf,Musik / Tanz,123
+121,Steglitz-Zehlendorf,Naturwissenschaft / Technik,42
+122,Steglitz-Zehlendorf,Sport,166
+123,Steglitz-Zehlendorf,Sprachen,23
+124,Steglitz-Zehlendorf,Umwelt,71
+125,Steglitz-Zehlendorf,nc,20
+126,Steglitz-Zehlendorf,no category,46
+127,Tempelhof-Schöneberg,Berufsorientierung,4
+128,Tempelhof-Schöneberg,Gesellschaft / Partizipation,18
+129,Tempelhof-Schöneberg,Handwerk,15
+130,Tempelhof-Schöneberg,Kultur / Kunst,2
+131,Tempelhof-Schöneberg,Kunst / Kultur,24
+132,Tempelhof-Schöneberg,Literatur / Medien,19
+133,Tempelhof-Schöneberg,Musik / Tanz,111
+134,Tempelhof-Schöneberg,Naturwissenschaft / Technik,30
+135,Tempelhof-Schöneberg,Sport,99
+136,Tempelhof-Schöneberg,Sprachen,25
+137,Tempelhof-Schöneberg,Umwelt,6
+138,Tempelhof-Schöneberg,nc,6
+139,Tempelhof-Schöneberg,no category,33
+140,Treptow-Köpenick,Berufsorientierung,1
+141,Treptow-Köpenick,Gesellschaft / Partizipation,32
+142,Treptow-Köpenick,Handwerk,21
+143,Treptow-Köpenick,Kunst / Kultur,19
+144,Treptow-Köpenick,Literatur / Medien,33
+145,Treptow-Köpenick,Musik / Tanz,43
+146,Treptow-Köpenick,Naturwissenschaft / Technik,34
+147,Treptow-Köpenick,Sport,147
+148,Treptow-Köpenick,Sprachen,15
+149,Treptow-Köpenick,Umwelt,5
+150,Treptow-Köpenick,nc,3
+151,Treptow-Köpenick,no category,62

@@ -1,6 +1,6 @@
-<div class="bar">
-  <button id="butLogo" class="barButton" aria-label="goBack" (click)="toggleMenu()" [hidden]="!showMenu"></button>
+<header class="bar">
+  <button id="butLogo" class="barButton" role="button" aria-label="toggleMenu" (click)="toggleMenu()" [hidden]="!showMenu"></button>
   <button id="goBack" class="barButton" aria-label="goBack" (click)="goBack()" [hidden]="!showBack"></button>
   <h1 class="bar__title">{{name}}</h1>
-</div>
+</header>
 <app-menu [@slideInOut]="menuState"></app-menu>

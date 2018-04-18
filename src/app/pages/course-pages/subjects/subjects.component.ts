@@ -6,16 +6,34 @@ import {environment} from '../../../../environments/environment';
 import {Course} from '../../../model/course';
 import {Point} from '../../../model/point';
 import {MapboxService} from '../../../services/mapbox/mapbox.service';
+import {animate, state, style, transition, trigger} from '@angular/animations';
 
 @Component({
   selector: 'app-subjects',
   templateUrl: './subjects.component.html',
-  styleUrls: ['./subjects.component.scss']
+  styleUrls: ['./subjects.component.scss'],
+  animations: [
+    trigger('swiping', [
+      state('left', style({
+        transform: 'translate3d(0, 0, 0)'
+      })),
+      state('right', style({
+        transform: 'translate3d(-43%, 0, 0)'
+      })),
+      transition('left => right', animate('200ms ease-in-out')),
+      transition('right => left', animate('200ms ease-in-out'))
+    ])
+  ]
 })
 export class SubjectsComponent implements OnInit {
 
-  constructor(private coursesService: CoursesService, private route: ActivatedRoute, private mapboxService: MapboxService) {
+  constructor(
+    private coursesService: CoursesService,
+    private route: ActivatedRoute,
+    private mapboxService: MapboxService) {
   }
+
+  swipeState = 'left';
 
   nextLink: string;
   course: Course;
@@ -88,5 +106,10 @@ export class SubjectsComponent implements OnInit {
       });
       // this.nextLink = `/subjects/${this.course.id}/${this.station.id}`;
     });
+  }
+
+  toggleSwipeState() {
+    console.log('hey');
+    this.swipeState = this.swipeState === 'left' ? 'right' : 'left';
   }
 }

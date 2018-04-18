@@ -1,24 +1,27 @@
 <div class="wrapper" *ngIf="station">
   <app-action-bar [name]="title" [showBack]="true"></app-action-bar>
 
-  <mgl-map
-    [center]="mapOptions.center"
-    [zoom]="mapOptions.zoom"
-    [style]="mapOptions.style">
+  <div class="swipeable-content" [@swiping]="swipeState">
+    <mgl-map
+      [center]="mapOptions.center"
+      [zoom]="mapOptions.zoom"
+      [style]="mapOptions.style">
 
-    <mgl-marker
-      [lngLat]="mapOptions.center">
-      <div class="marker">{{station.name}}</div>
-    </mgl-marker>
-  </mgl-map>
+      <mgl-marker
+        [lngLat]="mapOptions.center">
+        <div class="marker">{{station.name}}</div>
+      </mgl-marker>
+    </mgl-map>
 
-  <div class="box-container">
-    <div class="box" *ngFor="let subject of station.subjects" routerLink="{{subject['link']}}">
-      <h1>{{subject.name}}</h1>
-      <p>{{subject.description}}</p>
+    <div class="box-container">
+      <div class="box" *ngFor="let subject of station.subjects" routerLink="{{subject['link']}}">
+        <h1>{{subject.name}}</h1>
+        <p>{{subject.description}}</p>
+      </div>
+      <a class="btn" routerLink="{{nextLink}}">zur nächsten Station</a>
+      <div class="swipe-helper" (click)="toggleSwipeState()"></div>
     </div>
-    <a class="btn" routerLink="{{nextLink}}">zur nächsten Station</a>
   </div>
-  <app-page-indicator></app-page-indicator>
 
+  <app-page-indicator></app-page-indicator>
 </div>

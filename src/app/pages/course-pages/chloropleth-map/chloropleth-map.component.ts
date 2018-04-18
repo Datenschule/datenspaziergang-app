@@ -43,13 +43,13 @@ export class ChloroplethMapComponent implements OnInit {
     environment: 'Umwelt'
   };
 
-  mapOption: Object = {
+  mapOption: any = {
     center: [13.4190634, 52.4945314],
     zoom: [10],
     style: environment.mapboxTiles.chloropleth,
     sources: {
-      berlinBorders: environment.geoJsonSources.berlin,
-      schoolActivities: environment.geoJsonSources.schoolActivities
+      berlinBorders: "https://raw.githubusercontent.com/berlinermorgenpost/Berlin-Geodaten/master/berlin_bezirke.geojson",
+      schoolActivities: "/assets/data/schools.json"
     }
   };
 

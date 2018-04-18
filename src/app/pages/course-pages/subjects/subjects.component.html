@@ -19,7 +19,9 @@
         <p>{{subject.description}}</p>
       </div>
       <a class="btn" routerLink="{{nextLink}}">zur nächsten Station</a>
-      <div class="swipe-helper" (click)="toggleSwipeState()"></div>
+      <div class="swipe-helper"
+        (click)="toggleSwipeState()"
+        (touchmove)="toggleSwipeState()"></div>
     </div>
   </div>
 

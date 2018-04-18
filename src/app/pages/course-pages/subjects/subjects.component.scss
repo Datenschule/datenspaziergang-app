@@ -66,6 +66,12 @@ mgl-map {
   }
 }
 
+.overflow-hidden {
+  @media (max-width: 800px) {
+    overflow-x: hidden;
+  }
+}
+
 .swipe-helper {
   background-color: cornflowerblue;
   width: 15vw;

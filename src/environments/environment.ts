@@ -10,9 +10,5 @@ export const environment = {
     light: 'mapbox://styles/mapbox/light-v9',
     street: 'mapbox://styles/mapbox/streets-v9',
     chloropleth: "mapbox://styles/okfde/cjg2f1o3b0jo52sldswi5pqz2"
-  },
-  geoJsonSources: {
-    berlin: "https://raw.githubusercontent.com/berlinermorgenpost/Berlin-Geodaten/master/berlin_bezirke.geojson",
-    schoolActivities: "/assets/data/schools.json"
   }
 };

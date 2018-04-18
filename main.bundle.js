@@ -1036,8 +1036,8 @@ var ChloroplethMapComponent = /** @class */ (function () {
             zoom: [10],
             style: __WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].mapboxTiles.chloropleth,
             sources: {
-                berlinBorders: __WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].geoJsonSources.berlin,
-                schoolActivities: __WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].geoJsonSources.schoolActivities
+                berlinBorders: "https://raw.githubusercontent.com/berlinermorgenpost/Berlin-Geodaten/master/berlin_bezirke.geojson",
+                schoolActivities: "/assets/data/schools.json"
             }
         };
         this.hoverFilter = ['==', 'name', ''];
@@ -1842,7 +1842,7 @@ var StoryComponent = /** @class */ (function () {
 /***/ "../../../../../src/app/pages/course-pages/subjects/subjects.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"wrapper overflow-hidden\" *ngIf=\"station\">\n  <app-action-bar [name]=\"title\" [showBack]=\"true\"></app-action-bar>\n\n  <div class=\"swipeable-content\" [@swiping]=\"swipeState\">\n    <mgl-map\n      [center]=\"mapOptions.center\"\n      [zoom]=\"mapOptions.zoom\"\n      [style]=\"mapOptions.style\">\n\n      <mgl-marker\n        [lngLat]=\"mapOptions.center\">\n        <div class=\"marker\">{{station.name}}</div>\n      </mgl-marker>\n    </mgl-map>\n\n    <div class=\"box-container\">\n      <div class=\"box\" *ngFor=\"let subject of station.subjects\" routerLink=\"{{subject['link']}}\">\n        <h1>{{subject.name}}</h1>\n        <p>{{subject.description}}</p>\n      </div>\n      <a class=\"btn\" routerLink=\"{{nextLink}}\">zur nächsten Station</a>\n      <div class=\"swipe-helper\" (click)=\"toggleSwipeState()\"></div>\n    </div>\n  </div>\n\n  <app-page-indicator></app-page-indicator>\n</div>\n"
+module.exports = "<div class=\"wrapper overflow-hidden\" *ngIf=\"station\">\n  <app-action-bar [name]=\"title\" [showBack]=\"true\"></app-action-bar>\n\n  <div class=\"swipeable-content\" [@swiping]=\"swipeState\">\n    <mgl-map\n      [center]=\"mapOptions.center\"\n      [zoom]=\"mapOptions.zoom\"\n      [style]=\"mapOptions.style\">\n\n      <mgl-marker\n        [lngLat]=\"mapOptions.center\">\n        <div class=\"marker\">{{station.name}}</div>\n      </mgl-marker>\n    </mgl-map>\n\n    <div class=\"box-container\">\n      <div class=\"box\" *ngFor=\"let subject of station.subjects\" routerLink=\"{{subject['link']}}\">\n        <h1>{{subject.name}}</h1>\n        <p>{{subject.description}}</p>\n      </div>\n      <a class=\"btn\" routerLink=\"{{nextLink}}\">zur nächsten Station</a>\n      <div class=\"swipe-helper\"\n        (click)=\"toggleSwipeState()\"\n        (touchmove)=\"toggleSwipeState()\"></div>\n    </div>\n  </div>\n\n  <app-page-indicator></app-page-indicator>\n</div>\n"
 
 /***/ }),
 
@@ -2855,10 +2855,6 @@ var environment = {
         light: 'mapbox://styles/mapbox/light-v9',
         street: 'mapbox://styles/mapbox/streets-v9',
         chloropleth: "mapbox://styles/okfde/cjg2f1o3b0jo52sldswi5pqz2"
-    },
-    geoJsonSources: {
-        berlin: "https://raw.githubusercontent.com/berlinermorgenpost/Berlin-Geodaten/master/berlin_bezirke.geojson",
-        schoolActivities: "/assets/data/schools.json"
     }
 };
 

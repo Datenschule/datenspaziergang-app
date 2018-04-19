@@ -2,15 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Weather PWA">
+  <meta name="msapplication-TileImage" content="assets/images/logo.png">
+  <meta name="msapplication-TileColor" content="#2F3BA2">
+
   <title>Datenspaziergang</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" />
   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+  <link rel="manifest" href="assets/manifest.json">
   <script>
-
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('assets/sw.js')
+        .then(function() { console.log('Service Worker Registered'); });
+    }
   </script>
 </head>
 <body>

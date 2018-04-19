@@ -1,15 +1,14 @@
+@import '../../../_vars.scss';
+
 :host {
+  position: fixed;
+  top: $actionbar-height;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  z-index: map-get($z-index-map, "menu");
   background: #1a2580;
   color: #fff;
-  position: fixed;
-  right: auto;
-  top: 55px;
-  left: -20%;
-  bottom: 0;
-  width: 20%;
-  min-width: 250px;
-  z-index: 9999;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 ul {
@@ -21,7 +20,8 @@ ul {
 }
 
 ul.inner-menu {
-  padding-top: 0;
+  padding: 0 1em 0 1.5em;
+  word-break: break-all;
 }
 
 a, a:hover, a:visited, a:active, a:focus {

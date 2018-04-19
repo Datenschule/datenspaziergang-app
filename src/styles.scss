@@ -1,5 +1,7 @@
 @import "~mapbox-gl/dist/mapbox-gl.css";
 @import "~@mapbox/mapbox-gl-geocoder/lib/mapbox-gl-geocoder.css";
+@import "~bourbon-neat/app/assets/stylesheets/_neat.scss";
+@import "vars.scss";
 
 * {
   box-sizing: border-box;

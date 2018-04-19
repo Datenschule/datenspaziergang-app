@@ -1,7 +1,7 @@
 {
   "name": "Datenspaziergang",
   "short_name": "Datenspaziergang",
-  "start_url": ".",
+  "start_url": "/intro",
   "display": "standalone",
   "background_color" : "#fff" ,
   "description": "Datenspaziergänge sind toll",

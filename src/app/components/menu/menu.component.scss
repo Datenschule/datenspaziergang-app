@@ -1,4 +1,4 @@
-@import '../../../_vars.scss';
+@import "../../../style/_scss/variables";
 
 :host {
   position: fixed;
@@ -17,11 +17,12 @@ ul {
   font-weight: 400;
   padding-top: 50px;
   list-style: none;
-}
 
-ul.inner-menu {
-  padding: 0 1em 0 1.5em;
-  word-break: break-all;
+  .inner-menu {
+    padding: 0 1em 0 1.5em;
+    word-break: break-all;
+  }
+
 }
 
 a, a:hover, a:visited, a:active, a:focus {

@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Helvetica', 'Verdana', sans-serif;
+  font-weight: 400;
+  font-display: optional;
+  color: #444;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*html {*/
+/*overflow: hidden; }*/
+
+body {
+  background: #ececec;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  a {
+    text-decoration: none;
+  }
+}
+
+strong {
+  font-weight: $weight-bold;
+}
+
+em {
+  font-style: italic;
+}
+
+a img {
+  border: 0;
+  outline: 0;
+}
+
+[aria-hidden="true"] {
+  display: none;
+}
+
+*[hidden], .hidden {
+  display: none !important;
+}
+
+.clickable {
+  cursor: pointer;
+}

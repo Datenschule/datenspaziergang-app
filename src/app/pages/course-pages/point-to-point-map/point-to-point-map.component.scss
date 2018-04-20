@@ -1,23 +1,5 @@
-.box {
+#next {
   position: absolute;
-  top: 80px;
-  left: 60px;
-  min-height: 30vh;
-  width: 50vh;
-  background-color: white;
-  border: 1px solid black;
-  padding: 30px;
-  max-height: 40vh;
-  overflow-y: scroll;
-}
-
-::-webkit-scrollbar {
-  -webkit-appearance: none;
-  width: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-  /*border-radius: 5px;*/
-  background-color: rgba(0,0,0,.5);
-  -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+  bottom: 100px;
+  left: 50px
 }

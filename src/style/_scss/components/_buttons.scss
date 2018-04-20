@@ -1,0 +1,17 @@
+.btn {
+  background:$base-button-color;
+  -webkit-border-radius: $base-button-radius;
+  -moz-border-radius: $base-button-radius;
+  border-radius: $base-button-radius;
+  color: $complementary-font-color;
+  font-size: $base-button-font-size;
+  padding: $base-padding-lite;
+  text-decoration: none;
+  display: inline-block;
+  margin: $margin-top-medium;
+}
+
+.btn:hover {
+  background: #42bd7b;
+  text-decoration: none;
+}

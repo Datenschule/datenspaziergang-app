@@ -1,15 +1,15 @@
 <div class="wrapper" *ngIf="station">
   <app-action-bar [name]="title" [showBack]="true"></app-action-bar>
-
-  <mgl-map
-    [center]="mapOptions.center"
-    [zoom]="mapOptions.zoom"
-    [style]="mapOptions.style">
-    <mgl-layer
-      *ngIf="locationMarker.length > 0"
-      id="linelayer"
-      type="line"
-      [source]="{
+  <div class="map">
+    <mgl-map
+      [center]="mapOptions.center"
+      [zoom]="mapOptions.zoom"
+      [style]="mapOptions.style">
+      <mgl-layer
+        *ngIf="locationMarker.length > 0"
+        id="linelayer"
+        type="line"
+        [source]="{
         'type': 'geojson',
         'data': {
           'type': 'Feature',
@@ -20,28 +20,31 @@
            }
         }
         }"
-      [layout]="{
+        [layout]="{
         'line-join': 'round',
         'line-cap': 'round'
         }"
-      [paint]="{
+        [paint]="{
         'line-color': '#888',
         'line-width': 8
         }"
-    ></mgl-layer>
-    <mgl-marker
-      [lngLat]="mapOptions.center">
-      <div class="marker">{{station.name}}</div>
-    </mgl-marker>
-    <mgl-marker *ngIf="locationMarker.length > 0"
-                [lngLat]="locationMarker">
-      <div class="marker">DU</div>
-    </mgl-marker>
-  </mgl-map>
+      ></mgl-layer>
+      <mgl-marker
+        [lngLat]="mapOptions.center">
+        <div class="marker">{{station.name}}</div>
+      </mgl-marker>
+      <mgl-marker *ngIf="locationMarker.length > 0"
+                  [lngLat]="locationMarker">
+        <div class="marker">DU</div>
+      </mgl-marker>
+    </mgl-map>
+  </div>
 
-  <a class="btn" style="position: absolute; bottom: 100px; left: 50px" routerLink="{{nextLink}}">Angekommen</a>
-  <div class="box">
-    <p [innerHTML]="course.description | safeHtml"></p>
+  <a class="btn" id="next" routerLink="{{nextLink}}">Angekommen</a>
+  <div class="container-margin-all">
+    <div class="box">
+      <p [innerHTML]="course.description | safeHtml"></p>
+    </div>
   </div>
   <app-page-indicator></app-page-indicator>
 

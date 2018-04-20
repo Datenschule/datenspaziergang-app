@@ -1,0 +1,72 @@
+// Typography
+$weight-light: 300;
+$weight-book: 400;
+$weight-bold: 700;
+
+$headercolor: #f9f9f9;
+
+$logo-font: 'spacemono';
+
+$base-font-family: "LatoWeb", Helvetica, Arial, sans-serif;
+
+$base-font-weight: 400;
+$base-font-size: 1rem;
+$base-font-multiplier: 1;
+$base-line-height: 1.375rem;
+
+//colors
+$white: #fff;
+$black: #000;
+$green: #039908;
+$blue: #3F51B5;
+
+// Font Colors
+$base-font-color: $black;
+$base-selected-font-background-color: $black;
+$complementary-font-color: $white;
+
+
+// Padding
+$base-padding: 1.25em; //20px
+$base-padding-lite: $base-padding / 3;
+$base-padding-large: 1.875em; //30px
+$base-padding-extra: 3.125em; //50px
+$base-padding-jumbo: 3.8em;
+$base-padding-giant: 5em;
+
+// Margin
+$margin-top-medium: 30px 0 0 0;
+
+// Link Colors
+$base-link-color: #0d47a1;
+$base-link-hover-color: darken($base-link-color, 5%);
+
+// Buttons
+$base-button-color: $green;
+$base-button-radius: 16px;
+$base-button-font-size: 30px;
+
+// Radius
+$base-border-radius: 5px;
+$small-border-radius: 3px;
+
+// Border
+$base-border-color: $black;
+$thin-border-size: 1px;
+$regular-border-size: 3px;
+$thick-border-size: 8px;
+$base-border-size: $regular-border-size;
+
+$actionbar-height: 55px;
+
+$neat-grid: (
+  columns: 12,
+  gutter:20px
+);
+
+$z-index-map: (
+  actionbar: 50,
+  menu: 40,
+  box: 30,
+  map: -10
+);

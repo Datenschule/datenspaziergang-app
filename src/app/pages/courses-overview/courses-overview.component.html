@@ -1,17 +1,18 @@
 <app-action-bar [name]="title" [showMenu]="true"></app-action-bar>
 <!--<div class="main">-->
-  <!--<app-card *ngFor="let course of courses" [course]="course"></app-card>-->
+<!--<app-card *ngFor="let course of courses" [course]="course"></app-card>-->
 <!--</div>-->
 <div class="wrapper" *ngIf="activeCourse">
-  <mgl-map
-    [style]="mapOptions.style"
-    [zoom]="mapOptions.zoom"
-    [center]="mapOptions.center"
-    [doubleClickZoom]="false">
-    <mgl-layer
-      id="linelayer"
-      type="line"
-      [source]="{
+  <div class="map">
+    <mgl-map
+      [style]="mapOptions.style"
+      [zoom]="mapOptions.zoom"
+      [center]="mapOptions.center"
+      [doubleClickZoom]="false">
+      <mgl-layer
+        id="linelayer"
+        type="line"
+        [source]="{
         'type': 'geojson',
         'data': {
           'type': 'Feature',
@@ -22,29 +23,31 @@
           }
         }
         }"
-      [layout]="{
+        [layout]="{
         'line-join': 'round',
         'line-cap': 'round'
         }"
-      [paint]="{
+        [paint]="{
         'line-color': '#888',
         'line-width': 8
         }">
-    </mgl-layer>
-    <mgl-marker
-      *ngFor="let station of activeCourse.stations"
-      [lngLat]="[station.position.lon, station.position.lat]"
-    >{{station.id}} {{station.name}}
-    </mgl-marker>
-  </mgl-map>
-
-  <div class="box">
-    <h1>{{activeCourse.name}}</h1>
-    <p [innerHTML]="activeCourse.description | safeHtml"></p>
-    <div class="navigation">
-      <a class="btn" routerLink="">&lt;</a>
-      <a class="btn" routerLink="/point-to-point/{{activeCourse.id}}/{{activeCourse.entry}}">Starten</a>
-      <a class="btn" routerLink="">&gt;</a>
+      </mgl-layer>
+      <mgl-marker
+        *ngFor="let station of activeCourse.stations"
+        [lngLat]="[station.position.lon, station.position.lat]"
+      >{{station.id}} {{station.name}}
+      </mgl-marker>
+    </mgl-map>
+  </div>
+  <div class="container-margin-all">
+    <div class="box">
+      <h1>{{activeCourse.name}}</h1>
+      <p [innerHTML]="activeCourse.description | safeHtml"></p>
+      <div class="navigation">
+        <a class="btn" routerLink="">&lt;</a>
+        <a class="btn" routerLink="/point-to-point/{{activeCourse.id}}/{{activeCourse.entry}}">Starten</a>
+        <a class="btn" routerLink="">&gt;</a>
+      </div>
     </div>
   </div>
 

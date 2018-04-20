@@ -13,6 +13,6 @@ notifications:
 script:
   - npm install -g angular-cli
   - npm install
-  - ng build
+  - ng build --prod
 after_success:
   - bash ./scripts/deploy.sh

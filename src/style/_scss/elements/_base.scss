@@ -2,6 +2,13 @@
   box-sizing: border-box;
 }
 
+::selection {
+  background: $orange; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: $orange; /* Gecko Browsers */
+}
+
 html, body {
   padding: 0;
   margin: 0;

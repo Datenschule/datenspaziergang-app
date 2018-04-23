@@ -13,9 +13,9 @@
 .box__title {
   position: absolute;
   top: -1.6em;
-  right: $base-padding;
+  right: 30px;
   display: inline-block;
-  padding: 0.4em 0.4em 0.1em;
+  padding: $base-padding-lite ($base-padding / 1.5) 0.1em;
   background: white;
   border: $regular-border-size solid $purple;
 }

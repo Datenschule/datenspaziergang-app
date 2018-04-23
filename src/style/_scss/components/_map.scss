@@ -6,10 +6,24 @@ mgl-map {
 
 .marker,
 .mapboxgl-marker {
-  width: 40px;
-  height: 40px;
-  color: white;
-  background-color: hotpink;
+  width: 44px;
+  height: 44px;
+  color: $white;
+  font-size: 1.9em;
+  text-align: center;
+  line-height: 1.9;
+  overflow: hidden;
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    polygon {
+      transform: scale(0.45)
+    }
+  }
 }
 
 .map {

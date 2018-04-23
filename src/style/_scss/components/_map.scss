@@ -4,12 +4,42 @@ mgl-map {
   z-index: -1;
 }
 
-.marker,
 .mapboxgl-marker {
-  width: 40px;
-  height: 40px;
-  color: white;
-  background-color: hotpink;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 42px;
+  height: 24.25px;
+  margin: 12.12px 0;
+  background-color: $purple;
+  will-change: transform;
+  color: $white;
+  font-size: 1.4em;
+  text-align: center;
+  line-height: 1.1;
+
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    z-index: -1;
+    border-left: 21px solid transparent;
+    border-right: 21px solid transparent;
+  }
+
+  &:before {
+    bottom: 100%;
+    border-bottom: 12.12px solid $purple;
+  }
+
+  &:after {
+    top: 100%;
+    width: 0;
+    border-top: 12.12px solid $purple;
+  }
 }
 
 .map {

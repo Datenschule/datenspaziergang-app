@@ -5,28 +5,29 @@
   top: $actionbar-height;
   left: 0;
   bottom: 0;
-  width: 250px;
+  width: 360px;
   z-index: map-get($z-index-map, "menu");
-  background: #1a2580;
-  color: #fff;
+  background: $purple;
+  color: $foam;
+}
+
+nav {
+  padding: ($base-padding * 2) ($base-padding * 2) 0;
 }
 
 ul {
-  font-size: 18px;
-  line-height: 3;
-  font-weight: 400;
-  padding-top: 50px;
+  font-size: 1.5rem;
+  line-height: 2.4;
   list-style: none;
 
   .inner-menu {
     padding: 0 1em 0 1.5em;
     word-break: break-all;
   }
-
 }
 
 a, a:hover, a:visited, a:active, a:focus {
-  color: #fff;
+  color: $foam;
   text-decoration: none;
 }
 

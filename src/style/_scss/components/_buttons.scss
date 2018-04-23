@@ -1,17 +1,24 @@
 .btn {
-  background:$base-button-color;
-  -webkit-border-radius: $base-button-radius;
-  -moz-border-radius: $base-button-radius;
-  border-radius: $base-button-radius;
-  color: $complementary-font-color;
-  font-size: $base-button-font-size;
-  padding: $base-padding-lite;
-  text-decoration: none;
   display: inline-block;
   margin: $margin-top-medium;
+  padding: 0.1em $base-padding;
+  background: $foam;
+  //-webkit-border-radius: $base-button-radius;
+  //-moz-border-radius: $base-button-radius;
+  //border-radius: $base-button-radius;
+  color: $purple;
+  font-size: $base-button-font-size;
+  border: $thin-border-size solid $purple;
+  text-decoration: none;
+  box-shadow: -4px 4px 0px 0 $purple;
+  transition: box-shadow 120ms ease;
 }
 
 .btn:hover {
-  background: #42bd7b;
+  background: $mint-light;
   text-decoration: none;
+}
+
+.btn:active {
+  box-shadow: -1px 1px 0px 0 $purple;
 }

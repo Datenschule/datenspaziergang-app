@@ -2,15 +2,24 @@
   box-sizing: border-box;
 }
 
+::selection {
+  background: $orange; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: $orange; /* Gecko Browsers */
+}
+
 html, body {
   padding: 0;
   margin: 0;
   height: 100%;
   width: 100%;
+  font-size: 18px;
   font-family: 'Overpass', 'Verdana', sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-display: optional;
-  color: #444;
+  line-height: 1.55;
+  color: $black;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -20,6 +29,7 @@ html, body {
 
 body {
   background: #ececec;
+  overflow-x: hidden;
 }
 
 h1,

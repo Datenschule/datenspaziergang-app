@@ -34,10 +34,6 @@
       <mgl-marker
         *ngFor="let station of activeCourse.stations"
         [lngLat]="[station.position.lon, station.position.lat]">
-        <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" viewbox="0 0 40 40">
-            <polygon points="50 2 7 26 7 74 50 98 93 74 93 26" fill="#4c00c8" stroke-width="4" stroke="none"></polygon>
-</svg>
-
           {{station.id}}
       </mgl-marker>
     </mgl-map>

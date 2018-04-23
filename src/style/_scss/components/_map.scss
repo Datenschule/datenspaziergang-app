@@ -8,27 +8,37 @@ mgl-map {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1;
+  width: 40px;
+  height: 23.09px;
+  margin: 11.55px 0;
+  background-color: $purple;
   will-change: transform;
-}
-
-.marker,
-.mapboxgl-marker {
-  width: 44px;
-  height: 44px;
   color: $white;
   font-size: 1.4em;
   text-align: center;
-  line-height: 2.3;
-  overflow: hidden;
+  line-height: 1.1;
 
-  svg {
+  &:after,
+  &:before {
+    content: "";
     position: absolute;
-    top: 0;
     left: 0;
+    width: 0;
     z-index: -1;
-    polygon {
-      transform: scale(0.45);
-    }
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+  }
+
+  &:before {
+    bottom: 100%;
+    border-bottom: 11.55px solid $purple;
+  }
+
+  &:after {
+    top: 100%;
+    width: 0;
+    border-top: 11.55px solid $purple;
   }
 }
 

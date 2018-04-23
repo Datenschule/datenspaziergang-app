@@ -93,7 +93,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     NgxMapboxGLModule.forRoot({
       accessToken: environment.mapbox_key, // Can also be set per map (accessToken input of mgl-map)
       //geocoderAccessToken: 'TOKEN' // Optionnal, specify if different from the map access token, can also be set per mgl-geocoder (accessToken input of mgl-geocoder)
-    })
+    }),
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [CoursesService, {
     provide: PERFECT_SCROLLBAR_CONFIG,

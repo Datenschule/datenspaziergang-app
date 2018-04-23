@@ -1,10 +1,21 @@
 .box {
-  max-height: 50vh;
+  //max-height: 50vh;
+  position: relative;
   max-width: 500px;
   background-color: white;
-  border: 1px solid black;
-  padding: 30px;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  border: $regular-border-size solid $purple;
+  padding: 40px 30px;
+  //overflow-x: hidden;
   z-index: map-get($z-index-map, "box");
+  box-shadow: -6px 6px 0px 0 $purple;
+}
+
+.box__title {
+  position: absolute;
+  top: -1.6em;
+  right: $base-padding;
+  display: inline-block;
+  padding: 0.4em 0.4em 0.1em;
+  background: white;
+  border: $regular-border-size solid $purple;
 }

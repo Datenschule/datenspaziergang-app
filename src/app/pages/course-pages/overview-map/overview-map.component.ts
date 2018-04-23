@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {CoursesService} from '../../../services/courses/courses.service';
 import {ActivatedRoute} from '@angular/router';
-//import * as mapboxgl from 'mapbox-gl';
+import * as mapboxgl from 'mapbox-gl';
 import * as turf from '@turf/turf';
 import {Course} from '../../../model/course';
 import {Station} from '../../../model/stations';

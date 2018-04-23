@@ -4,7 +4,8 @@
     <mgl-map
       [center]="mapOptions.center"
       [zoom]="mapOptions.zoom"
-      [style]="mapOptions.style">
+      [style]="mapOptions.style"
+      [interactive]="true">
       <mgl-layer
         *ngIf="locationMarker.length > 0"
         id="linelayer"
@@ -25,13 +26,13 @@
         'line-cap': 'round'
         }"
         [paint]="{
-        'line-color': '#888',
+        'line-color': '#4c00c8',
         'line-width': 8
         }"
       ></mgl-layer>
       <mgl-marker
         [lngLat]="mapOptions.center">
-        <div class="marker">{{station.name}}</div>
+        <div class="marker">{{station.id}}</div>
       </mgl-marker>
       <mgl-marker *ngIf="locationMarker.length > 0"
                   [lngLat]="locationMarker">
@@ -40,10 +41,11 @@
     </mgl-map>
   </div>
 
-  <a class="btn" id="next" routerLink="{{nextLink}}">Angekommen</a>
   <div class="container-margin-all">
     <div class="box">
+      <h1 class="box__title">{{station.name}}</h1>
       <p [innerHTML]="course.description | safeHtml"></p>
+      <a class="btn" id="next" routerLink="{{nextLink}}">Angekommen</a>
     </div>
   </div>
   <app-page-indicator></app-page-indicator>

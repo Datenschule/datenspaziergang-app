@@ -8,6 +8,10 @@
   //overflow-x: hidden;
   z-index: map-get($z-index-map, "box");
   box-shadow: -6px 6px 0px 0 $purple;
+
+  @include respond-to(medium-down) {
+    margin-top: $base-padding-extra;
+  }
 }
 
 .box__title {
@@ -15,7 +19,8 @@
   top: -1.6em;
   right: 30px;
   display: inline-block;
-  padding: $base-padding-lite ($base-padding / 1.5) 0.1em;
+  padding: 0.2em ($base-padding / 1.5) 0.1em;
   background: white;
   border: $regular-border-size solid $purple;
+  white-space: nowrap;
 }

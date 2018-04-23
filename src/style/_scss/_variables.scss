@@ -15,8 +15,9 @@ $base-line-height: 1.375rem;
 //colors
 $white: #fff;
 $black: #000;
-$green: #00ff9d;
-$blue: #4c00c8;
+$green: #039908;
+$blue: #3F51B5;
+
 
 // demolabs colors
 $mint: #00d4e2;
@@ -29,6 +30,11 @@ $orange: #FFA822;
 $green-light: #00FF68;
 $purple-dark: #5500C3;
 $pink-dark: #EA0173;
+
+//$purple: #4c00c8;
+$purple: $purple-dark;
+$foam: #00ff9d;
+
 
 // Font Colors
 $base-font-color: $black;
@@ -67,7 +73,7 @@ $regular-border-size: 3px;
 $thick-border-size: 8px;
 $base-border-size: $regular-border-size;
 
-$actionbar-height: 55px;
+$actionbar-height: 64px;
 
 $neat-grid: (
   columns: 12,

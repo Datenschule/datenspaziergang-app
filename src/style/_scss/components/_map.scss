@@ -4,14 +4,21 @@ mgl-map {
   z-index: -1;
 }
 
+.mapboxgl-marker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  will-change: transform;
+}
+
 .marker,
 .mapboxgl-marker {
   width: 44px;
   height: 44px;
   color: $white;
-  font-size: 1.9em;
+  font-size: 1.4em;
   text-align: center;
-  line-height: 1.9;
+  line-height: 2.3;
   overflow: hidden;
 
   svg {
@@ -19,9 +26,8 @@ mgl-map {
     top: 0;
     left: 0;
     z-index: -1;
-
     polygon {
-      transform: scale(0.45)
+      transform: scale(0.45);
     }
   }
 }

@@ -56,3 +56,38 @@ a img {
 .clickable {
   cursor: pointer;
 }
+
+.fond_blue_gradient {
+  background: -webkit-linear-gradient(-30deg, $mint, $blue-light); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(-30deg, $mint, $blue-light); /* For Opera 11.1 to 12.0*/
+  background: -moz-linear-gradient(-30deg, $mint, $blue-light); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(-30deg, $mint, $blue-light); /* Standard syntax */
+}
+
+.fond_darkblue_gradient {
+  background: -webkit-linear-gradient(-30deg, $purple-light, $blue-dark); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(-30deg, $purple-light, $blue-dark); /* For Opera 11.1 to 12.0*/
+  background: -moz-linear-gradient(-30deg, $purple-light, $blue-dark); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(-30deg, $purple-light, $blue-dark); /* Standard syntax */
+}
+
+.fond_red_gradient {
+  background: -webkit-linear-gradient(-30deg, $pink-light, $orange); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(-30deg, $pink-light, $orange); /* For Opera 11.1 to 12.0*/
+  background: -moz-linear-gradient(-30deg, $pink-light, $orange); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(-30deg, $pink-light, $orange); /* Standard syntax */
+}
+
+.fond_green_gradient {
+  background: -webkit-linear-gradient(-30deg, $green-light, $mint-light); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(-30deg, $green-light, $mint-light); /* For Opera 11.1 to 12.0*/
+  background: -moz-linear-gradient(-30deg, $green-light, $mint-light); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(-30deg, $green-light, $mint-light); /* Standard syntax */
+}
+
+.fond_purple_gradient {
+  background: -webkit-linear-gradient(-30deg, $purple-dark, $pink-dark); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(-30deg, $purple-dark, $pink-dark); /* For Opera 11.1 to 12.0*/
+  background: -moz-linear-gradient(-30deg, $purple-dark, $pink-dark); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(-30deg, $purple-dark, $pink-dark); /* Standard syntax */
+}

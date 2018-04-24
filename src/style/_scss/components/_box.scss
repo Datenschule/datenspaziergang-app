@@ -14,6 +14,35 @@
   }
 }
 
+.box + .box {
+  margin-top: $base-padding-jumbo;
+}
+
+.box__container {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  z-index: 30;
+
+  @media (max-width: 800px) {
+    width: 90vw;
+    background: pink;
+    padding: 5em 3em;
+  }
+  @media (min-width: 801px) {
+    position: absolute;
+    top: 0;
+    left: $base-padding;
+    height: 100vh;
+    padding: ($actionbar-height * 2) $base-padding $base-padding;
+    margin: 0 -$base-padding;
+    background: transparent;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    z-index: map-get($z-index-map, "box");
+  }
+}
+
+
 .box__title {
   position: absolute;
   top: -1.6em;

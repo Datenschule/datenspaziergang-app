@@ -9,21 +9,21 @@
 
       <mgl-marker
         [lngLat]="mapOptions.center">
-        <div class="marker">{{station.name}}</div>
+        <div class="marker">{{station.id + 1}}</div>
       </mgl-marker>
     </mgl-map>
 
-    <div class="box-container">
+    <div class="box__container">
       <div class="box" *ngFor="let subject of station.subjects" routerLink="{{subject['link']}}">
-        <h1>{{subject.name}}</h1>
+        <h1 class="box__title">{{subject.name}}</h1>
         <p>{{subject.description}}</p>
       </div>
-      <a class="btn" routerLink="{{nextLink}}">zur nächsten Station</a>
+      <a class="btn btn--standalone" routerLink="{{nextLink}}">Zur nächsten Station</a>
       <div class="swipe-helper"
         (click)="toggleSwipeState()"
         (touchmove)="toggleSwipeState()"></div>
     </div>
   </div>
 
-  <app-page-indicator></app-page-indicator>
+  <app-page-indicator [course]="course.id" [stations]="course.stations" [active]="station.id"></app-page-indicator>
 </div>

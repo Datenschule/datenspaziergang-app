@@ -3,7 +3,7 @@
   "short_name": "Datenspaziergang",
   "start_url": "/intro",
   "display": "standalone",
-  "background_color" : "#fff" ,
+  "background_color" : "#00ff9d" ,
   "description": "Datenspaziergänge sind toll",
   "Icons": [{
     "src": "assets/images/logo.png",

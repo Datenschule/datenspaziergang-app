@@ -26,7 +26,6 @@ export class StoryComponent implements OnInit {
       const subject_id = +params['subject'];
       const page_id = +params['page'];
 
-
       this.coursesService.getPage(course_id, station_id, subject_id, page_id).subscribe((page) => {
 
         this.title = page.name;

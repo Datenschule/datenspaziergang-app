@@ -27,6 +27,7 @@ export class PointToPointMapComponent implements OnInit {
   location: Point;
   locationMarker: Array<number> = [];
   title: string;
+  stationsForIndicator: Array<any>;
 
   lineData =  [
     [13.419347, 52.497136],
@@ -55,6 +56,7 @@ export class PointToPointMapComponent implements OnInit {
     boxZoom: true,
     dragRotate: true,
     dragPan: true,
+
     keyboard: true,
     doubleClickZoom: true,
     touchZoomRotate: true,
@@ -75,6 +77,7 @@ export class PointToPointMapComponent implements OnInit {
     this.coursesService.getCourse(course_id).subscribe((course) => {
 
       this.course = course;
+      this.stationsForIndicator = this.course.stations;
 
       this.station = this.course.stations.find((station) => station.id === station_id);
       this.mapOptions.center = [this.station.position.lon, this.station.position.lat];

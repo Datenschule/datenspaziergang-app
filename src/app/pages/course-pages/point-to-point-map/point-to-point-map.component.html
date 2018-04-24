@@ -48,6 +48,6 @@
       <a class="btn" id="next" routerLink="{{nextLink}}">Angekommen</a>
     </div>
   </div>
-  <app-page-indicator [values]="3" [active]="station.id"></app-page-indicator>
+  <app-page-indicator [course]="course.id" [stations]="stationsForIndicator" [active]="station.id"></app-page-indicator>
 
 </div>

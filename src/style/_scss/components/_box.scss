@@ -24,3 +24,7 @@
   border: $regular-border-size solid $purple;
   white-space: nowrap;
 }
+
+.box-wide {
+  max-width: 70vw;
+}

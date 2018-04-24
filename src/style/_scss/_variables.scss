@@ -3,7 +3,7 @@ $weight-light: 600;
 $weight-book: 400;
 $weight-bold: 600;
 
-$headercolor: #f9f9f9;
+$headercolor: #00ff9d;
 
 $base-font-family: "Overpass", Helvetica, Arial, sans-serif;
 
@@ -16,7 +16,7 @@ $base-line-height: 1.375rem;
 $white: #fff;
 $black: #000;
 $green: #039908;
-$blue: #3F51B5;
+$blue: #4c00c8;
 
 
 // demolabs colors
@@ -73,7 +73,8 @@ $regular-border-size: 4px;
 $thick-border-size: 8px;
 $base-border-size: $regular-border-size;
 
-$actionbar-height: 64px;
+$actionbar-height: 85px;
+
 
 $z-index-map: (
   actionbar: 50,

@@ -101,3 +101,7 @@ a img {
   background: -moz-linear-gradient(-30deg, $purple-dark, $pink-dark); /* For Firefox 3.6 to 15 */
   background: linear-gradient(-30deg, $purple-dark, $pink-dark); /* Standard syntax */
 }
+
+.center {
+  margin: auto;
+}

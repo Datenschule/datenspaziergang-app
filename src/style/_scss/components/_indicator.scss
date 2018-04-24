@@ -59,7 +59,7 @@ $inactive-purple: #a576f1;
 
 .page-indicator__item:hover,
 .page-indicator__item:active {
-  @include set-hex-color($blue-light);
+  @include set-hex-color($purple);
 }
 
 .page-indicator__connect {

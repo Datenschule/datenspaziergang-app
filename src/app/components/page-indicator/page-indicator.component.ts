@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import { Station } from '../../model/stations';
 
 @Component({
   selector: 'app-page-indicator',
@@ -9,7 +10,7 @@ export class PageIndicatorComponent implements OnInit {
 
   constructor() { }
 
-  @Input() stations: any[];
+  @Input() stations: Station[];
   @Input() active: number;
   @Input() course: number;
 

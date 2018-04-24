@@ -1,29 +1,5 @@
 @import "../../../../style/_scss/variables";
 
-
-.box {
-  width: auto;
-  background-color: white;
-  border: 1px solid black;
-  padding: 30px;
-  margin: 10px 0;
-}
-
-/*::-webkit-scrollbar {*/
-  /*-webkit-appearance: none;*/
-  /*width: 5px;*/
-/*}*/
-
-/*::-webkit-scrollbar-thumb {*/
-  /*!*border-radius: 5px;*!*/
-  /*background-color: rgba(0, 0, 0, .5);*/
-  /*-webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);*/
-/*}*/
-
-.box:hover {
-  cursor: pointer;
-}
-
 app-action-bar {
   position: absolute;
   width: 100%;
@@ -40,29 +16,6 @@ mgl-map {
   @media (max-width: 800px) {
     display: flex;
     width: 200%;
-  }
-}
-
-.box-container {
-  overflow-y: scroll;
-  overflow-x: hidden;
-  z-index: 30;
-
-  @media (max-width: 800px) {
-    width: 90vw;
-    background: pink;
-    padding: 5em 3em;
-  }
-  @media (min-width: 801px) {
-    position: absolute;
-    top: 80px;
-    left: 60px;
-    height: 90vh;
-    width: 50vh;
-    background: transparent;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    z-index: map-get($z-index-map, "box");
   }
 }
 
@@ -84,14 +37,4 @@ mgl-map {
   @media (min-width: 801px) {
     display: none;
   }
-}
-
-.btn {
-  margin: 10px 0;
-  display: block;
-  text-align: center;
-}
-
-.active {
-  background-color: lightblue;
 }

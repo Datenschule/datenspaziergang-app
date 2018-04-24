@@ -51,7 +51,7 @@ export class SubjectsComponent implements OnInit {
     style: environment.mapboxTiles.street,
     center: [13.390497, 52.517221],
     container: `map0`,
-    zoom: [15],
+    zoom: [16],
     hash: false,
     interactive: true,
     index: 0,

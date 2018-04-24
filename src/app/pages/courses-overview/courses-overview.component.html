@@ -34,7 +34,7 @@
       <mgl-marker
         *ngFor="let station of activeCourse.stations"
         [lngLat]="[station.position.lon, station.position.lat]">
-          {{station.id}}
+          {{station.id + 1}}
       </mgl-marker>
     </mgl-map>
   </div>
@@ -49,6 +49,7 @@
         <!--><a class="btn" routerLink="">&gt;</a><-->
       </div>
     </div>
+    <app-page-indicator [course]="activeCourse.id" [stations]="activeCourse.stations" [active]="-1"></app-page-indicator>
   </div>
 
 </div>

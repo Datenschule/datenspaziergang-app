@@ -1,24 +1,55 @@
 .btn {
   display: inline-block;
   margin: $margin-top-medium;
-  padding: 0.1em $base-padding;
+  padding: 0.2em $base-padding 0;
   background: $foam;
-  //-webkit-border-radius: $base-button-radius;
-  //-moz-border-radius: $base-button-radius;
-  //border-radius: $base-button-radius;
   color: $purple;
   font-size: $base-button-font-size;
   border: $thin-border-size solid $purple;
   text-decoration: none;
   box-shadow: -4px 4px 0px 0 $purple;
-  transition: box-shadow 120ms ease;
+  transition: box-shadow 80ms ease;
 }
 
 .btn:hover {
-  background: $mint-light;
+  background: $purple;
+  color: $white;
   text-decoration: none;
+  box-shadow: -2px 2px 0px 0 $purple;
 }
 
 .btn:active {
-  box-shadow: -1px 1px 0px 0 $purple;
+  box-shadow: 0 0 0 0 $purple;
+}
+
+.btn--standalone {
+  position: absolute;
+  right: ($base-padding / 2);
+  margin-top: $base-padding-extra;
+}
+
+.btn-cta {
+  @include font-size(2);
+  display: block;
+  margin-top: $base-padding-lite;
+  line-height: 1;
+  color: $foam;
+  text-align: right;
+  text-decoration: none;
+
+  &:after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 11px solid transparent;
+    border-bottom: 11px solid transparent;
+    border-left: 18px solid $foam;
+    margin-left: 0.3em;
+    transition: transform 120ms ease;
+  }
+  &:hover:after,
+  &:active:after {
+    transform: rotate(90deg);
+  }
 }

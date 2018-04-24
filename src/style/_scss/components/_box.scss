@@ -4,20 +4,54 @@
   max-width: 500px;
   background-color: white;
   border: $regular-border-size solid $purple;
-  padding: 40px 30px;
+  padding: $base-padding-large $base-padding $base-padding;
   //overflow-x: hidden;
   z-index: map-get($z-index-map, "box");
   box-shadow: -6px 6px 0px 0 $purple;
+
+  @include respond-to(medium-down) {
+    margin-top: $base-padding-extra;
+  }
 }
+
+.box + .box {
+  margin-top: $base-padding-jumbo;
+}
+
+.box__container {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  z-index: 30;
+
+  @media (max-width: 800px) {
+    width: 90vw;
+    background: pink;
+    padding: 5em 3em;
+  }
+  @media (min-width: 801px) {
+    position: absolute;
+    top: 0;
+    left: $base-padding;
+    height: 100vh;
+    padding: ($actionbar-height * 2) $base-padding $base-padding;
+    margin: 0 -$base-padding;
+    background: transparent;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    z-index: map-get($z-index-map, "box");
+  }
+}
+
 
 .box__title {
   position: absolute;
   top: -1.6em;
   right: 30px;
   display: inline-block;
-  padding: $base-padding-lite ($base-padding / 1.5) 0.1em;
+  padding: 0.2em ($base-padding / 1.5) 0.1em;
   background: white;
   border: $regular-border-size solid $purple;
+  white-space: nowrap;
 }
 
 .box-wide {

@@ -67,8 +67,6 @@ export class PointToPointMapComponent implements OnInit {
   ngOnInit() {
 
     this.route.params.subscribe((params) => {
-      const course_id = +params['course'];
-      const station_id = +params['station'];
       const subject_id = +params['subject'];
       const page_id = +params['page'];
       const p2p = +params['point-to-point'];

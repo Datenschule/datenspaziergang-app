@@ -16,6 +16,15 @@ export class PageIndicatorComponent implements OnInit {
   displayableList: Array<Object>;
 
   ngOnInit() {
+    this.populateDisplayableList();
+  }
+
+  ngOnChanges(changes: any) {
+    this.active = changes.active.currentValue;
+    this.populateDisplayableList();
+  }
+
+  populateDisplayableList() {
     this.displayableList = this.stations.map((x) => {
       let display_id = x.id + 1;
       let active = (x.id === this.active) || (x.id < this.active);
@@ -24,7 +33,6 @@ export class PageIndicatorComponent implements OnInit {
               display_id,
               active,
               link};
-    })
+    });
   }
-
 }

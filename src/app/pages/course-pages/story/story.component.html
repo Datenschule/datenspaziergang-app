@@ -1,8 +1,17 @@
 <app-action-bar  [name]="title" [showBack]="true"></app-action-bar>
-<div class="wrapper" *ngIf="story">
-  <div class="wrapper" [style.background-image]="image" style="height: 100vh; background-size: cover">
-    <div class="detail">
-      <div class="description" [innerHTML]="story.content | safeHtml"></div>
+<div class="wrapper fond_darkblue_gradient" *ngIf="story">
+  <div class="container padding-top-medium">
+    <div class="container-left-3 button-container">
+      <a class="btn" routerLink="{{nextLink}}">Zurück</a>
+    </div>
+    <div class="container-left-7">
+      <!--<div class="detail">-->
+        <div class="description box">
+          <p [innerHTML]="story.content | safeHtml"></p>
+        </div>
+      <!--</div>-->
+    </div>
+    <div class="container-left-1 button-container">
       <a class="btn" routerLink="{{nextLink}}">Weiter</a>
     </div>
   </div>

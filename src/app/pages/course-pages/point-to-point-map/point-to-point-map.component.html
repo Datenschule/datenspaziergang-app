@@ -32,7 +32,7 @@
       ></mgl-layer>
       <mgl-marker
         [lngLat]="mapOptions.center">
-        <div class="marker">{{station.id}}</div>
+        <div class="marker">{{station.id + 1}}</div>
       </mgl-marker>
       <mgl-marker *ngIf="locationMarker.length > 0"
                   [lngLat]="locationMarker">

@@ -1,0 +1,73 @@
+$inactive-purple: #a576f1;
+
+@mixin set-hex-color($color) {
+  background-color: $color;
+  &:after {
+    border-top-color: $color;
+  }
+  &:before {
+    border-bottom-color: $color;
+  }
+}
+
+@mixin hexagon-indicator($color) {
+  position: relative;
+  width: 32px;
+  height: 18.48px;
+  margin: 9.24px 0;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+  }
+
+  &:before {
+    bottom: 100%;
+    border-bottom: 9.24px solid;
+  }
+
+  &:after {
+    top: 100%;
+    width: 0;
+    border-top: 9.24px solid;
+  }
+
+  @include set-hex-color($color);
+}
+
+.page-indicator {
+  display: flex;
+  position: fixed;
+  bottom: $base-padding-large;
+  right: $base-padding-large;
+}
+
+.page-indicator__item {
+  @include hexagon-indicator($inactive-purple);
+
+  margin-left: $base-padding;
+  color: $white;
+
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    line-height: 1.3;
+    z-index: 1;
+  }
+}
+
+.page-indicator__item.active {
+  @include set-hex-color($purple);
+}
+
+.page-indicator__item:hover,
+.page-indicator__item:active {
+  @include set-hex-color($blue-light);
+}

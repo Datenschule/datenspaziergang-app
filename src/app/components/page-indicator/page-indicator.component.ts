@@ -18,7 +18,7 @@ export class PageIndicatorComponent implements OnInit {
   ngOnInit() {
     this.displayableList = this.stations.map((x) => {
       let display_id = x.id + 1;
-      let active = (x.id === this.active);
+      let active = (x.id === this.active) || (x.id < this.active);
       let link = `/subjects/${this.course}/${x.id}`;
       return {id: x.id,
               display_id,

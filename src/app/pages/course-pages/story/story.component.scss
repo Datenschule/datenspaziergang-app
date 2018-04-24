@@ -1,10 +1,12 @@
+@import "../../../../style/_scss/variables";
+
 .detail {
   background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45));
   height: 100%;
 }
 
 .description {
-  color: white;
+  //color: white;
   padding: 80px 10% 10% 10%;
   max-width: 50vw;
 }
@@ -12,4 +14,17 @@
 .btn {
   margin-left: 10%;
   margin-top: 40px;
+}
+
+.wrapper {
+  height: calc(100% - #{$actionbar-height});
+}
+
+.container {
+  display: flex
+}
+
+.button-container {
+  display: flex;
+  align-items: flex-end;
 }

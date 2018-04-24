@@ -83,7 +83,7 @@ export class PointToPointMapComponent implements OnInit {
         this.mapOptions.center = [this.station.position.lon, this.station.position.lat];
         console.log(this.station);
 
-        this.title = `${course.name} | ${station_id}. Station:  ${this.station.name}`;
+        this.title = `${course.name} | ${station_id + 1}. Station:  ${this.station.name}`;
 
         if (navigator.geolocation) {
           console.log('start requesting geolocation');

@@ -22,9 +22,34 @@
   box-shadow: 0 0 0 0 $purple;
 }
 
-
 .btn--standalone {
   position: absolute;
   right: ($base-padding / 2);
   margin-top: $base-padding-extra;
+}
+
+.btn-cta {
+  @include font-size(2);
+  display: block;
+  margin-top: $base-padding-lite;
+  line-height: 1;
+  color: $foam;
+  text-align: right;
+  text-decoration: none;
+
+  &:after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 11px solid transparent;
+    border-bottom: 11px solid transparent;
+    border-left: 18px solid $foam;
+    margin-left: 0.3em;
+    transition: transform 120ms ease;
+  }
+  &:hover:after,
+  &:active:after {
+    transform: rotate(90deg);
+  }
 }

@@ -14,7 +14,7 @@ html, body {
   margin: 0;
   height: 100%;
   width: 100%;
-  font-size: 18px;
+  font-size: 21px;
   font-family: 'Overpass', 'Verdana', sans-serif;
   font-weight: 600;
   font-display: optional;
@@ -75,10 +75,10 @@ a img {
 }
 
 .fond_darkblue_gradient {
-  background: -webkit-linear-gradient(-30deg, $purple-light, $blue-dark); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(-30deg, $purple-light, $blue-dark); /* For Opera 11.1 to 12.0*/
-  background: -moz-linear-gradient(-30deg, $purple-light, $blue-dark); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(-30deg, $purple-light, $blue-dark); /* Standard syntax */
+  background: -webkit-linear-gradient(-30deg, $blue-second, $purple-second); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(-30deg, $blue-second, $purple-second); /* For Opera 11.1 to 12.0*/
+  background: -moz-linear-gradient(-30deg, $blue-second, $purple-second); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(-30deg, $blue-second, $purple-second); /* Standard syntax */
 }
 
 .fond_red_gradient {
@@ -104,4 +104,8 @@ a img {
 
 .center {
   margin: auto;
+}
+
+.padding-top-medium {
+  padding-top: 60px;
 }

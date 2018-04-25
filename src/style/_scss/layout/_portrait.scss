@@ -1,0 +1,22 @@
+.swipeable {
+  mgl-map {
+    @media (max-width: 800px) {
+      width: 200%;
+    }
+  }
+}
+
+.swipeable__helper {
+  background-color: cornflowerblue;
+  width: 15vw;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 85vw;
+  opacity: 0.5;
+  z-index: map-get($z-index-map, menu);
+  @media (min-width: 801px) {
+    display: none;
+  }
+}

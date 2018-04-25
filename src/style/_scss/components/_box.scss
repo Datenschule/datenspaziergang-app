@@ -1,11 +1,9 @@
 .box {
-  //max-height: 50vh;
   position: relative;
-  max-width: 500px;
+  max-width: 400px;
   background-color: white;
   border: $regular-border-size solid $purple;
   padding: $base-padding-large $base-padding $base-padding;
-  //overflow-x: hidden;
   z-index: map-get($z-index-map, "box");
   box-shadow: -6px 6px 0px 0 $purple;
 
@@ -19,29 +17,27 @@
 }
 
 .box__container {
+  position: absolute;
+  top: 0;
+  height: 100vh;
   overflow-y: scroll;
   overflow-x: hidden;
   z-index: 30;
 
   @media (max-width: 800px) {
-    width: 90vw;
-    background: pink;
-    padding: 5em 3em;
+    widdth: 90vw;
+    padding: 2em 2em 3em $base-padding;
   }
   @media (min-width: 801px) {
-    position: absolute;
-    top: 0;
     left: $base-padding;
-    height: 100vh;
-    padding: ($actionbar-height * 2) $base-padding $base-padding;
-    margin: 0 -$base-padding;
+    padding: $actionbar-height $base-padding $base-padding;
+    margin: 0 (-$base-padding);
     background: transparent;
     overflow-y: scroll;
     overflow-x: hidden;
     z-index: map-get($z-index-map, "box");
   }
 }
-
 
 .box__title {
   position: absolute;
@@ -52,6 +48,11 @@
   background: white;
   border: $regular-border-size solid $purple;
   white-space: nowrap;
+
+  @media (max-width: 800px) {
+    font-size: 30px;
+    top: -2em;
+  }
 }
 
 .box-wide {

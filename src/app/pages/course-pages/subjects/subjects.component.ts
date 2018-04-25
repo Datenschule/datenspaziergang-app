@@ -18,7 +18,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
         transform: 'translate3d(0, 0, 0)'
       })),
       state('right', style({
-        transform: 'translate3d(-43%, 0, 0)'
+        transform: 'translate3d(-85%, 0, 0)'
       })),
       transition('left => right', animate('200ms ease-in-out')),
       transition('right => left', animate('200ms ease-in-out'))

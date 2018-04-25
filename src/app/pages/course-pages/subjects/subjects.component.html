@@ -1,7 +1,7 @@
-<div class="wrapper overflow-hidden" *ngIf="station">
+<div class="wrapper" *ngIf="station">
   <app-action-bar [name]="title" [showBack]="true"></app-action-bar>
 
-  <div class="swipeable-content" [@swiping]="swipeState">
+  <div class="swipeable" [@swiping]="swipeState">
     <mgl-map
       [center]="mapOptions.center"
       [zoom]="mapOptions.zoom"
@@ -19,11 +19,13 @@
         <p>{{subject.description}}</p>
         <a href="{{subject['link']}}" class="btn-cta">Anschauen</a>
       </div>
-      <a class="btn btn--standalone" routerLink="{{nextLink}}">Zur nächsten Station</a>
-      <div class="swipe-helper"
-        (click)="toggleSwipeState()"
-        (touchmove)="toggleSwipeState()"></div>
+      <div class="btn__position--right">
+        <a class="btn btn--standalone" routerLink="{{nextLink}}">Zur nächsten Station</a>
+      </div>
     </div>
+    <div class="swipeable__helper"
+      (click)="toggleSwipeState()"
+      (touchmove)="toggleSwipeState()"></div>
   </div>
 
   <app-page-indicator [course]="course.id" [stations]="course.stations" [active]="station.id"></app-page-indicator>

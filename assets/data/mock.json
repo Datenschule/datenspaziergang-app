@@ -6,6 +6,7 @@
     "preview_image": "/assets/images/datawalk.png",
     "description": "Berlin-Kreuzberg ist bunt und politisch: Der öffentliche Raum ist geprägt von zahlreichen Stories - von Hausbesetzungen, über XX bis hin zu XX. Aber welche Daten erzählen die Geschichte des Bezirks? Und wie gestalten Menschen den öffentlichen Raum durch digitale Mittel? An insgesamt 4 Stationen zu den Themen Kriminalität, Barrierefreiheit, Bildung und Umwelt lernst du neue Perspektiven auf das Berliner Szeneviertel kennen. Wir zeigen dir bei dieser Tour die spannendsten Orte in Kreuzberg und was du in offenen Daten alles über sie herausfinden kannst.<br /><br />Auf geht’s!",
     "entry": 0,
+    "courseline": [[13.418197,52.498763,40],[13.418166,52.498747,40],[13.418142,52.49877,40],[13.418068,52.498838,40],[13.418016,52.498886,40],[13.41809,52.498915,40],[13.418022,52.498971,40],[13.417992,52.498969,40],[13.417936,52.498965,40],[13.417859,52.49896,40],[13.417862,52.498944,40],[13.417727,52.498936,40],[13.417729,52.498923,40],[13.417853,52.498924,40],[13.41802,52.498929,40],[13.418129,52.498933,40],[13.418442,52.498946,39.8],[13.418516,52.498952,39.7],[13.418504,52.499,39.7],[13.418557,52.499004,39.6],[13.418717,52.499014,39.5],[13.418683,52.498943,39.4],[13.418621,52.49888,39.3],[13.418589,52.498859,39.2],[13.418607,52.498741,39.1],[13.418482,52.498704,39],[13.4185,52.498671,38.9],[13.41852,52.498438,38.7],[13.418535,52.498404,38.6],[13.419401,52.496815,39],[13.419518,52.496647,39.3],[13.419572,52.496569,39.5],[13.419586,52.496552,39.7],[13.419647,52.496478,39.9],[13.419703,52.4964,40],[13.419731,52.496361,40.2],[13.419861,52.496231,40.4],[13.419908,52.49617,40.5],[13.420097,52.495878,40.9],[13.419564,52.495899,41.2],[13.419479,52.495813,41.3],[13.419516,52.495793,41.3],[13.41975,52.495588,41.3],[13.419715,52.49554,41.3],[13.418977,52.494578,41.8],[13.418861,52.494473,42],[13.418694,52.49425,42.3],[13.418421,52.493886,43.5],[13.418439,52.493857,43.4],[13.418457,52.493828,43.4],[13.418622,52.49378,43.3],[13.419302,52.493604,43],[13.419387,52.493542,42.9],[13.419572,52.493498,42.8],[13.419688,52.493497,42.8],[13.42052,52.493281,41.9],[13.420676,52.493273,41.7],[13.420936,52.493202,41.5],[13.42105,52.493146,41.3],[13.421559,52.493005,40.7],[13.421626,52.492942,40.5],[13.421816,52.492931,40.4],[13.421866,52.492935,40.2],[13.422055,52.492959,40.1],[13.422207,52.492981,40],[13.422336,52.492993,39.9],[13.422389,52.492998,39.8],[13.423333,52.493089,40],[13.425501,52.49327,43.6],[13.42798,52.4935,44.3],[13.428207,52.493428,44.1],[13.428275,52.493497,43.8],[13.428329,52.493553,43.6],[13.428514,52.493746,43],[13.428595,52.493835,42.8],[13.428648,52.493895,42.6],[13.42941,52.494662,41.2],[13.430295,52.495554,39.8],[13.430588,52.495467,39.4],[13.431261,52.495272,39],[13.432861,52.494798,39.8],[13.432953,52.494858,40],[13.434491,52.496407,38.9],[13.434573,52.496495,38.7],[13.434706,52.496447,38.5],[13.43482,52.496582,38.4],[13.435244,52.49641,38],[13.435319,52.496458,37.9],[13.435427,52.496479,37.9],[13.435584,52.496439,37.8],[13.435675,52.496403,37.8],[13.435816,52.496391,37.7],[13.435933,52.496412,37.6],[13.436122,52.4965,37.5],[13.43659,52.496686,37.5],[13.436829,52.496782,37.5],[13.43687,52.496767,37.5],[13.437377,52.496608,37.2],[13.437635,52.496528,37],[13.437579,52.496474,36.8],[13.437635,52.496528,33],[13.437377,52.496608,33],[13.43687,52.496767,34.7],[13.436829,52.496782,35.1],[13.436103,52.49702,36.6],[13.435384,52.497264,37.3],[13.435061,52.497375,37.5],[13.434449,52.497574,38.5],[13.434407,52.497643,38.7],[13.434149,52.497883,38.6],[13.433848,52.498146,38.2],[13.433396,52.49835,38],[13.433358,52.498369,38],[13.433053,52.498518,37.8],[13.432844,52.498679,37.6],[13.432469,52.498804,37.4],[13.432312,52.498856,37.3],[13.432306,52.498923,37.2],[13.432008,52.499039,37],[13.431951,52.499139,36.9],[13.431888,52.49931,37.1],[13.432086,52.499337,37.4],[13.432054,52.499408,37.6],[13.432016,52.499486,37.9],[13.431872,52.499791,38.5],[13.431747,52.500057,39.4],[13.43168,52.500201,39.8],[13.431555,52.500465,40.7],[13.431432,52.500728,41.5],[13.431325,52.500954,42.1],[13.431281,52.50105,42.5],[13.431599,52.501398,43.1],[13.430336,52.501885,43.1],[13.42907,52.50237,42.2],[13.427096,52.50299,40.3],[13.425842,52.503391,39.4],[13.425982,52.503603,39.2],[13.425789,52.503652,39.1],[13.425685,52.503679,39],[13.425635,52.503745,38.9],[13.425517,52.503798,38.9],[13.425351,52.50382,38.8],[13.425208,52.5038,38.7],[13.425131,52.503819,38.7],[13.424709,52.503927,38.6],[13.424517,52.503975,38.6],[13.424505,52.503957,38.6]],
     "stations": [
       {
         "id": 0,
@@ -39,13 +40,21 @@
                 "content": "OffenesParlament.de macht Bundestagsdebatten transparent und nachvollziehbar. Über die Plattform kannst du  alle 245 Plenarprotokolle des Bundestags der letzten Wahlperiode durchsuchen - z.B. nach Ehe für Alle, Videoüberwachung oder Kriminalität. Dadurch hast du die Möglichkeit, die Arbeit von Abgeordneten und ihre Positionen zu überprüfen.<br /><br />Der Bundestag veröffentlicht regelmäßig Sitzungsprotokolle zu aktuellen Debatten. Seit Oktober 2017 werden die Dokumente als offene Daten zur freien Nutzung bereitgestellt. Sie können von Interessierten analysiert werden und finden Verwendung in gemeinnützigen Projekten, wie OffenesParlament.de.",
                 "name": "Was ist OffenesParlament.de?",
                 "prev": 0,
-                "next": 2
+                "next": 21
+              },
+              {
+              "type": "story",
+              "id": 21,
+              "img": "/assets/images/datawalk.png",
+              "content": "Die Kriminalität an Berliner U-Bahn-Stationen wurde z.B. am 27. Januar 2017 im Bundestag thematisiert (Sitzung 216, Tagesordnungspunkt 28b). Zur Debatte stand, ob der vermehrte Einsatz von Videoüberwachung an Bahnhöfen zu einer erhöhten Sicherheit beiträgt. Das Thema führte zu kontroversen Diskussionen zwischen den Abgeordneten und Fraktionen",
+              "name": "Was ist OffenesParlament.de?",
+              "prev": 1,
+              "next": 2
               },
               {
                 "type": "iframe",
                 "id": 2,
                 "name": "Offenes Parlament",
-                "content": "Die Kriminalität an Berliner U-Bahn-Stationen wurde z.B. am 27. Januar 2017 im Bundestag thematisiert (Sitzung 216, Tagesordnungspunkt 28b). Zur Debatte stand, ob der vermehrte Einsatz von Videoüberwachung an Bahnhöfen zu einer erhöhten Sicherheit beiträgt. Das Thema führte zu kontroversen Diskussionen zwischen den Abgeordneten und Fraktionen:",
                 "link": "https://offenesparlament.de/protokoll/#!/216#3",
                 "prev": 1,
                 "next": 3
@@ -119,7 +128,6 @@
               {
                 "type": "iframe",
                 "id": 8,
-                "content": "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem",
                 "name": "Wheelmap",
                 "link": "https://wheelmap.org/beta/nodes/268915491#?lat=52.499&lon=13.4184&zoom=19",
                 "prev": 7,
@@ -177,7 +185,6 @@
                 "type": "iframe",
                 "id": 2,
                 "name": "Jedeschule.de",
-                "content": "",
                 "link": "https://jedeschule.de/schulen/#!?lat=52.49349906504009&lng=13.416003427264517&zoom=16",
                 "prev": 1,
                 "next": 3
@@ -196,21 +203,7 @@
                 "img": "/assets/images/datawalk.png",
                 "name": "Schulaktivitäten in Kreuzberg",
                 "content": "In Kreuzberg zeigt Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-                "prev": 3,
-                "next": 5
-              },
-              {
-                "id": 5,
-                "type": "quiz",
-                "name": "Was muss Kind X könnnen?",
-                "question": "Was sind die erwarteten Fähigkeiten von 14-Jährigen",
-                "answers": [
-                  "Mathe",
-                  "Deutsch",
-                  "Englisch"
-                ],
-                "correct": 0,
-                "prev": 4
+                "prev": 3
               }
             ]
           }
@@ -253,7 +246,6 @@
               {
                 "id": 2,
                 "type": "iframe",
-                "content": "",
                 "name": "StreetTrees Map",
                 "link": "https://trees.codefor.de/",
                 "prev": 1,
@@ -284,15 +276,23 @@
                 "content": "Mundraub.org ist eine Online-Community, die zur Entdeckung und Nutzung essbarer Landschaften weltweit aufruft. Auf einer Karte können Fundorte von Obstbäumen, und -sträuchern, Nussbäumen und Kräutern in der eigenen Umgebung gesucht, gefiltert und hinzugefügt werden. Außerdem gibt es Informationen zu Mostereien, Stadtaktionen und Geburtsbäumen, z.B. im Anton-Saefkow-Park in Treptow. Auf diese Weise möchte Mundraub.org ein Bewusstsein für essbare Landschaften, Regionalität und Saisonalität schaffen und stärken.<br /><br />Wie essbar ist der Görli? Schau nach!",
                 "name": "Was ist Mundraub?",
                 "prev": 3,
+                "next": 51
+              },
+              {
+                "type": "story",
+                "id": 51,
+                "img": "/assets/images/datawalk.png",
+                "content": "Insgesamt gibt es auf Mundraub.org Informationen über 34 Nussbäume, Obstbäume und -sträucher im Görlitzer Park. Die meisten davon sind Kirschbäume (insgesamt 13), aber auch Äpfel, Birnen, Mirabellen, Brombeeren, Schlehen und Haselnüsse kann man hier zur richtigen Jahreszeit pflücken! Vormerken!",
+                "name": "Was ist Mundraub?",
+                "prev": 4,
                 "next": 5
               },
               {
                 "id": 5,
                 "type": "iframe",
                 "name": "Mundraub",
-                "content": "Insgesamt gibt es auf Mundraub.org Informationen über 34 Nussbäume, Obstbäume und -sträucher im Görlitzer Park. Die meisten davon sind Kirschbäume (insgesamt 13), aber auch Äpfel, Birnen, Mirabellen, Brombeeren, Schlehen und Haselnüsse kann man hier zur richtigen Jahreszeit pflücken! Vormerken!",
                 "link": "https://www.mundraub.org/map#z=16&lat=52.49779843831727&lng=13.43750858548447",
-                "prev": 4
+                "prev": 51
               }
             ]
           }
@@ -303,8 +303,8 @@
         "name": "Bethanien-Kloster",
         "prev": 2,
         "position": {
-          "lat": 52.49698,
-          "lon": 13.4185893
+          "lat": 52.503957,
+          "lon": 13.424505
         },
         "entry": 0,
         "subjects": [
@@ -334,7 +334,6 @@
               {
                 "id": 2,
                 "type": "iframe",
-                "content": "",
                 "name": "berlin.besetzt",
                 "link": "http://berlin-besetzt.de/",
                 "prev": 1

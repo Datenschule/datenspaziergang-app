@@ -50,6 +50,7 @@ export class CoursesOverviewComponent implements OnInit {
       prev.push([curr.position.lon, curr.position.lat]);
       return prev;
     }, []);
+    this.activeLine = course['courseline'];
   }
 
   ngOnInit() {

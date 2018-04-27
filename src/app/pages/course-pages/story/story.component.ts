@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {CoursesService} from '../../../services/courses/courses.service';
 import {ActivatedRoute} from '@angular/router';
 import {DomSanitizer, SafeStyle} from '@angular/platform-browser';
+import {Location} from '@angular/common';
 import {StoryPage} from '../../../model/stations';
 
 @Component({
@@ -16,7 +17,7 @@ export class StoryComponent implements OnInit {
   title: string;
   story: any;
 
-  constructor(private coursesService: CoursesService, private route: ActivatedRoute, private sanitizer: DomSanitizer) {
+  constructor(private coursesService: CoursesService, private route: ActivatedRoute, private sanitizer: DomSanitizer, private location: Location) {
   }
 
   ngOnInit() {
@@ -36,5 +37,9 @@ export class StoryComponent implements OnInit {
         });
       });
     });
+  }
+
+  goBack() {
+    this.location.back();
   }
 }

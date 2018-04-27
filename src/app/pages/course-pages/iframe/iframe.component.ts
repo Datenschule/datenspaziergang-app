@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {CoursesService} from '../../../services/courses/courses.service';
 import {DomSanitizer, SafeResourceUrl, SafeStyle} from '@angular/platform-browser';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-iframe',
@@ -15,7 +16,7 @@ export class IframeComponent implements OnInit {
   text: string;
   nextLink: string;
 
-  constructor(private coursesService: CoursesService, private route: ActivatedRoute, private sanitizer: DomSanitizer) {
+  constructor(private coursesService: CoursesService, private route: ActivatedRoute, private sanitizer: DomSanitizer, private location: Location) {
   }
 
   ngOnInit() {
@@ -29,7 +30,6 @@ export class IframeComponent implements OnInit {
       this.coursesService.getPage(course_id, station_id, subject_id, page_id).subscribe((page) => {
 
         this.link = this.sanitizer.bypassSecurityTrustResourceUrl(page.link);
-        this.text = page.content;
         this.title = page.name;
         this.coursesService.getNextPageLink(course_id, station_id, subject_id, page.next).subscribe((nextPage) => {
           this.nextLink = nextPage;
@@ -38,4 +38,7 @@ export class IframeComponent implements OnInit {
     });
   }
 
+  goBack() {
+    this.location.back();
+  }
 }

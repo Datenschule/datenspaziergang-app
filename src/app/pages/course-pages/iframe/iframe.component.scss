@@ -1,16 +1,35 @@
+@import "../../../../style/_scss/variables";
+
+:host {
+
+}
+
 .wrapper-window {
-  margin: 10vh auto 0 auto;
-  border: 5px solid green;
-  height: 60vh;
-  width: 80vh;
+  //margin: 10vh auto 0 auto;
+  height: calc(100vh - #{$actionbar-height});
+  width: 100%;
+  padding: 2%;
 }
 
 iframe {
   height: 100%;
   width: 100%;
   background-color: white;
+  box-shadow: -8px 8px 0px 0 $purple-dark;
 }
 
 .container {
   margin: 100px 10vh 0 10vh;
+}
+
+.btn-forward {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+
+.btn-back {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
 }

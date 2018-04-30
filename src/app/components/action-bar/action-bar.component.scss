@@ -28,8 +28,41 @@
     outline: none;
     cursor: pointer;
 
-    &:hover {
+    &:hover,
+    &:active{
       opacity: 1;
+    }
+  }
+
+  .button {
+    margin: auto $base-padding;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: none;
+  }
+
+  .logoButton {
+    width: 2em;
+    transition: color 0.333s cubic-bezier(0, 0, 0.21, 1);
+    font-size: 22px;
+    color: $black;
+
+    &:hover,
+    &:active{
+      color: $purple;
+    }
+  }
+
+  .backButton {
+    width: 3em;
+    svg {
+      transition: fill 0.333s cubic-bezier(0, 0, 0.21, 1);
+      fill: $black;
+    }
+    &:hover,
+    &:active {
+      svg {fill: $purple;}
     }
   }
 
@@ -40,18 +73,10 @@
   #butAdd {
     background: url(/assets/images/ic_add_white_24px.svg) center center no-repeat;
   }
-
-  #goBack {
-    background: url(/assets/images/ic_keyboard_backspace_white_24px.svg) center center no-repeat;
-  }
-
-  #butLogo {
-    width: 3em;
-    background: url(/assets/images/logo.png) center center no-repeat;
-  }
 }
 
 .bar__title {
+  margin-top: 1.2em;
   color: $black;
   font-weight: 600;
   font-size: 20px;

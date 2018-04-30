@@ -7,7 +7,8 @@
     <div class="container-left-6">
       <!--<div class="detail">-->
       <div class="description box">
-        <h1 class="box__title">{{title}}</h1>
+        <h1 class="box__title"
+        [ngClass]="{relative: inlineTitle === true}">{{title}}</h1>
         <p [innerHTML]="story.content | safeHtml"></p>
       </div>
       <!--</div>-->

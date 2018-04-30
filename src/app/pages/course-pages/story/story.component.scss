@@ -25,3 +25,10 @@
   display: flex;
   align-items: flex-end;
 }
+
+.box__title.relative {
+  position: relative;
+  top: -1.4em;
+  margin-bottom: 0em;
+  left: 0em;
+}

@@ -41,13 +41,13 @@
 
 .box__title {
   position: absolute;
-  top: -1.6em;
+  top: -1.5em;
   right: 30px;
   display: inline-block;
-  padding: 0.2em ($base-padding / 1.5) 0.1em;
+  padding: 0.3em ($base-padding / 1.5) 0.1em;
+  line-height: 1;
   background: white;
   border: $regular-border-size solid $purple;
-  white-space: nowrap;
 
   @media (max-width: 800px) {
     font-size: 30px;

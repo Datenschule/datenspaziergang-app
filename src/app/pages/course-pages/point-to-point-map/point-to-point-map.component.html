@@ -11,9 +11,32 @@
         <div class="marker">{{station.id + 1}}</div>
       </mgl-marker>
       <mgl-marker *ngIf="locationMarker.length > 0"
-                  [lngLat]="locationMarker">
+        [lngLat]="locationMarker">
         <div class="marker">DU</div>
       </mgl-marker>
+      <mgl-layer
+        id="linelayer"
+        type="line"
+        [source]="{
+        'type': 'geojson',
+        'data': {
+        'type': 'Feature',
+        'properties': {},
+        'geometry': {
+        'type': 'LineString',
+        'coordinates': course.courseline
+        }
+        }
+        }"
+        [layout]="{
+        'line-join': 'round',
+        'line-cap': 'round'
+        }"
+        [paint]="{
+        'line-color': '#a576f1',
+        'line-width': 8
+        }">
+      </mgl-layer>
     </mgl-map>
   </div>
 

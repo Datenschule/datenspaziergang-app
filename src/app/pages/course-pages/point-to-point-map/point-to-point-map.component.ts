@@ -27,12 +27,6 @@ export class PointToPointMapComponent implements OnInit {
   title: string;
   stationsForIndicator: Array<any>;
 
-  lineData =  [
-    [13.419347, 52.497136],
-    [13.419111, 52.498912],
-    [13.423489, 52.499173]
-  ];
-
   mapOptions = {
     style: environment.mapboxTiles.street,
     center: [13.390497, 52.517221],

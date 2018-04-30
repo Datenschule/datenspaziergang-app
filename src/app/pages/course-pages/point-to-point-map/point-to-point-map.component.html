@@ -6,30 +6,6 @@
       [zoom]="mapOptions.zoom"
       [style]="mapOptions.style"
       [interactive]="true">
-      <mgl-layer
-        *ngIf="locationMarker.length > 0"
-        id="linelayer"
-        type="line"
-        [source]="{
-        'type': 'geojson',
-        'data': {
-          'type': 'Feature',
-          'properties': {},
-          'geometry': {
-            'type': 'LineString',
-            'coordinates': [mapOptions.center, locationMarker]
-           }
-        }
-        }"
-        [layout]="{
-        'line-join': 'round',
-        'line-cap': 'round'
-        }"
-        [paint]="{
-        'line-color': '#4c00c8',
-        'line-width': 8
-        }"
-      ></mgl-layer>
       <mgl-marker
         [lngLat]="mapOptions.center">
         <div class="marker">{{station.id + 1}}</div>

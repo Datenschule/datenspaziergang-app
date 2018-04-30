@@ -25,7 +25,7 @@ export class PointToPointMapComponent implements OnInit {
   location: Point;
   locationMarker: Array<number> = [];
   title: string;
-  stationsForIndicator: Array<any>;
+  stationsForIndicator: Array<Station>;
 
   mapOptions = {
     style: environment.mapboxTiles.street,

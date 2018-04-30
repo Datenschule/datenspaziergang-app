@@ -1,10 +1,10 @@
 <div class="wrapper" *ngIf="title">
   <app-action-bar [name]="title" [showBack]="true"></app-action-bar>
-  <a class="btn" style="position: absolute; top: 100px; left: 50px; z-index: 1000;" routerLink="{{nextLink}}">Weiter</a>
+  <a class="btn" routerLink="{{nextLink}}">Weiter</a>
 </div>
 
 <div class="map-topics">
-  <h3>Kategorien</h3>
+  <h3 class="map__title">Kategorien</h3>
   <button
     *ngFor="let k of Object.keys(mapKeysToLayer)"
     [value]="k"
@@ -12,12 +12,13 @@
 </div>
 
 <div class="map-info">
-  <h3>{{mapData['name']}}</h3>
-  <div *ngIf="activeMap">{{mapKeysToLayer[activeMap]}} {{mapData[mapKeysToLayer[activeMap]]}}</div>
+  <h3 class="map__title">{{mapData['name']}}</h3>
+  <div *ngIf="activeMap">{{mapKeysToLayer[activeMap]}}: {{mapData[mapKeysToLayer[activeMap]]}} Aktivitäten</div>
 </div>
 
 <div class="map-legend">
   <div *ngFor="let l of legend"><span class="legend-color" [style.background]="l[1]"></span>{{l[0]}}</div>
+  <p><small>Anzahl der angebotenen außerschulischen Aktivitäten</small></p>
 </div>
 
 <mgl-map

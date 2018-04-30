@@ -6,9 +6,10 @@
     </div>
     <div class="container-left-6">
       <!--<div class="detail">-->
-        <div class="description box">
-          <p [innerHTML]="story.content | safeHtml"></p>
-        </div>
+      <div class="description box">
+        <h1 class="box__title">{{title}}</h1>
+        <p [innerHTML]="story.content | safeHtml"></p>
+      </div>
       <!--</div>-->
     </div>
     <div class="container-left-4 button-container">
@@ -16,5 +17,3 @@
     </div>
   </div>
 </div>
-
-

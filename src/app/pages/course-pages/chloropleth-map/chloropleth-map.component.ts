@@ -14,7 +14,7 @@ export class ChloroplethMapComponent implements OnInit {
   title: string;
   Object = Object; // workaround to access `Object` in template
 
-  defaultText: string = "Wähle eine Kategorie und hover über einen Bezirk";
+  defaultText: string = "Wähle eine Kategorie und einen Bezirk";
   mapData: Object = { name: this.defaultText };
   activeMap: string;
   theMapStyles: any;
@@ -45,7 +45,7 @@ export class ChloroplethMapComponent implements OnInit {
 
   mapOption: any = {
     center: [13.4190634, 52.4945314],
-    zoom: [10],
+    zoom: [9],
     style: environment.mapboxTiles.chloropleth,
     sources: {
       berlinBorders: "https://raw.githubusercontent.com/berlinermorgenpost/Berlin-Geodaten/master/berlin_bezirke.geojson",

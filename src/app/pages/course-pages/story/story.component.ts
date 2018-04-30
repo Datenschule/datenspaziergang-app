@@ -29,7 +29,7 @@ export class StoryComponent implements OnInit {
 
       this.coursesService.getPage(course_id, station_id, subject_id, page_id).subscribe((page) => {
 
-        this.title = page.name;
+        this.title = `${page.name}`;
         this.story = page;
         this.image = this.sanitizer.bypassSecurityTrustStyle(`url(${page.img})`);
         this.coursesService.getNextPageLink(course_id, station_id, subject_id, page.next).subscribe((nextPage) => {

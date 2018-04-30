@@ -1,6 +1,9 @@
 @import "../../../style/_scss/variables";
 
 .bar {
+  position: fixed;
+  top: 0;
+  z-index: map-get($z-index-map, actionbar);
   width: 100%;
   height: $actionbar-height;
   color: $black;

@@ -1,67 +1,69 @@
 <div class="wrapper" *ngIf="title">
   <app-action-bar [name]="title" [showBack]="true"></app-action-bar>
+
+  <div class="map-topics">
+    <h3 class="map__title">Kategorien</h3>
+    <button
+      *ngFor="let k of Object.keys(mapKeysToLayer)"
+      [value]="k"
+      (click)="moveLayerToTop($event)">{{mapKeysToLayer[k]}}</button>
+  </div>
+
+  <div class="map-info">
+    <h3 class="map__title">{{mapData['name']}}</h3>
+    <div *ngIf="activeMap">{{mapKeysToLayer[activeMap]}}: {{mapData[mapKeysToLayer[activeMap]]}} Aktivitäten</div>
+  </div>
+
+  <div class="map-legend">
+    <div *ngFor="let l of legend"><span class="legend-color" [style.background]="l[1]"></span>{{l[0]}}</div>
+    <p><small>Anzahl der angebotenen außerschulischen Aktivitäten</small></p>
+  </div>
+
+  <mgl-map
+    [center]="mapOption.center"
+    [zoom]="mapOption.zoom"
+    [style]="mapOption.style"
+    (load)="onLoad($event)">
+    <mgl-geojson-source
+      id="berlin"
+      [data]="mapOption.sources.berlinBorders">
+    </mgl-geojson-source>
+    <mgl-geojson-source
+      id="schools"
+      [data]="mapOption.sources.schoolActivities">
+    </mgl-geojson-source>
+
+    <mgl-layer
+      id="base"
+      type="fill"
+      source="schools"
+      [paint]='{
+      "fill-opacity": 0.0}'
+      (mouseMove)="activateHoverOn($event)"
+      (mouseLeave)="disableHover()">
+    </mgl-layer>
+
+    <mgl-layer
+      id="outline"
+      type="line"
+      source="berlin"
+      [paint]='{
+      "line-color": "#333",
+      "line-width": 2
+      }'>
+    </mgl-layer>
+    <mgl-layer
+      id="hover"
+      type="line"
+      source="berlin"
+      [paint]='{
+      "line-color": "#333",
+      "line-width": 6
+      }'
+      [filter]="hoverFilter">
+    </mgl-layer>
+  </mgl-map>
+
   <a class="btn" routerLink="{{nextLink}}">Weiter</a>
+
 </div>
-
-<div class="map-topics">
-  <h3 class="map__title">Kategorien</h3>
-  <button
-    *ngFor="let k of Object.keys(mapKeysToLayer)"
-    [value]="k"
-    (click)="moveLayerToTop($event)">{{mapKeysToLayer[k]}}</button>
-</div>
-
-<div class="map-info">
-  <h3 class="map__title">{{mapData['name']}}</h3>
-  <div *ngIf="activeMap">{{mapKeysToLayer[activeMap]}}: {{mapData[mapKeysToLayer[activeMap]]}} Aktivitäten</div>
-</div>
-
-<div class="map-legend">
-  <div *ngFor="let l of legend"><span class="legend-color" [style.background]="l[1]"></span>{{l[0]}}</div>
-  <p><small>Anzahl der angebotenen außerschulischen Aktivitäten</small></p>
-</div>
-
-<mgl-map
-  [center]="mapOption.center"
-  [zoom]="mapOption.zoom"
-  [style]="mapOption.style"
-  (load)="onLoad($event)">
-  <mgl-geojson-source
-    id="berlin"
-    [data]="mapOption.sources.berlinBorders">
-  </mgl-geojson-source>
-  <mgl-geojson-source
-    id="schools"
-    [data]="mapOption.sources.schoolActivities">
-  </mgl-geojson-source>
-
-  <mgl-layer
-    id="base"
-    type="fill"
-    source="schools"
-    [paint]='{
-    "fill-opacity": 0.0}'
-    (mouseMove)="activateHoverOn($event)"
-    (mouseLeave)="disableHover()">
-  </mgl-layer>
-
-  <mgl-layer
-    id="outline"
-    type="line"
-    source="berlin"
-    [paint]='{
-    "line-color": "#333",
-    "line-width": 2
-    }'>
-  </mgl-layer>
-  <mgl-layer
-    id="hover"
-    type="line"
-    source="berlin"
-    [paint]='{
-    "line-color": "#333",
-    "line-width": 6
-    }'
-    [filter]="hoverFilter">
-  </mgl-layer>
-</mgl-map>

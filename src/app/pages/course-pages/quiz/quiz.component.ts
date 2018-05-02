@@ -18,7 +18,7 @@ export class QuizComponent implements OnInit {
 
   title: string;
   question: string;
-  answers: string[];
+  answers: Array<[string, boolean, string]>;
   correct_answer: number;
   correct_message = 'Glückwunsch';
   wrong_message = 'Falsch';
@@ -35,8 +35,13 @@ export class QuizComponent implements OnInit {
 
         this.title = page.name;
         this.question = page.question;
-        this.answers = page.answers;
         this.correct_answer = page.correct;
+        this.answers = page.answers.map((answer, i) => {
+          let wasPressed = false;
+          let isCorrect = i === this.correct_answer ? "✅" : "❌";
+          return [answer, wasPressed, isCorrect];
+        });
+
 
         this.coursesService.getNextPageLink(course_id, station_id, subject_id, page.next).subscribe((nextPage) => {
           this.nextLink = nextPage;
@@ -48,6 +53,7 @@ export class QuizComponent implements OnInit {
   sendanswer(answer) {
     this.firstguess = true;
     console.log(`clicked option ${answer}`);
+    this.answers[answer][1] = true;
     this.correct = answer === this.correct_answer;
   }
 

@@ -9,11 +9,15 @@
         <h1 class="box__title">Quiz: Wer hat's gesagt?</h1>
         <p class="h3">{{question}}</p>
 
-        <p *ngIf="firstguess && correct">{{correct_message}}</p>
-        <p *ngIf="firstguess && !correct">{{wrong_message}}</p>
+        <!-- <p *ngIf="firstguess && correct">{{correct_message}}</p>
+             <p *ngIf="firstguess && !correct">{{wrong_message}}</p> -->
       </div>
       <ul>
-        <li class="btn" *ngFor="let answer of answers; let i = index" (click)="sendanswer(i)">{{answer}}</li>
+        <li class="btn"
+          *ngFor="let answer of answers; let i = index"
+          (click)="sendanswer(i)">
+          {{answer[0]}}
+          <span *ngIf="answer[1]" class="answer-indicator">{{answer[2]}}</span></li>
       </ul>
     </div>
     <div class="container-left-2 button-container">

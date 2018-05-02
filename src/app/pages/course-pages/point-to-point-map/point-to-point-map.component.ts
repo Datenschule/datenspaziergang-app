@@ -19,8 +19,8 @@ export class PointToPointMapComponent implements OnInit {
   nextLink: string;
   course: Course;
   points: Point[];
-  image = '/assets/images/pin.jpeg';
   station: Station;
+  stationNameInline: boolean = false;
   line: number[][];
   location: Point;
   locationMarker: Array<number> = [];
@@ -74,6 +74,11 @@ export class PointToPointMapComponent implements OnInit {
         this.stationsForIndicator = this.course.stations;
 
         this.station = this.course.stations.find((station) => station.id === station_id);
+
+        if (this.station.name.length > 20) {
+          this.stationNameInline = true;
+        }
+
         this.mapOptions.center = [this.station.position.lon, this.station.position.lat];
         console.log(this.station);
 
@@ -81,7 +86,7 @@ export class PointToPointMapComponent implements OnInit {
 
         if (navigator.geolocation) {
           console.log('start requesting geolocation');
-          navigator.geolocation.watchPosition((current_location) => {
+          navigator.geolocation.getCurrentPosition((current_location) => {
             console.log(current_location);
 
             // this.location = {lon: current_location.coords.longitude, lat: current_location.coords.latitude};

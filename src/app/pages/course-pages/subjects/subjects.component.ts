@@ -93,6 +93,7 @@ export class SubjectsComponent implements OnInit {
       this.station.subjects = this.station.subjects.map(subject => {
         const firstpage = subject.pages.find(page => page.id === subject.entry);
         subject['link'] = `/${firstpage['type']}/${this.course.id}/${this.station.id}/${subject.id}/${firstpage.id}`;
+        subject['inlineName'] = subject.name.length > 18 ? true : false;
         return subject;
       });
       this.mapOptions.center = [this.station.position.lon, this.station.position.lat];

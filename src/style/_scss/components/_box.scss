@@ -44,7 +44,7 @@
   top: -1.5em;
   right: 30px;
   display: inline-block;
-  padding: 0.3em ($base-padding / 1.5) 0.1em;
+  padding: 0.3em $base-padding-lite 0.1em;
   line-height: 1;
   background: white;
   border: $regular-border-size solid $purple;
@@ -54,6 +54,14 @@
     top: -2em;
   }
 }
+
+.box__title.relative {
+  position: relative;
+  top: -0.8em;
+  margin-bottom: 0em;
+  left: 0em;
+}
+
 
 .box-wide {
   max-width: 70vw;

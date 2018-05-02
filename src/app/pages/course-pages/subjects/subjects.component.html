@@ -15,7 +15,8 @@
 
     <div class="box__container">
       <div class="box" *ngFor="let subject of station.subjects" routerLink="{{subject['link']}}">
-        <h1 class="box__title">{{subject.name}}</h1>
+        <h1 class="box__title"
+        [ngClass]="{relative: subject.inlineName === true}">{{subject.name}}</h1>
         <p>{{subject.description}}</p>
         <a href="{{subject['link']}}" class="btn-cta">Anschauen</a>
       </div>

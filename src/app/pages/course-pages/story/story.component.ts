@@ -31,7 +31,7 @@ export class StoryComponent implements OnInit {
       this.coursesService.getPage(course_id, station_id, subject_id, page_id).subscribe((page) => {
 
         this.title = `${page.name}`;
-        if (this.title.length > 15) {
+        if (this.title.length > 20) {
           this.inlineTitle = true;
         }
         this.story = page;

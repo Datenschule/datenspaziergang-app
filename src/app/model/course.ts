@@ -8,4 +8,5 @@ export class Course {
   preview_image: string;
   description: string;
   entry: number;
+  courseline: Array<[number, number]>
 }

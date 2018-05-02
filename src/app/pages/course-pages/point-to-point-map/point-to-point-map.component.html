@@ -6,19 +6,26 @@
       [zoom]="mapOptions.zoom"
       [style]="mapOptions.style"
       [interactive]="true">
+      <mgl-marker
+        [lngLat]="mapOptions.center">
+        <div class="marker">{{station.id + 1}}</div>
+      </mgl-marker>
+      <mgl-marker *ngIf="locationMarker.length > 0"
+        [lngLat]="locationMarker">
+        <div class="marker">DU</div>
+      </mgl-marker>
       <mgl-layer
-        *ngIf="locationMarker.length > 0"
         id="linelayer"
         type="line"
         [source]="{
         'type': 'geojson',
         'data': {
-          'type': 'Feature',
-          'properties': {},
-          'geometry': {
-            'type': 'LineString',
-            'coordinates': [mapOptions.center, locationMarker]
-           }
+        'type': 'Feature',
+        'properties': {},
+        'geometry': {
+        'type': 'LineString',
+        'coordinates': course.courseline
+        }
         }
         }"
         [layout]="{
@@ -26,24 +33,17 @@
         'line-cap': 'round'
         }"
         [paint]="{
-        'line-color': '#4c00c8',
+        'line-color': '#a576f1',
         'line-width': 8
-        }"
-      ></mgl-layer>
-      <mgl-marker
-        [lngLat]="mapOptions.center">
-        <div class="marker">{{station.id + 1}}</div>
-      </mgl-marker>
-      <mgl-marker *ngIf="locationMarker.length > 0"
-                  [lngLat]="locationMarker">
-        <div class="marker">DU</div>
-      </mgl-marker>
+        }">
+      </mgl-layer>
     </mgl-map>
   </div>
 
   <div class="container-margin-all">
     <div class="box">
-      <h1 class="box__title">{{station.name}}</h1>
+      <h1 class="box__title"
+      [ngClass]="{relative: stationNameInline === true}">{{station.name}}</h1>
       <p [innerHTML]="course.description | safeHtml"></p>
       <a class="btn" id="next" routerLink="{{nextLink}}">Angekommen</a>
     </div>

@@ -1,14 +1,16 @@
-<app-action-bar  [name]="title" [showBack]="true"></app-action-bar>
 <div class="wrapper fond_darkblue_gradient" *ngIf="story">
+  <app-action-bar  [name]="title" [showBack]="true"></app-action-bar>
   <div class="container padding-top-medium">
     <div class="container-left-4 button-container">
       <a class="btn" (click)="goBack()">Zurück</a>
     </div>
     <div class="container-left-6">
       <!--<div class="detail">-->
-        <div class="description box">
-          <p [innerHTML]="story.content | safeHtml"></p>
-        </div>
+      <div class="description box">
+        <h1 class="box__title"
+        [ngClass]="{relative: inlineTitle === true}">{{title}}</h1>
+        <p [innerHTML]="story.content | safeHtml"></p>
+      </div>
       <!--</div>-->
     </div>
     <div class="container-left-4 button-container">
@@ -16,5 +18,3 @@
     </div>
   </div>
 </div>
-
-

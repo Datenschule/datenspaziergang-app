@@ -7,18 +7,14 @@
 
 .description {
   //color: white;
-  padding: 80px 10% 10% 10%;
+  padding: 60px 10% 10% 10%;
   max-width: 50vw;
-  max-height: 80vh;
-  overflow: scroll;
+  //max-height: 80vh;
+  //overflow: scroll;
 }
 
 .btn {
   margin: 0 auto;
-}
-
-.wrapper {
-  height: calc(100% - #{$actionbar-height});
 }
 
 .container {

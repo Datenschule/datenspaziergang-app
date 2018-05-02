@@ -47,6 +47,7 @@ import { MapboxService } from './services/mapbox/mapbox.service';
 import { PageIndicatorComponent } from './components/page-indicator/page-indicator.component';
 import { SubjectsComponent } from './pages/course-pages/subjects/subjects.component';
 import { IframeComponent } from './pages/course-pages/iframe/iframe.component';
+import { ImpressumComponent } from './pages/impressum/impressum.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -82,6 +83,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     PageIndicatorComponent,
     SubjectsComponent,
     IframeComponent,
+    ImpressumComponent,
   ],
   imports: [
     BrowserModule,

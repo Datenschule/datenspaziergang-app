@@ -18,7 +18,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
         transform: 'translate3d(0, 0, 0)'
       })),
       state('right', style({
-        transform: 'translate3d(-85%, 0, 0)'
+        transform: 'translate3d(-92%, 0, 0)'
       })),
       transition('left => right', animate('200ms ease-in-out')),
       transition('right => left', animate('200ms ease-in-out'))
@@ -93,6 +93,7 @@ export class SubjectsComponent implements OnInit {
       this.station.subjects = this.station.subjects.map(subject => {
         const firstpage = subject.pages.find(page => page.id === subject.entry);
         subject['link'] = `/${firstpage['type']}/${this.course.id}/${this.station.id}/${subject.id}/${firstpage.id}`;
+        subject['inlineName'] = subject.name.length > 18 ? true : false;
         return subject;
       });
       this.mapOptions.center = [this.station.position.lon, this.station.position.lat];

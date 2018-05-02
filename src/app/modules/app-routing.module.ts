@@ -22,6 +22,8 @@ import {IntroComponent} from '../pages/intro/intro.component';
 import {SubjectsComponent} from '../pages/course-pages/subjects/subjects.component';
 import {IframeComponent} from '../pages/course-pages/iframe/iframe.component';
 
+import {ImpressumComponent} from '../pages/impressum/impressum.component';
+
 const routes: Routes = [
   { path: '', redirectTo: '/intro', pathMatch: 'full'},
   { path: 'intro', component: IntroComponent },
@@ -43,7 +45,8 @@ const routes: Routes = [
   { path: 'tree-development/:course/:station/:subject/:page', component: TreeDevelopmentComponent },
   { path: 'mundraub-map/:course/:station/:subject/:page', component: MundraubMapComponent },
   { path: 'berlin-besetzt-map/:course/:station/:subject/:page', component: BerlinBesetztMapComponent },
-  { path: 'berlin-besetzt-dashboard/:course/:station/:subject/:page', component: BerlinBesetztDashboardComponent }
+  { path: 'berlin-besetzt-dashboard/:course/:station/:subject/:page', component: BerlinBesetztDashboardComponent },
+  {path: 'impressum', component: ImpressumComponent}
 ]
 
 @NgModule({

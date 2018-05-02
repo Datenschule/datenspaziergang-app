@@ -1,13 +1,23 @@
-<div class="wrapper" *ngIf="title">
+<div class="wrapper fond_darkblue_gradient" *ngIf="title">
   <app-action-bar [name]="title" [showBack]="true"></app-action-bar>
-  <h1 style="text-align: center; padding-top: 100px;">{{question}}</h1>
-  <ul>
-    <li class="button" *ngFor="let answer of answers; let i = index" (click)="sendanswer(i)">{{answer}}</li>
-  </ul>
-  <p *ngIf="firstguess && correct">{{correct_message}}</p>
-  <p *ngIf="firstguess && !correct">{{wrong_message}}</p>
-  <button class="button" style="margin-top: 10px" routerLink="{{nextLink}}">Next</button>
+  <div class="container padding-top-medium">
+    <div class="container-left-2 button-container">
+      <a class="btn" (click)="goBack()">Zurück</a>
+    </div>
+    <div class="container-left-8">
+      <div class="box box--fullwidth">
+        <h1 class="box__title">Quiz: Wer hat's gesagt?</h1>
+        <p class="h3">{{question}}</p>
 
+        <p *ngIf="firstguess && correct">{{correct_message}}</p>
+        <p *ngIf="firstguess && !correct">{{wrong_message}}</p>
+      </div>
+      <ul>
+        <li class="btn" *ngFor="let answer of answers; let i = index" (click)="sendanswer(i)">{{answer}}</li>
+      </ul>
+    </div>
+    <div class="container-left-2 button-container">
+      <a class="btn" routerLink="{{nextLink}}">Weiter</a>
+    </div>
+  </div>
 </div>
-
-

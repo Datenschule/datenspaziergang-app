@@ -8,7 +8,7 @@
   border: $thin-border-size solid $purple;
   text-decoration: none;
   box-shadow: -4px 4px 0px 0 $purple;
-  transition: box-shadow 80ms ease;
+  transition: box-shadow 80ms ease, color 80ms ease, border-color 80ms ease;
 
   @media (max-width: 800px) {
     font-size: 22px;
@@ -17,13 +17,14 @@
 
 .btn:hover {
   background: $purple;
-  color: $white;
+  color: $foam;
   text-decoration: none;
-  box-shadow: -2px 2px 0px 0 $purple;
+  box-shadow: -2px 2px 0px 0 $foam;
+  border-color: $foam;
 }
 
 .btn:active {
-  box-shadow: 0 0 0 0 $purple;
+  box-shadow: 0 0 0 0 $foam;
 }
 
 .btn__position--right {

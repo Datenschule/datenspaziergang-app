@@ -12,6 +12,10 @@
   }
 }
 
+.box--fullwidth {
+  max-width: 100%;
+}
+
 .box + .box {
   margin-top: $base-padding-jumbo;
 }

@@ -1,0 +1,10 @@
+@import "../../../../style/_scss/variables";
+
+.wrapper-box {
+  overflow: hidden;
+  width: 50vw;
+  height: calc(100vh - #{$actionbar-height});
+  position:absolute;
+  top: 0;
+  margin-left: 20px;
+}

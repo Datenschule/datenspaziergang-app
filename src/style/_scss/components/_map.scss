@@ -1,7 +1,8 @@
 mgl-map {
-  height: 100vh;
+  height: calc(100vh - #{$actionbar-height});
   width: 100%;
   z-index: -1;
+  overflow: hidden;
 }
 
 .mapboxgl-marker {

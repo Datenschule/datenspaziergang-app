@@ -12,21 +12,23 @@
         <div class="marker">{{station.id + 1}}</div>
       </mgl-marker>
     </mgl-map>
-
-    <div class="box__container">
-      <div class="box" *ngFor="let subject of station.subjects" routerLink="{{subject['link']}}">
-        <h1 class="box__title"
-        [ngClass]="{relative: subject.inlineName === true}">{{subject.name}}</h1>
-        <p>{{subject.description}}</p>
-        <a href="{{subject['link']}}" class="btn-cta">Anschauen</a>
+    <div class="wrapper-box">
+      <div class="box__container">
+        <div class="box" *ngFor="let subject of station.subjects" routerLink="{{subject['link']}}">
+          <h1 class="box__title"
+              [ngClass]="{relative: subject.inlineName === true}">{{subject.name}}</h1>
+          <p>{{subject.description}}</p>
+          <a href="{{subject['link']}}" class="btn-cta">Anschauen</a>
+        </div>
+        <div class="btn__position--right">
+          <a class="btn btn--standalone" routerLink="{{nextLink}}">Zur nächsten Station</a>
+        </div>
       </div>
-      <div class="btn__position--right">
-        <a class="btn btn--standalone" routerLink="{{nextLink}}">Zur nächsten Station</a>
-      </div>
+      <div class="swipeable__helper"
+           (click)="toggleSwipeState()"
+           (touchmove)="toggleSwipeState()"></div>
     </div>
-    <div class="swipeable__helper"
-      (click)="toggleSwipeState()"
-      (touchmove)="toggleSwipeState()"></div>
+
   </div>
 
   <app-page-indicator [course]="course.id" [stations]="course.stations" [active]="station.id"></app-page-indicator>

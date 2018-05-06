@@ -35,7 +35,7 @@
 .wrapper {
   height: 100vh;
   padding-top: $actionbar-height;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
 
 }

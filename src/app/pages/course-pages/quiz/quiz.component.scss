@@ -14,3 +14,14 @@ ul {
 .answer-indicator {
   float: right;
 }
+
+.button-container {
+  //display: flex;
+  //justify-content: space-between;
+}
+
+.quiz-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}

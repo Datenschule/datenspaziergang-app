@@ -18,10 +18,15 @@
 }
 
 .container {
-  display: flex
+  //display: flex
 }
 
 .button-container {
   display: flex;
-  align-items: flex-end;
+  //align-items: flex-end;
+  margin-top: 20px;
+}
+
+.story-container {
+  margin: 20px;
 }

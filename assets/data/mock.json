@@ -98,7 +98,16 @@
                   "Sigmar Gabriel, SPD"
                 ],
                 "correct": 0,
-                "prev": 4
+                "prev": 4,
+                "next": 6
+              },
+              {
+                "type": "story",
+                "id": 6,
+                "img": "/assets/images/datawalk.png",
+                "content": "Der U-Bahnhof Kottbusser Tor gehört zu den Stationen mit den höchsten Fahrgastzahlen, rund XX Menschen steigen hier pro Tag ein oder aus. Der Kotti gehört aber auch zu den Bahnhöfen mit der höchsten Kriminalität: Etwa 165 Gewalttaten wurden hier im Jahr 2016 begangen. Im gesamten Berliner Nahverkehr kam es im selben Jahr nach Angaben der Berliner Verkehrsbetriebe (BVG) zu 24.477 Straftaten, am häufigsten davon Taschendiebstähle (insgesamt 13.869 Fälle).<br /><br/>Und wie reagiert die Politik auf die Kriminalität an den U-Bahnhöfen? Das kann man bei OffenesParlament.de nachverfolgen.",
+                "name": "Kriminalität",
+                "prev": 5
               }
             ]
           },
@@ -129,7 +138,7 @@
                 "type": "iframe",
                 "id": 8,
                 "name": "Wheelmap",
-                "link": "https://wheelmap.org/beta/nodes/268915491#?lat=52.499&lon=13.4184&zoom=19",
+                "link": "https://wheelmap.org/beta#?lat=52.5034&lon=13.4251&zoom=19",
                 "prev": 7,
                 "next": 9
               },

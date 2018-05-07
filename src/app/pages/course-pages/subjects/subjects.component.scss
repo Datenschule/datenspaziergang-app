@@ -2,7 +2,7 @@
 
 .wrapper-box {
   overflow: hidden;
-  width: 50vw;
+  max-width: 500px;
   height: calc(100vh - #{$actionbar-height});
   position:absolute;
   top: 0;

@@ -20,8 +20,11 @@
   }
 }
 
+//.container_a
+
 .wrapper {
-  height: calc(100vh + $actionbar-height);
+  height: calc(100vh + #{$actionbar-height});
+
   padding-top: $actionbar-height;
   overflow-y: auto;
   overflow-x: hidden;

@@ -2,12 +2,18 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+
+  @media (max-width: 800px) {
+    flex-flow: column wrap;
+  }
 }
 
 .img-s {
-  height: 80px;
+  max-height: 80px;
+  max-width: 100%;
 }
 
 .img-m {
-  height: 130px;
+  max-height: 130px;
+  max-width: 100%;
 }

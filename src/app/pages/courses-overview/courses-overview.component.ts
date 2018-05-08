@@ -3,11 +3,24 @@ import {Course} from '../../model/course';
 import {CoursesService} from '../../services/courses/courses.service';
 import {environment} from '../../../environments/environment';
 import * as turf from '@turf/turf';
+import {animate, state, style, transition, trigger} from '@angular/animations';
 
 @Component({
   selector: 'app-courses-overview',
   templateUrl: './courses-overview.component.html',
-  styleUrls: ['./courses-overview.component.scss']
+  styleUrls: ['./courses-overview.component.scss'],
+  animations: [
+    trigger('swiping', [
+      state('left', style({
+        transform: 'translate3d(0, 0, 0)'
+      })),
+      state('right', style({
+        transform: 'translate3d(-92%, 0, 0)'
+      })),
+      transition('left => right', animate('200ms ease-in-out')),
+      transition('right => left', animate('200ms ease-in-out'))
+    ])
+  ]
 })
 export class CoursesOverviewComponent implements OnInit {
 
@@ -15,6 +28,8 @@ export class CoursesOverviewComponent implements OnInit {
   courses: Course[];
   activeCourse: Course;
   activeLine: any;
+
+  swipeState = 'left';
 
   mapOptions = {
     style: environment.mapboxTiles.street,
@@ -57,4 +72,7 @@ export class CoursesOverviewComponent implements OnInit {
     this.getCourses();
   }
 
+  toggleSwipeState() {
+    this.swipeState = this.swipeState === 'left' ? 'right' : 'left';
+  }
 }

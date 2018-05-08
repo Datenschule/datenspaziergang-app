@@ -1,9 +1,7 @@
-<app-action-bar [name]="title" [showMenu]="true"></app-action-bar>
-<!--<div class="main">-->
-<!--<app-card *ngFor="let course of courses" [course]="course"></app-card>-->
-<!--</div>-->
 <div class="wrapper" *ngIf="activeCourse">
-  <div class="map">
+  <app-action-bar [name]="title" [showMenu]="true"></app-action-bar>
+
+  <div class="swipeable" [@swiping]="swipeState">
     <mgl-map
       [style]="mapOptions.style"
       [zoom]="mapOptions.zoom"
@@ -14,12 +12,12 @@
         [source]="{
         'type': 'geojson',
         'data': {
-          'type': 'Feature',
-          'properties': {},
-          'geometry': {
-            'type': 'LineString',
-            'coordinates': activeCourse.courseline
-          }
+        'type': 'Feature',
+        'properties': {},
+        'geometry': {
+        'type': 'LineString',
+        'coordinates': activeCourse.courseline
+        }
         }
         }"
         [layout]="{
@@ -37,22 +35,28 @@
         {{station.id + 1}}
       </mgl-marker>
     </mgl-map>
-  </div>
-  <div class="container-margin-all">
-    <div class="box">
-      <div class="box__title h1">Über die Tour</div>
-      <div class="box-content">
-        <h1>{{activeCourse.name}}</h1>
-        <p [innerHTML]="activeCourse.description | safeHtml"></p>
-        <div class="navigation">
-          <!--><a class="btn" routerLink="">&lt;</a><-->
-          <a class="btn" routerLink="/point-to-point/{{activeCourse.id}}/{{activeCourse.entry}}">Starten</a>
-          <!--><a class="btn" routerLink="">&gt;</a><-->
+
+    <div class="wrapper-box">
+      <div class="box__container">
+        <div class="box">
+          <div class="box__title h1">Über die Tour</div>
+          <div class="box-content">
+            <h1>{{activeCourse.name}}</h1>
+            <p [innerHTML]="activeCourse.description | safeHtml"></p>
+            <div class="navigation">
+              <!--><a class="btn" routerLink="">&lt;</a><-->
+              <a class="btn" routerLink="/point-to-point/{{activeCourse.id}}/{{activeCourse.entry}}">Starten</a>
+              <!--><a class="btn" routerLink="">&gt;</a><-->
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <app-page-indicator [course]="activeCourse.id" [stations]="activeCourse.stations"
-                        [active]="-1"></app-page-indicator>
+    <div class="swipeable__helper"
+      (click)="toggleSwipeState()"
+      (touchmove)="toggleSwipeState()"></div>
   </div>
 
+  <app-page-indicator [course]="activeCourse.id" [stations]="activeCourse.stations"
+    [active]="-1"></app-page-indicator>
 </div>

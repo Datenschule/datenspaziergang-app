@@ -20,6 +20,15 @@
   margin-top: $base-padding-jumbo;
 }
 
+.story-container {
+  .box:last-of-type {
+    margin-bottom: $base-padding-large;
+  }
+  .button-container {
+    margin-bottom: 1.6 * $base-padding-jumbo;
+  }
+}
+
 .box:last-of-type {
   margin-bottom: 1.6 * $base-padding-jumbo;
 }

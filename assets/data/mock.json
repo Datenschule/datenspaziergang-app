@@ -199,19 +199,19 @@
                 "next": 3
               },
               {
-                "type": "chloropleth-map",
+                "type": "story",
                 "id": 3,
-                "name": "Schulaktivitäten nach Bezirken",
-                "datasource": "https://jedeschule.de/assets/data/activities.json",
+                "img": "/assets/images/datawalk.png",
+                "name": "Schulaktivitäten in Kreuzberg",
+                "content": "In Kreuzberg zeigt Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
                 "prev": 2,
                 "next": 4
               },
               {
-                "type": "story",
+                "type": "chloropleth-map",
                 "id": 4,
-                "img": "/assets/images/datawalk.png",
-                "name": "Schulaktivitäten in Kreuzberg",
-                "content": "In Kreuzberg zeigt Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+                "name": "Schulaktivitäten nach Bezirken",
+                "datasource": "https://jedeschule.de/assets/data/activities.json",
                 "prev": 3
               }
             ]
@@ -253,19 +253,19 @@
                 "prev": 1
               },
               {
+                "type": "story",
                 "id": 2,
-                "type": "iframe",
-                "name": "StreetTrees Map",
-                "link": "https://trees.codefor.de/",
+                "img": "/assets/images/datawalk.png",
+                "content": "Kaum zu glauben, aber im Görlitzer Park gibt es fast 900 Bäume und über 50 verschiedene Arten! Neben Esche, Linde und Kirsche sind auch viele Exoten dabei, z.B. die Oxelbeere, der Japanische Schnurbaum oder der dreidorniger Lederhülsenbaum. Die ältesten Bäume im Görli sind mit jeweils 249 Jahren zwei Berg-Ahorn-Bäume, die gleichzeitig auch den größten Stammumfang besitzen (beide 628 cm). Und hier gibt es noch viel mehr zu entdecken!",
+                "name": "Tree Map - Story vom Görli",
                 "prev": 1,
                 "next": 3
               },
               {
-                "type": "story",
                 "id": 3,
-                "img": "/assets/images/datawalk.png",
-                "content": "Kaum zu glauben, aber im Görlitzer Park gibt es fast 900 Bäume und über 50 verschiedene Arten! Neben Esche, Linde und Kirsche sind auch viele Exoten dabei, z.B. die Oxelbeere, der Japanische Schnurbaum oder der dreidorniger Lederhülsenbaum. Die ältesten Bäume im Görli sind mit jeweils 249 Jahren zwei Berg-Ahorn-Bäume, die gleichzeitig auch den größten Stammumfang besitzen (beide 628 cm). Und hier gibt es noch viel mehr zu entdecken!",
-                "name": "Tree Map - Story vom Görli",
+                "type": "iframe",
+                "name": "StreetTrees Map",
+                "link": "https://trees.codefor.de/",
                 "prev": 2,
                 "next": 4
               },

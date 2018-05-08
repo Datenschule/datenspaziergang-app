@@ -1,0 +1,38 @@
+.swipeable {
+  mgl-map {
+    @media (max-width: 800px) {
+      width: 200%;
+    }
+  }
+}
+
+.swipeable__helper {
+  //background-color: $foam; // use for debugging
+  width: 13vw;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 87vw;
+  opacity: 0.2;
+  z-index: map-get($z-index-map, menu);
+  @media (min-width: 801px) {
+    display: none;
+  }
+}
+
+.wrapper {
+  height: calc(100vh + #{$actionbar-height});
+  padding-top: $actionbar-height;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.wrapper-box {
+  overflow: hidden;
+  max-width: 490px;
+  height: calc(100vh - #{$actionbar-height});
+  position:absolute;
+  top: 0;
+  margin-left: 20px;
+}

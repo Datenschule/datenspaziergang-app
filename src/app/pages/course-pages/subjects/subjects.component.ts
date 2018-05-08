@@ -7,6 +7,7 @@ import {Course} from '../../../model/course';
 import {Point} from '../../../model/point';
 import {MapboxService} from '../../../services/mapbox/mapbox.service';
 import {animate, state, style, transition, trigger} from '@angular/animations';
+import * as turf from '@turf/turf';
 
 @Component({
   selector: 'app-subjects',
@@ -39,18 +40,14 @@ export class SubjectsComponent implements OnInit {
   course: Course;
   station: Station;
   location: Point;
+  locationMarker: Array<number>;
   title: string;
-
-  lineData =  [
-    [13.419347, 52.497136],
-    [13.419111, 52.498912],
-    [13.423489, 52.499173]
-  ];
 
   mapOptions = {
     style: environment.mapboxTiles.street,
     center: [13.390497, 52.517221],
     container: `map0`,
+    marker: [13.390497, 52.517221],
     zoom: [16],
     hash: false,
     interactive: true,
@@ -96,7 +93,11 @@ export class SubjectsComponent implements OnInit {
         subject['inlineName'] = subject.name.length > 18 ? true : false;
         return subject;
       });
-      this.mapOptions.center = [this.station.position.lon, this.station.position.lat];
+      // move center slightly to the right
+      let oldCenter = turf.point([this.station.position.lon, this.station.position.lat]);
+      let newCenter = turf.transformTranslate(oldCenter, -0.2, 90)
+      this.mapOptions.center = newCenter.geometry.coordinates;
+      this.mapOptions.marker = [this.station.position.lon, this.station.position.lat];
       console.log(this.station);
       this.title = `${course.name}: ${this.station.name}`;
 

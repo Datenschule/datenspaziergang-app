@@ -6,6 +6,7 @@ import {Point} from '../../../model/point';
 import {Station} from '../../../model/stations';
 import { environment } from '../../../../environments/environment';
 import {animate, state, style, transition, trigger} from '@angular/animations';
+import * as turf from '@turf/turf';
 
 @Component({
   selector: 'app-point-to-point-map',
@@ -44,6 +45,7 @@ export class PointToPointMapComponent implements OnInit {
   mapOptions = {
     style: environment.mapboxTiles.street,
     center: [13.390497, 52.517221],
+    marker: [13.390497, 52.517221],
     container: `map0`,
     zoom: [15],
     hash: false,
@@ -97,6 +99,11 @@ export class PointToPointMapComponent implements OnInit {
         console.log(this.station);
 
         this.title = `${course.name} | ${station_id + 1}. Station:  ${this.station.name}`;
+
+        let oldCenter = turf.point([this.station.position.lon, this.station.position.lat]);
+        let newCenter = turf.transformTranslate(oldCenter, -0.5, 90)
+        this.mapOptions.center = newCenter.geometry.coordinates;
+        this.mapOptions.marker = [this.station.position.lon, this.station.position.lat];
 
         if (navigator.geolocation) {
           console.log('start requesting geolocation');

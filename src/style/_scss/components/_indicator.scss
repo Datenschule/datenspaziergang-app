@@ -42,8 +42,8 @@ $inactive-purple: #a576f1;
 .page-indicator {
   display: flex;
   position: fixed;
-  bottom: $base-padding-large;
-  right: $base-padding-large;
+  bottom: $base-padding;
+  right: $base-padding;
 }
 
 .page-indicator__item {

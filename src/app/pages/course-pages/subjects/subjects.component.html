@@ -24,11 +24,10 @@
           <a class="btn btn--standalone" routerLink="{{nextLink}}">Zur nächsten Station</a>
         </div>
       </div>
-      <div class="swipeable__helper"
-           (click)="toggleSwipeState()"
-           (touchmove)="toggleSwipeState()"></div>
     </div>
-
+    <div class="swipeable__helper"
+      (click)="toggleSwipeState()"
+      (touchmove)="toggleSwipeState()"></div>
   </div>
 
   <app-page-indicator [course]="course.id" [stations]="course.stations" [active]="station.id"></app-page-indicator>

@@ -7,7 +7,6 @@
 }
 
 .swipeable__helper {
-  background-color: $foam;
   width: 13vw;
   height: auto;
   position: absolute;
@@ -19,23 +18,20 @@
   @media (min-width: 801px) {
     display: none;
   }
-  animation: pulse infinite 2000ms ease;
 }
-
-@keyframes pulse {
-  0%, 100% {
-    transform: translateX(-10%)
-  }
-  50% {
-    transform: translateX(10%)
-  }
-}
-
 
 .wrapper {
-  height: 100vh;
+  height: calc(100vh + $actionbar-height);
   padding-top: $actionbar-height;
   overflow-y: auto;
   overflow-x: hidden;
+}
 
+.wrapper-box {
+  overflow: hidden;
+  max-width: 500px;
+  height: calc(100vh - #{$actionbar-height});
+  position:absolute;
+  top: 0;
+  margin-left: 20px;
 }

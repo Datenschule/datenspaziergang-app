@@ -110,7 +110,6 @@ export class SubjectsComponent implements OnInit {
   }
 
   toggleSwipeState() {
-    console.log('hey');
     this.swipeState = this.swipeState === 'left' ? 'right' : 'left';
   }
 }

@@ -1,6 +1,7 @@
 <div class="wrapper" *ngIf="station">
   <app-action-bar [name]="title" [showBack]="true"></app-action-bar>
-  <div class="map">
+
+  <div class="swipeable" [@swiping]="swipeState">
     <mgl-map
       [center]="mapOptions.center"
       [zoom]="mapOptions.zoom"
@@ -38,16 +39,21 @@
         }">
       </mgl-layer>
     </mgl-map>
-  </div>
 
-  <div class="container-margin-all">
-    <div class="box">
-      <h1 class="box__title"
-      [ngClass]="{relative: stationNameInline === true}">{{station.name}}</h1>
-      <p [innerHTML]="course.description | safeHtml"></p>
-      <a class="btn" id="next" routerLink="{{nextLink}}">Angekommen</a>
+    <div class="wrapper-box">
+      <div class="box__container">
+      <div class="box">
+        <h1 class="box__title"
+          [ngClass]="{relative: stationNameInline === true}">{{station.name}}</h1>
+        <p [innerHTML]="course.description | safeHtml"></p>
+        <a class="btn" id="next" routerLink="{{nextLink}}">Angekommen</a>
+      </div>
+      </div>
     </div>
+    <div class="swipeable__helper"
+      (click)="toggleSwipeState()"
+      (touchmove)="toggleSwipeState()"></div>
   </div>
-  <app-page-indicator [course]="course.id" [stations]="stationsForIndicator" [active]="station.id"></app-page-indicator>
 
+  <app-page-indicator [course]="course.id" [stations]="stationsForIndicator" [active]="station.id"></app-page-indicator>
 </div>

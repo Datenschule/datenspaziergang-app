@@ -5,17 +5,31 @@ import {Course} from '../../../model/course';
 import {Point} from '../../../model/point';
 import {Station} from '../../../model/stations';
 import { environment } from '../../../../environments/environment';
+import {animate, state, style, transition, trigger} from '@angular/animations';
 
 @Component({
   selector: 'app-point-to-point-map',
   templateUrl: './point-to-point-map.component.html',
-  styleUrls: ['./point-to-point-map.component.scss']
+  styleUrls: ['./point-to-point-map.component.scss'],
+  animations: [
+    trigger('swiping', [
+      state('left', style({
+        transform: 'translate3d(0, 0, 0)'
+      })),
+      state('right', style({
+        transform: 'translate3d(-92%, 0, 0)'
+      })),
+      transition('left => right', animate('200ms ease-in-out')),
+      transition('right => left', animate('200ms ease-in-out'))
+    ])
+  ]
 })
 export class PointToPointMapComponent implements OnInit {
 
   constructor(private coursesService: CoursesService, private route: ActivatedRoute) {
   }
 
+  swipeState = 'left';
   nextLink: string;
   course: Course;
   points: Point[];
@@ -106,5 +120,9 @@ export class PointToPointMapComponent implements OnInit {
         this.nextLink = `/subjects/${this.course.id}/${this.station.id}`;
       });
     });
+  }
+
+  toggleSwipeState() {
+    this.swipeState = this.swipeState === 'left' ? 'right' : 'left';
   }
 }

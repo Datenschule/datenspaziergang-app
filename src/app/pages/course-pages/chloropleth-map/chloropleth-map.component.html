@@ -11,7 +11,9 @@
 
   <div class="map-info">
     <h3 class="map__title">{{mapData['name']}}</h3>
-    <div *ngIf="activeMap">{{mapKeysToLayer[activeMap]}}: {{mapData[mapKeysToLayer[activeMap]]}} Aktivitäten</div>
+    <div *ngIf="activeMap" class="map__title">
+      {{mapKeysToLayer[activeMap]}}: {{mapData[mapKeysToLayer[activeMap]]}} Aktivitäten
+    </div>
   </div>
 
   <div class="map-legend">

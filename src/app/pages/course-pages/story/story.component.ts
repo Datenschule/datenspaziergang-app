@@ -59,9 +59,6 @@ export class StoryComponent implements OnInit {
       this.coursesService.getPage(course_id, station_id, subject_id, page_id).subscribe((page) => {
         console.log(page);
         this.title = `${page.name}`;
-        if (this.title.length > 20) {
-          this.inlineTitle = true;
-        }
         if (!page.prev) {
           this.state = 'enter';
           console.log('set state to enter');

@@ -22,6 +22,13 @@ html, body {
   color: $black;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 460px) {
+    font-size: 14px;
+  }
+  @media (min-width: 461px) and (max-width: 640px) {
+    font-size: 18px;
+  }
 }
 
 /*html {*/

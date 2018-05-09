@@ -265,7 +265,7 @@
                 "id": 3,
                 "type": "iframe",
                 "name": "StreetTrees Map",
-                "link": "https://trees.codefor.de/",
+                "link": "https://app.okfn.de/trees-map/?lat=52.49704785672787&lon=13.439691066741943&zoom=16",
                 "prev": 2,
                 "next": 4
               },
@@ -344,7 +344,7 @@
                 "id": 2,
                 "type": "iframe",
                 "name": "berlin.besetzt",
-                "link": "http://berlin-besetzt.de/",
+                "link": "https://app.okfn.de/berlin-besetzt/index.html#",
                 "prev": 1
               }
             ]

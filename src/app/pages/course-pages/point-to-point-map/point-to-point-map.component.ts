@@ -41,6 +41,10 @@ export class PointToPointMapComponent implements OnInit {
   locationMarker: Array<number> = [];
   title: string;
   stationsForIndicator: Array<Station>;
+  pastStations: Array<Station>;
+  futureStations: Array<Station>;
+  //futureCourse: number[][];
+  //pastCourse: number[][];
 
   mapOptions = {
     style: environment.mapboxTiles.street,
@@ -91,12 +95,18 @@ export class PointToPointMapComponent implements OnInit {
 
         this.station = this.course.stations.find((station) => station.id === station_id);
 
-        if (this.station.name.length > 20) {
+        if (this.station.name.length > 17) {
           this.stationNameInline = true;
         }
 
+        this.pastStations = this.stationsForIndicator.filter(st => {
+          return st.id <= station_id;
+        });
+        this.futureStations = this.stationsForIndicator.filter(st => {
+          return st.id > station_id;
+        });
+
         this.mapOptions.center = [this.station.position.lon, this.station.position.lat];
-        console.log(this.station);
 
         this.title = `${course.name} | ${station_id + 1}. Station:  ${this.station.name}`;
 
@@ -120,7 +130,6 @@ export class PointToPointMapComponent implements OnInit {
         } else {
           console.log('no navigator object found');
         }
-
 
         // const firstpage = this.station.pages.find(page => page.id === this.station.entry);
         // this.nextLink = `/${firstpage['type']}/${this.course.id}/${this.station.id}/${firstpage.id}`;

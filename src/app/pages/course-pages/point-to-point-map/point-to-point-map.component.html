@@ -9,14 +9,26 @@
       [interactive]="true">
       <mgl-marker
         [lngLat]="mapOptions.marker">
-        <div class="marker">{{station.id + 1}}</div>
+        <div class="inactive-marker">
+          {{station.id + 1}}
+        </div>
+      </mgl-marker>
+      <mgl-marker
+        *ngFor="let s of pastStations"
+        [lngLat]="[s.position.lon, s.position.lat]">
+        <div class="inactive-marker">{{s.id + 1}}</div>
+      </mgl-marker>
+      <mgl-marker
+        *ngFor="let s of futureStations"
+        [lngLat]="[s.position.lon, s.position.lat]">
+        <div>{{s.id + 1}}</div>
       </mgl-marker>
       <mgl-marker *ngIf="locationMarker.length > 0"
         [lngLat]="locationMarker">
         <div class="marker">DU</div>
       </mgl-marker>
       <mgl-layer
-        id="linelayer"
+        id="pastLine"
         type="line"
         [source]="{
         'type': 'geojson',
@@ -42,12 +54,12 @@
 
     <div class="wrapper-box">
       <div class="box__container">
-      <div class="box">
-        <h1 class="box__title"
-          [ngClass]="{relative: stationNameInline === true}">{{station.name}}</h1>
-        <p [innerHTML]="course.description | safeHtml"></p>
-        <a class="btn" id="next" routerLink="{{nextLink}}">Angekommen</a>
-      </div>
+        <div class="box">
+          <h1 class="box__title"
+            [ngClass]="{relative: stationNameInline === true}">{{station.name}}</h1>
+          <p [innerHTML]="course.description | safeHtml"></p>
+          <a class="btn" id="next" routerLink="{{nextLink}}">Angekommen</a>
+        </div>
       </div>
     </div>
     <div class="swipeable__helper"

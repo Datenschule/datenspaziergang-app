@@ -8,13 +8,17 @@
       [style]="mapOptions.style"
       [interactive]="true">
       <mgl-marker
-        [lngLat]="mapOptions.marker">
+        [lngLat]="currentStationMarker">
         <div class="marker">{{station.id + 1}}</div>
       </mgl-marker>
-      <mgl-marker *ngIf="locationMarker.length > 0"
-        [lngLat]="locationMarker">
-        <div class="marker">DU</div>
+      <mgl-marker
+        [lngLat]="prevStationMarker">
+        <div class="marker">{{station.id}}</div>
       </mgl-marker>
+      <!--<mgl-marker *ngIf="locationMarker.length > 0"-->
+        <!--[lngLat]="locationMarker">-->
+        <!--<div class="marker">DU</div>-->
+      <!--</mgl-marker>-->
       <mgl-layer
         id="linelayer"
         type="line"
@@ -25,7 +29,7 @@
         'properties': {},
         'geometry': {
         'type': 'LineString',
-        'coordinates': course.courseline
+        'coordinates': line
         }
         }
         }"
@@ -55,5 +59,5 @@
       (touchmove)="toggleSwipeState()"></div>
   </div>
 
-  <app-page-indicator [course]="course.id" [stations]="stationsForIndicator" [active]="station.id"></app-page-indicator>
+  <app-page-indicator [course]="course.id" [stations]="course.stations" [active]="station.id"></app-page-indicator>
 </div>

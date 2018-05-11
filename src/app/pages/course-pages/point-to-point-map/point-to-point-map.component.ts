@@ -4,7 +4,7 @@ import {ActivatedRoute} from '@angular/router';
 import {Course} from '../../../model/course';
 import {Point} from '../../../model/point';
 import {Station} from '../../../model/stations';
-import { environment } from '../../../../environments/environment';
+import {environment} from '../../../../environments/environment';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import * as turf from '@turf/turf';
 
@@ -35,12 +35,13 @@ export class PointToPointMapComponent implements OnInit {
   course: Course;
   points: Point[];
   station: Station;
-  stationNameInline: boolean = false;
+  stationNameInline = false;
   line: number[][];
   location: Point;
   locationMarker: Array<number> = [];
   title: string;
-  stationsForIndicator: Array<Station>;
+  currentStationMarker: number[];
+  prevStationMarker: number[];
 
   mapOptions = {
     style: environment.mapboxTiles.street,
@@ -77,56 +78,50 @@ export class PointToPointMapComponent implements OnInit {
   ngOnInit() {
 
     this.route.params.subscribe((params) => {
-      const subject_id = +params['subject'];
-      const page_id = +params['page'];
-      const p2p = +params['point-to-point'];
 
-      const course_id = +this.route.snapshot.paramMap.get('course');
-      const station_id = +this.route.snapshot.paramMap.get('station');
+      const course_id = +params['course'];
+      const station_id = +params['station'];
 
       this.coursesService.getCourse(course_id).subscribe((course) => {
 
         this.course = course;
-        this.stationsForIndicator = this.course.stations;
 
         this.station = this.course.stations.find((station) => station.id === station_id);
+        this.stationNameInline = this.station.name.length > 20;
 
-        if (this.station.name.length > 20) {
-          this.stationNameInline = true;
-        }
-
-        this.mapOptions.center = [this.station.position.lon, this.station.position.lat];
-        console.log(this.station);
+        // this.mapOptions.center = [this.station.position.lon, this.station.position.lat];
 
         this.title = `${course.name} | ${station_id + 1}. Station:  ${this.station.name}`;
+        this.line = course.courseline[this.station['line']];
+        console.log(this.line);
 
-        let oldCenter = turf.point([this.station.position.lon, this.station.position.lat]);
-        let newCenter = turf.transformTranslate(oldCenter, -0.5, 90)
-        this.mapOptions.center = newCenter.geometry.coordinates;
-        this.mapOptions.marker = [this.station.position.lon, this.station.position.lat];
+        let translatedCenter = turf.transformTranslate(turf.point([this.station.position.lon, this.station.position.lat]), -0.5, 90);
+        this.mapOptions.center = translatedCenter.geometry.coordinates;
+        this.currentStationMarker = [this.station.position.lon, this.station.position.lat];
 
-        if (navigator.geolocation) {
-          console.log('start requesting geolocation');
-          navigator.geolocation.getCurrentPosition((current_location) => {
-            console.log(current_location);
-
-            // this.location = {lon: current_location.coords.longitude, lat: current_location.coords.latitude};
-            this.locationMarker = [current_location.coords.longitude, current_location.coords.latitude];
-            console.log(this.locationMarker);
-            // this.line = [[this.station.position.lon, this.station.position.lat], [this.location.lon, this.location.lat]];
-          }, (error) => {
-            console.log(error, " did not get user permission");
-          });
-        } else {
-          console.log('no navigator object found');
+        let prevStation = this.course.stations[this.station['prev']];
+        if (prevStation) {
+          this.prevStationMarker = [prevStation.position.lon, prevStation.position.lat];
         }
 
 
-        // const firstpage = this.station.pages.find(page => page.id === this.station.entry);
-        // this.nextLink = `/${firstpage['type']}/${this.course.id}/${this.station.id}/${firstpage.id}`;
+        this.findUserLocation();
         this.nextLink = `/subjects/${this.course.id}/${this.station.id}`;
       });
     });
+  }
+
+  private findUserLocation() {
+    if (navigator.geolocation) {
+      console.log('start requesting geolocation');
+      navigator.geolocation.getCurrentPosition((current_location) => {
+        this.locationMarker = [current_location.coords.longitude, current_location.coords.latitude];
+      }, (error) => {
+        console.log(error, ' did not get user permission');
+      });
+    } else {
+      console.log('no navigator object found');
+    }
   }
 
   toggleSwipeState() {

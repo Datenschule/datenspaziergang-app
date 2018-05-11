@@ -7,27 +7,12 @@
       [zoom]="mapOptions.zoom"
       [center]="mapOptions.center">
       <mgl-layer
-        id="linelayer"
+        *ngFor="let line of activeCourse.courseline; let i = index"
+        id="linelayer{{i}}"
         type="line"
-        [source]="{
-        'type': 'geojson',
-        'data': {
-        'type': 'Feature',
-        'properties': {},
-        'geometry': {
-        'type': 'LineString',
-        'coordinates': activeCourse.courseline
-        }
-        }
-        }"
-        [layout]="{
-        'line-join': 'round',
-        'line-cap': 'round'
-        }"
-        [paint]="{
-        'line-color': '#4c00c8',
-        'line-width': 8
-        }">
+        [source]="{'type': 'geojson', 'data': { 'type': 'Feature', 'properties': {}, 'geometry': { 'type': 'LineString','coordinates': line }}}"
+        [layout]="{'line-join': 'round', 'line-cap': 'round' }"
+        [paint]="{ 'line-color': '#4c00c8', 'line-width': 8 }">
       </mgl-layer>
       <mgl-marker
         *ngFor="let station of activeCourse.stations"

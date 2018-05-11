@@ -1,7 +1,7 @@
 <nav class="page-indicator">
   <a *ngFor="let item of displayableList"
-    routerLink="{{item.link}}"
+    routerLink="{{item['link']}}"
     [ngClass]="{active: item.active === true }"
     class="page-indicator__item">
-    <span class="page-indicator__connect">{{item.display_id}}</span></a>
+    <span class="page-indicator__connect">{{item['display_id']}}</span></a>
 </nav>

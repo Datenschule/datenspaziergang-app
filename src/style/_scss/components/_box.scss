@@ -65,17 +65,16 @@
   background: white;
   border: $regular-border-size solid $purple;
 
-  @media (max-width: 800px) {
+  @media (max-width: 640px) {
     font-size: 30px;
     top: -2em;
   }
 }
 
 .box__title.relative {
-  position: relative;
-  top: -0.8em;
-  margin-bottom: 0em;
-  left: 0em;
+  position: absolute;
+  top: -2.4em;
+  left: 30px;
 }
 
 

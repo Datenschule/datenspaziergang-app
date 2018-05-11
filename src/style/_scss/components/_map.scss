@@ -5,7 +5,7 @@ mgl-map {
   overflow: hidden;
 }
 
-.mapboxgl-marker {
+@mixin makeMarker($color) {
   position: absolute;
   top: 0;
   left: 0;
@@ -13,7 +13,7 @@ mgl-map {
   width: 42px;
   height: 24.25px;
   margin: 12.12px 0;
-  background-color: $purple;
+  background-color: $color;
   will-change: transform;
   color: $white;
   font-size: 1.3rem;
@@ -34,14 +34,23 @@ mgl-map {
 
   &:before {
     bottom: 100%;
-    border-bottom: 12.12px solid $purple;
+    border-bottom: 12.12px solid $color;
   }
 
   &:after {
     top: 100%;
     width: 0;
-    border-top: 12.12px solid $purple;
+    border-top: 12.12px solid $color;
   }
+}
+
+.mapboxgl-marker {
+  @include makeMarker($purple);
+}
+
+.inactive-marker {
+  @include makeMarker($inactive-purple);
+  top: -12px; // because of workaround-nesting
 }
 
 .map {

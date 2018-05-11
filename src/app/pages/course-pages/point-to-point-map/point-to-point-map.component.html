@@ -46,12 +46,12 @@
 
     <div class="wrapper-box">
       <div class="box__container">
-      <div class="box">
-        <h1 class="box__title"
-          [ngClass]="{relative: stationNameInline === true}">{{station.name}}</h1>
-        <p [innerHTML]="course.description | safeHtml"></p>
-        <a class="btn" id="next" routerLink="{{nextLink}}">Angekommen</a>
-      </div>
+        <div class="box">
+          <h1 class="box__title"
+            [ngClass]="{relative: stationNameInline === true}">{{station.name}}</h1>
+          <p [innerHTML]="course.description | safeHtml"></p>
+          <a class="btn" id="next" routerLink="{{nextLink}}">Angekommen</a>
+        </div>
       </div>
     </div>
     <div class="swipeable__helper"

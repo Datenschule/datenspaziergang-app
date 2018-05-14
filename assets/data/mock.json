@@ -162,7 +162,7 @@
         "subjects": [
           {
             "id": 0,
-            "name": "Bildung / außerschulische Bildung",
+            "name": "(Außer-) schulische Bildung",
             "description": "Station 2 bei unserem Datenspaziergang ist die Sekundarschule Graefestraße, denn das Thema Schule und Bildung betrifft uns alle. Aber: Schulbildung ist in Deutschland Ländersache, daher wird es im Hinblick auf offene Daten recht schnell kompliziert. Warum? Das zeigen wir dir hier.",
             "entry": 0,
             "next": 1,
@@ -332,7 +332,7 @@
         "subjects": [
           {
             "id": 0,
-            "name": "Bethanien - Stadtraum erobern",
+            "name": "Stadtraum erobern",
             "description": "Wir stehen jetzt am Bethanien, einem ganz besonderen Oort in Kreuzberg und seine Aaktivist/innenszene. Hier habensind in die srriebziger Jahren die Jugendlichen aus West-Berlin angefangen, ihr Stadt zurück zu erobern.",
             "entry": 0,
             "pages": [

@@ -1,47 +1,19 @@
 @import "../../../../style/_scss/variables";
 
-:host {
 
+.story-container {
+  margin: 20px 20px;
+  height: calc(100vh - 65px);
 }
 
-.wrapper-window {
-  //margin: 10vh auto 0 auto;
-  height: calc(100vh - #{$actionbar-height});
-  width: 100%;
-  padding: 2%;
+.iframe-container {
+  height: 86vh;
 }
+
 
 iframe {
   height: 100%;
   width: 100%;
   background-color: white;
   box-shadow: -8px 8px 0px 0 $purple-dark;
-}
-
-.container {
-  margin: 100px 10vh 0 10vh;
-}
-
-.btn {
-  @media (max-width: 420px) {
-    font-size: 1.3rem;
-  }
-}
-
-.btn-forward {
-  position: absolute;
-  bottom: 40px;
-  right: 50px;
-  @media (max-width: 420px) {
-    right: 30px;
-  }
-}
-
-.btn-back {
-  position: absolute;
-  bottom: 40px;
-  left: 50px;
-  @media (max-width: 420px) {
-    left: 30px;
-  }
 }

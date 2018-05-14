@@ -1,18 +1,17 @@
 <div class="wrapper fond_darkblue_gradient" *ngIf="story" [@fadeInAnimation]="state"
-     (@fadeInAnimation.done)="animationDone($event)">
-  <app-action-bar [name]="title" [showBack]="true"></app-action-bar>
+  (@fadeInAnimation.done)="animationDone($event)">
+  <app-action-bar [name]="actionbarTitle" [showBack]="true"></app-action-bar>
   <div class="story-container">
 
     <div class="container padding-top-medium">
       <div class="description box box-wide">
-        <h1 class="box__title"
-            [ngClass]="{relative: inlineTitle === true}">{{title}}</h1>
+        <h1 class="box__title h1"
+          [ngClass]="{relative: inlineTitle === true}">{{title}}</h1>
         <p [innerHTML]="story.content | safeHtml"></p>
       </div>
-      <div class="button-container">
-        <a class="btn btn-back" (click)="goBack()">Zurück</a>
-        <a class="btn btn-forward" (click)="goNext()">Weiter</a>
-      </div>
+
+      <a class="btn-back" (click)="goBack()">Zurück</a>
+      <a class="btn-forward" (click)="goNext()">Weiter</a>
     </div>
   </div>
 </div>

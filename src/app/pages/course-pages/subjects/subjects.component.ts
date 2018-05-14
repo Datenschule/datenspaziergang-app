@@ -99,7 +99,7 @@ export class SubjectsComponent implements OnInit {
       this.mapOptions.center = newCenter.geometry.coordinates;
       this.mapOptions.marker = [this.station.position.lon, this.station.position.lat];
       console.log(this.station);
-      this.title = `${course.name}: ${this.station.name}`;
+      this.title = `${course.name}: ${this.station.id + 1}. ${this.station.name}`;
 
       //
       // this.nextLink = `/${firstpage['type']}/${this.course.id}/${this.station.id}/${firstpage.id}`;

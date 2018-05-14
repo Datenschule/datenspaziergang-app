@@ -38,7 +38,7 @@ export class QuizComponent implements OnInit {
         this.correct_answer = page.correct;
         this.answers = page.answers.map((answer, i) => {
           let wasPressed = false;
-          let isCorrect = i === this.correct_answer ? "✅" : "❌";
+          let isCorrect = i === this.correct_answer ? true : false;
           return [answer, wasPressed, isCorrect];
         });
 

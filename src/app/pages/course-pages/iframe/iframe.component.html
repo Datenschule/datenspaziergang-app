@@ -1,9 +1,13 @@
-<app-action-bar [name]="title" [showBack]="true"></app-action-bar>
-<div class="wrapper fond_blue_gradient">
-  <div class="wrapper-window fond_darkblue_gradient">
-    <iframe [src]="link" frameborder="0" scrolling="yes"></iframe>
+<div class="wrapper fond_darkblue_gradient">
+  <app-action-bar [name]="title" [showBack]="true"></app-action-bar>
+  <div class="story-container">
+    <div class="container">
+      <div class="iframe-container">
+        <iframe [src]="link" frameborder="0" scrolling="yes"></iframe>
+      </div>
+
+      <a class="btn-forward" routerLink="{{nextLink}}">Weiter</a>
+      <a class="btn-back" (click)="goBack()">Zurück</a>
+    </div>
   </div>
 </div>
-
-<a class="btn btn-forward" routerLink="{{nextLink}}">Weiter</a>
-<a class="btn btn-back" (click)="goBack()">Zurück</a>

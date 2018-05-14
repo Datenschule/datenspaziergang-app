@@ -71,3 +71,34 @@
     font-size: 30px;
   }
 }
+
+.btn-back,
+.btn-forward {
+  position: absolute;
+  bottom: 20px;
+  display: block;
+  width: 55px;
+  height: 55px;
+  text-indent: 999%;
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: map-get($z-index-map, prevnextbtn);
+}
+
+.btn-forward {
+  right: 20px;
+  background-image: url(/assets/images/btn-next.svg);
+  &:hover,
+  &:active {
+    background-image: url(/assets/images/btn-next-pressed.svg);
+  }
+}
+
+.btn-back {
+  left: 20px;
+  background-image: url(/assets/images/btn-prev.svg);
+  &:hover,
+  &:active {
+    background-image: url(/assets/images/btn-prev-pressed.svg);
+  }
+}

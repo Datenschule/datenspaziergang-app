@@ -3,23 +3,22 @@
   <div class="quiz-container">
     <div class="container padding-top-medium">
         <div class="box box--fullwidth">
-          <h1 class="box__title">Quiz: Wer hat's gesagt?</h1>
-          <p class="h3">{{question}}</p>
-
-          <!-- <p *ngIf="firstguess && correct">{{correct_message}}</p>
-               <p *ngIf="firstguess && !correct">{{wrong_message}}</p> -->
+          <h1 class="box__title h1">Quiz: Wer hat's gesagt?</h1>
+          <p class="h4">"{{question}}"</p>
         </div>
         <ul>
           <li class="btn"
               *ngFor="let answer of answers; let i = index"
               (click)="sendanswer(i)">
             {{answer[0]}}
-            <span *ngIf="answer[1]" class="answer-indicator">{{answer[2]}}</span></li>
+            <span *ngIf="answer[1]" class="answer-indicator">
+              <span *ngIf="answer[2] === true" class="quiz-check">richtig</span>
+              <span *ngIf="answer[2] === false" class="quiz-cross">❌</span>
+            </span>
+          </li>
         </ul>
     </div>
-    <div class="container button-container">
-      <a class="btn" (click)="goBack()">Zurück</a>
-      <a class="btn" routerLink="{{nextLink}}">Weiter</a>
-    </div>
+    <a class="btn-back" (click)="goBack()">Zurück</a>
+    <a class="btn-forward" (click)="goNext()">Weiter</a>
   </div>
 </div>

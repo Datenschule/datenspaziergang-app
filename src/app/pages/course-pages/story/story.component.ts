@@ -3,7 +3,7 @@ import {CoursesService} from '../../../services/courses/courses.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {DomSanitizer, SafeStyle} from '@angular/platform-browser';
 import {Location} from '@angular/common';
-import {StoryPage} from '../../../model/stations';
+import {StoryPage, Station} from '../../../model/stations';
 import {animate, style, transition, trigger} from '@angular/animations';
 import {control} from 'leaflet';
 
@@ -41,7 +41,8 @@ export class StoryComponent implements OnInit {
   inlineTitle: boolean = false;
   story: any;
   state: string;
-
+  station: Station;
+  actionbarTitle: string;
 
   constructor(private coursesService: CoursesService, private route: ActivatedRoute, private router: Router, private sanitizer: DomSanitizer, private location: Location) {
   }
@@ -55,6 +56,13 @@ export class StoryComponent implements OnInit {
 
       // this.state = 'unenter';
       // this.state = "enter";
+
+      //this.coursesService.getCourse(course_id)
+      this.coursesService.getCourse(course_id).subscribe((course) => {
+        this.station = course.stations.find((station) => station.id === station_id);
+        this.actionbarTitle = `${this.station.id + 1}. ${this.station.name}`;
+      });
+
 
       this.coursesService.getPage(course_id, station_id, subject_id, page_id).subscribe((page) => {
         console.log(page);

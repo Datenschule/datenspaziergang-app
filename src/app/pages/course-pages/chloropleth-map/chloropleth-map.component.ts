@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {CoursesService} from '../../../services/courses/courses.service';
 import {ActivatedRoute} from '@angular/router';
 import { environment } from '../../../../environments/environment';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-chloropleth-map',
@@ -14,21 +15,19 @@ export class ChloroplethMapComponent implements OnInit {
   title: string;
   Object = Object; // workaround to access `Object` in template
 
-  defaultText: string = "Wähle eine Kategorie und einen Bezirk";
+  defaultText: string = "Wähle einen Bezirk aus, um genaueres zu erfahren.";
   mapData: Object = { name: this.defaultText };
   activeMap: string;
   theMapStyles: any;
 
   legend = [
-    ['0-5', '#FFEDA0'],
-    ['5-15', '#FED976'],
-    ['15-25', '#FEB24C'],
-    ['25-40', '#FD8D3C'],
-    ['40-55', '#FC4E2A'],
-    ['55-75', '#E31A1C'],
-    ['75-90', '#BD0026'],
-    ['90-110', '#800026'],
-    ['110+', '#420014']
+    ['0-10', '#1E0843'],
+    ['10-25', '#33106C'],
+    ['25-40', '#4C00C8'],
+    ['40-60', '#8047DD'],
+    ['60-80', '#AB78FF'],
+    ['80-100', '#C8A7FF'],
+    ['110+', '#DAC4FF']
   ];
 
   mapKeysToLayer: Object = {
@@ -53,8 +52,9 @@ export class ChloroplethMapComponent implements OnInit {
     }
   };
 
-  constructor(private coursesService: CoursesService, private route: ActivatedRoute) {
-  }
+  constructor(private coursesService: CoursesService,
+              private route: ActivatedRoute,
+              private location: Location) {}
 
   ngOnInit() {
     const course_id = +this.route.snapshot.paramMap.get('course');
@@ -91,6 +91,10 @@ export class ChloroplethMapComponent implements OnInit {
 
   onLoad(evt: any) {
     this.theMapStyles = evt;
+  }
+
+  goBack() {
+    this.location.back();
   }
 
 }

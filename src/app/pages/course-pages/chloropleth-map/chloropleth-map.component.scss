@@ -36,7 +36,7 @@ $padding: 0.8rem;
 
 .map-info {
   position: absolute;
-  top: $actionbar-height + 10px;
+  top: $actionbar-height + 20px;
   right: $padding;
   z-index: 1;
   background: $white;
@@ -47,28 +47,24 @@ $padding: 0.8rem;
 
 .map-legend {
   position: absolute;
-  bottom: $padding;
+  bottom: 120px;
   right: $padding;
   z-index: 1;
-  background: white;
   padding: $base-padding-lite;
-  font-size: 14px;
   max-width: 12em;
-  border: 2px solid $purple;
-  box-shadow: -6px 6px 0px 0 $purple;
+  font-size: 14px;
+  text-align: right;
 }
 
 .legend-color {
   display: inline-block;
   width: 1em;
   height: 1em;
-  margin-right: 0.7em;
+  margin-left: 0.7em;
   line-height: 1;
 }
 
 .map__title {
-  font-size: 18px;
-  font-weight: 700;
   margin: .2em 0;
 }
 

@@ -15,7 +15,7 @@
     "stations": [
       {
         "id": 0,
-        "name": "Am Kottbusser Tor",
+        "name": "Restaurant Morgenland",
         "position": {
           "lat": 52.49896,
           "lon": 13.425756
@@ -23,99 +23,6 @@
         "entry": 0,
         "next": 1,
         "subjects": [
-          {
-            "id": 0,
-            "name": "Kriminalität",
-            "description": "Das Kottbusser Tor - oder auch liebevoll “Kotti” genannt, ist nicht nur Berliner*innen ein Begriff, sondern auch außerhalb der Hauptstadt sehr bekannt, leider nicht immer im besten Sinne. Wir zeigen dir hier, was du in offenen Daten alles über den Kotti herausfinden kannst, zum Beispiel zum Thema Kriminalität in der U-Bahn",
-            "entry": 0,
-            "next": 1,
-            "pages": [
-              {
-                "type": "story",
-                "id": 0,
-                "img": "/assets/images/datawalk.png",
-                "content": "Der U-Bahnhof Kottbusser Tor gehört zu den Stationen mit den höchsten Fahrgastzahlen, rund XX Menschen steigen hier pro Tag ein oder aus. Der Kotti gehört aber auch zu den Bahnhöfen mit der höchsten Kriminalität: Etwa 165 Gewalttaten wurden hier im Jahr 2016 begangen. Im gesamten Berliner Nahverkehr kam es im selben Jahr nach Angaben der Berliner Verkehrsbetriebe (BVG) zu 24.477 Straftaten, am häufigsten davon Taschendiebstähle (insgesamt 13.869 Fälle).<br /><br/>Und wie reagiert die Politik auf die Kriminalität an den U-Bahnhöfen? Das kann man bei OffenesParlament.de nachverfolgen.",
-                "name": "Kriminalität",
-                "next": 1
-              },
-              {
-                "type": "story",
-                "id": 1,
-                "img": "/assets/images/datawalk.png",
-                "content": "OffenesParlament.de macht Bundestagsdebatten transparent und nachvollziehbar. Über die Plattform kannst du  alle 245 Plenarprotokolle des Bundestags der letzten Wahlperiode durchsuchen - z.B. nach Ehe für Alle, Videoüberwachung oder Kriminalität. Dadurch hast du die Möglichkeit, die Arbeit von Abgeordneten und ihre Positionen zu überprüfen.<br /><br />Der Bundestag veröffentlicht regelmäßig Sitzungsprotokolle zu aktuellen Debatten. Seit Oktober 2017 werden die Dokumente als offene Daten zur freien Nutzung bereitgestellt. Sie können von Interessierten analysiert werden und finden Verwendung in gemeinnützigen Projekten, wie OffenesParlament.de.",
-                "name": "Was ist OffenesParlament.de?",
-                "prev": 0,
-                "next": 21
-              },
-              {
-              "type": "story",
-              "id": 21,
-              "img": "/assets/images/datawalk.png",
-              "content": "Die Kriminalität an Berliner U-Bahn-Stationen wurde z.B. am 27. Januar 2017 im Bundestag thematisiert (Sitzung 216, Tagesordnungspunkt 28b). Zur Debatte stand, ob der vermehrte Einsatz von Videoüberwachung an Bahnhöfen zu einer erhöhten Sicherheit beiträgt. Das Thema führte zu kontroversen Diskussionen zwischen den Abgeordneten und Fraktionen",
-              "name": "Was ist OffenesParlament.de?",
-              "prev": 1,
-              "next": 2
-              },
-              {
-                "type": "iframe",
-                "id": 2,
-                "name": "Offenes Parlament",
-                "link": "https://offenesparlament.de/protokoll/#!/216#3",
-                "prev": 1,
-                "next": 3
-              },
-              {
-                "id": 3,
-                "type": "quiz",
-                "name": "Wer hats gesagt?",
-                "question": "Kameras leisten einen entscheidenden Beitrag zu mehr Sicherheit. Sie helfen, Straftäter zu identifizieren, festzunehmen und zu bestrafen. Sie verhindern auch Straftaten.",
-                "answers": [
-                  "Thomas de Maiziere, CDU",
-                  "Horst Seehofer, CDU/CSU",
-                  "Sigmar Gabriel, SPD"
-                ],
-                "correct": 0,
-                "prev": 2,
-                "next": 4
-              },
-              {
-                "id": 4,
-                "type": "quiz",
-                "name": "Wer hats gesagt?",
-                "question": "Das Einzige, was hier passiert, ist, dass Sie gewaltige Datenberge schaffen, von Flensburg bis Rosenheim, um im Fall eines Attentates ein paar mehr Bilder vom Tatort zu bekommen. Und am Ende dauert die Auswertung - wie im Fall Amri - womöglich wochenlang. Ja wen wollen Sie mit diesem Placebo eigentlich beruhigen, meine Damen und Herren?",
-                "answers": [
-                  "Irene Mihalic, Grüne",
-                  "Horst Seehofer, CDU/CSU",
-                  "Sigmar Gabriel, SPD"
-                ],
-                "correct": 0,
-                "prev": 3,
-                "next": 5
-              },
-              {
-                "id": 5,
-                "type": "quiz",
-                "name": "Wer hats gesagt?",
-                "question": "Das Gesetz wird also nichts besser machen. Doch was macht das Gesetz schlimmer? Videoüberwachung ist ein intensiver Eingriff. Sie beeinträchtigt alle, die den betroffenen Raum betreten",
-                "answers": [
-                  "Martina Renner, Linke",
-                  "Horst Seehofer, CDU/CSU",
-                  "Sigmar Gabriel, SPD"
-                ],
-                "correct": 0,
-                "prev": 4,
-                "next": 6
-              },
-              {
-                "type": "story",
-                "id": 6,
-                "img": "/assets/images/datawalk.png",
-                "content": "Der U-Bahnhof Kottbusser Tor gehört zu den Stationen mit den höchsten Fahrgastzahlen, rund XX Menschen steigen hier pro Tag ein oder aus. Der Kotti gehört aber auch zu den Bahnhöfen mit der höchsten Kriminalität: Etwa 165 Gewalttaten wurden hier im Jahr 2016 begangen. Im gesamten Berliner Nahverkehr kam es im selben Jahr nach Angaben der Berliner Verkehrsbetriebe (BVG) zu 24.477 Straftaten, am häufigsten davon Taschendiebstähle (insgesamt 13.869 Fälle).<br /><br/>Und wie reagiert die Politik auf die Kriminalität an den U-Bahnhöfen? Das kann man bei OffenesParlament.de nachverfolgen.",
-                "name": "Kriminalität",
-                "prev": 5
-              }
-            ]
-          },
           {
             "id": 1,
             "name": "Barrierefreiheit",
@@ -145,17 +52,7 @@
                 "id": 8,
                 "name": "Wheelmap",
                 "link": "https://wheelmap.org/beta#?lat=52.4991&lon=13.4188&zoom=18",
-                "prev": 7,
-                "next": 9
-              },
-              {
-                "type": "story",
-                "id": 9,
-                "img": "/assets/images/datawalk.png",
-                "content": "Von den sechs U-Bahn-Eingängen am Kottbusser Tor ist nur ein Zugang grün markiert und damit voll rollstuhlgerecht, über alle anderen Eingänge ist der Bahnsteig nicht stufenlos zugänglich. Rollstuhlfahrer*innen oder auch Personen, die eine Gehhilfe o.ä. benutzen, erreichen den Bahnsteig nur über einen Aufzug - der aber nicht immer funktioniert. Aktuelle Informationen zu Aufzugsstörungen stellt die BVG bereit. Ein weiteres Problem: Es gibt keine behindertengerechte Toilette an dieser U-Bahn-Station. Das nächstgelegene WC, das für Rollstuhlfahrer*innen zugänglich ist, ist eine City-Toilette, die sich ein paar Meter außerhalb der Station befindet. Das zeigt: Es gibt noch viel zu tun für mehr Barrierefreiheit!<br /><br />Weiter geht’s! Zur nächsten Station unseres Datenspaziergangs sind es XX Meter/ XX Minuten.",
-                "name": "Was ist die Wheelmap?",
-                "next": 10,
-                "prev": 8
+                "prev": 7
               }
             ]
           }
@@ -163,7 +60,7 @@
       },
       {
         "id": 1,
-        "name": "Schule in der Graefestraße 85",
+        "name": "Görlitzer Park",
         "position": {
           "lat": 52.496559,
           "lon": 13.437327
@@ -172,70 +69,6 @@
         "next": 2,
         "entry": 0,
         "line": 0,
-        "subjects": [
-          {
-            "id": 0,
-            "name": "Bildung / außerschulische Bildung",
-            "description": "Station 2 bei unserem Datenspaziergang ist die Sekundarschule Graefestraße, denn das Thema Schule und Bildung betrifft uns alle. Aber: Schulbildung ist in Deutschland Ländersache, daher wird es im Hinblick auf offene Daten recht schnell kompliziert. Warum? Das zeigen wir dir hier.",
-            "entry": 0,
-            "next": 1,
-            "pages": [
-              {
-                "type": "story",
-                "id": 0,
-                "img": "/assets/images/datawalk.png",
-                "content": "Jedes Bundesland unterscheidet sich nicht nur beim Schulsystem, den Unterrichtsfächern, und Schulaktivitäten, sondern teilweise sogar bei den Schularten. So gibt es z.B. in Hamburg sogenannte Stadtteilschulen, die sonst in keinem anderen Bundesland vorkommen. Das Problem daran: Die Informationen über Schulen in Deutschland sind nur schwer miteinander zu vergleichen und die Daten überall unterschiedlich vorhanden, z.B. über Partnerschaften, Fremdsprachen oder Ganztagsangebote. Für Eltern, Lehrende und Schüler*innen sind diese Informationen aber wichtig, um gute Entscheidungen für die Wahl der Schule zu treffen.<br /><br />Offene Daten über Schulen findet du auf JedeSchule.de",
-                "name": "Bildung/ außerschulische Bildung",
-                "next": 1
-              },
-              {
-                "type": "story",
-                "id": 1,
-                "img": "/assets/images/datawalk.png",
-                "content": "JedeSchule.de macht die Informationen von über 30.000 allgemeinbildende Schulen in Deutschland zugänglich. Für knapp 3.000 Schulen in Berlin und Sachsen werden anhand von Daten außerschulische  Aktivitäten, Förderangebote und Partner der Schulen analysiert. Über eine Suchmaske kann auf JedeSchule.de gezielt nach bestimmten Schulen, Schularten, Aktivitäten oder Ganztagsangeboten von Schulen in der eigenen Umgebung oder deutschlandweit gesucht und gefiltert werden.<br /><br />Und was findest du über die Sekundärschule Graefestraße auf JedeSchule.de heraus?",
-                "name": "Was ist JedeSchule.de?",
-                "next": 2,
-                "prev": 0
-              },
-              {
-                "type": "iframe",
-                "id": 2,
-                "name": "Jedeschule.de",
-                "link": "https://jedeschule.de/schulen/#!?lat=52.49349906504009&lng=13.416003427264517&zoom=16",
-                "prev": 1,
-                "next": 3
-              },
-              {
-                "type": "story",
-                "id": 3,
-                "img": "/assets/images/datawalk.png",
-                "name": "Schulaktivitäten in Kreuzberg",
-                "content": "In Kreuzberg zeigt Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-                "prev": 2,
-                "next": 4
-              },
-              {
-                "type": "chloropleth-map",
-                "id": 4,
-                "name": "Schulaktivitäten nach Bezirken",
-                "datasource": "https://jedeschule.de/assets/data/activities.json",
-                "prev": 3
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": 2,
-        "name": "Görlitzer Park",
-        "position": {
-          "lat": 52.499867,
-          "lon": 13.435728
-        },
-        "prev": 1,
-        "next": 3,
-        "entry": 0,
-        "line": 1,
         "subjects": [
           {
             "id": 0,
@@ -316,8 +149,72 @@
         ]
       },
       {
+        "id": 2,
+        "name": "Refik-Veseli-Schule",
+        "position": {
+          "lat": 52.499867,
+          "lon": 13.435728
+        },
+        "prev": 1,
+        "next": 3,
+        "entry": 0,
+        "line": 1,
+        "subjects": [
+          {
+            "id": 0,
+            "name": "Bildung / außerschulische Bildung",
+            "description": "Station 2 bei unserem Datenspaziergang ist die Sekundarschule Graefestraße, denn das Thema Schule und Bildung betrifft uns alle. Aber: Schulbildung ist in Deutschland Ländersache, daher wird es im Hinblick auf offene Daten recht schnell kompliziert. Warum? Das zeigen wir dir hier.",
+            "entry": 0,
+            "next": 1,
+            "pages": [
+              {
+                "type": "story",
+                "id": 0,
+                "img": "/assets/images/datawalk.png",
+                "content": "Jedes Bundesland unterscheidet sich nicht nur beim Schulsystem, den Unterrichtsfächern, und Schulaktivitäten, sondern teilweise sogar bei den Schularten. So gibt es z.B. in Hamburg sogenannte Stadtteilschulen, die sonst in keinem anderen Bundesland vorkommen. Das Problem daran: Die Informationen über Schulen in Deutschland sind nur schwer miteinander zu vergleichen und die Daten überall unterschiedlich vorhanden, z.B. über Partnerschaften, Fremdsprachen oder Ganztagsangebote. Für Eltern, Lehrende und Schüler*innen sind diese Informationen aber wichtig, um gute Entscheidungen für die Wahl der Schule zu treffen.<br /><br />Offene Daten über Schulen findet du auf JedeSchule.de",
+                "name": "Bildung/ außerschulische Bildung",
+                "next": 1
+              },
+              {
+                "type": "story",
+                "id": 1,
+                "img": "/assets/images/datawalk.png",
+                "content": "JedeSchule.de macht die Informationen von über 30.000 allgemeinbildende Schulen in Deutschland zugänglich. Für knapp 3.000 Schulen in Berlin und Sachsen werden anhand von Daten außerschulische  Aktivitäten, Förderangebote und Partner der Schulen analysiert. Über eine Suchmaske kann auf JedeSchule.de gezielt nach bestimmten Schulen, Schularten, Aktivitäten oder Ganztagsangeboten von Schulen in der eigenen Umgebung oder deutschlandweit gesucht und gefiltert werden.<br /><br />Und was findest du über die Sekundärschule Graefestraße auf JedeSchule.de heraus?",
+                "name": "Was ist JedeSchule.de?",
+                "next": 2,
+                "prev": 0
+              },
+              {
+                "type": "iframe",
+                "id": 2,
+                "name": "Jedeschule.de",
+                "link": "https://jedeschule.de/schulen/#!?lat=52.49349906504009&lng=13.416003427264517&zoom=16",
+                "prev": 1,
+                "next": 3
+              },
+              {
+                "type": "story",
+                "id": 3,
+                "img": "/assets/images/datawalk.png",
+                "name": "Schulaktivitäten in Kreuzberg",
+                "content": "In Kreuzberg zeigt Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+                "prev": 2,
+                "next": 4
+              },
+              {
+                "type": "chloropleth-map",
+                "id": 4,
+                "name": "Schulaktivitäten nach Bezirken",
+                "datasource": "https://jedeschule.de/assets/data/activities.json",
+                "prev": 3
+              }
+            ]
+          }
+        ]
+      },
+      {
         "id": 3,
-        "name": "Bethanien-Kloster",
+        "name": "Lausitzer Platz",
         "prev": 2,
         "next": 4,
         "line": 2,
@@ -329,33 +226,94 @@
         "subjects": [
           {
             "id": 0,
-            "name": "Bethanien - Stadtraum erobern",
-            "description": "Wir stehen jetzt am Bethanien, einem ganz besonderen Oort in Kreuzberg und seine Aaktivist/innenszene. Hier habensind in die srriebziger Jahren die Jugendlichen aus West-Berlin angefangen, ihr Stadt zurück zu erobern.",
+            "name": "Kriminalität",
+            "description": "Das Kottbusser Tor - oder auch liebevoll “Kotti” genannt, ist nicht nur Berliner*innen ein Begriff, sondern auch außerhalb der Hauptstadt sehr bekannt, leider nicht immer im besten Sinne. Wir zeigen dir hier, was du in offenen Daten alles über den Kotti herausfinden kannst, zum Beispiel zum Thema Kriminalität in der U-Bahn",
             "entry": 0,
+            "next": 1,
             "pages": [
               {
                 "type": "story",
                 "id": 0,
-                "next": 1,
                 "img": "/assets/images/datawalk.png",
-                "content": "Mundraub zeigt Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-                "name": "Stadtraum erobern"
+                "content": "Der U-Bahnhof Kottbusser Tor gehört zu den Stationen mit den höchsten Fahrgastzahlen, rund XX Menschen steigen hier pro Tag ein oder aus. Der Kotti gehört aber auch zu den Bahnhöfen mit der höchsten Kriminalität: Etwa 165 Gewalttaten wurden hier im Jahr 2016 begangen. Im gesamten Berliner Nahverkehr kam es im selben Jahr nach Angaben der Berliner Verkehrsbetriebe (BVG) zu 24.477 Straftaten, am häufigsten davon Taschendiebstähle (insgesamt 13.869 Fälle).<br /><br/>Und wie reagiert die Politik auf die Kriminalität an den U-Bahnhöfen? Das kann man bei OffenesParlament.de nachverfolgen.",
+                "name": "Kriminalität",
+                "next": 1
               },
               {
                 "type": "story",
                 "id": 1,
-                "next": 2,
-                "prev": 0,
                 "img": "/assets/images/datawalk.png",
-                "content": "Mundraub zeigt Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
-                "name": "Berlin.besetzt"
+                "content": "OffenesParlament.de macht Bundestagsdebatten transparent und nachvollziehbar. Über die Plattform kannst du  alle 245 Plenarprotokolle des Bundestags der letzten Wahlperiode durchsuchen - z.B. nach Ehe für Alle, Videoüberwachung oder Kriminalität. Dadurch hast du die Möglichkeit, die Arbeit von Abgeordneten und ihre Positionen zu überprüfen.<br /><br />Der Bundestag veröffentlicht regelmäßig Sitzungsprotokolle zu aktuellen Debatten. Seit Oktober 2017 werden die Dokumente als offene Daten zur freien Nutzung bereitgestellt. Sie können von Interessierten analysiert werden und finden Verwendung in gemeinnützigen Projekten, wie OffenesParlament.de.",
+                "name": "Was ist OffenesParlament.de?",
+                "prev": 0,
+                "next": 21
               },
               {
-                "id": 2,
+                "type": "story",
+                "id": 21,
+                "img": "/assets/images/datawalk.png",
+                "content": "Die Kriminalität an Berliner U-Bahn-Stationen wurde z.B. am 27. Januar 2017 im Bundestag thematisiert (Sitzung 216, Tagesordnungspunkt 28b). Zur Debatte stand, ob der vermehrte Einsatz von Videoüberwachung an Bahnhöfen zu einer erhöhten Sicherheit beiträgt. Das Thema führte zu kontroversen Diskussionen zwischen den Abgeordneten und Fraktionen",
+                "name": "Was ist OffenesParlament.de?",
+                "prev": 1,
+                "next": 2
+              },
+              {
                 "type": "iframe",
-                "name": "berlin.besetzt",
-                "link": "https://app.okfn.de/berlin-besetzt/index.html#",
-                "prev": 1
+                "id": 2,
+                "name": "Offenes Parlament",
+                "link": "https://offenesparlament.de/protokoll/#!/216#3",
+                "prev": 1,
+                "next": 3
+              },
+              {
+                "id": 3,
+                "type": "quiz",
+                "name": "Wer hats gesagt?",
+                "question": "Kameras leisten einen entscheidenden Beitrag zu mehr Sicherheit. Sie helfen, Straftäter zu identifizieren, festzunehmen und zu bestrafen. Sie verhindern auch Straftaten.",
+                "answers": [
+                  "Thomas de Maiziere, CDU",
+                  "Horst Seehofer, CDU/CSU",
+                  "Sigmar Gabriel, SPD"
+                ],
+                "correct": 0,
+                "prev": 2,
+                "next": 4
+              },
+              {
+                "id": 4,
+                "type": "quiz",
+                "name": "Wer hats gesagt?",
+                "question": "Das Einzige, was hier passiert, ist, dass Sie gewaltige Datenberge schaffen, von Flensburg bis Rosenheim, um im Fall eines Attentates ein paar mehr Bilder vom Tatort zu bekommen. Und am Ende dauert die Auswertung - wie im Fall Amri - womöglich wochenlang. Ja wen wollen Sie mit diesem Placebo eigentlich beruhigen, meine Damen und Herren?",
+                "answers": [
+                  "Irene Mihalic, Grüne",
+                  "Horst Seehofer, CDU/CSU",
+                  "Sigmar Gabriel, SPD"
+                ],
+                "correct": 0,
+                "prev": 3,
+                "next": 5
+              },
+              {
+                "id": 5,
+                "type": "quiz",
+                "name": "Wer hats gesagt?",
+                "question": "Das Gesetz wird also nichts besser machen. Doch was macht das Gesetz schlimmer? Videoüberwachung ist ein intensiver Eingriff. Sie beeinträchtigt alle, die den betroffenen Raum betreten",
+                "answers": [
+                  "Martina Renner, Linke",
+                  "Horst Seehofer, CDU/CSU",
+                  "Sigmar Gabriel, SPD"
+                ],
+                "correct": 0,
+                "prev": 4,
+                "next": 6
+              },
+              {
+                "type": "story",
+                "id": 6,
+                "img": "/assets/images/datawalk.png",
+                "content": "Der U-Bahnhof Kottbusser Tor gehört zu den Stationen mit den höchsten Fahrgastzahlen, rund XX Menschen steigen hier pro Tag ein oder aus. Der Kotti gehört aber auch zu den Bahnhöfen mit der höchsten Kriminalität: Etwa 165 Gewalttaten wurden hier im Jahr 2016 begangen. Im gesamten Berliner Nahverkehr kam es im selben Jahr nach Angaben der Berliner Verkehrsbetriebe (BVG) zu 24.477 Straftaten, am häufigsten davon Taschendiebstähle (insgesamt 13.869 Fälle).<br /><br/>Und wie reagiert die Politik auf die Kriminalität an den U-Bahnhöfen? Das kann man bei OffenesParlament.de nachverfolgen.",
+                "name": "Kriminalität",
+                "prev": 5
               }
             ]
           }
@@ -363,7 +321,7 @@
       },
       {
         "id": 4,
-        "name": "Bethanien-Kloster",
+        "name": "Bethanien Kloster",
         "prev": 3,
         "position": {
           "lat": 52.503392,

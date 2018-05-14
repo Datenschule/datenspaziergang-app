@@ -93,7 +93,6 @@ export class PointToPointMapComponent implements OnInit {
 
         this.title = `${course.name} | ${station_id + 1}. Station:  ${this.station.name}`;
         this.line = course.courseline[this.station['line']];
-        console.log(this.line);
 
         let translatedCenter = turf.transformTranslate(turf.point([this.station.position.lon, this.station.position.lat]), -0.5, 90);
         this.mapOptions.center = translatedCenter.geometry.coordinates;

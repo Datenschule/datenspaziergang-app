@@ -9,9 +9,9 @@
             [ngClass]="{relative: inlineTitle === true}">{{title}}</h1>
         <p [innerHTML]="story.content | safeHtml"></p>
       </div>
-      <div class="container button-container">
-        <a class="btn" (click)="goBack()">Zurück</a>
-        <a class="btn" (click)="goNext()">Weiter</a>
+      <div class="button-container">
+        <a class="btn btn-back" (click)="goBack()">Zurück</a>
+        <a class="btn btn-forward" (click)="goNext()">Weiter</a>
       </div>
     </div>
   </div>

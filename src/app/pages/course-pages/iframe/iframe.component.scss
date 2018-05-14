@@ -22,14 +22,26 @@ iframe {
   margin: 100px 10vh 0 10vh;
 }
 
+.btn {
+  @media (max-width: 420px) {
+    font-size: 1.3rem;
+  }
+}
+
 .btn-forward {
   position: absolute;
-  bottom: 50px;
+  bottom: 40px;
   right: 50px;
+  @media (max-width: 420px) {
+    right: 30px;
+  }
 }
 
 .btn-back {
   position: absolute;
-  bottom: 50px;
+  bottom: 40px;
   left: 50px;
+  @media (max-width: 420px) {
+    left: 30px;
+  }
 }

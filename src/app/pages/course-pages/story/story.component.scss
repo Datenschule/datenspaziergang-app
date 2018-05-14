@@ -6,28 +6,24 @@
 }
 
 .description {
-  //color: white;
   padding: 60px 10% 10% 10%;
   max-width: 100%;
-  //max-height: 80vh;
-  //overflow: scroll;
-}
-
-.btn {
-  margin: 0 auto;
-}
-
-.container {
-  //display: flex
 }
 
 .button-container {
   display: flex;
-  //align-items: flex-end;
-  margin-top: 20px;
+  justify-content: space-between;
+  @media (min-width: 640px) {
+    padding: 0 30px;
+  }
 }
 
 .story-container {
   margin: 20px;
   height: calc(100vh - 85px);
+}
+
+.btn {
+  max-width: 6em;
+  text-align: center;
 }

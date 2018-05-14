@@ -19,7 +19,7 @@ import * as turf from '@turf/turf';
         transform: 'translate3d(0, 0, 0)'
       })),
       state('right', style({
-        transform: 'translate3d(-92%, 0, 0)'
+        transform: 'translate3d(-99%, 0, 0)'
       })),
       transition('left => right', animate('200ms ease-in-out')),
       transition('right => left', animate('200ms ease-in-out'))

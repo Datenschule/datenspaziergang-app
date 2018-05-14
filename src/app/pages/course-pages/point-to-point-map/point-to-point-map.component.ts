@@ -98,12 +98,6 @@ export class PointToPointMapComponent implements OnInit {
         this.mapOptions.center = translatedCenter.geometry.coordinates;
         this.currentStationMarker = [this.station.position.lon, this.station.position.lat];
 
-        let prevStation = this.course.stations[this.station['prev']];
-        if (prevStation) {
-          this.prevStationMarker = [prevStation.position.lon, prevStation.position.lat];
-        }
-
-
         this.findUserLocation();
         this.nextLink = `/subjects/${this.course.id}/${this.station.id}`;
       });

@@ -1,14 +1,11 @@
 <div class="wrapper fond_green_gradient">
   <app-action-bar  [name]="title" [showBack]="true"></app-action-bar>
-
-  <div class="container padding-top-medium">
-    <div class="container">
-      <div class="box center">
-        <h1 class="box__title">{{title}}</h1>
-        <p [innerHTML]="message | safeHtml"></p>
-        <img style="max-width: 100%; margin-bottom: 2em" src="/assets/images/success.svg" alt="">
-        <button class="btn" style="display: block; margin: auto" routerLink="/overview">Zu allen Spaziergängen</button>
-      </div>
+  <div class="success-container padding-top-medium">
+    <div class="box center">
+      <h1 class="box__title h1">{{title}}</h1>
+      <p [innerHTML]="message | safeHtml"></p>
+      <img style="max-width: 100%; margin-bottom: 2em" src="/assets/images/success.svg" alt="">
+      <a class="btn" routerLink="/overview">Zu allen Spaziergängen</a>
     </div>
   </div>
 </div>

@@ -1,6 +1,9 @@
 <div class="wrapper fond_darkblue_gradient" *ngIf="story" [@fadeInAnimation]="state"
   (@fadeInAnimation.done)="animationDone($event)">
-  <app-action-bar [name]="actionbarTitle" [showBack]="true"></app-action-bar>
+  <app-action-bar [name]="actionbarTitle"
+    [showBack]="true"
+    [courseId]="courseId"
+    [stationId]="station.id"></app-action-bar>
   <div class="story-container">
 
     <div class="container padding-top-medium">

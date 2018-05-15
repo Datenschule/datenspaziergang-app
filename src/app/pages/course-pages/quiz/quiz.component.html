@@ -1,15 +1,18 @@
 <div class="wrapper fond_darkblue_gradient" *ngIf="title">
-  <app-action-bar [name]="title" [showBack]="true"></app-action-bar>
-  <div class="quiz-container">
-    <div class="container padding-top-medium">
+  <app-action-bar [name]="title"
+    [showBack]="true"
+    [courseId]="courseId"
+    [stationId]="stationId"></app-action-bar>
+    <div class="quiz-container">
+      <div class="container padding-top-medium">
         <div class="box box--fullwidth">
           <h1 class="box__title h1">Quiz: Wer hat's gesagt?</h1>
           <p class="h4">"{{question}}"</p>
         </div>
         <ul>
           <li class="btn"
-              *ngFor="let answer of answers; let i = index"
-              (click)="sendanswer(i)">
+            *ngFor="let answer of answers; let i = index"
+            (click)="sendanswer(i)">
             {{answer[0]}}
             <span *ngIf="answer[1]" class="answer-indicator">
               <span *ngIf="answer[2] === true" class="quiz-check">richtig</span>
@@ -17,9 +20,9 @@
             </span>
           </li>
         </ul>
-    </div>
-    <a class="btn-back" (click)="goBack()">Zurück</a>
-    <a class="btn-forward" routerLink="{{nextLink}}">Weiter</a>
+      </div>
+      <a class="btn-back" (click)="goBack()">Zurück</a>
+      <a class="btn-forward" routerLink="{{nextLink}}">Weiter</a>
 
-  </div>
+    </div>
 </div>

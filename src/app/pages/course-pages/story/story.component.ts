@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, AfterViewChecked, OnInit, ViewChild, ElementRef} from '@angular/core';
 import {CoursesService} from '../../../services/courses/courses.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {DomSanitizer, SafeStyle} from '@angular/platform-browser';
@@ -6,6 +6,7 @@ import {Location} from '@angular/common';
 import {StoryPage, Station} from '../../../model/stations';
 import {animate, style, transition, trigger} from '@angular/animations';
 import {control} from 'leaflet';
+
 
 @Component({
   selector: 'app-story',
@@ -33,8 +34,7 @@ import {control} from 'leaflet';
     ]),
   ])],
 })
-export class StoryComponent implements OnInit {
-
+export class StoryComponent implements OnInit, AfterViewChecked {
   nextLink: string;
   image: SafeStyle;
   title: string;
@@ -42,10 +42,15 @@ export class StoryComponent implements OnInit {
   story: any;
   state: string;
   station: Station;
+  courseId: number;
   actionbarTitle: string;
+  @ViewChild("wrapper") wrapper: ElementRef;
 
-  constructor(private coursesService: CoursesService, private route: ActivatedRoute, private router: Router, private sanitizer: DomSanitizer, private location: Location) {
-  }
+  constructor(private coursesService: CoursesService,
+              private route: ActivatedRoute,
+              private router: Router,
+              private sanitizer: DomSanitizer,
+              private location: Location) {}
 
   ngOnInit() {
     this.route.params.subscribe((params) => {
@@ -71,6 +76,7 @@ export class StoryComponent implements OnInit {
           this.state = 'enter';
           console.log('set state to enter');
         }
+        this.courseId = course_id;
         this.story = page;
         this.image = this.sanitizer.bypassSecurityTrustStyle(`url(${page.img})`);
         this.coursesService.getNextPageLink(course_id, station_id, subject_id, page.next).subscribe((nextPage) => {
@@ -78,6 +84,15 @@ export class StoryComponent implements OnInit {
         });
       });
     });
+  }
+
+  ngAfterViewChecked() {
+    console.log('fire');
+    if (this.wrapper && this.wrapper.nativeElement) {
+      console.log(this.wrapper.nativeElement.scrollTop);
+      this.wrapper.nativeElement.scollTop = 0;
+
+    }
   }
 
   goNext() {

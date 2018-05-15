@@ -20,6 +20,9 @@ export class ChloroplethMapComponent implements OnInit {
   activeMap: string;
   theMapStyles: any;
 
+  stationId: number;
+  courseId: number;
+
   legend = [
     ['0-10', '#1E0843'],
     ['10-25', '#33106C'],
@@ -61,6 +64,9 @@ export class ChloroplethMapComponent implements OnInit {
     const station_id = +this.route.snapshot.paramMap.get('station');
     const subject_id = +this.route.snapshot.paramMap.get('subject');
     const page_id = +this.route.snapshot.paramMap.get('page');
+    this.stationId = station_id;
+    this.courseId = course_id;
+
     this.coursesService.getPage(course_id, station_id, subject_id, page_id).subscribe((page) => {
       this.title = page.name;
       this.coursesService.getNextPageLink(course_id, station_id,subject_id, page.next).subscribe((nextPage) => {

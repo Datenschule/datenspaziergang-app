@@ -24,13 +24,17 @@ export class ActionBarComponent implements OnInit {
   @Input() name: string;
   @Input() showMenu: boolean;
   @Input() showBack: boolean;
+  @Input() courseId: number;
+  @Input() stationId: number;
 
+  linkToLastStation: string;
   menuState = 'out';
 
   constructor(private locaction: Location) {
   }
 
   ngOnInit() {
+    this.linkToLastStation = `/subjects/${this.courseId}/${this.stationId}`;
   }
 
   goBack() {

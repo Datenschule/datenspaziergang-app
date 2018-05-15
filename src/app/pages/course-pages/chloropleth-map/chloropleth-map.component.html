@@ -1,5 +1,8 @@
 <div class="wrapper" *ngIf="title">
-  <app-action-bar [name]="title" [showBack]="true"></app-action-bar>
+  <app-action-bar [name]="title"
+    [showBack]="true"
+    [courseId]="courseId"
+    [stationId]="stationId"></app-action-bar>
 
   <div class="map-topics box">
     <h3 class="box__title h1">Kategorien</h3>

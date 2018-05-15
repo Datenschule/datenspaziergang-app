@@ -58,7 +58,8 @@
   }
 
   .backButton {
-    width: 3em;
+    line-height: 1;
+    margin-left: $base-padding + 0.4em;
     svg {
       transition: fill 0.333s cubic-bezier(0, 0, 0.21, 1);
       fill: $black;

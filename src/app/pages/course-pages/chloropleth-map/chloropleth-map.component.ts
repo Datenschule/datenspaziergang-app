@@ -16,7 +16,7 @@ export class ChloroplethMapComponent implements OnInit {
   Object = Object; // workaround to access `Object` in template
 
   defaultText: string = "Wähle einen Bezirk aus, um genaueres zu erfahren.";
-  mapData: Object = { name: this.defaultText };
+  mapData: Object = { label: this.defaultText };
   activeMap: string;
   theMapStyles: any;
 
@@ -73,12 +73,15 @@ export class ChloroplethMapComponent implements OnInit {
 
   activateHoverOn(evt: any) {
     this.mapData = evt.features[0].properties;
+    let name = this.mapData['name'];
+    let numActivities = this.mapData[this.mapKeysToLayer[this.activeMap]];
+    this.mapData['label'] = `${name}: ${numActivities} Aktivitäten`;
     this.hoverFilter = ['==', 'name', evt.features[0].properties.name];
   }
 
   disableHover() {
     this.mapData = {};
-    this.mapData['name'] = this.defaultText;
+    this.mapData['label'] = this.defaultText;
     this.hoverFilter = ['==', 'name', ''];
   }
 

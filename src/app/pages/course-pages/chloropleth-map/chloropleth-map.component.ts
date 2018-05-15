@@ -92,8 +92,8 @@ export class ChloroplethMapComponent implements OnInit {
     this.setActiveMap(initId);
   }
 
-  setActiveMap(layerId) {
-    let mapId = layerId;
+  setActiveMap(paramId) {
+    let mapId = paramId;
     this.activeMap = mapId;
     let layerId = mapId.toUpperCase();
     this.theMapStyles = this.theMapStyles.moveLayer(layerId, 'outline');

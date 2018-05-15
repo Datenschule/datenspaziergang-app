@@ -11,12 +11,10 @@ $padding: 0.8rem;
 
 .map-topics {
   position: absolute;
-  bottom: $padding;
+  top: 120px;
   left: $padding;
   z-index: 1;
-  background: $white;
-  padding: $base-padding-lite;
-  max-width: 12em;
+  background: $foam;
   border: 2px solid $purple;
   box-shadow: -6px 6px 0px 0 $purple;
 
@@ -24,12 +22,17 @@ $padding: 0.8rem;
     display: block;
     padding: 0;
     margin-bottom: $padding;
-    color: $foam;
+    font-size: 1rem;
+    color: $purple;
     border: none;
     background: none;
     &:hover,
     &:active {
       color: $purple;
+      text-decoration: underline;
+    }
+    &:focus {
+      outline: none;
     }
   }
 }
@@ -64,10 +67,10 @@ $padding: 0.8rem;
   line-height: 1;
 }
 
-.map__title {
-  margin: .2em 0;
-}
-
 small {
   font-size: .8em;
+}
+
+.map__title {
+  margin: .2em 0;
 }

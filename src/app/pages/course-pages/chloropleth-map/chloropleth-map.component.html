@@ -1,8 +1,8 @@
 <div class="wrapper" *ngIf="title">
   <app-action-bar [name]="title" [showBack]="true"></app-action-bar>
 
-  <div class="map-topics">
-    <h3 class="map__title">Kategorien</h3>
+  <div class="map-topics box">
+    <h3 class="box__title h1">Kategorien</h3>
     <button
       *ngFor="let k of Object.keys(mapKeysToLayer)"
       [value]="k"

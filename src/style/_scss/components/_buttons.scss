@@ -83,12 +83,13 @@
   overflow: hidden;
   white-space: nowrap;
   z-index: map-get($z-index-map, prevnextbtn);
+  cursor: pointer;
 }
 
 .btn-forward {
   right: 20px;
   background-image: url(/assets/images/btn-next.svg);
-  &:hover {
+  &:active {
     background-image: url(/assets/images/btn-next-pressed.svg);
   }
   &:focus {
@@ -99,7 +100,7 @@
 .btn-back {
   left: 20px;
   background-image: url(/assets/images/btn-prev.svg);
-  &:hover {
+  &:active {
     background-image: url(/assets/images/btn-prev-pressed.svg);
   }
   &:focus {

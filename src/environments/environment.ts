@@ -9,6 +9,6 @@ export const environment = {
   mapboxTiles: {
     light: 'mapbox://styles/mapbox/light-v9',
     street: 'mapbox://styles/mapbox/streets-v9',
-    chloropleth: "mapbox://styles/okfde/cjg2f1o3b0jo52sldswi5pqz2"
+    chloropleth: "mapbox://styles/okfde/cjh7f7il55yme2rqsd3plnhf5"
   }
 };

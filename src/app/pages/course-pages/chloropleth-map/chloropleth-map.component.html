@@ -5,6 +5,7 @@
     <h3 class="box__title h1">Kategorien</h3>
     <button
       *ngFor="let k of Object.keys(mapKeysToLayer)"
+      [ngClass]="{'active': k === activeMap}"
       [value]="k"
       (click)="moveLayerToTop($event)">{{mapKeysToLayer[k]}}</button>
   </div>

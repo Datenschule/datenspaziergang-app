@@ -27,7 +27,8 @@ $padding: 0.8rem;
     border: none;
     background: none;
     &:hover,
-    &:active {
+    &:active,
+    &.active {
       color: $purple;
       text-decoration: underline;
     }

@@ -27,7 +27,7 @@ export class ChloroplethMapComponent implements OnInit {
     ['40-60', '#8047DD'],
     ['60-80', '#AB78FF'],
     ['80-100', '#C8A7FF'],
-    ['110+', '#DAC4FF']
+    ['100+', '#DAC4FF']
   ];
 
   mapKeysToLayer: Object = {
@@ -84,6 +84,16 @@ export class ChloroplethMapComponent implements OnInit {
 
   moveLayerToTop(evt: any) {
     let mapId = evt.target.value;
+    this.setActiveMap(mapId);
+  }
+
+  initFirstLayer() {
+    let initId = 'society'; // some key from mapKeysToLayer
+    this.setActiveMap(initId);
+  }
+
+  setActiveMap(layerId) {
+    let mapId = layerId;
     this.activeMap = mapId;
     let layerId = mapId.toUpperCase();
     this.theMapStyles = this.theMapStyles.moveLayer(layerId, 'outline');
@@ -91,6 +101,7 @@ export class ChloroplethMapComponent implements OnInit {
 
   onLoad(evt: any) {
     this.theMapStyles = evt;
+    this.initFirstLayer();
   }
 
   goBack() {

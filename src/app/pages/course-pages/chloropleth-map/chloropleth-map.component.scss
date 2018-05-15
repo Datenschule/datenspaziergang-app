@@ -47,6 +47,11 @@ $padding: 0.8rem;
   padding: $base-padding-lite;
   border: 2px solid $purple;
   box-shadow: -6px 6px 0px 0 $purple;
+
+  @media (orientation: portrait) and (max-width: 800px) {
+    top: 120px;
+    max-width: 400px;
+  }
 }
 
 .map-legend {
@@ -58,6 +63,9 @@ $padding: 0.8rem;
   max-width: 12em;
   font-size: 14px;
   text-align: right;
+  @media (orientation: portrait) and (max-width: 800px) {
+    top: 350px;
+  }
 }
 
 .legend-color {

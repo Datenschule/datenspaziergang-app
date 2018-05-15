@@ -1,4 +1,4 @@
-<div class="wrapper fond_darkblue_gradient" *ngIf="story" [@fadeInAnimation]="state"
+<div class="wrapper fond_darkblue_gradient" #wrapper *ngIf="story" [@fadeInAnimation]="state"
   (@fadeInAnimation.done)="animationDone($event)">
   <app-action-bar [name]="actionbarTitle"
     [showBack]="true"

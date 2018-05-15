@@ -91,7 +91,7 @@ export class StoryComponent implements OnInit, AfterViewChecked {
     if (this.wrapper && this.wrapper.nativeElement) {
       console.log(this.wrapper.nativeElement.scrollTop);
       this.wrapper.nativeElement.scollTop = 0;
-
+      console.log(this.wrapper.nativeElement.scrollTop);
     }
   }
 

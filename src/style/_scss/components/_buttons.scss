@@ -38,7 +38,7 @@
   @media (max-width: 800px) {
     margin-top: $base-padding;
     margin-bottom: $base-padding-jumbo * 1.5;
-    margin-right: 1em;
+    margin-right: 2.5em;
   }
 }
 
@@ -88,17 +88,21 @@
 .btn-forward {
   right: 20px;
   background-image: url(/assets/images/btn-next.svg);
-  &:hover,
-  &:active {
+  &:hover {
     background-image: url(/assets/images/btn-next-pressed.svg);
+  }
+  &:focus {
+    background-image: url(/assets/images/btn-next.svg);
   }
 }
 
 .btn-back {
   left: 20px;
   background-image: url(/assets/images/btn-prev.svg);
-  &:hover,
-  &:active {
+  &:hover {
     background-image: url(/assets/images/btn-prev-pressed.svg);
+  }
+  &:focus {
+    background-image: url(/assets/images/btn-prev.svg);
   }
 }

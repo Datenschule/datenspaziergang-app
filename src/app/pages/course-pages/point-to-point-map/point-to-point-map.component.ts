@@ -98,23 +98,9 @@ export class PointToPointMapComponent implements OnInit {
         this.mapOptions.center = translatedCenter.geometry.coordinates;
         this.currentStationMarker = [this.station.position.lon, this.station.position.lat];
 
-        this.findUserLocation();
         this.nextLink = `/subjects/${this.course.id}/${this.station.id}`;
       });
     });
-  }
-
-  private findUserLocation() {
-    if (navigator.geolocation) {
-      console.log('start requesting geolocation');
-      navigator.geolocation.getCurrentPosition((current_location) => {
-        this.locationMarker = [current_location.coords.longitude, current_location.coords.latitude];
-      }, (error) => {
-        console.log(error, ' did not get user permission');
-      });
-    } else {
-      console.log('no navigator object found');
-    }
   }
 
   toggleSwipeState() {

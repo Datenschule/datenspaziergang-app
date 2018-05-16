@@ -22,6 +22,14 @@
         [layout]="{ 'line-join': 'round', 'line-cap': 'round' }"
         [paint]="{'line-color': '#a576f1', 'line-width': 8 }">
       </mgl-layer>
+      <mgl-control
+        mglGeolocate
+        [positionOptions]="{
+        enableHighAccuracy: true,
+        maximumAge: 5000
+        }"
+        [trackUserLocation]="true"
+      ></mgl-control>
     </mgl-map>
 
     <div class="wrapper-box">

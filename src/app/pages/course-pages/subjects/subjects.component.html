@@ -11,6 +11,14 @@
         [lngLat]="mapOptions.marker">
         <div class="marker">{{station.id + 1}}</div>
       </mgl-marker>
+      <mgl-control
+        mglGeolocate
+        [positionOptions]="{
+        enableHighAccuracy: true,
+        maximumAge: 5000
+        }"
+        [trackUserLocation]="true"
+      ></mgl-control>
     </mgl-map>
     <div class="wrapper-box">
       <div class="box__container">

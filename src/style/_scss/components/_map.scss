@@ -45,9 +45,49 @@ mgl-map {
   }
 }
 
-.mapboxgl-marker {
+.mapboxgl-marker:not(.mapboxgl-user-location-dot) {
   @include makeMarker($purple);
 }
+
+.mapboxgl-marker.mapboxgl-user-location-dot {
+  background-color: $purple-dark;
+  width: 20px;
+  height: 20px;
+  &:before {
+    background-color: $purple-dark;
+    width: 20px;
+    height: 20px;
+  }
+  &:after {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.mapboxgl-ctrl.mapboxgl-ctrl-group {
+  overflow: visible;
+}
+
+.mapboxgl-ctrl-icon.mapboxgl-ctrl-geolocate,
+.mapboxgl-ctrl-icon.mapboxgl-ctrl-geolocate.mapboxgl-ctrl-geolocate-background,
+.mapboxgl-ctrl-icon.mapboxgl-ctrl-geolocate.mapboxgl-ctrl-geolocate-active {
+  background-color: $foam;
+  border: 2px solid $purple;
+  box-shadow: -3px 3px 0px 0 $purple;
+}
+
+.mapboxgl-ctrl-icon.mapboxgl-ctrl-geolocate,
+.mapboxgl-ctrl-icon.mapboxgl-ctrl-geolocate.mapboxgl-ctrl-geolocate-background{
+  background-image: url(/assets/images/geolocate-inactive.svg);
+}
+
+.mapboxgl-ctrl-icon.mapboxgl-ctrl-geolocate.mapboxgl-ctrl-geolocate-active {
+  background-color: $purple;
+  border-color: $foam;
+  box-shadow: none;
+  background-image: url(/assets/images/geolocate-active.svg);
+}
+
 
 .inactive-marker {
   @include makeMarker($inactive-purple);

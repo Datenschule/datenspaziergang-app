@@ -28,7 +28,7 @@
     <div class="swipeable__helper"
       (click)="toggleSwipeState()"
       (touchmove)="toggleSwipeState()">
-      <div class="swipeable__btn">click</div></div>
+      <div class="swipeable__btn" aria-label="click to see map"></div></div>
   </div>
 
   <app-page-indicator [course]="course.id" [stations]="course.stations" [active]="station.id"></app-page-indicator>

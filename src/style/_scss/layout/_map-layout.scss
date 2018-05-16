@@ -20,13 +20,15 @@
 }
 
 .swipeable__btn {
-  width: 5em;
+  width: 5.5em;
   height: 2.1em;
   padding: 0 1em;
   transform: translateY(41vh);
   box-shadow: 1px 4px 0 2px $purple;
-  background-color: $foam;
   border-radius: 26px;
+  background: url(/assets/images/triangle-arrow-right.svg) 2px -2px, url(/assets/images/triangle-arrow-left.svg) 100% -2px;
+  background-repeat: no-repeat;
+  background-color: $foam;
 }
 
 .wrapper {

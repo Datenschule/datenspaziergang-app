@@ -44,10 +44,10 @@
       </div>
     </div>
     <div class="swipeable__helper"
-  (click)="toggleSwipeState()"
-  (touchmove)="toggleSwipeState()"></div>
-
-
+      (click)="toggleSwipeState()"
+      (touchmove)="toggleSwipeState()">
+      <div class="swipeable__btn" aria-label="click to see map"></div>
+    </div>
   </div>
 
   <app-page-indicator [course]="activeCourse.id" [stations]="activeCourse.stations"

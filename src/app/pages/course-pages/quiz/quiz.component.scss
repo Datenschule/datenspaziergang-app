@@ -15,13 +15,29 @@ ul {
   float: right;
 }
 
-.button-container {
-  //display: flex;
-  //justify-content: space-between;
-}
-
 .quiz-container {
   padding: 20px;
   display: flex;
   flex-direction: column;
+}
+
+
+.quiz-check {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  text-indent: 999%;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: middle;
+  background: {
+    image: url(/assets/images/checkmark.svg);
+    size: 100%;
+    repeat: no-repeat;
+  }
+
+  .btn:active &,
+  .btn:hover & {
+    background-image: url(/assets/images/checkmark-select.svg);
+  }
 }

@@ -15,6 +15,8 @@ export class IframeComponent implements OnInit {
   link: SafeResourceUrl;
   text: string;
   nextLink: string;
+  stationId: number;
+  courseId: number;
 
   constructor(private coursesService: CoursesService, private route: ActivatedRoute, private sanitizer: DomSanitizer, private location: Location) {
   }
@@ -26,6 +28,8 @@ export class IframeComponent implements OnInit {
       const subject_id = +params['subject'];
       const page_id = +params['page'];
 
+      this.stationId = station_id;
+      this.courseId = course_id;
 
       this.coursesService.getPage(course_id, station_id, subject_id, page_id).subscribe((page) => {
 

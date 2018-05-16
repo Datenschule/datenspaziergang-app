@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {CoursesService} from '../../../services/courses/courses.service';
 import {ActivatedRoute} from '@angular/router';
 import { environment } from '../../../../environments/environment';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-chloropleth-map',
@@ -14,21 +15,22 @@ export class ChloroplethMapComponent implements OnInit {
   title: string;
   Object = Object; // workaround to access `Object` in template
 
-  defaultText: string = "Wähle eine Kategorie und einen Bezirk";
-  mapData: Object = { name: this.defaultText };
+  defaultText: string = "Wähle einen Bezirk aus, um genaueres zu erfahren.";
+  mapData: Object = { label: this.defaultText };
   activeMap: string;
   theMapStyles: any;
 
+  stationId: number;
+  courseId: number;
+
   legend = [
-    ['0-5', '#FFEDA0'],
-    ['5-15', '#FED976'],
-    ['15-25', '#FEB24C'],
-    ['25-40', '#FD8D3C'],
-    ['40-55', '#FC4E2A'],
-    ['55-75', '#E31A1C'],
-    ['75-90', '#BD0026'],
-    ['90-110', '#800026'],
-    ['110+', '#420014']
+    ['0-10', '#1E0843'],
+    ['10-25', '#33106C'],
+    ['25-40', '#4C00C8'],
+    ['40-60', '#8047DD'],
+    ['60-80', '#AB78FF'],
+    ['80-100', '#C8A7FF'],
+    ['100+', '#DAC4FF']
   ];
 
   mapKeysToLayer: Object = {
@@ -53,14 +55,18 @@ export class ChloroplethMapComponent implements OnInit {
     }
   };
 
-  constructor(private coursesService: CoursesService, private route: ActivatedRoute) {
-  }
+  constructor(private coursesService: CoursesService,
+              private route: ActivatedRoute,
+              private location: Location) {}
 
   ngOnInit() {
     const course_id = +this.route.snapshot.paramMap.get('course');
     const station_id = +this.route.snapshot.paramMap.get('station');
     const subject_id = +this.route.snapshot.paramMap.get('subject');
     const page_id = +this.route.snapshot.paramMap.get('page');
+    this.stationId = station_id;
+    this.courseId = course_id;
+
     this.coursesService.getPage(course_id, station_id, subject_id, page_id).subscribe((page) => {
       this.title = page.name;
       this.coursesService.getNextPageLink(course_id, station_id,subject_id, page.next).subscribe((nextPage) => {
@@ -73,17 +79,30 @@ export class ChloroplethMapComponent implements OnInit {
 
   activateHoverOn(evt: any) {
     this.mapData = evt.features[0].properties;
+    let name = this.mapData['name'];
+    let numActivities = this.mapData[this.mapKeysToLayer[this.activeMap]];
+    this.mapData['label'] = `${name}: ${numActivities} Aktivitäten`;
     this.hoverFilter = ['==', 'name', evt.features[0].properties.name];
   }
 
   disableHover() {
     this.mapData = {};
-    this.mapData['name'] = this.defaultText;
+    this.mapData['label'] = this.defaultText;
     this.hoverFilter = ['==', 'name', ''];
   }
 
   moveLayerToTop(evt: any) {
     let mapId = evt.target.value;
+    this.setActiveMap(mapId);
+  }
+
+  initFirstLayer() {
+    let initId = 'society'; // some key from mapKeysToLayer
+    this.setActiveMap(initId);
+  }
+
+  setActiveMap(paramId) {
+    let mapId = paramId;
     this.activeMap = mapId;
     let layerId = mapId.toUpperCase();
     this.theMapStyles = this.theMapStyles.moveLayer(layerId, 'outline');
@@ -91,6 +110,11 @@ export class ChloroplethMapComponent implements OnInit {
 
   onLoad(evt: any) {
     this.theMapStyles = evt;
+    this.initFirstLayer();
+  }
+
+  goBack() {
+    this.location.back();
   }
 
 }

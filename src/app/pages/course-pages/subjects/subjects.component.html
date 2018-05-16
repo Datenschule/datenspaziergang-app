@@ -1,5 +1,5 @@
 <div class="wrapper" *ngIf="station">
-  <app-action-bar [name]="title" [showBack]="true"></app-action-bar>
+  <app-action-bar [name]="title" [showMenu]="true"></app-action-bar>
 
   <div class="swipeable" [@swiping]="swipeState">
     <mgl-map
@@ -15,7 +15,7 @@
     <div class="wrapper-box">
       <div class="box__container">
         <div class="box" *ngFor="let subject of station.subjects" routerLink="{{subject['link']}}">
-          <h1 class="box__title"
+          <h1 class="box__title h1"
               [ngClass]="{relative: subject.inlineName === true}">{{subject.name}}</h1>
           <p>{{subject.description}}</p>
           <a href="{{subject['link']}}" class="btn-cta">Anschauen</a>
@@ -27,7 +27,8 @@
     </div>
     <div class="swipeable__helper"
       (click)="toggleSwipeState()"
-      (touchmove)="toggleSwipeState()"></div>
+      (touchmove)="toggleSwipeState()">
+      <div class="swipeable__btn" aria-label="click to see map"></div></div>
   </div>
 
   <app-page-indicator [course]="course.id" [stations]="course.stations" [active]="station.id"></app-page-indicator>

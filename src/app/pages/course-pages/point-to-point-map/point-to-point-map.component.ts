@@ -18,7 +18,7 @@ import * as turf from '@turf/turf';
         transform: 'translate3d(0, 0, 0)'
       })),
       state('right', style({
-        transform: 'translate3d(-92%, 0, 0)'
+        transform: 'translate3d(-99%, 0, 0)'
       })),
       transition('left => right', animate('200ms ease-in-out')),
       transition('right => left', animate('200ms ease-in-out'))
@@ -87,22 +87,16 @@ export class PointToPointMapComponent implements OnInit {
         this.course = course;
 
         this.station = this.course.stations.find((station) => station.id === station_id);
-        this.stationNameInline = this.station.name.length > 20;
+        this.stationNameInline = this.station.name.length > 30;
 
         // this.mapOptions.center = [this.station.position.lon, this.station.position.lat];
 
-        this.title = `${course.name} | ${station_id + 1}. Station:  ${this.station.name}`;
+        this.title = `${course.name}: ${station_id + 1}. ${this.station.name}`;
         this.line = course.courseline[this.station['line']];
 
         let translatedCenter = turf.transformTranslate(turf.point([this.station.position.lon, this.station.position.lat]), -0.5, 90);
         this.mapOptions.center = translatedCenter.geometry.coordinates;
         this.currentStationMarker = [this.station.position.lon, this.station.position.lat];
-
-        let prevStation = this.course.stations[this.station['prev']];
-        if (prevStation) {
-          this.prevStationMarker = [prevStation.position.lon, prevStation.position.lat];
-        }
-
 
         this.findUserLocation();
         this.nextLink = `/subjects/${this.course.id}/${this.station.id}`;

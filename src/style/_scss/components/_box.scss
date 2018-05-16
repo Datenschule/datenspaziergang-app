@@ -10,6 +10,10 @@
   @include respond-to(medium-down) {
     margin-top: $base-padding-extra;
   }
+
+  @media (orientation: portrait) {
+    max-width: 100%;
+  }
 }
 
 .box--fullwidth {
@@ -42,7 +46,7 @@
 
   @media (max-width: 800px) {
     width: 90vw;
-    padding: 2em 2em 3em $base-padding;
+    padding: 4em 2em 3em $base-padding;
   }
   @media (min-width: 801px) {
     left: $base-padding;
@@ -57,7 +61,7 @@
 
 .box__title {
   position: absolute;
-  top: -1.5em;
+  top: -2.2em;
   right: 30px;
   display: inline-block;
   padding: 0.3em $base-padding-lite 0.1em;

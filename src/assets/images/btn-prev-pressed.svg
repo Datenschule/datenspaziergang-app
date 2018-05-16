@@ -1,0 +1,21 @@
+<svg width="55px" height="55px" viewBox="0 0 55 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>Button_Zurück zur Station_pressed</title>
+  <defs>
+    <rect id="path-1" x="0" y="0" width="50" height="50"></rect>
+    <filter x="-15.0%" y="-5.0%" width="120.0%" height="120.0%" filterUnits="objectBoundingBox" id="filter-2">
+      <feOffset dx="-5" dy="5" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+      <feComposite in="shadowOffsetOuter1" in2="SourceAlpha" operator="out" result="shadowOffsetOuter1"></feComposite>
+      <feColorMatrix values="0 0 0 0 0   0 0 0 0 1   0 0 0 0 0.615686275  0 0 0 1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+    </filter>
+  </defs>
+  <g id="Screens" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Button_Zurück-zur-Station_pressed" transform="translate(5.000000, 0.000000)">
+      <g id="Rectangle-4">
+        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+        <use fill="#4C00C8" fill-rule="evenodd" xlink:href="#path-1"></use>
+        <rect stroke="#00FF9D" stroke-width="2" x="1" y="1" width="48" height="48"></rect>
+      </g>
+      <polygon id="Rectangle-5" fill="#00FF9D" transform="translate(27.727922, 24.727922) rotate(-135.000000) translate(-27.727922, -24.727922) " points="18.7279221 19.925696 36.7279221 15.7279221 32.5301482 33.7279221"></polygon>
+    </g>
+  </g>
+</svg>

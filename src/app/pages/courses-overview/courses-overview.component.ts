@@ -15,7 +15,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
         transform: 'translate3d(0, 0, 0)'
       })),
       state('right', style({
-        transform: 'translate3d(-92%, 0, 0)'
+        transform: 'translate3d(-99%, 0, 0)'
       })),
       transition('left => right', animate('200ms ease-in-out')),
       transition('right => left', animate('200ms ease-in-out'))
@@ -57,7 +57,7 @@ export class CoursesOverviewComponent implements OnInit {
     );
 
     var center = turf.center(features);
-    center = turf.transformTranslate(center, -1, 90);
+    center = turf.transformTranslate(center, -0.8, 90);
     console.log(center);
     this.mapOptions.center = center.geometry.coordinates;
     this.activeLine = this.activeCourse.stations.reduce((prev, curr) => {

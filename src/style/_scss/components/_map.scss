@@ -7,7 +7,7 @@ mgl-map {
 
 @mixin makeMarker($color) {
   position: absolute;
-  top: 0;
+  top: -35px;
   left: 0;
   z-index: 1;
   width: 42px;
@@ -16,10 +16,11 @@ mgl-map {
   background-color: $color;
   will-change: transform;
   color: $white;
+  font-family: 'Overpass', 'Verdana', sans-serif;
   font-size: 1.3rem;
   font-weight: 700;
   text-align: center;
-  line-height: 1.1;
+  line-height: 1.2;
 
   &:after,
   &:before {

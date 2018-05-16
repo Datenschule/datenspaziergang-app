@@ -19,7 +19,7 @@ import * as turf from '@turf/turf';
         transform: 'translate3d(0, 0, 0)'
       })),
       state('right', style({
-        transform: 'translate3d(-92%, 0, 0)'
+        transform: 'translate3d(-99%, 0, 0)'
       })),
       transition('left => right', animate('200ms ease-in-out')),
       transition('right => left', animate('200ms ease-in-out'))
@@ -99,7 +99,7 @@ export class SubjectsComponent implements OnInit {
       this.mapOptions.center = newCenter.geometry.coordinates;
       this.mapOptions.marker = [this.station.position.lon, this.station.position.lat];
       console.log(this.station);
-      this.title = `${course.name}: ${this.station.name}`;
+      this.title = `${course.name}: ${this.station.id + 1}. ${this.station.name}`;
 
       //
       // this.nextLink = `/${firstpage['type']}/${this.course.id}/${this.station.id}/${firstpage.id}`;

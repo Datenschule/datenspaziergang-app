@@ -1,24 +1,26 @@
 <div class="wrapper" *ngIf="title">
-  <app-action-bar [name]="title" [showBack]="true"></app-action-bar>
+  <app-action-bar [name]="title"
+    [showBack]="true"
+    [courseId]="courseId"
+    [stationId]="stationId"></app-action-bar>
 
-  <div class="map-topics">
-    <h3 class="map__title">Kategorien</h3>
+  <div class="map-topics box">
+    <h3 class="box__title h1">Kategorien</h3>
     <button
       *ngFor="let k of Object.keys(mapKeysToLayer)"
+      [ngClass]="{'active': k === activeMap}"
       [value]="k"
       (click)="moveLayerToTop($event)">{{mapKeysToLayer[k]}}</button>
   </div>
 
   <div class="map-info">
-    <h3 class="map__title">{{mapData['name']}}</h3>
-    <div *ngIf="activeMap" class="map__title">
-      {{mapKeysToLayer[activeMap]}}: {{mapData[mapKeysToLayer[activeMap]]}} Aktivitäten
-    </div>
+    <h2 class="map__title h1">{{mapData['label']}}</h2>
   </div>
 
   <div class="map-legend">
-    <div *ngFor="let l of legend"><span class="legend-color" [style.background]="l[1]"></span>{{l[0]}}</div>
-    <p><small>Anzahl der angebotenen außerschulischen Aktivitäten</small></p>
+    <p>Außerschulische Angebote:</p>
+    <div *ngFor="let l of legend">{{l[0]}} <span class="legend-color" [style.background]="l[1]"></span></div>
+
   </div>
 
   <mgl-map
@@ -50,8 +52,8 @@
       type="line"
       source="berlin"
       [paint]='{
-      "line-color": "#333",
-      "line-width": 2
+      "line-color": "#00ff9d",
+      "line-width": 3
       }'>
     </mgl-layer>
     <mgl-layer
@@ -59,13 +61,13 @@
       type="line"
       source="berlin"
       [paint]='{
-      "line-color": "#333",
-      "line-width": 6
+      "line-color": "#00ff9d",
+      "line-width": 8
       }'
       [filter]="hoverFilter">
     </mgl-layer>
   </mgl-map>
 
-  <a class="btn" routerLink="{{nextLink}}">Weiter</a>
-
+  <a class="btn-back" (click)="goBack()">Zurück</a>
+  <a class="btn-forward" routerLink="{{nextLink}}">Weiter</a>
 </div>

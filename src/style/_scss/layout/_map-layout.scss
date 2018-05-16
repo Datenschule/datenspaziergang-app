@@ -7,18 +7,28 @@
 }
 
 .swipeable__helper {
-  //background-color: $foam; // use for debugging
-  width: 13vw;
+  //background-color: pink;
   height: auto;
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 87vw;
-  opacity: 0.2;
+  left: 92vw;
   z-index: map-get($z-index-map, menu);
   @media (min-width: 801px) {
     display: none;
   }
+}
+
+.swipeable__btn {
+  width: 5.5em;
+  height: 2.1em;
+  padding: 0 1em;
+  transform: translateY(41vh);
+  box-shadow: 1px 4px 0 2px $purple;
+  border-radius: 26px;
+  background: url(/assets/images/triangle-arrow-right.svg) 2px -2px, url(/assets/images/triangle-arrow-left.svg) 100% -2px;
+  background-repeat: no-repeat;
+  background-color: $foam;
 }
 
 .wrapper {
@@ -35,4 +45,8 @@
   position:absolute;
   top: 0;
   margin-left: 20px;
+
+  @media (orientation: portrait) {
+    max-width: 90vw;
+  }
 }

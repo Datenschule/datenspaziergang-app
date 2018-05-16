@@ -1,5 +1,5 @@
 <div class="wrapper" *ngIf="station">
-  <app-action-bar [name]="title" [showBack]="true"></app-action-bar>
+  <app-action-bar [name]="title" [showMenu]="true"></app-action-bar>
 
   <div class="swipeable" [@swiping]="swipeState">
     <mgl-map
@@ -7,39 +7,27 @@
       [zoom]="mapOptions.zoom"
       [style]="mapOptions.style"
       [interactive]="true">
-      <!--<mgl-marker-->
-        <!--[lngLat]="currentStationMarker">-->
-        <!--<div class="marker">{{station.id + 1}}</div>-->
-      <!--</mgl-marker>-->
-      <!--<mgl-marker *ngIf="prevStationMarker"-->
-        <!--[lngLat]="prevStationMarker">-->
-        <!--<div class="marker">{{station.id}}</div>-->
-      <!--</mgl-marker>-->
-      <!--<mgl-marker *ngIf="locationMarker.length > 0"-->
-        <!--[lngLat]="locationMarker">-->
-        <!--<div class="marker">DU</div>-->
-      <!--</mgl-marker>-->
       <mgl-marker
-        *ngFor="let station of course.stations"
-        [lngLat]="[station.position.lon, station.position.lat]"
-      >{{station.id + 1}}
+        *ngFor="let st of course.stations"
+        [lngLat]="[st.position.lon, st.position.lat]">
+        <div [ngClass]="{'inactive-marker': st.id === station.id}">{{st.id + 1}}</div>
       </mgl-marker>
       <mgl-layer *ngFor="let line of course.courseline let i = index;" id="linelayerall{{i}}" type="line"
         [source]="{ 'type': 'geojson', 'data': { 'type': 'Feature', 'properties': {}, 'geometry': { 'type': 'LineString', 'coordinates': line }}}"
         [layout]="{ 'line-join': 'round', 'line-cap': 'round' }"
-        [paint]="{ 'line-color': '#a576f1', 'line-width': 8 }">
+        [paint]="{ 'line-color': '#5500C3', 'line-width': 8 }">
       </mgl-layer>
       <mgl-layer *ngIf="line" id="linelayer" type="line"
         [source]="{ 'type': 'geojson', 'data': { 'type': 'Feature', 'properties': {}, 'geometry': { 'type': 'LineString', 'coordinates': line}}}"
         [layout]="{ 'line-join': 'round', 'line-cap': 'round' }"
-        [paint]="{'line-color': '#5500C3', 'line-width': 8 }">
+        [paint]="{'line-color': '#a576f1', 'line-width': 8 }">
       </mgl-layer>
     </mgl-map>
 
     <div class="wrapper-box">
       <div class="box__container">
         <div class="box">
-          <h1 class="box__title"
+          <h1 class="box__title h1"
             [ngClass]="{relative: stationNameInline === true}">{{station.name}}</h1>
           <p [innerHTML]="course.description | safeHtml"></p>
           <a class="btn" id="next" routerLink="{{nextLink}}">Angekommen</a>
@@ -48,7 +36,9 @@
     </div>
     <div class="swipeable__helper"
       (click)="toggleSwipeState()"
-      (touchmove)="toggleSwipeState()"></div>
+      (touchmove)="toggleSwipeState()">
+      <div class="swipeable__btn" aria-label="click to see map"></div>
+    </div>
   </div>
 
   <app-page-indicator [course]="course.id" [stations]="course.stations" [active]="station.id"></app-page-indicator>

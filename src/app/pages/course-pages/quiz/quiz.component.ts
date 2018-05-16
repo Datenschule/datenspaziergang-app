@@ -17,6 +17,8 @@ export class QuizComponent implements OnInit {
   firstguess = false;
 
   title: string;
+  stationId: number;
+  courseId: number;
   question: string;
   answers: Array<[string, boolean, string]>;
   correct_answer: number;
@@ -31,14 +33,16 @@ export class QuizComponent implements OnInit {
       const station_id = +this.route.snapshot.paramMap.get('station');
       const subject_id = +this.route.snapshot.paramMap.get('subject');
       const page_id = +this.route.snapshot.paramMap.get('page');
-      this.coursesService.getPage(course_id, station_id, subject_id, page_id).subscribe((page) => {
+      this.stationId = station_id;
+      this.courseId = course_id;
 
+      this.coursesService.getPage(course_id, station_id, subject_id, page_id).subscribe((page) => {
         this.title = page.name;
         this.question = page.question;
         this.correct_answer = page.correct;
         this.answers = page.answers.map((answer, i) => {
           let wasPressed = false;
-          let isCorrect = i === this.correct_answer ? "✅" : "❌";
+          let isCorrect = i === this.correct_answer ? true : false;
           return [answer, wasPressed, isCorrect];
         });
 

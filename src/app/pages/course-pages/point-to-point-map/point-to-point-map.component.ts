@@ -36,7 +36,7 @@ export class PointToPointMapComponent implements OnInit {
   points: Point[];
   station: Station;
   stationNameInline = false;
-  line: number[][];
+  line: [number, number];
   location: Point;
   locationMarker: Array<number> = [];
   title: string;
@@ -92,7 +92,7 @@ export class PointToPointMapComponent implements OnInit {
         // this.mapOptions.center = [this.station.position.lon, this.station.position.lat];
 
         this.title = `${course.name}: ${station_id + 1}. ${this.station.name}`;
-        this.line = course.courseline[this.station['line']];
+        this.line = this.course.courseline[this.station['line']];
 
         let translatedCenter = turf.transformTranslate(turf.point([this.station.position.lon, this.station.position.lat]), -0.5, 90);
         this.mapOptions.center = translatedCenter.geometry.coordinates;
@@ -100,6 +100,7 @@ export class PointToPointMapComponent implements OnInit {
 
         this.nextLink = `/subjects/${this.course.id}/${this.station.id}`;
       });
+
     });
   }
 

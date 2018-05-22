@@ -12,7 +12,8 @@
         [lngLat]="[st.position.lon, st.position.lat]">
         <div [ngClass]="{'inactive-marker': st.id === station.id}">{{st.id + 1}}</div>
       </mgl-marker>
-      <mgl-layer *ngFor="let line of course.courseline let i = index;" id="linelayerall{{i}}" type="line"
+      <mgl-layer *ngFor="let line of course.courseline let i = index;"
+        id="linelayerall-{{station.id}}-{{i}}" type="line"
         [source]="{ 'type': 'geojson', 'data': { 'type': 'Feature', 'properties': {}, 'geometry': { 'type': 'LineString', 'coordinates': line }}}"
         [layout]="{ 'line-join': 'round', 'line-cap': 'round' }"
         [paint]="{ 'line-color': '#5500C3', 'line-width': 8 }">

@@ -64,6 +64,11 @@ mgl-map {
   }
 }
 
+.mapboxgl-ctrl-group {
+  background: transparent;
+  box-shadow: none;
+}
+
 .mapboxgl-ctrl.mapboxgl-ctrl-group {
   overflow: visible;
 }

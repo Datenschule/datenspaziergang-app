@@ -86,7 +86,7 @@ export class StoryComponent implements OnInit {
   }
 
   goNext() {
-    if (this.nextLink.startsWith('/story')) {
+    if (this.nextLink.startsWith('/story') && this.wrapper) {
       this.wrapper.nativeElement.scrollTop = 0;
     }
     console.log(this.nextLink);

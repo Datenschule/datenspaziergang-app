@@ -1,4 +1,4 @@
-import {Component, AfterViewChecked, OnInit, ViewChild, ElementRef} from '@angular/core';
+import {Component, OnInit, ViewChild, ElementRef} from '@angular/core';
 import {CoursesService} from '../../../services/courses/courses.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {DomSanitizer, SafeStyle} from '@angular/platform-browser';
@@ -30,11 +30,11 @@ import {control} from 'leaflet';
       style({transform: 'scale(1)'}),
 
       // animation and styles at end of transition
-      animate('.3s', style({ transform: 'scale(0.1)' }))
+      animate('.15s', style({ transform: 'scale(0.05)' }))
     ]),
   ])],
 })
-export class StoryComponent implements OnInit, AfterViewChecked {
+export class StoryComponent implements OnInit {
   nextLink: string;
   image: SafeStyle;
   title: string;
@@ -68,7 +68,6 @@ export class StoryComponent implements OnInit, AfterViewChecked {
         this.actionbarTitle = `${this.station.id + 1}. ${this.station.name}`;
       });
 
-
       this.coursesService.getPage(course_id, station_id, subject_id, page_id).subscribe((page) => {
         console.log(page);
         this.title = `${page.name}`;
@@ -86,17 +85,10 @@ export class StoryComponent implements OnInit, AfterViewChecked {
     });
   }
 
-  ngAfterViewChecked() {
-    console.log('fire');
-    if (this.wrapper && this.wrapper.nativeElement) {
-      console.log(this.wrapper.nativeElement.scrollTop);
-      this.wrapper.nativeElement.scollTop = 0;
-      console.log(this.wrapper.nativeElement.scrollTop);
-    }
-  }
-
   goNext() {
-    this.wrapper.nativeElement.scrollTop = 0;
+    if (this.nextLink.startsWith('/story')) {
+      this.wrapper.nativeElement.scrollTop = 0;
+    }
     console.log(this.nextLink);
     if (this.nextLink.startsWith('/subject')) {
       this.state = 'leave';

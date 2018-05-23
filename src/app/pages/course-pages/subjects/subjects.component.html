@@ -26,7 +26,7 @@
           <h1 class="box__title h1"
               [ngClass]="{relative: subject.inlineName === true}">{{subject.name}}</h1>
           <p>{{subject.description}}</p>
-          <a href="{{subject['link']}}" class="btn-cta">Anschauen</a>
+          <a routerLink="{{subject['link']}}" class="btn-cta">Anschauen</a>
         </div>
         <div class="btn__position--right">
           <a class="btn btn--standalone" routerLink="{{nextLink}}">Zur nächsten Station</a>

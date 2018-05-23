@@ -68,7 +68,9 @@ export class QuizComponent implements OnInit {
   }
 
   goNext() {
-    this.wrapper.nativeElement.scrollTop = 0;
+    if (this.nextLink.startsWith('/quiz')) {
+      this.wrapper.nativeElement.scrollTop = 0;
+    }
     this.router.navigate([this.nextLink]);
   }
 }

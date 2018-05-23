@@ -96,6 +96,7 @@ export class StoryComponent implements OnInit, AfterViewChecked {
   }
 
   goNext() {
+    this.wrapper.nativeElement.scrollTop = 0;
     console.log(this.nextLink);
     if (this.nextLink.startsWith('/subject')) {
       this.state = 'leave';

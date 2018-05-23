@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild, ElementRef} from '@angular/core';
 import {CoursesService} from '../../../services/courses/courses.service';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {Course} from '../../../model/course';
 import {Station} from '../../../model/stations';
 import {Location} from '@angular/common';
@@ -24,8 +24,12 @@ export class QuizComponent implements OnInit {
   correct_answer: number;
   correct_message = 'Glückwunsch';
   wrong_message = 'Falsch';
+  @ViewChild("wrapper") wrapper: ElementRef;
 
-  constructor(private coursesService: CoursesService, private route: ActivatedRoute, private location: Location) {}
+  constructor(private coursesService: CoursesService,
+              private route: ActivatedRoute,
+              private router: Router,
+              private location: Location) {}
 
   ngOnInit() {
     this.route.params.subscribe(val => {
@@ -46,7 +50,6 @@ export class QuizComponent implements OnInit {
           return [answer, wasPressed, isCorrect];
         });
 
-
         this.coursesService.getNextPageLink(course_id, station_id, subject_id, page.next).subscribe((nextPage) => {
           this.nextLink = nextPage;
         });
@@ -56,12 +59,16 @@ export class QuizComponent implements OnInit {
 
   sendanswer(answer) {
     this.firstguess = true;
-    console.log(`clicked option ${answer}`);
     this.answers[answer][1] = true;
     this.correct = answer === this.correct_answer;
   }
 
   goBack() {
     this.location.back();
+  }
+
+  goNext() {
+    this.wrapper.nativeElement.scrollTop = 0;
+    this.router.navigate([this.nextLink]);
   }
 }

@@ -1,4 +1,4 @@
-<div class="wrapper fond_darkblue_gradient" *ngIf="title">
+<div class="wrapper fond_darkblue_gradient" #wrapper *ngIf="title">
   <app-action-bar [name]="title"
     [showBack]="true"
     [courseId]="courseId"
@@ -22,7 +22,7 @@
         </ul>
       </div>
       <a class="btn-back" (click)="goBack()">Zurück</a>
-      <a class="btn-forward" routerLink="{{nextLink}}">Weiter</a>
+      <a class="btn-forward" (click)="goNext()">Weiter</a>
 
     </div>
 </div>

@@ -16,11 +16,18 @@ ul {
 }
 
 .quiz-container {
-  padding: 20px;
+  margin: 40px 20px 20px;
   display: flex;
   flex-direction: column;
-}
 
+  .box {
+    margin-bottom: 3em;
+  }
+
+  ul {
+    margin-bottom: 10em;
+  }
+}
 
 .quiz-check {
   display: inline-block;

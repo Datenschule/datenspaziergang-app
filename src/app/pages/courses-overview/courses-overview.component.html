@@ -8,32 +8,32 @@
       <div class="swipeable__btn">click</div>
     </div>
 
-    <!--<mgl-map-->
-  <!--[style]="mapOptions.style"-->
-  <!--[zoom]="mapOptions.zoom"-->
-  <!--[center]="mapOptions.center">-->
-      <!--<mgl-layer-->
-  <!--*ngFor="let line of activeCourse.courseline; let i = index"-->
-  <!--id="linelayer{{i}}"-->
-  <!--type="line"-->
-  <!--[source]="{'type': 'geojson', 'data': { 'type': 'Feature', 'properties': {}, 'geometry': { 'type': 'LineString','coordinates': line }}}"-->
-  <!--[layout]="{'line-join': 'round', 'line-cap': 'round' }"-->
-  <!--[paint]="{ 'line-color': '#4c00c8', 'line-width': 8 }">-->
-      <!--</mgl-layer>-->
-      <!--<mgl-marker-->
-  <!--*ngFor="let station of activeCourse.stations"-->
-  <!--[lngLat]="[station.position.lon, station.position.lat]">-->
-      <!--{{station.id + 1}}-->
-      <!--</mgl-marker>-->
-      <!--<mgl-control-->
-        <!--mglGeolocate-->
-        <!--[positionOptions]="{-->
-        <!--enableHighAccuracy: true,-->
-        <!--maximumAge: 5000-->
-        <!--}"-->
-        <!--[trackUserLocation]="true"-->
-      <!--&gt;</mgl-control>-->
-    <!--</mgl-map>-->
+    <mgl-map
+  [style]="mapOptions.style"
+  [zoom]="mapOptions.zoom"
+  [center]="mapOptions.center">
+      <mgl-layer
+  *ngFor="let line of activeCourse.courseline; let i = index"
+  id="linelayer{{i}}"
+  type="line"
+  [source]="{'type': 'geojson', 'data': { 'type': 'Feature', 'properties': {}, 'geometry': { 'type': 'LineString','coordinates': line }}}"
+  [layout]="{'line-join': 'round', 'line-cap': 'round' }"
+  [paint]="{ 'line-color': '#4c00c8', 'line-width': 8 }">
+      </mgl-layer>
+      <mgl-marker
+  *ngFor="let station of activeCourse.stations"
+  [lngLat]="[station.position.lon, station.position.lat]">
+      {{station.id + 1}}
+      </mgl-marker>
+      <mgl-control
+        mglGeolocate
+        [positionOptions]="{
+        enableHighAccuracy: true,
+        maximumAge: 5000
+        }"
+        [trackUserLocation]="true"
+      ></mgl-control>
+    </mgl-map>
 
     <div class="wrapper-box">
       <div class="box__container">

@@ -15,7 +15,7 @@ export class ChloroplethMapComponent implements OnInit {
   title: string;
   Object = Object; // workaround to access `Object` in template
 
-  defaultText: string = "Wähle einen Bezirk aus, um genaueres zu erfahren.";
+  defaultText: string = "Wähle einen Bezirk aus.";
   mapData: Object = { label: this.defaultText };
   activeMap: string;
   theMapStyles: any;

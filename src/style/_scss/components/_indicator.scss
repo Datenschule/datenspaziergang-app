@@ -10,28 +10,28 @@
 
 @mixin hexagon-indicator($color) {
   position: relative;
-  width: 32px;
-  height: 18.48px;
-  margin: 9.24px 0;
+  width: 30px;
+  height: 17.32px;
+  margin: 8.66px 0;
 
   &:before,
   &:after {
     content: "";
     position: absolute;
     width: 0;
-    border-left: 16px solid transparent;
-    border-right: 16px solid transparent;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
   }
 
   &:before {
     bottom: 100%;
-    border-bottom: 9.24px solid;
+    border-bottom: 8.66px solid;
   }
 
   &:after {
     top: 100%;
     width: 0;
-    border-top: 9.24px solid;
+    border-top: 8.66px solid;
   }
 
   @include set-hex-color($color);
@@ -40,24 +40,25 @@
 .page-indicator {
   display: flex;
   position: fixed;
-  bottom: $base-padding;
+  bottom: 1rem;
   right: $base-padding;
 }
 
 .page-indicator__item {
-  @include hexagon-indicator($purple);
+  @include hexagon-indicator($inactive-purple);
 
   margin-left: $base-padding;
   color: $white;
+  font-size: 19px;
 }
 
 .page-indicator__item.active {
-  @include set-hex-color($inactive-purple);
+  @include set-hex-color($purple);
 }
 
 .page-indicator__item:hover,
 .page-indicator__item:active {
-  @include set-hex-color($inactive-purple);
+  @include set-hex-color($purple);
 }
 
 .page-indicator__connect {
@@ -72,7 +73,7 @@
   &:after {
     content: "";
     display: block;
-    background-color: $purple;
+    background-color: $inactive-purple;
     width: $base-padding;
     height: 6px;
     position: absolute;
@@ -86,7 +87,7 @@
 }
 
 .page-indicator__item.active .page-indicator__connect:after {
-  background-color: $inactive-purple;
+  background-color: $purple;
 }
 
 .page-indicator__item:first-of-type .page-indicator__connect:after {

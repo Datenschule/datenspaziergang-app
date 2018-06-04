@@ -13,6 +13,13 @@
         <p *ngFor="let content of story.content" [innerHTML]="content | safeHtml"></p>
       </div>
 
+      <div *ngIf="story.challenges" class="description box box-wide">
+        <h1 class="box__title h1" [ngClass]="{relative: inlineTitle === true}">Challenges</h1>
+        <ul>
+          <li *ngFor="let content of story.challenges" [innerHTML]="content | safeHtml"></li>
+        </ul>
+      </div>
+
       <a *ngIf="subject.entry != story.id" class="btn-back" (click)="goBack()">Zurück</a>
       <a class="btn-forward" (click)="goNext()">Weiter</a>
     </div>

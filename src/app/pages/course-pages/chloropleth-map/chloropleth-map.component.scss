@@ -11,7 +11,7 @@ $padding: 0.8rem;
 
 .map-topics {
   position: absolute;
-  top: 120px;
+  top: 100px;
   left: 1.2rem;
   z-index: 1;
   padding: 2.075em 1.2rem 0.4rem;
@@ -19,10 +19,14 @@ $padding: 0.8rem;
   border: 2px solid $purple;
   box-shadow: -6px 6px 0px 0 $purple;
 
+  @media (orientation: portrait) and (max-width: 800px) {
+    top: 120px;
+  }
+
   button {
     display: block;
     padding: 0;
-    margin-bottom: $padding;
+    margin-bottom: 0.6em;
     font-size: 18px;
     color: $purple;
     border: none;

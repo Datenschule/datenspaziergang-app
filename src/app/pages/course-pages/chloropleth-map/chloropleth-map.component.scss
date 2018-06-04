@@ -12,21 +12,18 @@ $padding: 0.8rem;
 .map-topics {
   position: absolute;
   top: 120px;
-  left: $padding;
+  left: 1.2rem;
   z-index: 1;
-  padding: 2.075em 1rem 0.4rem;
+  padding: 2.075em 1.2rem 0.4rem;
   background: $foam;
   border: 2px solid $purple;
   box-shadow: -6px 6px 0px 0 $purple;
-  @media (orientation: landscape) and (max-width: 1200px) {
-    left: 60px;
-  }
 
   button {
     display: block;
     padding: 0;
     margin-bottom: $padding;
-    font-size: 16px;
+    font-size: 18px;
     color: $purple;
     border: none;
     background: none;
@@ -39,6 +36,11 @@ $padding: 0.8rem;
     &:focus {
       outline: none;
     }
+  }
+
+  .box__title {
+    font-size: 18px;
+    padding: 0.6em 1em 0.5em;
   }
 }
 
@@ -54,13 +56,13 @@ $padding: 0.8rem;
 
   @media (orientation: portrait) and (max-width: 800px) {
     top: 80px;
-    max-width: 400px;
+    max-width: 480px;
   }
 }
 
 .map-legend {
   position: absolute;
-  bottom: 120px;
+  bottom: 100px;
   right: $padding;
   z-index: 1;
   padding: $base-padding-lite;

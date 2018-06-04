@@ -46,7 +46,7 @@ export class ChloroplethMapComponent implements OnInit {
   };
 
   mapOption: any = {
-    center: [13.4190634, 52.4945314],
+    center: [13.3090634, 52.5145314],
     zoom: [9],
     style: environment.mapboxTiles.chloropleth,
     sources: {

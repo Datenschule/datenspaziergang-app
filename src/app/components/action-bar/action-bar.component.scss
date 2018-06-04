@@ -10,6 +10,7 @@
   background: $foam;
   will-change: transform;
   display: flex;
+  overflow: hidden;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-start;

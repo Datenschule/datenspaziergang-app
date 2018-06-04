@@ -15,7 +15,7 @@ export class ChloroplethMapComponent implements OnInit {
   title: string;
   Object = Object; // workaround to access `Object` in template
 
-  defaultText: string = "Wähle einen Bezirk aus, um genaueres zu erfahren.";
+  defaultText: string = "Wähle einen Bezirk aus.";
   mapData: Object = { label: this.defaultText };
   activeMap: string;
   theMapStyles: any;
@@ -24,13 +24,13 @@ export class ChloroplethMapComponent implements OnInit {
   courseId: number;
 
   legend = [
-    ['0-10', '#1E0843'],
-    ['10-25', '#33106C'],
-    ['25-40', '#4C00C8'],
+    ['100+', '#1E0843'],
+    ['80-100', '#33106C'],
+    ['60-80', '#4C00C8'],
     ['40-60', '#8047DD'],
-    ['60-80', '#AB78FF'],
-    ['80-100', '#C8A7FF'],
-    ['100+', '#DAC4FF']
+    ['25-40', '#AB78FF'],
+    ['10-25', '#C8A7FF'],
+    ['0-10', '#DAC4FF']
   ];
 
   mapKeysToLayer: Object = {

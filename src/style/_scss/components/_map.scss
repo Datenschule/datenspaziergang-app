@@ -49,6 +49,27 @@ mgl-map {
   @include makeMarker($purple);
 }
 
+.marker--large .mapboxgl-marker:not(.mapboxgl-user-location-dot) {
+  width: 60px;
+  height: 34.64px;
+  margin: 17.32px 0;
+  font-size: 1.8rem;
+  top: -45px;
+  background-color: $purple;
+
+  &:before,
+  &:after {
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+  }
+  &:before {
+    border-bottom: 17.32px solid $purple;
+  }
+  &:after {
+    border-top: 17.32px solid $purple;
+  }
+}
+
 .mapboxgl-marker.mapboxgl-user-location-dot {
   background-color: $purple-dark;
   width: 20px;
@@ -84,6 +105,13 @@ mgl-map {
 .mapboxgl-ctrl-icon.mapboxgl-ctrl-geolocate,
 .mapboxgl-ctrl-icon.mapboxgl-ctrl-geolocate.mapboxgl-ctrl-geolocate-background{
   background-image: url(/assets/images/geolocate-inactive.svg);
+
+  &:active {
+    background-color: $purple;
+    border-color: $foam;
+    box-shadow: none;
+    background-image: url(/assets/images/geolocate-active.svg);
+  }
 }
 
 .mapboxgl-ctrl-icon.mapboxgl-ctrl-geolocate.mapboxgl-ctrl-geolocate-active {

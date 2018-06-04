@@ -1,7 +1,7 @@
 <div class="wrapper" *ngIf="station">
   <app-action-bar [name]="title" [showMenu]="true"></app-action-bar>
 
-  <div class="swipeable" [@swiping]="swipeState">
+  <div class="swipeable marker--large" [@swiping]="swipeState">
     <mgl-map
       [center]="mapOptions.center"
       [zoom]="mapOptions.zoom"

@@ -10,18 +10,18 @@
       <mgl-marker
         *ngFor="let st of course.stations"
         [lngLat]="[st.position.lon, st.position.lat]">
-        <div [ngClass]="{'inactive-marker': st.id === station.id}">{{st.id}}</div>
+        <div [ngClass]="{'inactive-marker': st.id !== station.id}">{{st.id}}</div>
       </mgl-marker>
       <mgl-layer *ngFor="let line of course.courseline let i = index;"
         id="linelayerall-{{station.id}}-{{i}}" type="line"
         [source]="{ 'type': 'geojson', 'data': { 'type': 'Feature', 'properties': {}, 'geometry': { 'type': 'LineString', 'coordinates': line }}}"
         [layout]="{ 'line-join': 'round', 'line-cap': 'round' }"
-        [paint]="{ 'line-color': '#5500C3', 'line-width': 8 }">
+        [paint]="{ 'line-color': '#a576f1', 'line-width': 8 }">
       </mgl-layer>
       <mgl-layer *ngIf="line" id="linelayer" type="line"
         [source]="{ 'type': 'geojson', 'data': { 'type': 'Feature', 'properties': {}, 'geometry': { 'type': 'LineString', 'coordinates': line}}}"
         [layout]="{ 'line-join': 'round', 'line-cap': 'round' }"
-        [paint]="{'line-color': '#a576f1', 'line-width': 8 }">
+        [paint]="{'line-color': '#5500C3', 'line-width': 8 }">
       </mgl-layer>
       <mgl-control
         mglGeolocate

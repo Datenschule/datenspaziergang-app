@@ -200,7 +200,10 @@
                 "id": 3,
                 "img": "/assets/images/datawalk.png",
                 "name": "Schulaktivitäten in Kreuzberg",
-                "content": ["Schukaktivitäten sind auch wichtig ... "],
+                "content": [
+                  "Schule ist weit mehr als nur Unterricht. Potenziale, Persönlichkeit, Selbstständigkeit und das Engagement für die Gesellschaft entwickeln sich vorwiegend außerhalb des Regelbetriebs.",
+                  "Viele Schulen bieten ihren Schüler*innen deshalb ganz unterschiedliche zukunftsfähige Projekte zu Themen wie neue Arbeitswelten, Klimaschutz oder Demokratie an, die sie gemeinsam mit Partnerorganisationen aus Politik, Zivilgesellschaft und Wirtschaft umsetzen."
+                ],
                 "prev": 2,
                 "next": 4
               },
@@ -209,16 +212,20 @@
                 "id": 4,
                 "name": "Schulaktivitäten nach Bezirken",
                 "datasource": "https://jedeschule.de/assets/data/activities.json",
-                "prev": 3
+                "prev": 3,
+                "next": 5
               },
               {
                 "type": "story",
-                "id": 3,
+                "id": 5,
                 "img": "/assets/images/datawalk.png",
                 "name": "Schulaktivitäten in Kreuzberg",
-                "content": ["Schukaktivitäten zeigen dass ... "],
-                "prev": 2,
-                "next": 4
+                "content": [
+                  "<span class='bold'>Die meisten Schulen bieten durchschnittlich acht Aktivitäten und Projekte zu mindestens vier verschiedenen Themen an.</span>",
+                  "492 der knapp 800 allgemeinbildenden Schulen in Berlin kommunizieren ihre Projekte und Aktivitäten an die Senatsverwaltung für Bildung, Jugend und Familie. Insgesamt bieten sie über 3.850 Aktivitäten zu den Themen Umwelt, Sport, Musik und Tanz, Gesellschaft und Partizipation, Literatur und Medien, Handwerk, Kunst und Kultur, Naturwissenschaft und Technik, Berufsorientierung und Sprachen an.",
+                  "<img style='display: block; margin: auto; max-width: 100%' src='/assets/images/schulaktivitaeten.png'/>"
+                ],
+                "prev": 4
               }
             ]
           }
@@ -238,8 +245,8 @@
         "subjects": [
           {
             "id": 0,
-            "name": "sozialer Wohnungsbau",
-            "description": "Kurzer Text zu sozialem Wohnungsbau und Mietpreisentwicklung Berlin",
+            "name": "Mietpreisentwicklung",
+            "description": "Ob in Berlin-Mitte, München-Schwabing oder im Frankfurter Westend: Die Mieten in Großstädten steigen seit Jahren. Was sagt die Politik dazu und wie ist die Meinung der verschiedenen Parteien im Bundestag?",
             "entry": 0,
             "next": 1,
             "pages": [
@@ -247,7 +254,12 @@
                 "type": "story",
                 "id": 0,
                 "img": "/assets/images/datawalk.png",
-                "content": ["Hintergrundtext sozialer Wohnungsbau"],
+                "content":
+                  [
+                    "In keiner deutschen Großstadt sind die Mieten mittlerweile für Normalverdiener so unerschwinglich wie in Berlin. Das hat eine eigene Analyse der Angebotsmieten in 79 Städten mit mehr als 100.000 Einwohnern ergeben. Untersucht wurden deren 1375 Postleitzahlbereiche. Die Auswertung zeigt damit neben den mittleren Preisen auch die Mietpreisverteilung innerhalb der Stadtgebiete auf – als Mieten-Skyline.",
+                    "In jedem zehnten der untersuchten Postleitzahlgebiete können sich Durchschnittsverdiener das Wohnen eigentlich nicht mehr leisten. Denn: Der Mieter müsste dort mehr als ein Drittel seines Einkommens für die Warmmiete aufwenden. Dabei sind Stromkosten noch nicht enthalten. Die meisten dieser kaum noch bezahlbaren Viertel liegen in Berlin – in 53 Postleitzahlbereichen. Auch die Top 5 der hierzulande für Durchschnittsverdiener unerschwinglichen Postleitzahlbereiche liegen in der Hauptstadt.",
+                    "Was sagt eigentlich die Politik dazu? Finde es im offenen Parlament heraus"
+                  ],
                 "name": "sozialer Wohnungsbau",
                 "next": 1
               },
@@ -258,7 +270,7 @@
                 "content": [
                   "OffenesParlament.de macht Bundestagsdebatten transparent und nachvollziehbar. Über die Plattform kannst du  alle 245 Plenarprotokolle des Bundestags der letzten Wahlperiode durchsuchen - z.B. nach Ehe für Alle, Videoüberwachung oder Kriminalität. Dadurch hast du die Möglichkeit, die Arbeit von Abgeordneten und ihre Positionen zu überprüfen.",
                   "Der Bundestag veröffentlicht regelmäßig Sitzungsprotokolle zu aktuellen Debatten. Seit Oktober 2017 werden die Dokumente als offene Daten zur freien Nutzung bereitgestellt. Sie können von Interessierten analysiert werden und finden Verwendung in gemeinnützigen Projekten, wie OffenesParlament.de.",
-                  "Bundestagsdebatte: Videos an Bahnhöfen - Sicherheit vs. Überwachung Schau rein: Was findest du über U-Bahn-Kriminalität am Kotti auf OffenesParlament.de heraus?"
+                  "Bundestagsdebatte: Videos an Bahnhöfen - Sicherheit vs. Überwachung Schau rein: Was findest du über Mietpreisentwicklungsdebatten auf OffenesParlament.de heraus?"
                 ],
                 "name": "Was ist OffenesParlament.de?",
                 "prev": 0,
@@ -268,7 +280,7 @@
                 "type": "iframe",
                 "id": 2,
                 "name": "Offenes Parlament",
-                "link": "https://offenesparlament.de/protokoll/#!/216#3",
+                "link": "https://offenesparlament.de/protokoll/#!/161#10",
                 "prev": 1,
                 "next": 3
               },
@@ -276,11 +288,11 @@
                 "id": 3,
                 "type": "quiz",
                 "name": "Wer hats gesagt?",
-                "question": "Kameras leisten einen entscheidenden Beitrag zu mehr Sicherheit. Sie helfen, Straftäter zu identifizieren, festzunehmen und zu bestrafen. Sie verhindern auch Straftaten.",
+                "question": "Bezahlbarer Wohnraum, Demografie, Integration und Klimaschutz gehören zusammen. Wir können dieser Vielschichtigkeit nur mit einem breiten Spektrum an Maßnahmen gerecht werden.",
                 "answers": [
-                  "Thomas de Maiziere, CDU",
-                  "Horst Seehofer, CDU/CSU",
-                  "Sigmar Gabriel, SPD"
+                  "Barbara Hendricks, SPD",
+                  "Konstantin von Notz, Bündnis '90 die Grünen",
+                  "Caren Lay, die Linke"
                 ],
                 "correct": 0,
                 "prev": 2,
@@ -290,10 +302,10 @@
                 "id": 4,
                 "type": "quiz",
                 "name": "Wer hats gesagt?",
-                "question": "Das Einzige, was hier passiert, ist, dass Sie gewaltige Datenberge schaffen, von Flensburg bis Rosenheim, um im Fall eines Attentates ein paar mehr Bilder vom Tatort zu bekommen. Und am Ende dauert die Auswertung - wie im Fall Amri - womöglich wochenlang. Ja wen wollen Sie mit diesem Placebo eigentlich beruhigen, meine Damen und Herren?",
+                "question": "Was den sozialen Wohnungsbau betrifft, wäre es mir lieber gewesen, Sie hätten die Schuldigen klar benannt. Der Bund hat die Länder jahrelang finanziert und das Geld für Wohnungsbau brav überwiesen, aber die Länder haben damit ihre Haushalte ausgeglichen.",
                 "answers": [
-                  "Irene Mihalic, Grüne",
-                  "Horst Seehofer, CDU/CSU",
+                  "Dr. Georg Nüßlein, CDU/CSU",
+                  "Caren Lay, die Linke",
                   "Sigmar Gabriel, SPD"
                 ],
                 "correct": 0,
@@ -304,11 +316,11 @@
                 "id": 5,
                 "type": "quiz",
                 "name": "Wer hats gesagt?",
-                "question": "Das Gesetz wird also nichts besser machen. Doch was macht das Gesetz schlimmer? Videoüberwachung ist ein intensiver Eingriff. Sie beeinträchtigt alle, die den betroffenen Raum betreten",
+                "question": "Mein Gott, was glauben Sie eigentlich, für wie doof Sie die Leute verkaufen können? Da bin ich doch fassungslos; denn jeder von uns, der bei den wohnungspolitischen Debatten dabei war, erinnert sich, wie Ihre Einlassungen zur Mietpreisbremse waren. Sie haben das Ganze blockiert - ohne Ende, bis es nicht mehr ging",
                 "answers": [
-                  "Martina Renner, Linke",
-                  "Horst Seehofer, CDU/CSU",
-                  "Sigmar Gabriel, SPD"
+                  "Britta Haßelmann, Bündnis '90 die Grünen",
+                  "Gregor Gysi, die Linke",
+                  "Michael Groß, SPD"
                 ],
                 "correct": 0,
                 "prev": 4,
@@ -318,8 +330,8 @@
                 "type": "story",
                 "id": 6,
                 "img": "/assets/images/datawalk.png",
-                "content": ["Der U-Bahnhof Kottbusser Tor gehört zu den Stationen mit den höchsten Fahrgastzahlen, rund XX Menschen steigen hier pro Tag ein oder aus. Der Kotti gehört aber auch zu den Bahnhöfen mit der höchsten Kriminalität: Etwa 165 Gewalttaten wurden hier im Jahr 2016 begangen. Im gesamten Berliner Nahverkehr kam es im selben Jahr nach Angaben der Berliner Verkehrsbetriebe (BVG) zu 24.477 Straftaten, am häufigsten davon Taschendiebstähle (insgesamt 13.869 Fälle).<br /><br/>Und wie reagiert die Politik auf die Kriminalität an den U-Bahnhöfen? Das kann man bei OffenesParlament.de nachverfolgen."],
-                "name": "Kriminalität",
+                "content": ["Abschlusstext Mietpreise"],
+                "name": "Mietpreisentwicklung",
                 "prev": 5
               }
             ]
@@ -373,7 +385,7 @@
                 "id": 3,
                 "prev": 2,
                 "img": "/assets/images/datawalk.png",
-                "content": ["Die Chronik der besetzten Häuser wurde vom Projekt berlin.besetzt aufbereitet und visualisiert. Da es keine amtliche Statistik zu Häuserbesetzungen gibt stützten sich die Daten in erster Linie auf Szenepublikationen und Zeitungsartikel. Auf der Karte werden verschiedene Hausbesetzungen seit den 70er Jahren dargestellt. Was war die kürzeste Besetzungszeit, finde es heraus!"],
+                "content": ["Abschlusstext Hausbesetzungen"],
                 "name": "Berlin besetzt"
               }
             ]

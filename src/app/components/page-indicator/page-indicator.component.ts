@@ -27,7 +27,7 @@ export class PageIndicatorComponent implements OnInit {
 
   populateDisplayableList() {
     this.displayableList = this.stations.map((x) => {
-      let display_id = x.id + 1;
+      let display_id = x.id;
       let active = (x.id === this.active);
       let link = `/point-to-point/${this.course}/${x.id}`;
       return {id: x.id,

@@ -23,7 +23,7 @@
       <mgl-marker
   *ngFor="let station of activeCourse.stations"
   [lngLat]="[station.position.lon, station.position.lat]">
-      {{station.id + 1}}
+      {{station.id}}
       </mgl-marker>
       <mgl-control
         mglGeolocate

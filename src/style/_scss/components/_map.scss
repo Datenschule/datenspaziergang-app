@@ -46,7 +46,7 @@ mgl-map {
 }
 
 .mapboxgl-marker:not(.mapboxgl-user-location-dot) {
-  @include makeMarker($inactive-purple);
+  @include makeMarker($purple);
 }
 
 .marker--large .mapboxgl-marker:not(.mapboxgl-user-location-dot) {
@@ -123,7 +123,7 @@ mgl-map {
 
 
 .inactive-marker {
-  @include makeMarker($purple);
+  @include makeMarker($inactive-purple);
   top: -12px; // because of workaround-nesting
 }
 

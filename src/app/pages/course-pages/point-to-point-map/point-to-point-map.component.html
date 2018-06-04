@@ -10,7 +10,7 @@
       <mgl-marker
         *ngFor="let st of course.stations"
         [lngLat]="[st.position.lon, st.position.lat]">
-        <div [ngClass]="{'inactive-marker': st.id === station.id}">{{st.id}}</div>
+        <div [ngClass]="{'inactive-marker': st.id !== station.id}">{{st.id}}</div>
       </mgl-marker>
       <mgl-layer *ngFor="let line of course.courseline let i = index;"
         id="linelayerall-{{station.id}}-{{i}}" type="line"

@@ -7,13 +7,13 @@
   <div class="story-container">
 
     <div class="container">
-      <div class="description box box-wide" *ngFor="let content of story.content; let i = index">
-        <h1 *ngIf="i == 0" class="box__title h1"
+      <div class="description box box-wide">
+        <h1 class="box__title h1"
           [ngClass]="{relative: inlineTitle === true}">{{title}}</h1>
-        <p [innerHTML]="content | safeHtml"></p>
+        <p *ngFor="let content of story.content" [innerHTML]="content | safeHtml"></p>
       </div>
 
-      <a class="btn-back" (click)="goBack()">Zurück</a>
+      <a *ngIf="subject.entry != story.id" class="btn-back" (click)="goBack()">Zurück</a>
       <a class="btn-forward" (click)="goNext()">Weiter</a>
     </div>
   </div>

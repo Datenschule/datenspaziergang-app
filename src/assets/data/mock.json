@@ -5,7 +5,7 @@
     "location": "Berlin-Kreuzberg",
     "preview_image": "/assets/images/datawalk.png",
     "description": "Berlin-Kreuzberg ist bunt und politisch: Der öffentliche Raum ist geprägt von zahlreichen Stories - von Hausbesetzungen, über Barrierefreiheit bis hin zu Baumpolitik. Aber welche Daten erzählen die Geschichte des Bezirks? Und wie gestalten Menschen den öffentlichen Raum durch digitale Mittel? An insgesamt 5 Stationen zu den Themen Barrierefreiheit, Bildung und Umwelt lernst du neue Perspektiven auf das Berliner Szeneviertel kennen. Wir zeigen dir bei dieser Tour die spannendsten Orte in Kreuzberg und was du in offenen Daten alles über sie herausfinden kannst.<br /><br />Auf geht’s!",
-    "entry": 0,
+    "entry": 1,
     "courseline": [
       [[13.425756,52.49896,39.5],[13.426009,52.498884,39.3],[13.426119,52.499008,39.2],[13.426141,52.499033,39.1],[13.426205,52.499105,39.1],[13.426545,52.499114,39.1],[13.426836,52.499115,38.9],[13.427015,52.49906,38.8],[13.427306,52.498968,38.7],[13.427484,52.49891,38.6],[13.429622,52.49817,38.9],[13.430647,52.497825,39.9],[13.431401,52.497582,40.4],[13.431343,52.497611,40.5],[13.431401,52.497582,40],[13.431728,52.497456,38.9],[13.431901,52.497391,38.5],[13.432055,52.497331,38.3],[13.432165,52.497297,38.1],[13.433248,52.496939,37.4],[13.434038,52.496678,36.3],[13.434433,52.496543,36.4],[13.434573,52.496495,36.4],[13.434706,52.496447,36.5],[13.435173,52.496287,36.7],[13.435588,52.496146,36.9],[13.436687,52.495771,38],[13.4368,52.49589,37.5],[13.436837,52.495898,37.1],[13.4368,52.49589,33],[13.436851,52.495926,33],[13.436953,52.496101,33],[13.436902,52.496148,33],[13.437339,52.496571,33]],
       [[13.437327,52.496559,33],[13.437377,52.496608,33],[13.43748,52.496688,34.7],[13.437769,52.49687,36.3],[13.438079,52.496984,37.1],[13.438185,52.4971,37.3],[13.438339,52.497253,37.6],[13.439844,52.498772,40.3],[13.440316,52.499249,40.8],[13.439246,52.499688,40.3],[13.438327,52.50007,39.4],[13.438227,52.500111,39.2],[13.438132,52.50015,39],[13.438001,52.500204,38.8],[13.437834,52.500179,38.7],[13.437727,52.500163,38.5],[13.436577,52.499992,37.5],[13.435728,52.499867,37.5]],
@@ -14,14 +14,13 @@
     ],
     "stations": [
       {
-        "id": 0,
+        "id": 1,
         "name": "Restaurant Morgenland",
         "position": {
           "lat": 52.49896,
           "lon": 13.425756
         },
-        "entry": 0,
-        "next": 1,
+        "next": 2,
         "subjects": [
           {
             "id": 1,
@@ -81,14 +80,14 @@
         ]
       },
       {
-        "id": 1,
+        "id": 2,
         "name": "Görlitzer Park",
         "position": {
           "lat": 52.496559,
           "lon": 13.437327
         },
         "prev": 0,
-        "next": 2,
+        "next": 3,
         "entry": 0,
         "line": 0,
         "subjects": [
@@ -144,14 +143,14 @@
         ]
       },
       {
-        "id": 2,
+        "id": 3,
         "name": "Refik-Veseli-Schule",
         "position": {
           "lat": 52.499867,
           "lon": 13.435728
         },
         "prev": 1,
-        "next": 3,
+        "next": 4,
         "entry": 0,
         "line": 1,
         "subjects": [
@@ -232,10 +231,10 @@
         ]
       },
       {
-        "id": 3,
+        "id": 4,
         "name": "Lausitzer Platz",
         "prev": 2,
-        "next": 4,
+        "next": 5,
         "line": 2,
         "position": {
           "lat": 52.499745,
@@ -339,7 +338,7 @@
         ]
       },
       {
-        "id": 4,
+        "id": 5,
         "name": "Bethanien Kloster",
         "prev": 3,
         "position": {

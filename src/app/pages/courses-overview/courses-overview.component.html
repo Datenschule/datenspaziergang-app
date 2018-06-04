@@ -23,7 +23,7 @@
       <mgl-marker
   *ngFor="let station of activeCourse.stations"
   [lngLat]="[station.position.lon, station.position.lat]">
-      {{station.id + 1}}
+      {{station.id}}
       </mgl-marker>
       <mgl-control
         mglGeolocate
@@ -44,7 +44,7 @@
       <p [innerHTML]="activeCourse.description | safeHtml"></p>
       <div class="navigation">
       <!--><a class="btn" routerLink="">&lt;</a><-->
-      <a class="btn" routerLink="/point-to-point/{{activeCourse.id}}/{{activeCourse.entry}}">Starten</a>
+      <a class="btn" routerLink="/point-to-point/{{activeCourse.id}}/{{activeCourse.entry}}">Tour starten</a>
       <!--><a class="btn" routerLink="">&gt;</a><-->
             </div>
           </div>

@@ -78,10 +78,6 @@ export class SubjectsComponent implements OnInit {
     const course_id = +this.route.snapshot.paramMap.get('course');
     const station_id = +this.route.snapshot.paramMap.get('station');
 
-    this.mapboxService.getRoute().subscribe((res) => {
-      console.log(res);
-    });
-
     this.coursesService.getCourse(course_id).subscribe((course) => {
 
       this.course = course;
@@ -98,7 +94,6 @@ export class SubjectsComponent implements OnInit {
       let newCenter = turf.transformTranslate(oldCenter, -0.2, 90)
       this.mapOptions.center = newCenter.geometry.coordinates;
       this.mapOptions.marker = [this.station.position.lon, this.station.position.lat];
-      console.log(this.station);
       this.title = `${course.name}: ${this.station.id + 1}. ${this.station.name}`;
 
       //

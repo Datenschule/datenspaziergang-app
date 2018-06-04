@@ -44,6 +44,7 @@ export class StoryComponent implements OnInit {
   station: Station;
   courseId: number;
   actionbarTitle: string;
+  subject: any;
   @ViewChild("wrapper") wrapper: ElementRef;
 
   constructor(private coursesService: CoursesService,
@@ -59,21 +60,16 @@ export class StoryComponent implements OnInit {
       const subject_id = +params['subject'];
       const page_id = +params['page'];
 
-      // this.state = 'unenter';
-      // this.state = "enter";
-
-      //this.coursesService.getCourse(course_id)
       this.coursesService.getCourse(course_id).subscribe((course) => {
         this.station = course.stations.find((station) => station.id === station_id);
+        this.subject = this.station.subjects.find((subject) => subject.id === subject_id);
         this.actionbarTitle = `${this.station.id + 1}. ${this.station.name}`;
       });
 
       this.coursesService.getPage(course_id, station_id, subject_id, page_id).subscribe((page) => {
-        console.log(page);
         this.title = `${page.name}`;
         if (!page.prev) {
           this.state = 'enter';
-          console.log('set state to enter');
         }
         this.courseId = course_id;
         this.story = page;

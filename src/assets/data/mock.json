@@ -48,9 +48,11 @@
                 "content":
                   [
                     "Die Wheelmap ist eine interaktive Karte zum Suchen und Finden rollstuhlgerechter Orte. Dabei kann jede*r Nutzer*in selbst öffentlich zugängliche Orte wie U-Bahn-Stationen, Cafés oder Behörden entsprechend ihrer Rollstuhlgerechtigkeit markieren – weltweit.",
-                    "Dafür nutzt Wheelmap.org ein einfaches Ampelsystem: Grün steht für voll rollstuhlgerechte Orte, d.h. stufenlos frei zugänglich. Gelb kennzeichnet nur teilweise zugängliche Räume und rot zeigt nicht rollstuhlgerechte Orte an. Bei allen grauen Felder ist der Status noch unbekannt. Die Wheelmap verschafft damit Menschen, die auf Barrierefreiheit angewiesen sind, einen guten Überblick zu rollstuhlgerechten Orten in der Stadt und mehr Planungssicherheit auf ihren Wegen. Politisch gibt es hier aber noch eine Menge zu tun!",
-                    "Wie rollstuhlgerecht ist die Gegend rund um den Görlitzer Bahnhof Finde es heraus!"
+                    "Dafür nutzt Wheelmap.org ein einfaches Ampelsystem: Grün steht für voll rollstuhlgerechte Orte, d.h. stufenlos frei zugänglich. Gelb kennzeichnet nur teilweise zugängliche Räume und rot zeigt nicht rollstuhlgerechte Orte an. Bei allen grauen Felder ist der Status noch unbekannt. Die Wheelmap verschafft damit Menschen, die auf Barrierefreiheit angewiesen sind, einen guten Überblick zu rollstuhlgerechten Orten in der Stadt und mehr Planungssicherheit auf ihren Wegen. Politisch gibt es hier aber noch eine Menge zu tun!"
                   ],
+                "challenges": [
+                  "Wie rollstuhlgerecht ist die Gegend rund um den Görlitzer Bahnhof Finde es heraus!"
+                ],
                 "name": "Was ist die Wheelmap?",
                 "next": 8,
                 "prev": 6
@@ -114,8 +116,11 @@
                 "id": 1,
                 "img": "/assets/images/datawalk.png",
                 "content": [
-                  "Die Baumkarte ist ein ehrenamtliches Communityprojekt von Code for Germany, das vom OK Lab Berlin entwickelt wurde. Auf einer interaktiven Stadtkarte werden alle registrierten Bäume in Berlin angezeigt. Zu jedem einzelnen Baum gibt es umfangreiche Informationen wie Gattung, Alter, Höhe und Pflanzjahr. Weiterhin kann man nach Straßen- und Anlagebäumen, Kastanien und Birken filtern. Damit bietet die Street Trees Map einen guten Überblick über den Bestand an Bäumen im gesamten Stadtgebiet und ist ein tolles Format die Hauptstadt einmal aus einer anderen Perspektive kennenzulernen.",
-                  "<span class='bold underline'>Deine Challenges:</span><br /><br />Welcher ist der älteste Baum im Görlitzer Park den du findest? Suche ihn auf der Karte!<br />Wie breit ist der Baum unter dem wir gerade stehen?"
+                  "Die Baumkarte ist ein ehrenamtliches Communityprojekt von Code for Germany, das vom OK Lab Berlin entwickelt wurde. Auf einer interaktiven Stadtkarte werden alle registrierten Bäume in Berlin angezeigt. Zu jedem einzelnen Baum gibt es umfangreiche Informationen wie Gattung, Alter, Höhe und Pflanzjahr. Weiterhin kann man nach Straßen- und Anlagebäumen, Kastanien und Birken filtern. Damit bietet die Street Trees Map einen guten Überblick über den Bestand an Bäumen im gesamten Stadtgebiet und ist ein tolles Format die Hauptstadt einmal aus einer anderen Perspektive kennenzulernen."
+                ],
+                "challenges": [
+                  "Welcher ist der älteste Baum im Görlitzer Park den du findest? Suche ihn auf der Karte!",
+                  "Wie breit ist der Baum unter dem wir gerade stehen?"
                 ],
                 "name": "Was ist die Street Baumkarte?",
                 "next": 2,

@@ -7,6 +7,7 @@ export class Station {
   pages: any[];
   entry: number;
   subjects: Subject[];
+  desciption: string;
 }
 
 export class StoryPage {

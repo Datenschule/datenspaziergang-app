@@ -38,7 +38,7 @@
         <div class="box">
           <h1 class="box__title h1"
             [ngClass]="{relative: stationNameInline === true}">{{station.id}}. {{station.name}}</h1>
-          <p [innerHTML]="course.description | safeHtml"></p>
+          <p [innerHTML]="station.description | safeHtml"></p>
           <a class="btn" id="next" routerLink="{{nextLink}}">Angekommen</a>
         </div>
       </div>

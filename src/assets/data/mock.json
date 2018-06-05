@@ -60,7 +60,7 @@
               {
                 "type": "iframe",
                 "id": 8,
-                "name": "Wheelmap",
+                "name": "Projekt: Wheelmap",
                 "link": "https://wheelmap.org/beta#?lat=52.4992599&lon=13.4278898&zoom=18",
                 "prev": 7
               },
@@ -129,7 +129,7 @@
               {
                 "id": 3,
                 "type": "iframe",
-                "name": "StreetTrees Map",
+                "name": "Projekt: StreetTrees Map",
                 "link": "https://app.okfn.de/trees-map/?lat=52.49704785672787&lon=13.439691066741943&zoom=16",
                 "prev": 2,
                 "next": 4
@@ -194,7 +194,7 @@
               {
                 "type": "iframe",
                 "id": 2,
-                "name": "Jedeschule.de",
+                "name": "Projekt: Jedeschule.de",
                 "link": "https://jedeschule.de/schulen/#!?lat=52.50085414006978&lng=13.433167221955955&zoom=17",
                 "prev": 1,
                 "next": 3
@@ -283,8 +283,8 @@
               {
                 "type": "iframe",
                 "id": 2,
-                "name": "Offenes Parlament",
-                "link": "https://offenesparlament.de/protokoll/#!/161#10",
+                "name": "Projekt: Offenes Parlament",
+                "link": "https://offenesparlament.de/protokoll/#!/13#top-zp-1-aktuelle-stunde-zur-steuerhinterziehung",
                 "prev": 1,
                 "next": 3
               },
@@ -379,7 +379,7 @@
               {
                 "id": 2,
                 "type": "iframe",
-                "name": "berlin.besetzt",
+                "name": "Projekt: berlin besetzt",
                 "link": "https://app.okfn.de/berlin-besetzt/index.html#",
                 "prev": 1,
                 "next": 3

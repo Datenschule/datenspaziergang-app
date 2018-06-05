@@ -14,7 +14,7 @@ $padding: 0.8rem;
   top: 100px;
   left: 1.2rem;
   z-index: 1;
-  padding: 2.075em 1.2rem 0.4rem;
+  padding: 2.075em 1.2rem 0.4rem 0.6em;
   background: $foam;
   border: 2px solid $purple;
   box-shadow: -6px 6px 0px 0 $purple;
@@ -26,6 +26,7 @@ $padding: 0.8rem;
   button {
     display: block;
     padding: 0;
+    padding-left: 1.2em;
     margin-bottom: 0.6em;
     font-size: 18px;
     color: $purple;
@@ -36,6 +37,12 @@ $padding: 0.8rem;
     &.active {
       color: $purple;
       text-decoration: underline;
+    }
+    &.active {
+      background-image: url(/assets/images/triangle-arrow-right.svg);
+      background-repeat: no-repeat;
+      background-position: -18px -12px;
+      background-size: 49px;
     }
     &:focus {
       outline: none;
@@ -92,4 +99,7 @@ small {
 
 .map__title {
   margin: .2em 0;
+  line-height: 1.1;
+  font-size: 18px;
+  padding: 0.6em 1em 0.5em;
 }

@@ -94,7 +94,7 @@ export class SubjectsComponent implements OnInit {
       let newCenter = turf.transformTranslate(oldCenter, -0.2, 90)
       this.mapOptions.center = newCenter.geometry.coordinates;
       this.mapOptions.marker = [this.station.position.lon, this.station.position.lat];
-      this.title = `${course.name}: ${this.station.id + 1}. ${this.station.name}`;
+      this.title = `${course.name}: ${this.station.id}. ${this.station.name}`;
 
       //
       // this.nextLink = `/${firstpage['type']}/${this.course.id}/${this.station.id}/${firstpage.id}`;

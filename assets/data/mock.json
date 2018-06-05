@@ -15,7 +15,8 @@
     "stations": [
       {
         "id": 1,
-        "name": "Restaurant Morgenland",
+        "name": "(U) Görlitzer Bahnhof",
+        "description": "Das Restaurant Morgenland ist der Startpunkt unseres Spaziergangs. Gleich gegenüber liegt der Görlitzer Bahnhof, wo die beiden U-Bahn-Linien U1 und U3 sowie die Buslinie M29 aufeinander treffen und somit wichtige Teile der Hauptstadt miteinander verbinden. Aber gilt das auch für Rollstuhlfahrer*innen und andere Menschen, die auf einen barrierefreien Zugang zu öffentlichen Verkehrsmitteln und Orte angewiesen sind?",
         "position": {
           "lat": 52.49896,
           "lon": 13.425756
@@ -25,37 +26,25 @@
           {
             "id": 1,
             "name": "Barrierefreiheit",
-            "description": "Das Restaurant Morgenland ist der Startpunkt unseres Spaziergangs.. Ganz in der Nähe liegt auch der Görlitzer Bahnhof, der die beiden Linien U1 und U3 sowie die Buslinie M29 miteinander verbindet, die vom Roseneck über die Kochstraße nach Neukölln zum Hermannplatz verkehrt.",
-            "entry": 6,
+            "description": "Viele der 173 U-Bahnhöfe der Berliner Verkehrsbetriebe sind inzwischen barrierefrei, sodass sie z.B. auch für Rollstuhlfahrer*innen problemlos benutzbar sind. Für die Haltestelle Görlitzer Bahnhof gilt dies leider nicht.<br/><br />Aber welche Bahnhöfe genau sind barrierefrei? Dazu gibt die Wheelmap Auskunft.",
+            "entry": 7,
             "line": 1,
             "pages": [
-              {
-                "type": "story",
-                "id": 6,
-                "img": "/assets/images/datawalk.png",
-                "content": [
-                  "Viele der Bahnhöfe der Berliner Verkehrsbetriebe sind inzwischen barrierefrei, sodass sie auch für z.B. Rollstuhlfahrer problemlos benutzbar sind. Für den U-Bahnhof Görlitzer Park gilt dies leider nicht. Aber wie sieht es denn um den Bahnhof herum aus? Finde es heraus",
-                  "Etwa 10 Prozent der Menschen in Deutschland sind auf Barrierefreiheit zwingend angewiesen. Dazu gehört auch der freie Zugang zu Bussen und Bahnen. Von den 173 Berliner U-Bahnhöfen ist der Großteil durch den Einbau von Aufzügen oder Rampen stufenlos erreichbar. Außerdem gibt es nach Angaben der BVG 100 Bahnhöfe die mit Blindenleitsystemen ausgestattet sind. Für Menschen, die in ihrer Barrierefreiheit eingeschränkt sind, ist es aber wichtig zu wissen, wo sie in öffentliche Verkehrsmittel ein-, um- und aussteigen können - und wo nicht.",
-                  "Aber welche Bahnhöfe genau sind barrierefrei? Dazu gibt die Wheelmap Auskunft."
-                ],
-                "name": "Barrierefreiheit",
-                "next": 7
-              },
               {
                 "type": "story",
                 "id": 7,
                 "img": "/assets/images/datawalk.png",
                 "content":
                   [
-                    "Die Wheelmap ist eine interaktive Karte zum Suchen und Finden rollstuhlgerechter Orte. Dabei kann jede*r Nutzer*in selbst öffentlich zugängliche Orte wie U-Bahn-Stationen, Cafés oder Behörden entsprechend ihrer Rollstuhlgerechtigkeit markieren – weltweit.",
-                    "Dafür nutzt Wheelmap.org ein einfaches Ampelsystem: Grün steht für voll rollstuhlgerechte Orte, d.h. stufenlos frei zugänglich. Gelb kennzeichnet nur teilweise zugängliche Räume und rot zeigt nicht rollstuhlgerechte Orte an. Bei allen grauen Felder ist der Status noch unbekannt. Die Wheelmap verschafft damit Menschen, die auf Barrierefreiheit angewiesen sind, einen guten Überblick zu rollstuhlgerechten Orten in der Stadt und mehr Planungssicherheit auf ihren Wegen. Politisch gibt es hier aber noch eine Menge zu tun!"
+                    "Die Wheelmap ist eine interaktive Karte zum Suchen und Finden rollstuhlgerechter Orte. Dabei kann jede*r Nutzer*in selbst öffentlich zugängliche Orte wie U-Bahn-Stationen, Cafés oder Behörden entsprechend ihrer Rollstuhlgerechtigkeit markieren – weltweit. Dafür nutzt Wheelmap.org ein einfaches Ampelsystem.",
+                    "<img src='/assets/images/kreuzberg/wheelmap_rating.png' />",
+                    "Die Wheelmap verschafft damit Menschen, die auf Barrierefreiheit angewiesen sind, einen guten Überblick zu rollstuhlgerechten Orten in der Stadt und mehr Planungssicherheit auf ihren Wegen. Politisch gibt es hier aber noch eine Menge zu tun!"
                   ],
                 "challenges": [
                   "Wie rollstuhlgerecht ist die Gegend rund um den Görlitzer Bahnhof Finde es heraus!"
                 ],
                 "name": "Was ist die Wheelmap?",
-                "next": 8,
-                "prev": 6
+                "next": 8
               },
               {
                 "type": "iframe",
@@ -63,19 +52,6 @@
                 "name": "Projekt: Wheelmap",
                 "link": "https://wheelmap.org/beta#?lat=52.4992599&lon=13.4278898&zoom=18",
                 "prev": 7
-              },
-              {
-                "type": "story",
-                "id": 6,
-                "img": "/assets/images/datawalk.png",
-                "content": [
-                  "Die Wheelmap zeigt, dass viele öffentliche Orte, wie Cafés, U-Bahnhöfe, Restaurant, Bankautomaten etc. für viele Menschen nicht barrierefrei zugänglich sind.",
-                  "Von den drei U-Bahn-Eingängen am Görlitzer Bahnhof ist kein Zugang grün markiert und damit voll rollstuhlgerecht, über alle anderen Eingänge ist der Bahnsteig nicht stufenlos zugänglich. Rollstuhlfahrer*innen oder auch Personen, die eine Gehhilfe o.ä. benutzen, erreichen den Bahnsteig nur über einen Aufzug - der aber nicht immer funktioniert. Aktuelle Informationen zu Aufzugsstörungen stellt die BVG bereit. Auch die meisten Restaurants um den Bahnhof herum sind nicht stufenlos erreichbar. Das zeigt: Es gibt noch viel zu tun für mehr Barrierefreiheit!",
-                  "Weiter geht’s! Zur nächsten Station unseres Datenspaziergangs"
-
-                ],
-                "name": "Barrierefreiheit",
-                "next": 7
               }
             ]
           }
@@ -84,6 +60,7 @@
       {
         "id": 2,
         "name": "Görlitzer Park",
+        "description": "Wir gehen sind nun weiter zur Station 2 unserer Kreuzberg-Tour - dem Görlitzer Park, auch “Görli” genannt. Der “Görli” ist einer von ca. 2.500 öffentlichen Grünanlagen in Berlin. Damit gehört die deutsche Hauptstadt zu den grünsten Städten in Europa! Was man über Bäume in offenen Daten erfahren kann, zeigen wir dir hier.",
         "position": {
           "lat": 52.496559,
           "lon": 13.437327
@@ -96,35 +73,22 @@
           {
             "id": 0,
             "name": "Umwelt/Bäume",
-            "description": "Wir sind nun an Station 2 unserer Kreuzberg-Tour angekommen - dem Görlitzer Park, auch “Görli” genannt. Der “Görli” ist einer von ca. 2.500 öffentlichen Grünanlagen in Berlin. Damit gehört die deutsche Hauptstadt zu den grünsten Städten in Europa! Was man über Bäume in offenen Daten erfahren kann, zeigen wir dir hier.",
-            "entry": 0,
+            "description": "Bäume haben mehr  mit Politik zu tun, als man zunächst vielleicht denkt: Es gibt eine Menge von Vorschriften und Maßnahmen, die sich ausschließlich mit den rund 438.000 Straßenbäumen in Berlin beschäftigen. Wusstest du z.B. dass der Abstand von der Mitte eines Baumstamms bis zur Fahrbahn mindestens 80 cm betragen muss?<br /><br />Was man noch alles über Bäume in Berlin erfahren kann, zeigt die <span class='bold'>Street Trees Map</span>.",
+            "entry": 1,
             "pages": [
-              {
-                "type": "story",
-                "id": 0,
-                "img": "/assets/images/datawalk.png",
-                "content":
-                [
-                  "Zunächst denkt man vielleicht nicht, dass Bäume viel mit Politik zu tun haben. Das ändert sich aber, wenn z.B. alte Bäume in der eigenen Umgebung gefällt werden sollen - oft ist der Protest der Anwohner*innen groß. Es gibt aber auch eine Menge von Vorschriften, Maßnahmen und Erhebungen, die sich ausschließlich mit den rund 438.000 Straßenbäumen in Berlin beschäftigen. Wusstest du z.B. dass etwa 62% der Ahorn-Bäume geschädigt sind? Oder dass der Abstand von der Mitte eines Baumstamms bis zur Fahrbahn mindestens 80 cm betragen muss?",
-                  "In Baumdaten gibt es viele weitere spannende Fakten zu entdecken."
-                ],
-                "name": "Umwelt erleben - Baumpolitik",
-                "next": 1
-              },
               {
                 "type": "story",
                 "id": 1,
                 "img": "/assets/images/datawalk.png",
                 "content": [
-                  "Die Baumkarte ist ein ehrenamtliches Communityprojekt von Code for Germany, das vom OK Lab Berlin entwickelt wurde. Auf einer interaktiven Stadtkarte werden alle registrierten Bäume in Berlin angezeigt. Zu jedem einzelnen Baum gibt es umfangreiche Informationen wie Gattung, Alter, Höhe und Pflanzjahr. Weiterhin kann man nach Straßen- und Anlagebäumen, Kastanien und Birken filtern. Damit bietet die Street Trees Map einen guten Überblick über den Bestand an Bäumen im gesamten Stadtgebiet und ist ein tolles Format die Hauptstadt einmal aus einer anderen Perspektive kennenzulernen."
+                  "Die Street Trees Map ist ein ehrenamtliches Communityprojekt von Code for Germany, das vom OK Lab Berlin entwickelt wurde. Auf einer interaktiven Stadtkarte werden alle registrierten Bäume in Berlin angezeigt. Zu jedem einzelnen Baum gibt es umfangreiche Informationen wie Gattung, Alter, Höhe und Pflanzjahr. Weiterhin kann man nach Straßen- und Anlagebäumen, Kastanien und Birken filtern. Damit bietet die Street Trees Map einen guten Überblick über den Bestand an Bäumen im gesamten Stadtgebiet und ist ein tolles Format die Hauptstadt einmal aus einer anderen Perspektive kennenzulernen."
                 ],
                 "challenges": [
                   "Welcher ist der älteste Baum im Görlitzer Park den du findest? Suche ihn auf der Karte!",
                   "Wie breit ist der Baum unter dem wir gerade stehen?"
                 ],
-                "name": "Was ist die Street Baumkarte?",
-                "next": 2,
-                "prev": 1
+                "name": "Was ist die Street Trees Map?",
+                "next": 3
               },
               {
                 "id": 3,
@@ -133,15 +97,6 @@
                 "link": "https://app.okfn.de/trees-map/?lat=52.49704785672787&lon=13.439691066741943&zoom=16",
                 "prev": 2,
                 "next": 4
-              },
-              {
-                "type": "story",
-                "id": 2,
-                "img": "/assets/images/datawalk.png",
-                "content": ["Kaum zu glauben, aber im Görlitzer Park gibt es fast 900 Bäume und über 50 verschiedene Arten! Neben Esche, Linde und Kirsche sind auch viele Exoten dabei, z.B. die Oxelbeere, der Japanische Schnurbaum oder der dreidorniger Lederhülsenbaum. Die ältesten Bäume im Görli sind mit jeweils 249 Jahren zwei Berg-Ahorn-Bäume, die gleichzeitig auch den größten Stammumfang besitzen (beide 628 cm). Und hier gibt es noch viel mehr zu entdecken!"],
-                "name": "Tree Map - Story vom Görli",
-                "prev": 1,
-                "next": 3
               }
             ]
           }
@@ -150,6 +105,7 @@
       {
         "id": 3,
         "name": "Refik-Veseli-Schule",
+        "description": "Station 3 bei unserem Datenspaziergang ist die Refik Veseli-Schule, denn das Thema Schule und Bildung betrifft uns alle. Aber: Schulbildung ist in Deutschland Ländersache, daher wird es im Hinblick auf offene Daten recht schnell kompliziert. Warum? Das zeigen wir dir hier.",
         "position": {
           "lat": 52.499867,
           "lon": 13.435728
@@ -162,34 +118,22 @@
           {
             "id": 0,
             "name": "(Außer-) schulische Bildung",
-            "description": "Station 3 bei unserem Datenspaziergang ist die Refik Veseli Schule, denn das Thema Schule und Bildung betrifft uns alle. Aber: Schulbildung ist in Deutschland Ländersache, daher wird es im Hinblick auf offene Daten recht schnell kompliziert. Warum? Das zeigen wir dir hier.",
-            "entry": 0,
+            "description": "Jedes Bundesland unterscheidet sich nicht nur bei den Unterrichtsfächern und Schulaktivitäten, sondern teilweise sogar bei den Schularten. So gibt es z.B. in Hamburg Stadtteilschulen, die sonst in keinem anderen Bundesland vorkommen. Informationen über Schulen in Deutschland sind dadurch sehr breit verstreut und nur schwer miteinander zu vergleichen.<br /><br />Offene Daten über allgemeinbildende Schulen findest du auf <span class='bold>'JedeSchule.de.</span>",
+            "entry": 1,
             "next": 1,
             "pages": [
-              {
-                "type": "story",
-                "id": 0,
-                "img": "/assets/images/datawalk.png",
-                "content":
-                [
-                  "Jedes Bundesland unterscheidet sich nicht nur beim Schulsystem, den Unterrichtsfächern, und Schulaktivitäten, sondern teilweise sogar bei den Schularten. So gibt es z.B. in Hamburg Stadtteilschulen, die sonst in keinem anderen Bundesland vorkommen.",
-                  "Das Problem daran: Die Informationen über Schulen in Deutschland sind nur schwer miteinander zu vergleichen und die Daten überall unterschiedlich vorhanden, z.B. über Partnerschaften, Fremdsprachen oder Ganztagsangebote. Für Eltern, Lehrende und Schüler*innen sind diese Informationen aber wichtig, um gute Entscheidungen für die Wahl der Schule zu treffen.",
-                  "Offene Daten über Schulen findest du auf JedeSchule.de"
-                ],
-                "name": "Bildung/ außerschulische Bildung",
-                "next": 1
-              },
               {
                 "type": "story",
                 "id": 1,
                 "img": "/assets/images/datawalk.png",
                 "content": [
-                 "JedeSchule.de macht die Informationen von über 30.000 allgemeinbildende Schulen in Deutschland zugänglich. Für knapp 3.000 Schulen in Berlin und Sachsen werden anhand von Daten außerschulische  Aktivitäten, Förderangebote und Partner der Schulen analysiert. Über eine Suchmaske kann auf JedeSchule.de gezielt nach bestimmten Schulen, Schularten, Aktivitäten oder Ganztagsangeboten von Schulen in der eigenen Umgebung oder deutschlandweit gesucht und gefiltert werden.",
-                  "Und was findest du über die Sekundärschule Refik-Veseli-Schule auf JedeSchule.de heraus?"
+                 "JedeSchule.de macht die Informationen von über 30.000 allgemeinbildende Schulen in Deutschland zugänglich. Für knapp 3.000 Schulen in Berlin und Sachsen werden anhand von Daten außerschulische  Aktivitäten, Förderangebote und Partner der Schulen analysiert. Über eine Suchmaske kann auf JedeSchule.de gezielt nach bestimmten Schulen, Schularten, Aktivitäten oder Ganztagsangeboten von Schulen in der eigenen Umgebung oder deutschlandweit gesucht und gefiltert werden."
                 ],
                 "name": "Was ist JedeSchule.de?",
-                "next": 2,
-                "prev": 0
+                "challenges": [
+                  "Und was findest du über die Sekundärschule Refik-Veseli-Schule auf JedeSchule.de heraus?"
+                ],
+                "next": 2
               },
               {
                 "type": "iframe",
@@ -216,20 +160,7 @@
                 "id": 4,
                 "name": "Schulaktivitäten nach Bezirken",
                 "datasource": "https://jedeschule.de/assets/data/activities.json",
-                "prev": 3,
-                "next": 5
-              },
-              {
-                "type": "story",
-                "id": 5,
-                "img": "/assets/images/datawalk.png",
-                "name": "Schulaktivitäten in Kreuzberg",
-                "content": [
-                  "<span class='bold'>Die meisten Schulen bieten durchschnittlich acht Aktivitäten und Projekte zu mindestens vier verschiedenen Themen an.</span>",
-                  "492 der knapp 800 allgemeinbildenden Schulen in Berlin kommunizieren ihre Projekte und Aktivitäten an die Senatsverwaltung für Bildung, Jugend und Familie. Insgesamt bieten sie über 3.850 Aktivitäten zu den Themen Umwelt, Sport, Musik und Tanz, Gesellschaft und Partizipation, Literatur und Medien, Handwerk, Kunst und Kultur, Naturwissenschaft und Technik, Berufsorientierung und Sprachen an.",
-                  "<img style='display: block; margin: auto; max-width: 100%' src='/assets/images/schulaktivitaeten.png'/>"
-                ],
-                "prev": 4
+                "prev": 3
               }
             ]
           }
@@ -238,6 +169,7 @@
       {
         "id": 4,
         "name": "Lausitzer Platz",
+        "description": "Die vierte Station unseres Datenspaziergangs ist der Lausitzer Platz. Der Bezirk Friedrichshain-Kreuzberg gehört mittlerweile zu den beliebtesten Wohngegenden in Berlin - und leider auch zu den teuersten.",
         "prev": 2,
         "next": 5,
         "line": 2,
@@ -250,23 +182,10 @@
           {
             "id": 0,
             "name": "Mietpreisentwicklung",
-            "description": "Ob in Berlin-Mitte, München-Schwabing oder im Frankfurter Westend: Die Mieten in Großstädten steigen seit Jahren. Was sagt die Politik dazu und wie ist die Meinung der verschiedenen Parteien im Bundestag?",
-            "entry": 0,
+            "description": "In keiner deutschen Großstadt sind die Mieten mittlerweile für Normalverdiener so unerschwinglich wie in Berlin. Mieter*innen müssen hier mehr als ein Drittel des Einkommens für die Warmmiete aufwenden. Dabei sind Stromkosten noch nicht enthalten!<br /><br />Was sagt eigentlich die Politik dazu? Darüber informiert <span class='bold'>OffenesParlament.de</span>.",
+            "entry": 1,
             "next": 1,
             "pages": [
-              {
-                "type": "story",
-                "id": 0,
-                "img": "/assets/images/datawalk.png",
-                "content":
-                  [
-                    "In keiner deutschen Großstadt sind die Mieten mittlerweile für Normalverdiener so unerschwinglich wie in Berlin. Das hat eine eigene Analyse der Angebotsmieten in 79 Städten mit mehr als 100.000 Einwohnern ergeben. Untersucht wurden deren 1375 Postleitzahlbereiche. Die Auswertung zeigt damit neben den mittleren Preisen auch die Mietpreisverteilung innerhalb der Stadtgebiete auf – als Mieten-Skyline.",
-                    "In jedem zehnten der untersuchten Postleitzahlgebiete können sich Durchschnittsverdiener das Wohnen eigentlich nicht mehr leisten. Denn: Der Mieter müsste dort mehr als ein Drittel seines Einkommens für die Warmmiete aufwenden. Dabei sind Stromkosten noch nicht enthalten. Die meisten dieser kaum noch bezahlbaren Viertel liegen in Berlin – in 53 Postleitzahlbereichen. Auch die Top 5 der hierzulande für Durchschnittsverdiener unerschwinglichen Postleitzahlbereiche liegen in der Hauptstadt.",
-                    "Was sagt eigentlich die Politik dazu? Finde es im offenen Parlament heraus"
-                  ],
-                "name": "sozialer Wohnungsbau",
-                "next": 1
-              },
               {
                 "type": "story",
                 "id": 1,
@@ -274,7 +193,7 @@
                 "content": [
                   "OffenesParlament.de macht Bundestagsdebatten transparent und nachvollziehbar. Über die Plattform kannst du  alle 245 Plenarprotokolle des Bundestags der letzten Wahlperiode durchsuchen - z.B. nach Ehe für Alle, Videoüberwachung oder Kriminalität. Dadurch hast du die Möglichkeit, die Arbeit von Abgeordneten und ihre Positionen zu überprüfen.",
                   "Der Bundestag veröffentlicht regelmäßig Sitzungsprotokolle zu aktuellen Debatten. Seit Oktober 2017 werden die Dokumente als offene Daten zur freien Nutzung bereitgestellt. Sie können von Interessierten analysiert werden und finden Verwendung in gemeinnützigen Projekten, wie OffenesParlament.de.",
-                  "Bundestagsdebatte: Videos an Bahnhöfen - Sicherheit vs. Überwachung Schau rein: Was findest du über Mietpreisentwicklungsdebatten auf OffenesParlament.de heraus?"
+                  "Was findest du über die Mietpreisentwicklung in Berlin auf OffenesParlament.de heraus?"
                 ],
                 "name": "Was ist OffenesParlament.de?",
                 "prev": 0,
@@ -329,14 +248,6 @@
                 "correct": 0,
                 "prev": 4,
                 "next": 6
-              },
-              {
-                "type": "story",
-                "id": 6,
-                "img": "/assets/images/datawalk.png",
-                "content": ["Abschlusstext Mietpreise"],
-                "name": "Mietpreisentwicklung",
-                "prev": 5
               }
             ]
           }
@@ -345,6 +256,7 @@
       {
         "id": 5,
         "name": "Bethanien Kloster",
+        "description": "Die letzte Station unserer Tour durch Kreuzberg ist das Bethanien-Kloster. Das Bethanien wurde vor allem durch seine Besetzung und Umbenennung 1971 in das Georg-von-Rauch-Haus - benannt nach einem Studenten, der durch eine Polizeiaktion ums Leben kam - über die Grenzen Berlins hinaus bekannt.",
         "prev": 3,
         "position": {
           "lat": 52.503392,
@@ -356,25 +268,18 @@
           {
             "id": 0,
             "name": "Stadtraum erobern",
-            "description": "Die letzte Station unserer Tour durch Kreuzberg ist das Bethanien Kloster. Das Bethanien wurde vor allem durch die Besetzung und Umbenennung in das Georg von Rauchhaus nach einem Todesopfer durch eine Polizeiaktion über die Grenzen Berlins hinaus bekannt.",
-            "entry": 0,
+            "description": "Das Bethanien steht stellvertretend für die Berliner Besetzerszene, die seit den 70er-Jahren aktiv ist. Das Georg-von-Rauch-Haus ist mit 42 Jahren das am längsten besetzte und inzwischen legalisierte Haus Berlins.<br /><br />Über aktuell und ehemalige besetzte Orte gibt die Plattform berlin.besetzt Auskunft.",
+            "entry": 1,
             "pages": [
-              {
-                "type": "story",
-                "id": 0,
-                "next": 1,
-                "img": "/assets/images/datawalk.png",
-                "content": ["Das Bethanien steht stellvertretend für die Berliner Besetzerszene die seit den siebziger Jahren jahren aktiv ist. Das Georg-von-Rauch-Haus ist mit inzwischen 42 Jahren, das am längsten besetzte und inzwischen legalisierte Haus Berlins."],
-                "name": "Stadtraum erobern"
-              },
               {
                 "type": "story",
                 "id": 1,
                 "next": 2,
                 "prev": 0,
                 "img": "/assets/images/datawalk.png",
-                "content": ["Die Chronik der besetzten Häuser wurde vom Projekt berlin.besetzt aufbereitet und visualisiert. Da es keine amtliche Statistik zu Häuserbesetzungen gibt stützten sich die Daten in erster Linie auf Szenepublikationen und Zeitungsartikel. Auf der Karte werden verschiedene Hausbesetzungen seit den 70er Jahren dargestellt. Was war die kürzeste Besetzungszeit, finde es heraus!"],
-                "name": "Berlin besetzt"
+                "content": ["Die Chronik der besetzten Häuser wurde vom Projekt berlin.besetzt aufbereitet und visualisiert. Da es keine amtliche Statistik zu Häuserbesetzungen gibt stützten sich die Daten in erster Linie auf Szenepublikationen und Zeitungsartikel. Auf der Karte werden verschiedene Hausbesetzungen seit den 70er Jahren dargestellt."],
+                "name": "Berlin besetzt",
+                "challenges": ["Was war die kürzeste Dauer einer Besetzung? Finde es heraus!"]
               },
               {
                 "id": 2,
@@ -383,14 +288,6 @@
                 "link": "https://app.okfn.de/berlin-besetzt/index.html#",
                 "prev": 1,
                 "next": 3
-              },
-              {
-                "type": "story",
-                "id": 3,
-                "prev": 2,
-                "img": "/assets/images/datawalk.png",
-                "content": ["Abschlusstext Hausbesetzungen"],
-                "name": "Berlin besetzt"
               }
             ]
           }

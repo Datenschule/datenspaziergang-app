@@ -35,13 +35,10 @@ export class PointToPointMapComponent implements OnInit {
   course: Course;
   points: Point[];
   station: Station;
-  stationNameInline = false;
   line: [number, number];
   location: Point;
   locationMarker: Array<number> = [];
   title: string;
-  currentStationMarker: number[];
-  prevStationMarker: number[];
 
   mapOptions = {
     style: environment.mapboxTiles.street,
@@ -85,22 +82,18 @@ export class PointToPointMapComponent implements OnInit {
       this.coursesService.getCourse(course_id).subscribe((course) => {
 
         this.course = course;
+        this.station = course.stations.find((station) => station.id === station_id);
 
-        this.station = this.course.stations.find((station) => station.id === station_id);
-        this.stationNameInline = this.station.name.length > 30;
-
-        // this.mapOptions.center = [this.station.position.lon, this.station.position.lat];
-
-        this.title = `${course.name}: ${station_id + 1}. ${this.station.name}`;
+        this.title = `${this.course.name}: ${this.station.id}. ${this.station.name}`;
         this.line = this.course.courseline[this.station['line']];
+
+        console.log(this.station, this.line);
 
         let translatedCenter = turf.transformTranslate(turf.point([this.station.position.lon, this.station.position.lat]), -0.5, 90);
         this.mapOptions.center = translatedCenter.geometry.coordinates;
-        this.currentStationMarker = [this.station.position.lon, this.station.position.lat];
 
         this.nextLink = `/subjects/${this.course.id}/${this.station.id}`;
       });
-
     });
   }
 

@@ -39,6 +39,7 @@ export class SubjectsComponent implements OnInit {
   nextLink: string;
   course: Course;
   station: Station;
+  line: [number, number];
   location: Point;
   locationMarker: Array<number>;
   title: string;
@@ -81,12 +82,12 @@ export class SubjectsComponent implements OnInit {
     this.coursesService.getCourse(course_id).subscribe((course) => {
 
       this.course = course;
-
       this.station = this.course.stations.find((station) => station.id === station_id);
+      this.line = this.course.courseline[this.station['line']];
+
       this.station.subjects = this.station.subjects.map(subject => {
         const firstpage = subject.pages.find(page => page.id === subject.entry);
         subject['link'] = `/${firstpage['type']}/${this.course.id}/${this.station.id}/${subject.id}/${firstpage.id}`;
-        subject['inlineName'] = subject.name.length > 20 ? true : false;
         return subject;
       });
       // move center slightly to the right
@@ -94,14 +95,11 @@ export class SubjectsComponent implements OnInit {
       let newCenter = turf.transformTranslate(oldCenter, -0.2, 90)
       this.mapOptions.center = newCenter.geometry.coordinates;
       this.mapOptions.marker = [this.station.position.lon, this.station.position.lat];
-      this.title = `${course.name}: ${this.station.id + 1}. ${this.station.name}`;
+      this.title = `${course.name}: ${this.station.id}. ${this.station.name}`;
 
-      //
-      // this.nextLink = `/${firstpage['type']}/${this.course.id}/${this.station.id}/${firstpage.id}`;
       this.coursesService.getNextStationLink(course_id, station_id).subscribe((nextStation) => {
         this.nextLink = nextStation;
       });
-      // this.nextLink = `/subjects/${this.course.id}/${this.station.id}`;
     });
   }
 

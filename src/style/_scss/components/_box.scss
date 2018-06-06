@@ -46,7 +46,7 @@
   }
   @media (min-width: 801px) {
     left: $base-padding;
-    padding: $actionbar-height $base-padding $base-padding;
+    padding: $actionbar-height $base-padding $base-padding 1.55em;
     margin: 0 (-$base-padding);
     background: transparent;
     overflow-y: scroll;

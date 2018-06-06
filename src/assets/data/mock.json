@@ -15,7 +15,7 @@
     "stations": [
       {
         "id": 1,
-        "name": "(U) Görlitzer Bahnhof",
+        "name": "Görlitzer Bahnhof",
         "description": "Das Restaurant Morgenland ist der Startpunkt unseres Spaziergangs. Gleich gegenüber liegt der Görlitzer Bahnhof, wo die beiden U-Bahn-Linien U1 und U3 sowie die Buslinie M29 aufeinander treffen und somit wichtige Teile der Hauptstadt miteinander verbinden. Aber gilt das auch für Rollstuhlfahrer*innen und andere Menschen, die auf einen barrierefreien Zugang zu öffentlichen Verkehrsmitteln und Orte angewiesen sind?",
         "position": {
           "lat": 52.49896,

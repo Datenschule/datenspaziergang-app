@@ -40,6 +40,7 @@ export class SubjectsComponent implements OnInit {
   course: Course;
   station: Station;
   line: [number, number];
+  pastlines: Array<number>;
   location: Point;
   locationMarker: Array<number>;
   title: string;
@@ -84,6 +85,13 @@ export class SubjectsComponent implements OnInit {
       this.course = course;
       this.station = this.course.stations.find((station) => station.id === station_id);
       this.line = this.course.courseline[this.station['line']];
+
+      let foo = [];
+      foo.push([]); // make sure template loop always works
+      for (let i = 0; i < this.station['line']; i++) {
+        foo.push(this.course.courseline[i]);
+      }
+      this.pastlines = foo;
 
       this.station.subjects = this.station.subjects.map(subject => {
         const firstpage = subject.pages.find(page => page.id === subject.entry);

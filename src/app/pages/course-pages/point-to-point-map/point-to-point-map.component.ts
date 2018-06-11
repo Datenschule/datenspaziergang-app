@@ -36,6 +36,7 @@ export class PointToPointMapComponent implements OnInit {
   points: Point[];
   station: Station;
   line: [number, number];
+  pastlines: any;
   location: Point;
   locationMarker: Array<number> = [];
   title: string;
@@ -87,7 +88,12 @@ export class PointToPointMapComponent implements OnInit {
         this.title = `${this.course.name}: ${this.station.id}. ${this.station.name}`;
         this.line = this.course.courseline[this.station['line']];
 
-        console.log(this.station, this.line);
+        let foo = [];
+        foo.push([]); // make sure template loop always works
+        for (let i = 0; i < this.station['line']; i++) {
+          foo.push(this.course.courseline[i]);
+        }
+        this.pastlines = foo;
 
         let translatedCenter = turf.transformTranslate(turf.point([this.station.position.lon, this.station.position.lat]), -0.5, 90);
         this.mapOptions.center = translatedCenter.geometry.coordinates;

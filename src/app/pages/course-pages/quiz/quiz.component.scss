@@ -11,6 +11,10 @@ ul {
   text-align: left;
   width: 70%;
   padding: 0;
+
+  li:before {
+    content: none;
+  }
 }
 
 .answer-indicator {

@@ -6,7 +6,7 @@
   <div class="story-container">
     <div class="container">
       <div class="iframe-container">
-        <iframe [src]="link" frameborder="0" scrolling="yes"></iframe>
+        <iframe [src]="link" frameborder="0" scrolling="yes" [ngClass]="class"></iframe>
       </div>
 
       <a class="btn-forward" routerLink="{{nextLink}}">Weiter</a>

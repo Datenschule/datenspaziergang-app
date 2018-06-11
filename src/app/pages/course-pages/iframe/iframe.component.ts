@@ -14,6 +14,7 @@ export class IframeComponent implements OnInit {
   title: string;
   link: SafeResourceUrl;
   text: string;
+  class: string;
   nextLink: string;
   stationId: number;
   courseId: number;
@@ -35,6 +36,7 @@ export class IframeComponent implements OnInit {
 
         this.link = this.sanitizer.bypassSecurityTrustResourceUrl(page.link);
         this.title = page.name;
+        this.class = page.class;
         this.coursesService.getNextPageLink(course_id, station_id, subject_id, page.next).subscribe((nextPage) => {
           this.nextLink = nextPage;
         });

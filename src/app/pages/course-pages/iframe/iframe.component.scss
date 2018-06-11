@@ -17,3 +17,11 @@ iframe {
   background-color: white;
   box-shadow: -8px 8px 0px 0 $purple-dark;
 }
+
+iframe.op {
+  position: absolute;
+  width: 90%;
+  left: 5%;
+  top: 7em;
+  height: 80%;
+}

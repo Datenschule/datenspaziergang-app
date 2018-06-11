@@ -22,7 +22,7 @@
         id="linelayerpast-{{station.id}}-{{i}}" type="line"
         [source]="{ 'type': 'geojson', 'data': { 'type': 'Feature', 'properties': {}, 'geometry': { 'type': 'LineString', 'coordinates': line }}}"
         [layout]="{ 'line-join': 'round', 'line-cap': 'square' }"
-        [paint]="{ 'line-color': '#a566f1', 'line-width': 8}">
+        [paint]="{ 'line-color': '#a576f1', 'line-width': 8}">
       </mgl-layer>
       <mgl-layer *ngIf="line" id="linelayer" type="line"
         [source]="{ 'type': 'geojson', 'data': { 'type': 'Feature', 'properties': {}, 'geometry': { 'type': 'LineString', 'coordinates': line}}}"

@@ -1,42 +1,3 @@
-@mixin set-hex-color($color) {
-  background-color: $color;
-  &:after {
-    border-top-color: $color;
-  }
-  &:before {
-    border-bottom-color: $color;
-  }
-}
-
-@mixin hexagon-indicator($color) {
-  position: relative;
-  width: 30px;
-  height: 17.32px;
-  margin: 8.66px 0;
-
-  &:before,
-  &:after {
-    content: "";
-    position: absolute;
-    width: 0;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-  }
-
-  &:before {
-    bottom: 100%;
-    border-bottom: 8.66px solid;
-  }
-
-  &:after {
-    top: 100%;
-    width: 0;
-    border-top: 8.66px solid;
-  }
-
-  @include set-hex-color($color);
-}
-
 .page-indicator {
   display: flex;
   position: fixed;
@@ -45,20 +6,22 @@
 }
 
 .page-indicator__item {
-  @include hexagon-indicator($inactive-purple);
-
+  position: relative;
+  width: 27px;
+  height: 31px;
+  background-image: url(/assets/images/hex-3-inactive.svg);
   margin-left: $base-padding;
   color: $white;
-  font-size: 19px;
+  font-size: 18px;
 }
 
 .page-indicator__item.active {
-  @include set-hex-color($purple);
+  background-image: url(/assets/images/hex-3.svg);
 }
 
 .page-indicator__item:hover,
 .page-indicator__item:active {
-  @include set-hex-color($purple);
+  background-image: url(/assets/images/hex-3.svg);
 }
 
 .page-indicator__connect {
@@ -67,7 +30,7 @@
   left: 0;
   right: 0;
   text-align: center;
-  line-height: 1.2;
+  line-height: 1.8;
   z-index: 1;
 
   &:after {

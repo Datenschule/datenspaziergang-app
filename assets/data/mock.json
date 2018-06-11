@@ -204,6 +204,7 @@
                 "id": 2,
                 "name": "Projekt: Offenes Parlament",
                 "link": "https://offenesparlament.de/protokoll/#!/13#top-zp-1-aktuelle-stunde-zur-steuerhinterziehung",
+                "class": "op",
                 "prev": 1,
                 "next": 3
               },

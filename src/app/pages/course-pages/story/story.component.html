@@ -14,7 +14,9 @@
       </div>
 
       <div *ngIf="story.challenges" class="description box box-wide">
-        <h1 class="box__title h1" [ngClass]="{relative: inlineTitle === true}">Challenges</h1>
+        <h1 class="box__title h1" [ngClass]="{relative: inlineTitle === true}">
+          <img src="/assets/images/challenge.svg" alt="">
+        </h1>
         <ul>
           <li *ngFor="let content of story.challenges" [innerHTML]="content | safeHtml"></li>
         </ul>

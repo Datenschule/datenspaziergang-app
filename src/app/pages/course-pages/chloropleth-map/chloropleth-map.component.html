@@ -42,7 +42,9 @@
       type="fill"
       source="schools"
       [paint]='{
-      "fill-opacity": 0.0}'
+      "fill-opacity": 0.0,
+      "fill-outline-color": "black"
+      }'
       (mouseMove)="activateHoverOn($event)"
       (mouseLeave)="disableHover()">
     </mgl-layer>

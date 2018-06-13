@@ -5,69 +5,27 @@ mgl-map {
   overflow: hidden;
 }
 
-@mixin makeMarker($color) {
+.mapboxgl-marker:not(.mapboxgl-user-location-dot) {
   position: absolute;
-  top: -31px;
-  left: 0;
+  top: -18px;
   z-index: 1;
-  width: 42px;
-  height: 24.25px;
-  margin: 12.12px 0;
-  background-color: $color;
-  will-change: transform;
   color: $white;
+  width: 37px;
+  height: 42px;
   font-family: 'Overpass', 'Verdana', sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 700;
   text-align: center;
-  line-height: 1.2;
-
-  &:after,
-  &:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 0;
-    z-index: -1;
-    border-left: 21px solid transparent;
-    border-right: 21px solid transparent;
-  }
-
-  &:before {
-    bottom: 100%;
-    border-bottom: 12.12px solid $color;
-  }
-
-  &:after {
-    top: 100%;
-    width: 0;
-    border-top: 12.12px solid $color;
-  }
-}
-
-.mapboxgl-marker:not(.mapboxgl-user-location-dot) {
-  @include makeMarker($purple);
+  line-height: 1.85;
+  background-image: url(/assets/images/hex-2.svg);
 }
 
 .marker--large .mapboxgl-marker:not(.mapboxgl-user-location-dot) {
-  width: 60px;
-  height: 34.64px;
-  margin: 17.32px 0;
-  font-size: 1.8rem;
+  width: 100px;
+  height: 100px;
+  font-size: 3rem;
+  background-image: url(/assets/images/hex.svg);
   top: -45px;
-  background-color: $purple;
-
-  &:before,
-  &:after {
-    border-left: 30px solid transparent;
-    border-right: 30px solid transparent;
-  }
-  &:before {
-    border-bottom: 17.32px solid $purple;
-  }
-  &:after {
-    border-top: 17.32px solid $purple;
-  }
 }
 
 .mapboxgl-marker.mapboxgl-user-location-dot {
@@ -121,10 +79,18 @@ mgl-map {
   background-image: url(/assets/images/geolocate-active.svg);
 }
 
-
 .inactive-marker {
-  @include makeMarker($inactive-purple);
-  top: -12px; // because of workaround-nesting
+  position: absolute;
+  z-index: 1;
+  color: $white;
+  width: 37px;
+  height: 42px;
+  font-family: 'Overpass', 'Verdana', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.8;
+  background-image: url(/assets/images/hex-2-inactive.svg);
 }
 
 .map {

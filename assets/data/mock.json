@@ -139,7 +139,7 @@
                 "type": "iframe",
                 "id": 2,
                 "name": "Projekt: Jedeschule.de",
-                "link": "https://jedeschule.de/schulen/#!?lat=52.50085414006978&lng=13.433167221955955&zoom=17",
+                "link": "https://jedeschule.de/schulen/#!?lat=52.50085414006978&lng=13.433167221955955&zoom=17&state=Berlin",
                 "prev": 1,
                 "next": 3
               },
@@ -203,7 +203,7 @@
                 "type": "iframe",
                 "id": 2,
                 "name": "Projekt: Offenes Parlament",
-                "link": "https://offenesparlament.de/protokoll/#!/13#top-zp-1-aktuelle-stunde-zur-steuerhinterziehung",
+                "link": "https://offenesparlament.de/protokoll/#!/161#10",
                 "class": "op",
                 "prev": 1,
                 "next": 3

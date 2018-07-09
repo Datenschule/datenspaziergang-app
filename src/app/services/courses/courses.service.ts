@@ -12,7 +12,7 @@ export class CoursesService {
   }
 
   private courses;
-  private url = '/assets/data/mock.json';
+  private url = '/assets/data/courses.json';
 
   private log(message: string) {
     console.log('Courses Service: ' + message);

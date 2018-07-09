@@ -1,0 +1,306 @@
+[
+  {
+    "id": 0,
+    "name": "Spaziergang Kreuzberg",
+    "location": "Berlin-Kreuzberg",
+    "preview_image": "/assets/images/datawalk.png",
+    "description": "Berlin-Kreuzberg ist bunt und politisch: Der öffentliche Raum ist geprägt von zahlreichen Stories - von Hausbesetzungen, über Barrierefreiheit bis hin zu Baumpolitik. Aber welche Daten erzählen die Geschichte des Bezirks? Und wie gestalten Menschen den öffentlichen Raum durch digitale Mittel? An insgesamt 5 Stationen zu den Themen Barrierefreiheit, Bildung und Umwelt lernst du neue Perspektiven auf das Berliner Szeneviertel kennen. Wir zeigen dir bei dieser Tour die spannendsten Orte in Kreuzberg und was du in offenen Daten alles über sie herausfinden kannst.<br /><br />Auf geht’s!",
+    "entry": 1,
+    "courseline": [
+      [[13.425756,52.49896,39.5],[13.426009,52.498884,39.3],[13.426119,52.499008,39.2],[13.426141,52.499033,39.1],[13.426205,52.499105,39.1],[13.426545,52.499114,39.1],[13.426836,52.499115,38.9],[13.427015,52.49906,38.8],[13.427306,52.498968,38.7],[13.427484,52.49891,38.6],[13.429622,52.49817,38.9],[13.430647,52.497825,39.9],[13.431401,52.497582,40.4],[13.431343,52.497611,40.5],[13.431401,52.497582,40],[13.431728,52.497456,38.9],[13.431901,52.497391,38.5],[13.432055,52.497331,38.3],[13.432165,52.497297,38.1],[13.433248,52.496939,37.4],[13.434038,52.496678,36.3],[13.434433,52.496543,36.4],[13.434573,52.496495,36.4],[13.434706,52.496447,36.5],[13.435173,52.496287,36.7],[13.435588,52.496146,36.9],[13.436687,52.495771,38],[13.4368,52.49589,37.5],[13.436837,52.495898,37.1],[13.4368,52.49589,33],[13.436851,52.495926,33],[13.436953,52.496101,33],[13.436902,52.496148,33],[13.437339,52.496571,33]],
+      [[13.437327,52.496559,33],[13.437377,52.496608,33],[13.43748,52.496688,34.7],[13.437769,52.49687,36.3],[13.438079,52.496984,37.1],[13.438185,52.4971,37.3],[13.438339,52.497253,37.6],[13.439844,52.498772,40.3],[13.440316,52.499249,40.8],[13.439246,52.499688,40.3],[13.438327,52.50007,39.4],[13.438227,52.500111,39.2],[13.438132,52.50015,39],[13.438001,52.500204,38.8],[13.437834,52.500179,38.7],[13.437727,52.500163,38.5],[13.436577,52.499992,37.5],[13.435728,52.499867,37.5]],
+      [[13.435728,52.499867,38],[13.435675,52.499859,38],[13.434285,52.499656,38.7],[13.433047,52.499476,40.3],[13.432677,52.499426,40.4],[13.432086,52.499337,40.6],[13.432054,52.499408,40.6],[13.432016,52.499486,40.6],[13.431872,52.499791,40.7],[13.431727,52.499769,40.7],[13.431413,52.499722,40.8],[13.431253,52.499698,40.8],[13.431046,52.499667,40.8],[13.431016,52.499733,40.7],[13.431011,52.499745,40.7]],
+      [[13.431011,52.499745,40],[13.431016,52.499733,40],[13.431046,52.499667,40],[13.430687,52.499613,39.7],[13.430308,52.499741,39.5],[13.430119,52.499771,39.4],[13.429695,52.500673,39.5],[13.429613,52.500778,39.5],[13.429317,52.500855,39.7],[13.428892,52.500973,40],[13.428142,52.501173,40.5],[13.428051,52.501197,40.5],[13.42791,52.501236,40.5],[13.427693,52.501294,40.6],[13.427462,52.501357,40.6],[13.425883,52.501793,39.6],[13.425256,52.501966,39.2],[13.424949,52.502051,39],[13.424744,52.502106,38.8],[13.425584,52.503374,37.7],[13.425492,52.503398,37.6],[13.425459,52.50339,37.6],[13.425422,52.503382,37.6],[13.425351,52.503379,37.6],[13.425286,52.503392,37.7]]
+    ],
+    "stations": [
+      {
+        "id": 1,
+        "name": "Görlitzer Bahnhof",
+        "description": "Das Restaurant Morgenland ist der Startpunkt unseres Spaziergangs. Gleich gegenüber liegt der Görlitzer Bahnhof, wo die beiden U-Bahn-Linien U1 und U3 sowie die Buslinie M29 aufeinander treffen und somit wichtige Teile der Hauptstadt miteinander verbinden. Aber gilt das auch für Rollstuhlfahrer*innen und andere Menschen, die auf einen barrierefreien Zugang zu öffentlichen Verkehrsmitteln und Orte angewiesen sind?",
+        "position": {
+          "lat": 52.49896,
+          "lon": 13.425756
+        },
+        "next": 2,
+        "subjects": [
+          {
+            "id": 1,
+            "name": "Barrierefreiheit",
+            "description": "Viele der 173 U-Bahnhöfe der Berliner Verkehrsbetriebe sind inzwischen barrierefrei, sodass sie z.B. auch für Rollstuhlfahrer*innen problemlos benutzbar sind. Für die Haltestelle Görlitzer Bahnhof gilt dies leider nicht.<br/><br />Aber welche Bahnhöfe genau sind barrierefrei? Dazu gibt die Wheelmap Auskunft.",
+            "entry": 7,
+            "line": 1,
+            "pages": [
+              {
+                "type": "story",
+                "id": 7,
+                "img": "/assets/images/datawalk.png",
+                "content":
+                  [
+                    "Die Wheelmap ist eine interaktive Karte zum Suchen und Finden rollstuhlgerechter Orte. Dabei kann jede*r Nutzer*in selbst öffentlich zugängliche Orte wie U-Bahn-Stationen, Cafés oder Behörden entsprechend ihrer Rollstuhlgerechtigkeit markieren – weltweit. Dafür nutzt Wheelmap.org ein einfaches Ampelsystem.",
+                    "<img src='/assets/images/kreuzberg/wheelmap_rating.png' />",
+                    "Die Wheelmap verschafft damit Menschen, die auf Barrierefreiheit angewiesen sind, einen guten Überblick zu rollstuhlgerechten Orten in der Stadt und mehr Planungssicherheit auf ihren Wegen. Politisch gibt es hier aber noch eine Menge zu tun!"
+                  ],
+                "challenges": [
+                  "Wie rollstuhlgerecht ist die Gegend rund um den Görlitzer Bahnhof Finde es heraus!"
+                ],
+                "name": "Was ist die Wheelmap?",
+                "next": 8
+              },
+              {
+                "type": "iframe",
+                "id": 8,
+                "name": "Projekt: Wheelmap",
+                "link": "https://wheelmap.org/beta#?lat=52.4992599&lon=13.4278898&zoom=18",
+                "prev": 7
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Görlitzer Park",
+        "description": "Wir gehen sind nun weiter zur Station 2 unserer Kreuzberg-Tour - dem Görlitzer Park, auch “Görli” genannt. Der “Görli” ist einer von ca. 2.500 öffentlichen Grünanlagen in Berlin. Damit gehört die deutsche Hauptstadt zu den grünsten Städten in Europa! Was man über Bäume in offenen Daten erfahren kann, zeigen wir dir hier.",
+        "position": {
+          "lat": 52.496559,
+          "lon": 13.437327
+        },
+        "prev": 0,
+        "next": 3,
+        "entry": 0,
+        "line": 0,
+        "subjects": [
+          {
+            "id": 0,
+            "name": "Umwelt/Bäume",
+            "description": "Bäume haben mehr  mit Politik zu tun, als man zunächst vielleicht denkt: Es gibt eine Menge von Vorschriften und Maßnahmen, die sich ausschließlich mit den rund 438.000 Straßenbäumen in Berlin beschäftigen. Wusstest du z.B. dass der Abstand von der Mitte eines Baumstamms bis zur Fahrbahn mindestens 80 cm betragen muss?<br /><br />Was man noch alles über Bäume in Berlin erfahren kann, zeigt die <span class='bold'>Street Trees Map</span>.",
+            "entry": 1,
+            "pages": [
+              {
+                "type": "story",
+                "id": 1,
+                "img": "/assets/images/datawalk.png",
+                "content": [
+                  "Die Street Trees Map ist ein ehrenamtliches Communityprojekt von Code for Germany, das vom OK Lab Berlin entwickelt wurde. Auf einer interaktiven Stadtkarte werden alle registrierten Bäume in Berlin angezeigt. Zu jedem einzelnen Baum gibt es umfangreiche Informationen wie Gattung, Alter, Höhe und Pflanzjahr. Weiterhin kann man nach Straßen- und Anlagebäumen, Kastanien und Birken filtern. Damit bietet die Street Trees Map einen guten Überblick über den Bestand an Bäumen im gesamten Stadtgebiet und ist ein tolles Format die Hauptstadt einmal aus einer anderen Perspektive kennenzulernen."
+                ],
+                "challenges": [
+                  "Welcher ist der älteste Baum im Görlitzer Park den du findest? Suche ihn auf der Karte!",
+                  "Wie breit ist der Baum unter dem wir gerade stehen?"
+                ],
+                "name": "Was ist die Street Trees Map?",
+                "next": 3
+              },
+              {
+                "id": 3,
+                "type": "iframe",
+                "name": "Projekt: StreetTrees Map",
+                "link": "https://app.okfn.de/trees-map/?lat=52.49704785672787&lon=13.439691066741943&zoom=16",
+                "prev": 2,
+                "next": 4
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Refik-Veseli-Schule",
+        "description": "Station 3 bei unserem Datenspaziergang ist die Refik Veseli-Schule, denn das Thema Schule und Bildung betrifft uns alle. Aber: Schulbildung ist in Deutschland Ländersache, daher wird es im Hinblick auf offene Daten recht schnell kompliziert. Warum? Das zeigen wir dir hier.",
+        "position": {
+          "lat": 52.499867,
+          "lon": 13.435728
+        },
+        "prev": 1,
+        "next": 4,
+        "entry": 0,
+        "line": 1,
+        "subjects": [
+          {
+            "id": 0,
+            "name": "(Außer-) schulische Bildung",
+            "description": "Jedes Bundesland unterscheidet sich nicht nur bei den Unterrichtsfächern und Schulaktivitäten, sondern teilweise sogar bei den Schularten. So gibt es z.B. in Hamburg Stadtteilschulen, die sonst in keinem anderen Bundesland vorkommen. Informationen über Schulen in Deutschland sind dadurch sehr breit verstreut und nur schwer miteinander zu vergleichen.<br /><br />Offene Daten über allgemeinbildende Schulen findest du auf <span class='bold>'JedeSchule.de.</span>",
+            "entry": 1,
+            "next": 1,
+            "pages": [
+              {
+                "type": "story",
+                "id": 1,
+                "img": "/assets/images/datawalk.png",
+                "content": [
+                 "JedeSchule.de macht die Informationen von über 30.000 allgemeinbildende Schulen in Deutschland zugänglich. Für knapp 3.000 Schulen in Berlin und Sachsen werden anhand von Daten außerschulische  Aktivitäten, Förderangebote und Partner der Schulen analysiert. Über eine Suchmaske kann auf JedeSchule.de gezielt nach bestimmten Schulen, Schularten, Aktivitäten oder Ganztagsangeboten von Schulen in der eigenen Umgebung oder deutschlandweit gesucht und gefiltert werden."
+                ],
+                "name": "Was ist JedeSchule.de?",
+                "challenges": [
+                  "Und was findest du über die Sekundärschule Refik-Veseli-Schule auf JedeSchule.de heraus?"
+                ],
+                "next": 2
+              },
+              {
+                "type": "iframe",
+                "id": 2,
+                "name": "Projekt: Jedeschule.de",
+                "link": "https://jedeschule.de/schulen/#!?lat=52.50085414006978&lng=13.433167221955955&zoom=17&state=Berlin",
+                "prev": 1,
+                "next": 3
+              },
+              {
+                "type": "story",
+                "id": 3,
+                "img": "/assets/images/datawalk.png",
+                "name": "Schulaktivitäten in Kreuzberg",
+                "content": [
+                  "Schule ist weit mehr als nur Unterricht. Potenziale, Persönlichkeit, Selbstständigkeit und das Engagement für die Gesellschaft entwickeln sich vorwiegend außerhalb des Regelbetriebs.",
+                  "Viele Schulen bieten ihren Schüler*innen deshalb ganz unterschiedliche zukunftsfähige Projekte zu Themen wie neue Arbeitswelten, Klimaschutz oder Demokratie an, die sie gemeinsam mit Partnerorganisationen aus Politik, Zivilgesellschaft und Wirtschaft umsetzen."
+                ],
+                "prev": 2,
+                "next": 4
+              },
+              {
+                "type": "choropleth-map",
+                "id": 4,
+                "name": "Schulaktivitäten nach Bezirken",
+                "datasource": "https://jedeschule.de/assets/data/activities.json",
+                "prev": 3
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Lausitzer Platz",
+        "description": "Die vierte Station unseres Datenspaziergangs ist der Lausitzer Platz. Der Bezirk Friedrichshain-Kreuzberg gehört mittlerweile zu den beliebtesten Wohngegenden in Berlin - und leider auch zu den teuersten.",
+        "prev": 2,
+        "next": 5,
+        "line": 2,
+        "position": {
+          "lat": 52.499745,
+          "lon": 13.431011
+        },
+        "entry": 0,
+        "subjects": [
+          {
+            "id": 0,
+            "name": "Mietpreisentwicklung",
+            "description": "In keiner deutschen Großstadt sind die Mieten mittlerweile für Normalverdiener so unerschwinglich wie in Berlin. Mieter*innen müssen hier mehr als ein Drittel des Einkommens für die Warmmiete aufwenden. Dabei sind Stromkosten noch nicht enthalten!<br /><br />Was sagt eigentlich die Politik dazu? Darüber informiert <span class='bold'>OffenesParlament.de</span>.",
+            "entry": 1,
+            "next": 1,
+            "pages": [
+              {
+                "type": "story",
+                "id": 1,
+                "img": "/assets/images/datawalk.png",
+                "content": [
+                  "OffenesParlament.de macht Bundestagsdebatten transparent und nachvollziehbar. Über die Plattform kannst du  alle 245 Plenarprotokolle des Bundestags der letzten Wahlperiode durchsuchen - z.B. nach Ehe für Alle, Videoüberwachung oder Kriminalität. Dadurch hast du die Möglichkeit, die Arbeit von Abgeordneten und ihre Positionen zu überprüfen.",
+                  "Der Bundestag veröffentlicht regelmäßig Sitzungsprotokolle zu aktuellen Debatten. Seit Oktober 2017 werden die Dokumente als offene Daten zur freien Nutzung bereitgestellt. Sie können von Interessierten analysiert werden und finden Verwendung in gemeinnützigen Projekten, wie OffenesParlament.de.",
+                  "Was findest du über die Mietpreisentwicklung in Berlin auf OffenesParlament.de heraus?"
+                ],
+                "name": "Was ist OffenesParlament.de?",
+                "prev": 0,
+                "next": 2
+              },
+              {
+                "type": "iframe",
+                "id": 2,
+                "name": "Projekt: Offenes Parlament",
+                "link": "https://offenesparlament.de/protokoll/#!/161#10",
+                "class": "op",
+                "prev": 1,
+                "next": 3
+              },
+              {
+                "id": 3,
+                "type": "quiz",
+                "name": "Wer hats gesagt?",
+                "question": "Bezahlbarer Wohnraum, Demografie, Integration und Klimaschutz gehören zusammen. Wir können dieser Vielschichtigkeit nur mit einem breiten Spektrum an Maßnahmen gerecht werden.",
+                "answers": [
+                  "Barbara Hendricks, SPD",
+                  "Konstantin von Notz, Bündnis '90 die Grünen",
+                  "Caren Lay, die Linke"
+                ],
+                "correct": 0,
+                "prev": 2,
+                "next": 4
+              },
+              {
+                "id": 4,
+                "type": "quiz",
+                "name": "Wer hats gesagt?",
+                "question": "Was den sozialen Wohnungsbau betrifft, wäre es mir lieber gewesen, Sie hätten die Schuldigen klar benannt. Der Bund hat die Länder jahrelang finanziert und das Geld für Wohnungsbau brav überwiesen, aber die Länder haben damit ihre Haushalte ausgeglichen.",
+                "answers": [
+                  "Dr. Georg Nüßlein, CDU/CSU",
+                  "Caren Lay, die Linke",
+                  "Sigmar Gabriel, SPD"
+                ],
+                "correct": 0,
+                "prev": 3,
+                "next": 5
+              },
+              {
+                "id": 5,
+                "type": "quiz",
+                "name": "Wer hats gesagt?",
+                "question": "Mein Gott, was glauben Sie eigentlich, für wie doof Sie die Leute verkaufen können? Da bin ich doch fassungslos; denn jeder von uns, der bei den wohnungspolitischen Debatten dabei war, erinnert sich, wie Ihre Einlassungen zur Mietpreisbremse waren. Sie haben das Ganze blockiert - ohne Ende, bis es nicht mehr ging",
+                "answers": [
+                  "Britta Haßelmann, Bündnis '90 die Grünen",
+                  "Gregor Gysi, die Linke",
+                  "Michael Groß, SPD"
+                ],
+                "correct": 0,
+                "prev": 4,
+                "next": 6
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Bethanien Kloster",
+        "description": "Die letzte Station unserer Tour durch Kreuzberg ist das Bethanien-Kloster. Das Bethanien wurde vor allem durch seine Besetzung und Umbenennung 1971 in das Georg-von-Rauch-Haus - benannt nach einem Studenten, der durch eine Polizeiaktion ums Leben kam - über die Grenzen Berlins hinaus bekannt.",
+        "prev": 3,
+        "position": {
+          "lat": 52.503392,
+          "lon": 13.425286
+        },
+        "line": 3,
+        "entry": 0,
+        "subjects": [
+          {
+            "id": 0,
+            "name": "Stadtraum erobern",
+            "description": "Das Bethanien steht stellvertretend für die Berliner Besetzerszene, die seit den 70er-Jahren aktiv ist. Das Georg-von-Rauch-Haus ist mit 42 Jahren das am längsten besetzte und inzwischen legalisierte Haus Berlins.<br /><br />Über aktuell und ehemalige besetzte Orte gibt die Plattform berlin.besetzt Auskunft.",
+            "entry": 1,
+            "pages": [
+              {
+                "type": "story",
+                "id": 1,
+                "next": 2,
+                "prev": 0,
+                "img": "/assets/images/datawalk.png",
+                "content": ["Die Chronik der besetzten Häuser wurde vom Projekt berlin.besetzt aufbereitet und visualisiert. Da es keine amtliche Statistik zu Häuserbesetzungen gibt stützten sich die Daten in erster Linie auf Szenepublikationen und Zeitungsartikel. Auf der Karte werden verschiedene Hausbesetzungen seit den 70er Jahren dargestellt."],
+                "name": "Berlin besetzt",
+                "challenges": ["Was war die kürzeste Dauer einer Besetzung? Finde es heraus!"]
+              },
+              {
+                "id": 2,
+                "type": "iframe",
+                "name": "Projekt: berlin besetzt",
+                "link": "https://app.okfn.de/berlin-besetzt/index.html#",
+                "prev": 1,
+                "next": 3
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "name": "Spaziergang ohne Stationen",
+    "location": "Nada",
+    "img": "/assets/images/datawalk.png",
+    "stations": []
+  }
+]

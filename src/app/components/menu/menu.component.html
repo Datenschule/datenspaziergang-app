@@ -1,14 +1,14 @@
 <nav>
   <ul>
     <li><a routerLink="/intro">Datenspaziergang</a></li>
-    <li>Touren
-         <ul class="inner-menu">
-           <li><a routerLink="/overview">Kreuzberg</a></li>
-           <!--><li>2. Tour</li>-->
-         </ul>
-         </li>
-
-         <li><a href="https://docs.google.com/forms/d/1Ti10XaxG9HW5PBjlH_un7nHG5l_v0GpVDmCD3oBuojU">Feedback</a></li>
+    <li><a routerLink="/overview">Touren</a>
+      <ul class="inner-menu">
+        <li *ngFor="let tour of courses">
+          <a routerLink="/course/{{tour.id}}">{{tour.name}}</a>
+        </li>
+      </ul>
+    </li>
+    <li><a href="https://docs.google.com/forms/d/1Ti10XaxG9HW5PBjlH_un7nHG5l_v0GpVDmCD3oBuojU">Feedback</a></li>
     <li><a routerLink="/impressum">Impressum</a></li>
   </ul>
 </nav>

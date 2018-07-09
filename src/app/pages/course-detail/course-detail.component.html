@@ -1,11 +1,63 @@
-<div class="wrapper" *ngIf="course">
-  <app-action-bar  [name]="course.name"></app-action-bar>
-  <div class="main">
-    <div class="detail">
-      <img src="{{course.preview_image}}" alt="">
-      <p>{{course.description}}</p>
-      <button class="button" routerLink="{{entryLink}}">Take the tour!</button>
+<div class="wrapper" *ngIf="activeCourse">
+  <app-action-bar [name]="title" [showMenu]="true"></app-action-bar>
+
+  <div class="swipeable" [@swiping]="swipeState">
+    <div class="swipeable__helper"
+      (click)="toggleSwipeState()"
+      (touchmove)="toggleSwipeState()">
+      <div class="swipeable__btn">click</div>
+    </div>
+
+    <mgl-map
+      [style]="mapOptions.style"
+      [zoom]="mapOptions.zoom"
+      [center]="mapOptions.center">
+      <mgl-layer
+        *ngFor="let line of activeCourse.courseline; let i = index"
+        id="linelayer{{i}}"
+        type="line"
+        [source]="{'type': 'geojson', 'data': { 'type': 'Feature', 'properties': {}, 'geometry': { 'type': 'LineString','coordinates': line }}}"
+        [layout]="{'line-join': 'round', 'line-cap': 'round' }"
+        [paint]="{ 'line-color': '#5500c3', 'line-width': 8 }">
+      </mgl-layer>
+      <mgl-marker
+        *ngFor="let station of activeCourse.stations"
+        [lngLat]="[station.position.lon, station.position.lat]">
+        {{station.id}}
+      </mgl-marker>
+      <mgl-control
+        mglGeolocate
+        [positionOptions]="{
+        enableHighAccuracy: true,
+        maximumAge: 5000
+        }"
+        [trackUserLocation]="true"
+      ></mgl-control>
+    </mgl-map>
+
+    <div class="wrapper-box">
+      <div class="box__container">
+        <div class="box">
+          <div class="box__title h1">Über die Tour</div>
+          <div class="box-content">
+            <h1>{{activeCourse.name}}</h1>
+            <p [innerHTML]="activeCourse.description | safeHtml"></p>
+            <div class="navigation">
+              <!--><a class="btn" routerLink="">&lt;</a><-->
+              <a class="btn" routerLink="/point-to-point/{{activeCourse.id}}/{{activeCourse.entry}}">Tour starten</a>
+              <!--><a class="btn" routerLink="">&gt;</a><-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swipeable__helper"
+      (click)="toggleSwipeState()"
+      (touchmove)="toggleSwipeState()">
+      <div class="swipeable__btn" aria-label="click to see map"></div>
     </div>
   </div>
-</div>
 
+  <app-page-indicator [course]="activeCourse.id" [stations]="activeCourse.stations"
+    [active]="-1"></app-page-indicator>
+</div>

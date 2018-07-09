@@ -35,7 +35,7 @@ import {TreeBerlinService} from './services/plugins/tree-berlin.service';
 import { OpDebateComponent } from './pages/course-pages/op-debate/op-debate.component';
 import { WheelmapMapComponent } from './pages/course-pages/wheelmap-map/wheelmap-map.component';
 import { LineChartComponent } from './pages/course-pages/line-chart/line-chart.component';
-import { ChloroplethMapComponent } from './pages/course-pages/chloropleth-map/chloropleth-map.component';
+import { ChoroplethMapComponent } from './pages/course-pages/chloropleth-map/choropleth-map.component';
 import { TreeDashboardComponent } from './pages/course-pages/tree-dashboard/tree-dashboard.component';
 import { TreeDevelopmentComponent } from './pages/course-pages/tree-development/tree-development.component';
 import { MundraubMapComponent } from './pages/course-pages/mundraub-map/mundraub-map.component';
@@ -72,7 +72,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     OpDebateComponent,
     WheelmapMapComponent,
     LineChartComponent,
-    ChloroplethMapComponent,
+    ChoroplethMapComponent,
     TreeDashboardComponent,
     TreeDevelopmentComponent,
     MundraubMapComponent,

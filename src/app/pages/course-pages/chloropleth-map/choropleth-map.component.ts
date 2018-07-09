@@ -6,10 +6,10 @@ import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-chloropleth-map',
-  templateUrl: './chloropleth-map.component.html',
-  styleUrls: ['./chloropleth-map.component.scss']
+  templateUrl: './choropleth-map.component.html',
+  styleUrls: ['./choropleth-map.component.scss']
 })
-export class ChloroplethMapComponent implements OnInit {
+export class ChoroplethMapComponent implements OnInit {
 
   nextLink: string;
   title: string;

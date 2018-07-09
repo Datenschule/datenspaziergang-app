@@ -12,7 +12,7 @@ import {TreeMapComponent} from '../pages/course-pages/tree-map/tree-map.componen
 import {OpDebateComponent} from '../pages/course-pages/op-debate/op-debate.component';
 import {WheelmapMapComponent} from '../pages/course-pages/wheelmap-map/wheelmap-map.component';
 import {LineChartComponent} from '../pages/course-pages/line-chart/line-chart.component';
-import {ChloroplethMapComponent} from '../pages/course-pages/chloropleth-map/chloropleth-map.component';
+import {ChoroplethMapComponent} from '../pages/course-pages/chloropleth-map/choropleth-map.component';
 import {TreeDashboardComponent} from '../pages/course-pages/tree-dashboard/tree-dashboard.component';
 import {TreeDevelopmentComponent} from '../pages/course-pages/tree-development/tree-development.component';
 import {MundraubMapComponent} from '../pages/course-pages/mundraub-map/mundraub-map.component';
@@ -40,7 +40,7 @@ const routes: Routes = [
   { path: 'op-debate/:course/:station/:subject/:page', component: OpDebateComponent },
   { path: 'wheelmap-map/:course/:station/:subject/:page', component: WheelmapMapComponent },
   { path: 'line-chart/:course/:station/:subject/:page', component: LineChartComponent },
-  { path: 'chloropleth-map/:course/:station/:subject/:page', component: ChloroplethMapComponent },
+  { path: 'choropleth-map/:course/:station/:subject/:page', component: ChoroplethMapComponent },
   { path: 'tree-dashboard/:course/:station/:subject/:page', component: TreeDashboardComponent },
   { path: 'tree-development/:course/:station/:subject/:page', component: TreeDevelopmentComponent },
   { path: 'mundraub-map/:course/:station/:subject/:page', component: MundraubMapComponent },

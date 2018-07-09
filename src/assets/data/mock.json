@@ -156,7 +156,7 @@
                 "next": 4
               },
               {
-                "type": "chloropleth-map",
+                "type": "choropleth-map",
                 "id": 4,
                 "name": "Schulaktivitäten nach Bezirken",
                 "datasource": "https://jedeschule.de/assets/data/activities.json",

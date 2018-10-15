@@ -7,29 +7,17 @@ import {StoryPage, Station} from '../../../model/stations';
 import {animate, style, transition, trigger} from '@angular/animations';
 import {control} from 'leaflet';
 
-
 @Component({
   selector: 'app-story',
   templateUrl: './story.component.html',
   styleUrls: ['./story.component.scss'],
   animations: [trigger('fadeInAnimation', [
-
-    // route 'enter' transition
     transition('* => enter', [
-      // css styles at start of transition
-      // style({ opacity: 0 }),
       style({transform: 'scale(0.1)'}),
-
-      // animation and styles at end of transition
       animate('.3s', style({ transform: 'scale(1)' }))
     ]),
-    // route 'enter' transition
     transition('* => leave', [
-      // css styles at start of transition
-      // style({ opacity: 0 }),
       style({transform: 'scale(1)'}),
-
-      // animation and styles at end of transition
       animate('.15s', style({ transform: 'scale(0.05)' }))
     ]),
   ])],
@@ -61,9 +49,11 @@ export class StoryComponent implements OnInit {
       const page_id = +params['page'];
 
       this.coursesService.getCourse(course_id).subscribe((course) => {
-        this.station = course.stations.find((station) => station.id === station_id);
-        this.subject = this.station.subjects.find((subject) => subject.id === subject_id);
-        this.actionbarTitle = `${this.station.id}. ${this.station.name}`;
+        if (course.status === 'success') {
+          this.station = course.data.walk.stations.find((station) => station.id === station_id);
+          this.subject = this.station.subjects.find((subject) => subject.id === subject_id);
+          this.actionbarTitle = `${this.station.id}. ${this.station.name}`;
+        }
       });
 
       this.coursesService.getPage(course_id, station_id, subject_id, page_id).subscribe((page) => {

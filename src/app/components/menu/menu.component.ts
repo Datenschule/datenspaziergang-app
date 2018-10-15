@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Course} from '../../model/course';
+import {CoursesService} from '../../services/courses/courses.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  courses: Course[];
+
+  constructor(private coursesService: CoursesService) { }
 
   ngOnInit() {
+    this.coursesService.getCourses()
+      .subscribe(response => {
+        if (response.status === 'success') {
+          this.courses = response.data.walks;
+        }
+      });
   }
-
 }

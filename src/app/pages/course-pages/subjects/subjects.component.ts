@@ -27,7 +27,6 @@ import * as turf from '@turf/turf';
   ]
 })
 export class SubjectsComponent implements OnInit {
-
   constructor(
     private coursesService: CoursesService,
     private route: ActivatedRoute,
@@ -35,7 +34,6 @@ export class SubjectsComponent implements OnInit {
   }
 
   swipeState = 'left';
-
   nextLink: string;
   course: Course;
   station: Station;
@@ -81,33 +79,34 @@ export class SubjectsComponent implements OnInit {
     const station_id = +this.route.snapshot.paramMap.get('station');
 
     this.coursesService.getCourse(course_id).subscribe((course) => {
+      if (course.status === 'success') {
+        this.course = course.data.walk;
+        this.station = course.data.walk.stations.find((station) => station.id === station_id);
+        this.line = this.course.courseline[this.station['line']];
 
-      this.course = course;
-      this.station = this.course.stations.find((station) => station.id === station_id);
-      this.line = this.course.courseline[this.station['line']];
+        let foo = [];
+        foo.push([]); // make sure template loop always works
+        for (let i = 0; i < this.station['line']; i++) {
+          foo.push(this.course.courseline[i]);
+        }
+        this.pastlines = foo;
 
-      let foo = [];
-      foo.push([]); // make sure template loop always works
-      for (let i = 0; i < this.station['line']; i++) {
-        foo.push(this.course.courseline[i]);
+        this.station.subjects = this.station.subjects.map(subject => {
+          const firstpage = subject.pages.find(page => page.id === subject.entry);
+          subject['link'] = `/${firstpage.type}/${this.course.id}/${this.station.id}/${subject.id}/${firstpage.id}`;
+          return subject;
+        });
+        // move center slightly to the right
+        let oldCenter = turf.point([this.station.position.lon, this.station.position.lat]);
+        let newCenter = turf.transformTranslate(oldCenter, -0.2, 90)
+        this.mapOptions.center = newCenter.geometry.coordinates;
+        this.mapOptions.marker = [this.station.position.lon, this.station.position.lat];
+        this.title = `${this.course.name}: ${this.station.id}. ${this.station.name}`;
+
+        this.coursesService.getNextStationLink(course_id, station_id).subscribe((nextStation) => {
+          this.nextLink = nextStation;
+        });
       }
-      this.pastlines = foo;
-
-      this.station.subjects = this.station.subjects.map(subject => {
-        const firstpage = subject.pages.find(page => page.id === subject.entry);
-        subject['link'] = `/${firstpage['type']}/${this.course.id}/${this.station.id}/${subject.id}/${firstpage.id}`;
-        return subject;
-      });
-      // move center slightly to the right
-      let oldCenter = turf.point([this.station.position.lon, this.station.position.lat]);
-      let newCenter = turf.transformTranslate(oldCenter, -0.2, 90)
-      this.mapOptions.center = newCenter.geometry.coordinates;
-      this.mapOptions.marker = [this.station.position.lon, this.station.position.lat];
-      this.title = `${course.name}: ${this.station.id}. ${this.station.name}`;
-
-      this.coursesService.getNextStationLink(course_id, station_id).subscribe((nextStation) => {
-        this.nextLink = nextStation;
-      });
     });
   }
 

@@ -13,7 +13,7 @@
         <p *ngFor="let content of story.content" [innerHTML]="content | safeHtml"></p>
       </div>
 
-      <div *ngIf="story.challenges" class="description box box-wide">
+      <div *ngIf="story.challenges" class="description box box-wide box--challenge">
         <h1 class="box__title--challenge" [ngClass]="{relative: inlineTitle === true}">
           <img src="/assets/images/challenge.svg" alt="">
         </h1>

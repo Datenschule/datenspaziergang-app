@@ -77,6 +77,19 @@
   right: 30px;
 }
 
+.box--challenge {
+  li:before {
+    content: url(/assets/images/triangle-arrow-right-list.svg);
+    font-size: 1px;
+    display: inline-block;
+    height: 1em;
+    position: absolute;
+    left: -3em;
+    transform: scale(0.5);
+  }
+}
+
+
 .box__title.relative {
   position: absolute;
   top: -2.4em;

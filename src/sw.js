@@ -1,4 +1,4 @@
-var cacheName = 'weatherPWA-step-6-1';
+var cacheName = 'walkPWA-step-6-2';
 var filesToCache = [
   '/intro',
   '/assets/styles/leaflet-1.3.1.css',
@@ -9,7 +9,13 @@ var filesToCache = [
   '/vendor.bundle.js',
   '/main.bundle.js',
   '/assets/images/ic_keyboard_backspace_white_24px.svg',
-  '/assets/images/logo.png'
+  '/assets/images/logo.png',
+  '/assets/images/triangle-arrow-right-list.svg',
+  '/assets/images/challenge.svg',
+  '/assets/images/hex-2.svg',
+  '/assets/images/hex-2-inactive.svg',
+  '/assets/images/hex-3.svg',
+  '/assets/images/hex-3-inactive.svg',
 ];
 
 self.addEventListener('install', function(e) {

@@ -27,8 +27,8 @@ import * as turf from '@turf/turf';
 })
 export class PointToPointMapComponent implements OnInit {
 
-  constructor(private coursesService: CoursesService, private route: ActivatedRoute) {
-  }
+  constructor(private coursesService: CoursesService,
+              private route: ActivatedRoute) { }
 
   swipeState = 'left';
   nextLink: string;
@@ -74,31 +74,30 @@ export class PointToPointMapComponent implements OnInit {
   };
 
   ngOnInit() {
-
     this.route.params.subscribe((params) => {
-
       const course_id = +params['course'];
       const station_id = +params['station'];
 
       this.coursesService.getCourse(course_id).subscribe((course) => {
+        if (course.status === 'success') {
+          this.course = course.data.walk;
+          this.station = this.course.stations
+            .find((station) => station.id === station_id);
 
-        this.course = course;
-        this.station = course.stations.find((station) => station.id === station_id);
+          this.title = `${this.course.name}: ${this.station.id}. ${this.station.name}`;
+          this.line = this.course.courseline[this.station['line']];
 
-        this.title = `${this.course.name}: ${this.station.id}. ${this.station.name}`;
-        this.line = this.course.courseline[this.station['line']];
+          let foo = [];
+          foo.push([]); // make sure template loop always works
+          for (let i = 0; i < this.station['line']; i++) {
+            foo.push(this.course.courseline[i]);
+          }
+          this.pastlines = foo;
 
-        let foo = [];
-        foo.push([]); // make sure template loop always works
-        for (let i = 0; i < this.station['line']; i++) {
-          foo.push(this.course.courseline[i]);
+          let translatedCenter = turf.transformTranslate(turf.point([this.station.position.lon, this.station.position.lat]), -0.5, 90);
+          this.mapOptions.center = translatedCenter.geometry.coordinates;
+          this.nextLink = `/subjects/${this.course.id}/${this.station.id}`;
         }
-        this.pastlines = foo;
-
-        let translatedCenter = turf.transformTranslate(turf.point([this.station.position.lon, this.station.position.lat]), -0.5, 90);
-        this.mapOptions.center = translatedCenter.geometry.coordinates;
-
-        this.nextLink = `/subjects/${this.course.id}/${this.station.id}`;
       });
     });
   }

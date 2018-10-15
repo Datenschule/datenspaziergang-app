@@ -28,6 +28,7 @@ export class CoursesOverviewComponent implements OnInit {
   courses: Course[];
   activeCourse: Course;
   activeLine: any;
+  creatorLink = environment.creatorLink;
 
   swipeState = 'left';
 
@@ -37,35 +38,15 @@ export class CoursesOverviewComponent implements OnInit {
     center: [13.40497, 52.517221]
   };
 
-  constructor(private coursesService: CoursesService) {
-  }
+  constructor(private coursesService: CoursesService) {}
 
   private getCourses() {
     this.coursesService.getCourses()
-      .subscribe(courses => {
-        this.courses = courses;
-        console.log(courses);
-        this.updateCourse(courses[0]);
-        // console.log();
+      .subscribe(response => {
+        if (response.status === 'success') {
+          this.courses = response.data.walks;
+        }
       });
-  }
-
-  public updateCourse(course) {
-    this.activeCourse = course;
-    var features = turf.featureCollection(
-      this.activeCourse.stations.map(station => turf.point([station.position.lon, station.position.lat]))
-    );
-
-    var center = turf.center(features);
-    center = turf.transformTranslate(center, -0.8, 90);
-    console.log(center);
-    this.mapOptions.center = center.geometry.coordinates;
-    this.activeLine = this.activeCourse.stations.reduce((prev, curr) => {
-      console.log(prev);
-      prev.push([curr.position.lon, curr.position.lat]);
-      return prev;
-    }, []);
-    //this.activeLine = course['courseline'];
   }
 
   ngOnInit() {

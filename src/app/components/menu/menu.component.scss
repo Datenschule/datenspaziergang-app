@@ -21,8 +21,15 @@ ul {
   list-style: none;
 
   .inner-menu {
-    padding: 0 1em 0 1.5em;
+    padding: 0 1em 0 1em;
     word-break: break-all;
+
+    li {
+      list-style: none;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 }
 

@@ -63,7 +63,7 @@ export class StoryComponent implements OnInit {
       this.coursesService.getCourse(course_id).subscribe((course) => {
         this.station = course.stations.find((station) => station.id === station_id);
         this.subject = this.station.subjects.find((subject) => subject.id === subject_id);
-        this.actionbarTitle = `${this.station.id + 1}. ${this.station.name}`;
+        this.actionbarTitle = `${this.station.id}. ${this.station.name}`;
       });
 
       this.coursesService.getPage(course_id, station_id, subject_id, page_id).subscribe((page) => {

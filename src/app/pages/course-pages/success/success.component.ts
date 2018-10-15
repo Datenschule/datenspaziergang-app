@@ -26,7 +26,7 @@ export class SuccessComponent implements OnInit {
       if (course.status === 'success') {
         this.course = course.data.walk;
         this.title = `Abschluss ${this.course.name}`;
-        this.message = `Vielen Dank, dass du am Datenspaziergang durch ${this.course.name} durch ${this.course.location} teilgenommen hast! Wir hoffen es hat dir gefallen!`
+        this.message = `Vielen Dank, dass du am Datenspaziergang  ${this.course.name} durch ${this.course.location} teilgenommen hast! Wir hoffen es hat dir gefallen!`
       }
     });
   }

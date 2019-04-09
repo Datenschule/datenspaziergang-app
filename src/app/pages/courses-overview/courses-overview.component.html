@@ -11,6 +11,7 @@
       <div class="box-content">
         <h1 class="h1">{{tour.name}}</h1>
         <p [innerHTML]="tour.description | safeHtml"></p>
+        <p *ngIf="tour.author"><em>Erstellt von {{ tour.author }}</em></p>
         <div class="navigation">
           <a class="btn" routerLink="/course/{{tour.id}}/">Tour starten</a>
         </div>

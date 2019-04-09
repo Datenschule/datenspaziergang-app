@@ -2,6 +2,7 @@ import {Station} from './stations';
 
 export class Course {
   id: number;
+  author: string;
   name: string;
   location: string;
   stations: Station[];

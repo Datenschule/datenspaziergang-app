@@ -32,7 +32,6 @@
         maximumAge: 5000
         }"
         [trackUserLocation]="true"
-
       ></mgl-control>
     </mgl-map>
 
@@ -43,6 +42,7 @@
           <div class="box-content">
             <h1>{{activeCourse.name}}</h1>
             <p [innerHTML]="activeCourse.description | safeHtml"></p>
+            <p *ngIf="activeCourse.author"><em>Erstellt von {{ activeCourse.author }}</em></p>
             <div class="navigation">
               <!--><a class="btn" routerLink="">&lt;</a><-->
               <a class="btn" routerLink="/point-to-point/{{activeCourse.id}}/{{activeCourse.entry}}">Tour starten</a>

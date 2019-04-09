@@ -5,8 +5,8 @@
 
 export const environment = {
   production: false,
-  creatorLink: 'https://spaziergang-creator.herokuapp.com',
-  apiEndpoint: 'https://spaziergang-creator.herokuapp.com/api/v1',
+  creatorLink: 'https://spaziergang-creator.demokratielabore.de/',
+  apiEndpoint: 'https://spaziergang-creator.demokratielabore.de//api/v1',
   mapbox_key: 'pk.eyJ1Ijoib2tmZGUiLCJhIjoiY2lpOHhvMnNhMDAyNnZla280ZWhmMm96NyJ9.IvGz74dvvukg19B4Npsm1g',
   mapboxTiles: {
     light: 'mapbox://styles/mapbox/light-v9',

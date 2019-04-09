@@ -1,6 +1,3 @@
-
-
-
 /**
  * Required to support Web Animations `@angular/platform-browser/animations`.
  * Needed for: All but Chrome, Firefox and Opera. http://caniuse.com/#feat=web-animation
@@ -19,3 +16,6 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
+
+// Add global to window, assigning the value of window itself.
+(window as any).global = window;

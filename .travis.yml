@@ -13,7 +13,7 @@ before_install:
 notifications:
   email: false
 script:
-  - npm install -g angular-cli
+  - npm install -g @angular/cli
   - npm install
   - ng build --prod
 after_success:
